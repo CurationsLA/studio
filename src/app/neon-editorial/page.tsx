@@ -50,9 +50,9 @@ const NeonEditorialPage = () => {
       }
 
     const cardStyles = [
-        { bg: 'bg-[#ff4c4c]', border: 'border-[#7f0000]', title: 'text-white', subtitle: 'text-[#ffe5e0]', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#00cfc1]', border: 'border-[#003366]', title: 'text-white', subtitle: 'text-[#d0fafa]', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#fff275]', border: 'border-[#cc6600]', title: 'text-black', subtitle: 'text-[#333333]', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#0022ff]', border: 'border-[#EBF998]', title: 'text-white', subtitle: 'text-[#EBF998]', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#ffff00]', border: 'border-[#5d00ff]', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-black', border: 'border-[#f474b4]', title: 'text-white', subtitle: 'text-[#f474b4]', dateBg: 'bg-transparent' },
     ];
 
 
@@ -133,7 +133,7 @@ const NeonEditorialPage = () => {
                 <section id="home" className="pt-24 px-4 md:px-8">
                     <div className="magazine-grid">
                         <div className="span-12 text-center py-10">
-                            <h1 className="text-5xl md:text-6xl font-bold leading-tight uppercase">WE CURATE THE HEART OF BRANDS</h1>
+                            <h1 className="text-5xl md:text-6xl font-bold leading-tight uppercase">We curate the heart of brands</h1>
                             <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
                                 <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
                                     AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
@@ -145,8 +145,10 @@ const NeonEditorialPage = () => {
                 
                 <section className="px-4 md:px-8">
                      <div className="magazine-grid">
-                         <div id="services" className="span-8">
+                         <div id="services" className="span-12">
                             <div className="h-1 bg-[#f474b4] mb-6 mt-2"></div>
+                         </div>
+                         <div className="span-8">
                             <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block" style={{fontSize: '60%'}}>SERVICES</h2>
                             
                             <div className="magazine-grid">
