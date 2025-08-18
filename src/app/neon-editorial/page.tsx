@@ -93,7 +93,7 @@ const NeonEditorialPage = () => {
                 .span-12 { grid-column: span 12; }
                 
                 @media (max-width: 768px) {
-                    .span-6, .span-4, .span-3, .span-8, .span-9 { grid-column: span 12; }
+                    .span-12, .span-9, .span-3 { grid-column: span 12; }
                 }
 
                 .event-card {
@@ -126,20 +126,14 @@ const NeonEditorialPage = () => {
                 {/* Hero Grid Layout */}
                 <section id="home" className="pt-24 px-4 md:px-8">
                     <div className="magazine-grid">
-                        {/* Main Content Column */}
-                        <div className="span-9 space-y-4">
-                            {/* Main Title */}
+                        <div className="span-12 space-y-4">
                             <div className="relative text-center py-10">
-                                <div className="font-bold uppercase leading-tight text-4xl md:text-5xl space-y-2">
-                                    <div className="space-x-4" style={{ transform: 'rotate(-2deg)' }}>
-                                        <span className="font-anton inline-block bg-black text-white px-2 py-1">WE</span>
-                                        <span className="font-anton inline-block bg-black text-white px-2 py-1">CURATE</span>
-                                    </div>
-                                    <div className="space-x-2" style={{ transform: 'rotate(1deg)' }}>
-                                        <span className="font-marker normal-case text-[#f474b4] text-5xl inline-block">the heart of</span>
-                                    </div>
-                                    <div>
-                                        <span className="font-anton text-outline-pink text-8xl inline-block" style={{ transform: 'rotate(-3deg)' }}>BRANDS</span>
+                                 <div className="font-bold uppercase leading-tight text-3xl md:text-4xl space-y-2">
+                                    <div className="space-x-2">
+                                        <span className="font-anton inline-block bg-black text-white px-2 py-1 text-2xl">WE</span>
+                                        <span className="font-anton inline-block bg-black text-white px-2 py-1 text-2xl">CURATE</span>
+                                        <span className="font-marker normal-case text-[#f474b4] text-3xl inline-block">the heart of</span>
+                                        <span className="font-anton text-outline-pink text-6xl inline-block bg-[#f474b4] text-white px-2">BRANDS</span>
                                     </div>
                                 </div>
                                 <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
@@ -148,41 +142,45 @@ const NeonEditorialPage = () => {
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section className="px-4 md:px-8">
+                     <div className="magazine-grid">
+                        {/* Services Section */}
+                         <div id="services" className="span-9">
+                            <div className="h-1 bg-[#f474b4] mb-6 mt-2"></div>
+                            <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block" style={{fontSize: '60%'}}>SERVICES</h2>
                             
-                            {/* Services Section */}
-                             <div id="services">
-                                <div className="h-1 bg-[#f474b4] mb-6 mt-2"></div>
-                                <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block" style={{fontSize: '60%'}}>SERVICES</h2>
+                            <div className="magazine-grid">
+                                {/* Feature Service */}
+                                <div className="span-6 bg-black text-white p-6 min-h-[250px]">
+                                    <span className="text-4xl">🍽️</span>
+                                    <h3 className="text-xl font-bold mt-2 mb-2 text-[#EBF998]">RESTAURANT & BUSINESS</h3>
+                                    <p className="text-xs">From ghost kitchens to grand openings, we know food.</p>
+                                </div>
                                 
-                                <div className="magazine-grid">
-                                    {/* Feature Service */}
-                                    <div className="span-6 bg-black text-white p-6 min-h-[250px]">
-                                        <span className="text-4xl">🍽️</span>
-                                        <h3 className="text-xl font-bold mt-2 mb-2 text-[#EBF998]">RESTAURANT & BUSINESS</h3>
-                                        <p className="text-xs">From ghost kitchens to grand openings, we know food.</p>
-                                    </div>
-                                    
-                                    {/* AI Discovery */}
-                                    <div className="span-6 bg-[#6370E7] text-white p-6 min-h-[250px]">
-                                        <span className="text-4xl">🤖</span>
-                                        <h3 className="text-xl font-bold mt-2 mb-2">AI DISCOVERY</h3>
-                                        <p className="font-bold text-xs">"Vibe Coding" & Beyond</p>
-                                    </div>
-                                    
-                                    {/* Media Buying */}
-                                    <div className="span-4 bg-[#EBF998] text-black p-4">
-                                        <h3 className="text-lg font-bold text-[#6370E7]">MEDIA BUYING</h3>
-                                    </div>
-                                    
-                                    {/* Influencer */}
-                                    <div className="span-4 border-4 border-[#f474b4] p-4 bg-white">
-                                        <h3 className="text-lg font-bold text-[#f474b4]">CREATIVE COLLABS</h3>
-                                    </div>
-                                    
-                                    {/* Communications */}
-                                    <div className="span-4 bg-black text-white p-4">
-                                        <h3 className="text-lg font-bold text-[#f474b4]">COMMUNICATIONS</h3>
-                                    </div>
+                                {/* AI Discovery */}
+                                <div className="span-6 bg-[#6370E7] text-white p-6 min-h-[250px]">
+                                    <span className="text-4xl">🤖</span>
+                                    <h3 className="text-xl font-bold mt-2 mb-2">AI DISCOVERY</h3>
+                                    <p className="font-bold text-xs">"Vibe Coding" & Beyond</p>
+                                </div>
+                                
+                                {/* Media Buying */}
+                                <div className="span-4 bg-[#EBF998] text-black p-4">
+                                    <h3 className="text-lg font-bold text-[#6370E7]">MEDIA BUYING</h3>
+                                </div>
+                                
+                                {/* Influencer */}
+                                <div className="span-4 border-4 border-[#f474b4] p-4 bg-white">
+                                    <h3 className="text-lg font-bold text-[#f474b4]">CREATIVE COLLABS</h3>
+                                </div>
+                                
+                                {/* Communications */}
+                                <div className="span-4 bg-black text-white p-4">
+                                    <h3 className="text-lg font-bold text-[#f474b4]">COMMUNICATIONS</h3>
                                 </div>
                             </div>
                         </div>
