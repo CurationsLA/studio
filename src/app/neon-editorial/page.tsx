@@ -50,9 +50,9 @@ const NeonEditorialPage = () => {
       }
 
     const cardStyles = [
-        { bg: 'bg-[#76F4B5]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#F5B976]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#DD76F5]', border: 'border-white', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#6EE7B7]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#FDBA74]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#C4B5FD]', border: 'border-white', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
     ];
 
 
