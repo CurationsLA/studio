@@ -50,9 +50,9 @@ const NeonEditorialPage = () => {
       }
 
     const cardStyles = [
-        { bg: 'bg-[#008080]', border: 'border-[#004d4d]', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#ebf998]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-black', border: 'border-[#f474b4]', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#76F4B5]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#F5B976]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#DD76F5]', border: 'border-white', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
     ];
 
 
@@ -132,12 +132,38 @@ const NeonEditorialPage = () => {
                 {/* Hero Grid Layout */}
                 <section id="home" className="pt-24 px-4 md:px-8">
                     <div className="magazine-grid">
-                        <div className="span-12 text-center py-10">
-                            <h1 className="text-5xl md:text-6xl font-bold leading-tight uppercase font-anton">We curate the heart of brands</h1>
+                        <div className="span-8 text-left py-10">
+                            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight uppercase font-anton">We curate the heart of brands</h1>
                             <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
                                 <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
                                     AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
                                 </p>
+                            </div>
+                        </div>
+                        <div className="span-4 space-y-4">
+                             <div className="bg-white p-4">
+                                <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
+                                {loading && <p>Loading...</p>}
+                                {error && <p className="text-red-500">{error}</p>}
+                                {!loading && !error && feed.map((item, index) => {
+                                    const style = cardStyles[index % cardStyles.length];
+                                    return (
+                                        <div key={item.link} className={`event-card ${style.bg} ${style.border}`}>
+                                            <p className={`text-xs font-bold ${style.subtitle}`}>
+                                                <span className={`${style.dateBg} font-bold`}>{formatDate(item.pubDate)}</span>
+                                            </p>
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className={`font-bold hover:underline uppercase text-sm ${style.title}`}>{item.title}</a>
+                                            <p className={`text-sm ${style.subtitle}`}>{item.description}</p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                            
+                            <div className="bg-black text-white p-6 text-center">
+                                <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition"
+                                 style={{ fontFamily: "'Fredoka One', cursive", boxShadow: '2px 2px 5px rgba(0,0,0,0.3)', transform: 'rotate(-2deg)'}}>
+                                    SUBSCRIBE TO CURATIONSLA
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -180,33 +206,8 @@ const NeonEditorialPage = () => {
                                 </div>
                             </div>
                         </div>
-                         {/* Side Panel / News Feed */}
-                         <div className="span-4 space-y-4">
-                             <div className="bg-white p-4">
-                                <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
-                                {loading && <p>Loading...</p>}
-                                {error && <p className="text-red-500">{error}</p>}
-                                {!loading && !error && feed.map((item, index) => {
-                                    const style = cardStyles[index % cardStyles.length];
-                                    return (
-                                        <div key={item.link} className={`event-card ${style.bg} ${style.border}`}>
-                                            <p className={`text-xs font-bold ${style.subtitle}`}>
-                                                <span className={`${style.dateBg} font-bold`}>{formatDate(item.pubDate)}</span>
-                                            </p>
-                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className={`font-bold hover:underline uppercase text-sm ${style.title}`}>{item.title}</a>
-                                            <p className={`text-sm ${style.subtitle}`}>{item.description}</p>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                            
-                            <div className="bg-black text-white p-6 text-center">
-                                <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition"
-                                 style={{ fontFamily: "'Fredoka One', cursive", boxShadow: '2px 2px 5px rgba(0,0,0,0.3)', transform: 'rotate(-2deg)'}}>
-                                    SUBSCRIBE TO CURATIONSLA
-                                </button>
-                            </div>
-                        </div>
+                         {/* Side Panel placeholder*/}
+                         <div className="span-4"></div>
                     </div>
                 </section>
 
