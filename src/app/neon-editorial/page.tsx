@@ -128,14 +128,7 @@ const NeonEditorialPage = () => {
                     <div className="magazine-grid">
                         <div className="span-12 space-y-4">
                             <div className="relative text-center py-10">
-                                 <div className="font-bold uppercase leading-tight text-3xl md:text-4xl space-y-2">
-                                    <div className="space-x-2">
-                                        <span className="font-anton inline-block bg-black text-white px-2 py-1 text-2xl">WE</span>
-                                        <span className="font-anton inline-block bg-black text-white px-2 py-1 text-2xl">CURATE</span>
-                                        <span className="font-marker normal-case text-[#f474b4] text-3xl inline-block">the heart of</span>
-                                        <span className="font-anton text-outline-pink text-6xl inline-block bg-[#f474b4] text-white px-2">BRANDS</span>
-                                    </div>
-                                </div>
+                                <h1 className="text-3xl md:text-4xl font-normal leading-tight">We curate the heart of brands</h1>
                                 <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
                                     <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
                                         AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
