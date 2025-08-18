@@ -70,7 +70,7 @@ const NeonEditorialPage = () => {
                 }
 
                 .text-outline-pink {
-                    -webkit-text-stroke: 2px #f474b4;
+                    -webkit-text-stroke: 2px #F0469B;
                     -webkit-text-fill-color: transparent;
                 }
                 
