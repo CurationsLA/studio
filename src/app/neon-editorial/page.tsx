@@ -149,7 +149,7 @@ const NeonEditorialPage = () => {
                         
                         {/* Side Panel / News Feed */}
                         <div className="span-4 space-y-4">
-                             <div className="bg-[#EBF998] p-6">
+                             <div className="border-4 border-[#6370E7] p-6">
                                 <h3 className="font-bold text-xl mb-2 text-[#6370E7]">NEWS FROM CURATIONSLA</h3>
                                 {loading && <p>Loading...</p>}
                                 {error && <p className="text-red-500">{error}</p>}
