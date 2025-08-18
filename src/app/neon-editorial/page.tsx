@@ -53,25 +53,25 @@ const NeonEditorialPage = () => {
         <>
             <style jsx global>{`
                 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
                 
                 body {
                     font-family: 'IBM Plex Sans', sans-serif;
                     background: #f8f8f8;
                 }
 
-                .neon-pink {
-                    background: #f474b4;
-                    box-shadow: 0 0 30px rgba(244, 116, 180, 0.5);
+                .font-anton {
+                    font-family: 'Anton', sans-serif;
                 }
-                
-                .neon-blue {
-                    background: #6370E7;
-                    box-shadow: 0 0 30px rgba(99, 112, 231, 0.5);
+
+                .font-permanent-marker {
+                    font-family: 'Permanent Marker', sans-serif;
                 }
-                
-                .neon-green {
-                    background: #EBF998;
-                    box-shadow: 0 0 30px rgba(235, 249, 152, 0.3);
+
+                .text-outline-pink {
+                    -webkit-text-stroke: 2px #f474b4;
+                    -webkit-text-fill-color: transparent;
                 }
                 
                 .magazine-grid {
@@ -88,30 +88,6 @@ const NeonEditorialPage = () => {
                 
                 @media (max-width: 768px) {
                     .span-6, .span-4, .span-3, .span-8 { grid-column: span 12; }
-                }
-                
-                .text-outline {
-                    -webkit-text-stroke: 2px #f474b4;
-                    -webkit-text-fill-color: transparent;
-                }
-
-                .text-outline-black {
-                    -webkit-text-stroke: 1px black;
-                    -webkit-text-fill-color: transparent;
-                    text-shadow: 0 0 5px rgba(0,0,0,0.5);
-                }
-                
-                @keyframes pulse {
-                    0%, 100% { opacity: 1; }
-                    50% { opacity: 0.7; }
-                }
-                
-                .pulse-animation {
-                    animation: pulse 2s ease-in-out infinite;
-                }
-                
-                .diagonal-text {
-                    transform: rotate(-3deg);
                 }
             `}</style>
             <div className="bg-[#f8f8f8] text-black">
@@ -140,14 +116,18 @@ const NeonEditorialPage = () => {
                         {/* Main Content Column */}
                         <div className="span-8 space-y-4">
                             {/* Main Title */}
-                            <div className="relative text-center py-10" style={{ transform: 'rotate(-2deg)' }}>
+                            <div className="relative text-center py-10">
                                 <div className="font-bold uppercase leading-tight text-4xl md:text-5xl space-y-2">
-                                    <span className="inline-block" style={{ transform: 'rotate(-2deg)' }}>WE</span>
-                                    <span className="inline-block bg-black text-white px-3 py-1 mx-2" style={{ transform: 'rotate(1deg)' }}>CURATE</span>
-                                    <span className="inline-block" style={{ transform: 'rotate(-3deg)' }}>THE</span>
-                                    <span className="inline-block text-outline text-7xl mx-2" style={{ transform: 'rotate(4deg)' }}>HEART</span>
-                                    <span className="inline-block" style={{ transform: 'rotate(-1deg)' }}>OF</span>
-                                    <span className="inline-block text-outline text-7xl mx-2" style={{ transform: 'rotate(2deg)' }}>BRANDS</span>
+                                    <div className="space-x-4" style={{ transform: 'rotate(-2deg)' }}>
+                                        <span className="font-anton inline-block bg-black text-white px-2 py-1">WE</span>
+                                        <span className="font-anton inline-block bg-black text-white px-2 py-1">CURATE</span>
+                                    </div>
+                                    <div className="space-x-2" style={{ transform: 'rotate(1deg)' }}>
+                                        <span className="font-permanent-marker normal-case text-[#f474b4] text-5xl inline-block">the heart of</span>
+                                    </div>
+                                    <div>
+                                        <span className="font-anton text-outline-pink text-8xl inline-block" style={{ transform: 'rotate(-3deg)' }}>BRANDS</span>
+                                    </div>
                                 </div>
                                 <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
                                     <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
@@ -158,8 +138,8 @@ const NeonEditorialPage = () => {
                             
                             {/* Services Section */}
                              <div id="services">
-                                <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block" style={{fontSize: '60%'}}>SERVICES</h2>
                                 <div className="h-1 bg-[#f474b4] mb-6 mt-2"></div>
+                                <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block" style={{fontSize: '60%'}}>SERVICES</h2>
                                 
                                 <div className="magazine-grid">
                                     {/* Feature Service */}
@@ -247,7 +227,7 @@ const NeonEditorialPage = () => {
                                 <h2 className="text-5xl font-bold mb-4">
                                     <span className="text-[#f474b4]">CURATIONS</span> +
                                     <span className="text-[#6370E7]"> CurationsLA</span>
-                                _                                </h2>
+                                </h2>
                                 <p className="text-xl mb-6">The only dual-platform powerhouse in Los Angeles.</p>
                                 <p className="mb-6">While we craft your brand strategy, our sister company puts you directly in the inbox of LA's most influential community leaders, creators, and culture makers.</p>
                             </div>
