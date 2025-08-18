@@ -20,6 +20,9 @@ export default function Home() {
         <Link href="/split-screen-magazine" className="text-lg text-accent hover:underline">
           Split Screen Magazine
         </Link>
+        <Link href="/asymmetric-grid" className="text-lg text-accent hover:underline">
+          Asymmetric Grid
+        </Link>
       </div>
     </div>
   );
