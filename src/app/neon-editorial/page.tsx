@@ -1,4 +1,5 @@
 
+
 'use client';
 import { useState, useEffect } from 'react';
 
@@ -50,8 +51,8 @@ const NeonEditorialPage = () => {
       }
 
     const cardStyles = [
-        { bg: 'bg-[#6EE7B7]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#FDBA74]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#A7F3D0]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#FDE68A]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
         { bg: 'bg-[#C4B5FD]', border: 'border-white', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
     ];
 
@@ -161,7 +162,7 @@ const NeonEditorialPage = () => {
                             
                             <div className="bg-black text-white p-6 text-center">
                                 <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition"
-                                 style={{ fontFamily: "'Fredoka One', cursive", boxShadow: '2px 2px 5px rgba(0,0,0,0.3)', transform: 'rotate(-2deg)'}}>
+                                 style={{ boxShadow: '2px 2px 5px rgba(0,0,0,0.3)', transform: 'rotate(-2deg)'}}>
                                     SUBSCRIBE TO CURATIONSLA
                                 </button>
                             </div>
