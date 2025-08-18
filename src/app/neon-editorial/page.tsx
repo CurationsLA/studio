@@ -110,36 +110,36 @@ const NeonEditorialPage = () => {
                 }
 
                 .event-card-pp1 {
-                    background-color: rgb(234, 224, 255);
-                    border-color: rgb(60, 19, 97);
+                    background-color: rgb(74, 0, 120);
+                    border-color: rgb(168, 85, 247);
                 }
                 .event-card-pp1 .event-title {
-                    color: rgb(0, 0, 0);
+                    color: rgb(255, 255, 255);
                 }
                 .event-card-pp1 .event-subtitle {
-                    color: rgb(34, 34, 34);
+                    color: rgb(235, 220, 255);
                 }
 
                 .event-card-pp2 {
-                    background-color: rgb(255, 239, 200);
-                    border-color: rgb(180, 90, 0);
+                    background-color: rgb(176, 70, 0);
+                    border-color: rgb(255, 145, 0);
                 }
                 .event-card-pp2 .event-title {
-                    color: rgb(0, 0, 0);
+                    color: rgb(255, 255, 255);
                 }
                 .event-card-pp2 .event-subtitle {
-                    color: rgb(34, 34, 34);
+                    color: rgb(255, 235, 220);
                 }
 
                 .event-card-pp3 {
-                    background-color: rgb(210, 245, 230);
-                    border-color: rgb(0, 120, 90);
+                    background-color: rgb(0, 100, 90);
+                    border-color: rgb(0, 160, 140);
                 }
                 .event-card-pp3 .event-title {
-                    color: rgb(0, 0, 0);
+                    color: rgb(255, 255, 255);
                 }
                 .event-card-pp3 .event-subtitle {
-                    color: rgb(34, 34, 34);
+                    color: rgb(220, 245, 240);
                 }
             `}</style>
             <div className="bg-[#f8f8f8] text-black">
