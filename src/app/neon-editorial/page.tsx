@@ -84,10 +84,11 @@ const NeonEditorialPage = () => {
                     <div className="magazine-grid h-screen items-center">
                         {/* Main Title */}
                         <div className="span-8">
-                            <h1 className="text-6xl md:text-8xl font-bold diagonal-text">
-                                <span className="block">CURATIONS</span>
-                                <span className="block text-outline">CURATIONS</span>
-                                <span className="block text-[#FF5BF1]">CURATIONS</span>
+                            <h1 className="text-5xl md:text-7xl font-bold diagonal-text uppercase leading-tight">
+                                <span className="block">We Curate The</span>
+                                <span className="block text-[#FF5BF1]">Heart of Brands.</span>
+                                <span className="block text-outline">And The News</span>
+                                <span className="block text-[#6370E7]">They Break.</span>
                             </h1>
                             <div className="mt-8 space-y-2">
                                 <p className="text-2xl">We don't just market brands.</p>
