@@ -110,30 +110,30 @@ const NeonEditorialPage = () => {
                 }
 
                 .event-card-sdg1 {
-                    background-color: #FF69B4;
-                    border-color: #e55da2;
+                    background-color: #EC407A;
+                    border-color: #D43A6D;
                 }
                 .event-card-sdg1 .event-title {
-                    color: #000000;
+                    color: #ffffff;
                 }
                 .event-card-sdg1 .event-subtitle {
-                    color: #333333;
+                    color: #ffffff;
                 }
 
                 .event-card-sdg2 {
-                    background-color: #FF9966;
-                    border-color: #e58a5c;
+                    background-color: #FF7043;
+                    border-color: #E6653C;
                 }
                 .event-card-sdg2 .event-title {
-                    color: #000000;
+                    color: #ffffff;
                 }
                 .event-card-sdg2 .event-subtitle {
-                    color: #333333;
+                    color: #ffffff;
                 }
 
                 .event-card-sdg3 {
-                    background-color: #FFDD33;
-                    border-color: #e5c72e;
+                    background-color: #FFC107;
+                    border-color: #E6AE06;
                 }
                 .event-card-sdg3 .event-title {
                     color: #000000;
