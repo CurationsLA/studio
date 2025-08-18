@@ -204,7 +204,7 @@ const LayeredDepthPage = () => {
                 <section className="py-20 px-8">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-7xl font-bold mb-16 text-center">
-                            SERVICES IN <span className="text-neon-pink">VIBES</span>
+                            SERVICES <span className="text-neon-pink">VIBES</span>
                         </h2>
                         
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
