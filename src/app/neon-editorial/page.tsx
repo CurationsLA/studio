@@ -49,6 +49,12 @@ const NeonEditorialPage = () => {
         }).toUpperCase();
       }
 
+    const cardStyles = [
+        { bg: 'bg-[#ff4c4c]', border: 'border-[#7f0000]', title: 'text-white', subtitle: 'text-[#ffe5e0]', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#00cfc1]', border: 'border-[#003366]', title: 'text-white', subtitle: 'text-[#d0fafa]', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#fff275]', border: 'border-[#cc6600]', title: 'text-black', subtitle: 'text-[#333333]', dateBg: 'bg-transparent' },
+    ];
+
 
     return (
         <>
@@ -98,8 +104,7 @@ const NeonEditorialPage = () => {
                 }
 
                 .event-card {
-                  background-color: #e0f7fa;
-                  border-left: 5px solid #00bcd4;
+                  border-left-width: 5px;
                   padding: 1rem;
                   margin-bottom: 1rem;
                 }
@@ -128,7 +133,7 @@ const NeonEditorialPage = () => {
                 <section id="home" className="pt-24 px-4 md:px-8">
                     <div className="magazine-grid">
                         <div className="span-12 text-center py-10">
-                            <h1 className="text-5xl md:text-6xl font-bold leading-tight uppercase">We curate the heart of brands</h1>
+                            <h1 className="text-5xl md:text-6xl font-bold leading-tight uppercase">WE CURATE THE HEART OF BRANDS</h1>
                             <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
                                 <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
                                     AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
@@ -181,13 +186,18 @@ const NeonEditorialPage = () => {
                                 <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
                                 {loading && <p>Loading...</p>}
                                 {error && <p className="text-red-500">{error}</p>}
-                                {!loading && !error && feed.map(item => (
-                                    <div key={item.link} className="event-card">
-                                        <p className="text-xs font-bold"><span className="bg-[#EBF998] font-bold">{formatDate(item.pubDate)}</span></p>
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase text-sm">{item.title}</a>
-                                        <p className="text-sm">{item.description}</p>
-                                    </div>
-                                ))}
+                                {!loading && !error && feed.map((item, index) => {
+                                    const style = cardStyles[index % cardStyles.length];
+                                    return (
+                                        <div key={item.link} className={`event-card ${style.bg} ${style.border}`}>
+                                            <p className={`text-xs font-bold ${style.subtitle}`}>
+                                                <span className={`${style.dateBg} font-bold`}>{formatDate(item.pubDate)}</span>
+                                            </p>
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className={`font-bold hover:underline uppercase text-sm ${style.title}`}>{item.title}</a>
+                                            <p className={`text-sm ${style.subtitle}`}>{item.description}</p>
+                                        </div>
+                                    )
+                                })}
                             </div>
                             
                             <div className="bg-black text-white p-6 text-center">
