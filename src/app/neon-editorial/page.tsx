@@ -55,6 +55,7 @@ const NeonEditorialPage = () => {
                 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
                 
                 body {
                     font-family: 'IBM Plex Sans', sans-serif;
@@ -64,14 +65,22 @@ const NeonEditorialPage = () => {
                 .font-anton {
                     font-family: 'Anton', sans-serif;
                 }
-
+                
                 .font-permanent-marker {
                     font-family: 'Permanent Marker', sans-serif;
+                }
+
+                .font-marker {
+                    font-family: 'Permanent Marker', cursive;
                 }
 
                 .text-outline-pink {
                     -webkit-text-stroke: 2px #F0469B;
                     -webkit-text-fill-color: transparent;
+                }
+
+                .neon-glow {
+                   text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
                 }
                 
                 .magazine-grid {
@@ -89,6 +98,13 @@ const NeonEditorialPage = () => {
                 
                 @media (max-width: 768px) {
                     .span-6, .span-4, .span-3, .span-8, .span-9 { grid-column: span 12; }
+                }
+
+                .event-card {
+                  background-color: #e0f7fa;
+                  border-left: 5px solid #00bcd4;
+                  padding: 1rem;
+                  margin-bottom: 1rem;
                 }
             `}</style>
             <div className="bg-[#f8f8f8] text-black">
@@ -120,14 +136,14 @@ const NeonEditorialPage = () => {
                             <div className="relative text-center py-10">
                                 <div className="font-bold uppercase leading-tight text-4xl md:text-5xl space-y-2">
                                     <div className="space-x-4" style={{ transform: 'rotate(-2deg)' }}>
-                                        <span className="font-anton inline-block bg-black text-white px-2 py-1">WE</span>
-                                        <span className="font-anton inline-block bg-black text-white px-2 py-1">CURATE</span>
+                                        <span className="font-anton inline-block bg-black text-white px-2 py-1 neon-glow">WE</span>
+                                        <span className="font-anton inline-block bg-black text-white px-2 py-1 neon-glow">CURATE</span>
                                     </div>
                                     <div className="space-x-2" style={{ transform: 'rotate(1deg)' }}>
-                                        <span className="font-permanent-marker normal-case text-[#f474b4] text-5xl inline-block">the heart of</span>
+                                        <span className="font-marker normal-case text-[#f474b4] text-5xl inline-block">the heart of</span>
                                     </div>
                                     <div>
-                                        <span className="font-anton text-outline-pink text-8xl inline-block" style={{ transform: 'rotate(-3deg)' }}>BRANDS</span>
+                                        <span className="font-anton text-outline-pink text-8xl inline-block neon-glow" style={{ transform: 'rotate(-3deg)' }}>BRANDS</span>
                                     </div>
                                 </div>
                                 <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
@@ -177,21 +193,22 @@ const NeonEditorialPage = () => {
                         
                         {/* Side Panel / News Feed */}
                         <div className="span-3 space-y-4">
-                             <div className="border-4 border-[#f474b4] p-6 bg-white">
+                             <div className="bg-white p-4">
                                 <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
                                 {loading && <p>Loading...</p>}
                                 {error && <p className="text-red-500">{error}</p>}
                                 {!loading && !error && feed.map(item => (
-                                    <div key={item.link} className="mb-4">
+                                    <div key={item.link} className="event-card">
                                         <p className="text-xs font-bold"><span className="bg-[#EBF998] font-bold">{formatDate(item.pubDate)}</span></p>
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase">{item.title}</a>
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase text-sm">{item.title}</a>
                                         <p className="text-sm">{item.description}</p>
                                     </div>
                                 ))}
                             </div>
                             
                             <div className="bg-black text-white p-6 text-center">
-                                <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition">
+                                <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition"
+                                 style={{ fontFamily: "'Fredoka One', cursive", boxShadow: '2px 2px 5px rgba(0,0,0,0.3)', transform: 'rotate(-2deg)'}}>
                                     SUBSCRIBE TO CURATIONSLA
                                 </button>
                             </div>
