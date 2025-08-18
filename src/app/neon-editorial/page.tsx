@@ -45,6 +45,12 @@ const NeonEditorialPage = () => {
                     -webkit-text-stroke: 2px #FF5BF1;
                     -webkit-text-fill-color: transparent;
                 }
+
+                .text-outline-black {
+                    -webkit-text-stroke: 1px black;
+                    -webkit-text-fill-color: transparent;
+                    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+                }
                 
                 @keyframes pulse {
                     0%, 100% { opacity: 1; }
@@ -85,13 +91,12 @@ const NeonEditorialPage = () => {
                         {/* Main Title */}
                         <div className="span-8">
                             <div className="diagonal-text">
-                                <span className="neon-pink text-white font-bold text-xl md:text-2xl px-4 py-1 mb-4 inline-block">CURATIONS</span>
                                 <h1 className="text-5xl md:text-6xl font-bold uppercase leading-tight">
                                     WE CURATE THE <span className="text-[#FF5BF1]">HEART</span><br/>OF <span className="text-[#6370E7]">BRANDS</span>
                                 </h1>
                             </div>
                             <div className="mt-8 space-y-2">
-                                <p className="text-3xl font-bold">And the news they <span className="neon-pink text-white px-2">BREAK</span></p>
+                                <p className="text-3xl font-bold"><span className="text-outline-black">And the news they</span> <span className="neon-pink text-white px-2">BREAK</span></p>
                             </div>
                         </div>
                         
@@ -218,7 +223,7 @@ const NeonEditorialPage = () => {
                 {/* CurationsLA Feature */}
                 <section className="py-20 px-4 md:px-8">
                     <div className="max-w-6xl mx-auto">
-                        <div className="grid md:grid-cols-2 gap-8 items-center">
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
                                 <h2 className="text-5xl font-bold mb-4">
                                     <span className="text-[#FF5BF1]">CURATIONS</span> +
@@ -226,29 +231,26 @@ const NeonEditorialPage = () => {
                                 </h2>
                                 <p className="text-xl mb-6">The only dual-platform powerhouse in Los Angeles.</p>
                                 <p className="mb-6">While we craft your brand strategy, our sister company puts you directly in the inbox of LA's most influential community leaders, creators, and culture makers.</p>
-                                <div className="bg-[#EBF998] p-6 text-black">
-                                    <p className="font-bold text-xl mb-2">EXCLUSIVE ACCESS</p>
-                                    <ul className="space-y-1">
-                                        <li>📰 Breaking LA News</li>
-                                        <li>🎯 Direct Brand Connections</li>
-                                        <li>💌 Weekly Inbox Presence</li>
-                                        <li>🤝 Community Network</li>
-                                    </ul>
-                                </div>
                             </div>
                             
                             <div className="space-y-4">
-                                <div className="border-l-4 border-[#FF5BF1] pl-4">
-                                    <p className="font-bold">AGENCY SERVICES</p>
-                                    <p className="text-sm text-gray-600">Full-scope creative solutions</p>
+                                <div className="bg-[#EBF998] p-6">
+                                    <h3 className="font-bold text-xl mb-2">RECENTLY IN <span className="text-[#6370E7]">CurationsLA</span></h3>
+                                    <p>→ The Best Tacos in East LA (Eats)</p>
+                                    <p>→ Indie Film Fest This Weekend (Events)</p>
+                                    <p>→ Vibe Coding: Our Latest Obsession (Newsletter)</p>
                                 </div>
-                                <div className="border-l-4 border-[#6370E7] pl-4">
-                                    <p className="font-bold">MEDIA COVERAGE</p>
-                                    <p className="text-sm text-gray-600">Your story, amplified</p>
+                                
+                                <div className="border-4 border-[#6370E7] p-6">
+                                    <p className="font-bold">IN YOUR INBOX:</p>
+                                    <p className="text-2xl mt-2">💌 WEEKLY DROPS</p>
                                 </div>
-                                <div className="border-l-4 border-[#EBF998] pl-4">
-                                    <p className="font-bold">COMMUNITY</p>
-                                    <p className="text-sm text-gray-600">Where brands become besties</p>
+                                
+                                <div className="bg-black text-white p-6 text-center">
+                                    <p className="font-bold mb-2">GET THE ALPHA</p>
+                                    <button className="w-full px-6 py-3 bg-[#FF5BF1] text-black font-bold hover:bg-[#6370E7] hover:text-white transition">
+                                        SUBSCRIBE TO CURATIONSLA
+                                    </button>
                                 </div>
                             </div>
                         </div>
