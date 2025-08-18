@@ -56,7 +56,7 @@ const NeonEditorialPage = () => {
                 
                 body {
                     font-family: 'IBM Plex Sans', sans-serif;
-                    background: #fcfcfc;
+                    background: #f8f8f8;
                 }
 
                 .neon-pink {
@@ -114,7 +114,7 @@ const NeonEditorialPage = () => {
                     transform: rotate(-3deg);
                 }
             `}</style>
-            <div className="bg-[#fcfcfc] text-black">
+            <div className="bg-[#f8f8f8] text-black">
                 {/* Sticky Side Navigation */}
                 <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
                     <a href="#home" className="w-3 h-3 rounded-full bg-[#f474b4] hover:scale-150 transition"></a>
@@ -140,7 +140,7 @@ const NeonEditorialPage = () => {
                             {/* Main Title */}
                             <div className="diagonal-text text-center">
                                 <h1 className="text-4xl md:text-5xl font-bold uppercase leading-tight">
-                                    WE CURATE THE <span className="text-[#f474b4] drop-shadow-md">HEART</span> OF <span className="bg-[#f474b4] text-white px-2">BRANDS</span>
+                                    WE CURATE THE <span className="text-[#7676F4] drop-shadow-md">HEART</span> OF <span className="bg-[#f474b4] text-white px-2">BRANDS</span>
                                 </h1>
                                 <div className="mt-4">
                                     <p className="text-lg font-bold uppercase">AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
@@ -149,7 +149,7 @@ const NeonEditorialPage = () => {
                             
                             {/* Services Section */}
                              <div id="services">
-                                <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block">SERVICES</h2>
+                                <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block" style={{fontSize: '60%'}}>SERVICES</h2>
                                 <div className="h-1 bg-[#f474b4] mb-6 mt-2"></div>
                                 
                                 <div className="magazine-grid">
