@@ -58,7 +58,7 @@ const ServiceCard = ({ title, description, icon, href }: { title: string, descri
     <Card className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
             <div className="text-accent">{icon}</div>
-            <CardTitle className="text-base font-bold text-[#1A1A1A]">{title}</CardTitle>
+            <CardTitle className="text-sm font-bold uppercase text-primary">{title}</CardTitle>
         </CardHeader>
         <CardContent>
             <p className="text-sm text-gray-600 mb-2">{description}</p>
@@ -72,9 +72,6 @@ const ServiceCard = ({ title, description, icon, href }: { title: string, descri
 export default function Services() {
   return (
     <div className="bg-white p-6">
-      <h2 className="text-sm font-bold font-headline mb-4 text-center tracking-widest text-muted-foreground uppercase">
-        Public Relationships | Branding | Media
-      </h2>
       <Tabs defaultValue="pr" className="w-full">
         <TabsList className="grid w-full grid-cols-3 bg-transparent rounded-lg">
           <TabsTrigger value="pr" className="text-xs sm:text-sm uppercase font-bold data-[state=active]:bg-[#EBF998] data-[state=active]:text-[#1A1A1A] text-[#1A1A1A]">Public Relationships</TabsTrigger>
@@ -102,7 +99,7 @@ export default function Services() {
         <Card className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
             <CardHeader className="flex flex-row items-center gap-4 pb-2">
                  <div className="text-accent"><Rocket /></div>
-                <CardTitle className="text-base font-bold text-[#1A1A1A]">Collaborations</CardTitle>
+                <CardTitle className="text-sm font-bold uppercase text-primary">Collaborations</CardTitle>
             </CardHeader>
             <CardContent>
                 <p className="text-sm text-gray-600 mb-2">Creative, digital, partnership-driven projects that move culture.</p>
