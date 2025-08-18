@@ -50,9 +50,9 @@ const NeonEditorialPage = () => {
       }
 
     const cardStyles = [
-        { bg: 'bg-[#0022ff]', border: 'border-[#EBF998]', title: 'text-white', subtitle: 'text-[#EBF998]', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#ffff00]', border: 'border-[#f474b4]', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-black', border: 'border-[#f474b4]', title: 'text-white', subtitle: 'text-[#f474b4]', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#008080]', border: 'border-[#f474b4]', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#ffde59]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-black', border: 'border-[#008080]', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
     ];
 
 
@@ -133,7 +133,7 @@ const NeonEditorialPage = () => {
                 <section id="home" className="pt-24 px-4 md:px-8">
                     <div className="magazine-grid">
                         <div className="span-12 text-center py-10">
-                            <h1 className="text-5xl md:text-6xl font-bold leading-tight uppercase">We curate the heart of brands</h1>
+                            <h1 className="text-5xl md:text-6xl font-bold leading-tight uppercase font-anton">We curate the heart of brands</h1>
                             <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
                                 <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
                                     AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
