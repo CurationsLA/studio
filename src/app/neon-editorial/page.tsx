@@ -86,8 +86,8 @@ const NeonEditorialPage = () => {
                 </div>
 
                 {/* Hero Grid Layout */}
-                <section id="home" className="min-h-screen pt-16 px-4 md:px-8">
-                    <div className="magazine-grid h-screen items-center">
+                <section id="home" className="min-h-screen pt-24 px-4 md:px-8">
+                    <div className="magazine-grid">
                         {/* Main Title */}
                         <div className="span-8">
                             <div className="diagonal-text">
@@ -96,7 +96,7 @@ const NeonEditorialPage = () => {
                                 </h1>
                             </div>
                             <div className="mt-8 space-y-2">
-                                <p className="text-3xl font-bold"><span className="text-outline-black">And the news they</span> <span className="neon-pink text-white px-2">BREAK</span></p>
+                                <p className="text-3xl font-bold">And the news they BREAK</p>
                             </div>
                         </div>
                         
