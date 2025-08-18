@@ -132,16 +132,56 @@ const NeonEditorialPage = () => {
                 </div>
 
                 {/* Hero Grid Layout */}
-                <section id="home" className="min-h-screen pt-24 px-4 md:px-8">
+                <section id="home" className="pt-24 px-4 md:px-8">
                     <div className="magazine-grid">
-                        {/* Main Title */}
-                        <div className="span-8">
+                        {/* Main Content Column */}
+                        <div className="span-8 space-y-12">
+                            {/* Main Title */}
                             <div className="diagonal-text text-center">
                                 <h1 className="text-5xl md:text-6xl font-bold uppercase leading-tight">
                                     WE CURATE THE <span className="text-[#FF5BF1] drop-shadow-md">HEART</span> OF <span className="text-[#6370E7] drop-shadow-md">BRANDS</span>
                                 </h1>
                                 <div className="mt-4">
                                     <p className="text-lg font-bold uppercase">AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
+                                </div>
+                            </div>
+                            
+                            {/* Services Section */}
+                             <div id="services">
+                                <div className="flex items-center mb-4">
+                                    <h2 className="text-2xl font-bold">SERVICES</h2>
+                                </div>
+                                <div className="h-1 bg-[#EBF998] mb-6"></div>
+                                
+                                <div className="magazine-grid">
+                                    {/* Feature Service */}
+                                    <div className="span-6 bg-black text-white p-6 min-h-[250px]">
+                                        <span className="text-4xl">🍽️</span>
+                                        <h3 className="text-xl font-bold mt-2 mb-2 text-[#EBF998]">RESTAURANT & BUSINESS</h3>
+                                        <p className="text-xs">From ghost kitchens to grand openings, we know food.</p>
+                                    </div>
+                                    
+                                    {/* AI Discovery */}
+                                    <div className="span-6 bg-[#6370E7] text-white p-6 min-h-[250px]">
+                                        <span className="text-4xl">🤖</span>
+                                        <h3 className="text-xl font-bold mt-2 mb-2">AI DISCOVERY</h3>
+                                        <p className="font-bold text-xs">"Vibe Coding" & Beyond</p>
+                                    </div>
+                                    
+                                    {/* Media Buying */}
+                                    <div className="span-4 bg-[#EBF998] text-black p-4">
+                                        <h3 className="text-lg font-bold text-[#6370E7]">MEDIA BUYING</h3>
+                                    </div>
+                                    
+                                    {/* Influencer */}
+                                    <div className="span-4 border-4 border-[#FF5BF1] p-4 bg-white">
+                                        <h3 className="text-lg font-bold text-[#FF5BF1]">CREATIVE COLLABS</h3>
+                                    </div>
+                                    
+                                    {/* Communications */}
+                                    <div className="span-4 bg-black text-white p-4">
+                                        <h3 className="text-lg font-bold text-[#FF5BF1]">COMMUNICATIONS</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -176,78 +216,9 @@ const NeonEditorialPage = () => {
                 </section>
 
                 {/* Services Magazine Spread */}
-                <section id="services" className="py-20 px-4 md:px-8">
+                <section className="py-20 px-4 md:px-8">
                     <div className="max-w-7xl mx-auto">
-                        {/* Section Header */}
-                        <div className="flex items-center justify-center mb-12">
-                            <h2 className="text-4xl font-bold bg-[#FF5BF1] text-white px-6 py-2">SERVICES</h2>
-                        </div>
-                        
                         <div className="magazine-grid">
-                            {/* Feature Service */}
-                            <div className="span-6 bg-black text-white p-8 min-h-[350px]">
-                                <span className="text-5xl">🍽️</span>
-                                <h3 className="text-2xl font-bold mt-4 mb-4 text-[#EBF998]">RESTAURANT & BUSINESS</h3>
-                                <p className="mb-4 text-sm">From ghost kitchens to grand openings, we know food.</p>
-                                <ul className="space-y-1 text-xs">
-                                    <li>✓ Grand Openings & Events</li>
-                                    <li>✓ Menu Marketing</li>
-                                    <li>✓ Third-Party App Strategy</li>
-                                    <li>✓ Delivery Optimization</li>
-                                    <li>✓ Staff & Vendor Relations</li>
-                                </ul>
-                            </div>
-                            
-                            {/* AI Discovery */}
-                            <div className="span-6 bg-[#6370E7] text-white p-8 min-h-[350px]">
-                                <span className="text-5xl">🤖</span>
-                                <h3 className="text-2xl font-bold mt-4 mb-4">AI DISCOVERY</h3>
-                                <p className="mb-4 font-bold text-sm">"Vibe Coding" & Beyond</p>
-                                <ul className="space-y-1 text-xs">
-                                    <li>• AI Prompt Engineering</li>
-                                    <li>• SEO & AI Citations</li>
-                                    <li>• Tech Stack Discovery</li>
-                                    <li>• Business Consultations</li>
-                                    <li>• Team Workshops</li>
-                                </ul>
-                            </div>
-                            
-                            {/* Media Buying */}
-                            <div className="span-4 bg-[#EBF998] text-black p-6">
-                                <h3 className="text-xl font-bold mb-4 text-[#6370E7]">MEDIA BUYING</h3>
-                                <div className="space-y-2 text-xs">
-                                    <p>📺 Netflix | KTLA | NBC</p>
-                                    <p>📻 Podcast Placement</p>
-                                    <p>📍 Geofencing</p>
-                                    <p>🎯 Amazon | LinkedIn | Reddit</p>
-                                    <p>🔴 Live Streaming</p>
-                                </div>
-                            </div>
-                            
-                            {/* Influencer */}
-                            <div className="span-4 border-4 border-[#FF5BF1] p-6 bg-white">
-                                <h3 className="text-xl font-bold mb-4 text-[#FF5BF1]">CREATIVE COLLABS</h3>
-                                <p className="text-xs mb-4">UGC that actually converts.</p>
-                                <ul className="text-xs space-y-1">
-                                    <li>→ Social Strategy</li>
-                                    <li>→ Content Gaps</li>
-                                    <li>→ Digital Listening</li>
-                                    <li>→ Clips & Shorts</li>
-                                </ul>
-                            </div>
-                            
-                            {/* Communications */}
-                            <div className="span-4 bg-black text-white p-6">
-                                <h3 className="text-xl font-bold mb-4 text-[#FF5BF1]">COMMUNICATIONS</h3>
-                                <ul className="text-xs space-y-1">
-                                    <li>Corporate Comms</li>
-                                    <li>Executive Branding</li>
-                                    <li>Newsletter Design</li>
-                                    <li>Chaos Management</li>
-                                    <li>Legal Matching</li>
-                                </ul>
-                            </div>
-                            
                             {/* Full Stack */}
                             <div className="span-12 bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                                 <div className="flex flex-wrap justify-between items-center">
@@ -354,5 +325,3 @@ const NeonEditorialPage = () => {
 };
 
 export default NeonEditorialPage;
-
-    
