@@ -166,7 +166,7 @@ const LayeredDepthPage = () => {
                                 <div className="bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] p-8 neon-glow-pink">
                                     <span className="text-sm font-bold bg-white text-black px-2 py-1 inline-block">AUG 17, 2025</span>
                                     <h3 className="text-3xl font-bold mt-3 mb-4">📅 EVENTS: WEEK OF MONDAY</h3>
-                                    <p className="mb-4">Dave Matthews Band, Adam Sandler, Mt. Joy, The Fray, Nelly, and more.</p>
+                                    <p className="mb-4">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
                                     <ul className="space-y-2 mb-6">
                                         <li>🎤 Comedy Shows</li>
                                         <li>🎸 Live Music</li>
