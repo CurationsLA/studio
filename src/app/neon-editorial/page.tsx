@@ -51,7 +51,7 @@ const NeonEditorialPage = () => {
 
     const cardStyles = [
         { bg: 'bg-[#0022ff]', border: 'border-[#EBF998]', title: 'text-white', subtitle: 'text-[#EBF998]', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#ffff00]', border: 'border-[#5d00ff]', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#ffff00]', border: 'border-[#f474b4]', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
         { bg: 'bg-black', border: 'border-[#f474b4]', title: 'text-white', subtitle: 'text-[#f474b4]', dateBg: 'bg-transparent' },
     ];
 
