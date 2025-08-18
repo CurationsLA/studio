@@ -14,6 +14,9 @@ export default function Home() {
         <Link href="/zine-mock" className="text-lg text-accent hover:underline">
           Zine Mock
         </Link>
+        <Link href="/zine-remix" className="text-lg text-accent hover:underline">
+          Zine Remix
+        </Link>
       </div>
     </div>
   );
