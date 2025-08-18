@@ -78,10 +78,6 @@ const NeonEditorialPage = () => {
                     -webkit-text-stroke: 2px #F0469B;
                     -webkit-text-fill-color: transparent;
                 }
-
-                .neon-glow {
-                   text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
-                }
                 
                 .magazine-grid {
                     display: grid;
@@ -136,14 +132,14 @@ const NeonEditorialPage = () => {
                             <div className="relative text-center py-10">
                                 <div className="font-bold uppercase leading-tight text-4xl md:text-5xl space-y-2">
                                     <div className="space-x-4" style={{ transform: 'rotate(-2deg)' }}>
-                                        <span className="font-anton inline-block bg-black text-white px-2 py-1 neon-glow">WE</span>
-                                        <span className="font-anton inline-block bg-black text-white px-2 py-1 neon-glow">CURATE</span>
+                                        <span className="font-anton inline-block bg-black text-white px-2 py-1">WE</span>
+                                        <span className="font-anton inline-block bg-black text-white px-2 py-1">CURATE</span>
                                     </div>
                                     <div className="space-x-2" style={{ transform: 'rotate(1deg)' }}>
                                         <span className="font-marker normal-case text-[#f474b4] text-5xl inline-block">the heart of</span>
                                     </div>
                                     <div>
-                                        <span className="font-anton text-outline-pink text-8xl inline-block neon-glow" style={{ transform: 'rotate(-3deg)' }}>BRANDS</span>
+                                        <span className="font-anton text-outline-pink text-8xl inline-block" style={{ transform: 'rotate(-3deg)' }}>BRANDS</span>
                                     </div>
                                 </div>
                                 <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
