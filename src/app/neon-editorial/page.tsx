@@ -140,7 +140,7 @@ const NeonEditorialPage = () => {
                             {/* Main Title */}
                             <div className="diagonal-text text-center">
                                 <h1 className="text-4xl md:text-5xl font-bold uppercase leading-tight">
-                                    WE CURATE THE <span className="text-[#7676F4] drop-shadow-md">HEART</span> OF <span className="bg-[#f474b4] text-white px-2">BRANDS</span>
+                                    WE CURATE THE <span className="text-[#7676F4] drop-shadow-md">HEART</span> OF <span className="bg-[#F0469B] text-white px-2">BRANDS</span>
                                 </h1>
                                 <div className="mt-4">
                                     <p className="text-lg font-bold uppercase">AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
