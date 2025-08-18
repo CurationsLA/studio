@@ -136,20 +136,20 @@ const NeonEditorialPage = () => {
                     <div className="magazine-grid">
                         {/* Main Title */}
                         <div className="span-8">
-                            <div className="diagonal-text">
+                            <div className="diagonal-text text-center">
                                 <h1 className="text-5xl md:text-6xl font-bold uppercase leading-tight">
                                     WE CURATE THE <span className="text-[#FF5BF1] drop-shadow-md">HEART</span><br/>
-                                    OF <span className="text-[#6370E7] drop-shadow-md">BRANDS</span>
+                                    OF <span className="text-[#FF5BF1] drop-shadow-md">BRANDS</span>
                                 </h1>
-                            </div>
-                            <div className="mt-8 space-y-2">
-                                <p className="text-3xl font-bold">And the news they <span className="bg-[#FF5BF1] text-white px-2">BREAK</span></p>
+                                <div className="mt-8 space-y-2">
+                                    <p className="text-3xl font-bold">And the news they <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
+                                </div>
                             </div>
                         </div>
                         
                         {/* Side Panel / News Feed */}
                         <div className="span-4 space-y-4">
-                             <div className="border-4 border-[#6370E7] p-6">
+                             <div className="border-4 border-[#6370E7] p-6 bg-white">
                                 <h3 className="font-bold text-xl mb-2 text-[#6370E7]">NEWS FROM CURATIONSLA</h3>
                                 {loading && <p>Loading...</p>}
                                 {error && <p className="text-red-500">{error}</p>}
