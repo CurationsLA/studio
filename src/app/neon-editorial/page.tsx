@@ -51,9 +51,9 @@ const NeonEditorialPage = () => {
       }
 
     const cardStyles = [
-        { name: 'pastel-pop-1', classes: 'event-card-pp1' },
-        { name: 'pastel-pop-2', classes: 'event-card-pp2' },
-        { name: 'pastel-pop-3', classes: 'event-card-pp3' },
+        { name: 'sdg-1', classes: 'event-card-sdg1' },
+        { name: 'sdg-2', classes: 'event-card-sdg2' },
+        { name: 'sdg-3', classes: 'event-card-sdg3' },
     ];
 
 
@@ -109,37 +109,37 @@ const NeonEditorialPage = () => {
                   margin-bottom: 1rem;
                 }
 
-                .event-card-pp1 {
-                    background-color: rgb(74, 0, 120);
-                    border-color: rgb(168, 85, 247);
+                .event-card-sdg1 {
+                    background-color: #FF69B4;
+                    border-color: #e55da2;
                 }
-                .event-card-pp1 .event-title {
-                    color: rgb(255, 255, 255);
+                .event-card-sdg1 .event-title {
+                    color: #000000;
                 }
-                .event-card-pp1 .event-subtitle {
-                    color: rgb(235, 220, 255);
-                }
-
-                .event-card-pp2 {
-                    background-color: rgb(176, 70, 0);
-                    border-color: rgb(255, 145, 0);
-                }
-                .event-card-pp2 .event-title {
-                    color: rgb(255, 255, 255);
-                }
-                .event-card-pp2 .event-subtitle {
-                    color: rgb(255, 235, 220);
+                .event-card-sdg1 .event-subtitle {
+                    color: #333333;
                 }
 
-                .event-card-pp3 {
-                    background-color: rgb(0, 100, 90);
-                    border-color: rgb(0, 160, 140);
+                .event-card-sdg2 {
+                    background-color: #FF9966;
+                    border-color: #e58a5c;
                 }
-                .event-card-pp3 .event-title {
-                    color: rgb(255, 255, 255);
+                .event-card-sdg2 .event-title {
+                    color: #000000;
                 }
-                .event-card-pp3 .event-subtitle {
-                    color: rgb(220, 245, 240);
+                .event-card-sdg2 .event-subtitle {
+                    color: #333333;
+                }
+
+                .event-card-sdg3 {
+                    background-color: #FFDD33;
+                    border-color: #e5c72e;
+                }
+                .event-card-sdg3 .event-title {
+                    color: #000000;
+                }
+                .event-card-sdg3 .event-subtitle {
+                    color: #333333;
                 }
             `}</style>
             <div className="bg-[#f8f8f8] text-black">
@@ -164,40 +164,12 @@ const NeonEditorialPage = () => {
 
                 {/* Hero Grid Layout */}
                 <section id="home" className="pt-24 px-4 md:px-8">
-                    <div className="magazine-grid">
-                        <div className="span-8 text-left py-10">
-                            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight uppercase font-anton">We curate the heart of brands</h1>
-                            <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
-                                <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
-                                    AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div className="span-4 space-y-4">
-                             <div className="bg-white p-4">
-                                <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
-                                {loading && <p>Loading...</p>}
-                                {error && <p className="text-red-500">{error}</p>}
-                                {!loading && !error && feed.map((item, index) => {
-                                    const style = cardStyles[index % cardStyles.length];
-                                    return (
-                                        <div key={item.link} className={`event-card ${style.classes}`}>
-                                            <p className="text-xs font-bold event-subtitle">
-                                                <span className="font-bold">{formatDate(item.pubDate)}</span>
-                                            </p>
-                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase text-sm event-title">{item.title}</a>
-                                            <p className="text-sm event-subtitle">{item.description}</p>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                            
-                            <div className="bg-black text-white p-6 text-center">
-                                <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition"
-                                 style={{ boxShadow: '2px 2px 5px rgba(0,0,0,0.3)', transform: 'rotate(-2deg)'}}>
-                                    SUBSCRIBE TO CURATIONSLA
-                                </button>
-                            </div>
+                    <div className="text-center mb-12">
+                        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight uppercase font-anton">We curate the heart of brands</h1>
+                        <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
+                            <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
+                                AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -240,7 +212,31 @@ const NeonEditorialPage = () => {
                             </div>
                         </div>
                          {/* Side Panel placeholder*/}
-                         <div className="span-4"></div>
+                         <div className="span-4">
+                            <div className="bg-white p-4">
+                                <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
+                                {loading && <p>Loading...</p>}
+                                {error && <p className="text-red-500">{error}</p>}
+                                {!loading && !error && feed.map((item, index) => {
+                                    const style = cardStyles[index % cardStyles.length];
+                                    return (
+                                        <div key={item.link} className={`event-card ${style.classes}`}>
+                                            <p className="text-xs font-bold event-subtitle">
+                                                <span className="font-bold">{formatDate(item.pubDate)}</span>
+                                            </p>
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase text-sm event-title">{item.title}</a>
+                                            <p className="text-sm event-subtitle">{item.description}</p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                            
+                            <div className="bg-black text-white p-6 text-center">
+                                <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition">
+                                    SUBSCRIBE TO CURATIONSLA
+                                </button>
+                            </div>
+                         </div>
                     </div>
                 </section>
 
