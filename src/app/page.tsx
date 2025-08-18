@@ -17,6 +17,9 @@ export default function Home() {
         <Link href="/zine-remix" className="text-lg text-accent hover:underline">
           Zine Remix
         </Link>
+        <Link href="/split-screen-magazine" className="text-lg text-accent hover:underline">
+          Split Screen Magazine
+        </Link>
       </div>
     </div>
   );
