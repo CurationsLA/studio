@@ -100,27 +100,25 @@ const NeonEditorialPage = () => {
                             </div>
                         </div>
                         
-                        {/* Side Panel */}
+                        {/* Side Panel / News Feed */}
                         <div className="span-4 space-y-4">
-                            <div className="bg-[#EBF998] p-6">
-                                <h3 className="font-bold text-xl mb-2">TODAY'S VIBE</h3>
-                                <p>Breaking barriers in:</p>
-                                <ul className="mt-2">
-                                    <li>→ Restaurant Launches</li>
-                                    <li>→ AI Discovery</li>
-                                    <li>→ Media Buying</li>
-                                    <li>→ Influencer Collabs</li>
-                                </ul>
+                             <div className="bg-[#EBF998] p-6">
+                                <h3 className="font-bold text-xl mb-2">RECENTLY IN <span className="text-[#6370E7]">CurationsLA</span></h3>
+                                <p>→ The Best Tacos in East LA (Eats)</p>
+                                <p>→ Indie Film Fest This Weekend (Events)</p>
+                                <p>→ Vibe Coding: Our Latest Obsession (Newsletter)</p>
                             </div>
                             
                             <div className="border-4 border-[#6370E7] p-6">
-                                <p className="font-bold">BESTIE STATUS:</p>
-                                <p className="text-2xl mt-2">🚀 READY TO LAUNCH</p>
+                                <p className="font-bold">IN YOUR INBOX:</p>
+                                <p className="text-2xl mt-2">💌 WEEKLY DROPS</p>
                             </div>
                             
-                            <div className="bg-black text-white p-6">
-                                <p className="text-sm">Grow with Google Partner</p>
-                                <p className="text-xs mt-2">One brand. Full service. Free. Yearly.</p>
+                            <div className="bg-black text-white p-6 text-center">
+                                <p className="font-bold mb-2">GET THE ALPHA</p>
+                                <button className="w-full px-6 py-3 bg-[#FF5BF1] text-black font-bold hover:bg-[#6370E7] hover:text-white transition">
+                                    SUBSCRIBE TO CURATIONSLA
+                                </button>
                             </div>
                         </div>
                     </div>
