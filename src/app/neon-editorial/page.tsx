@@ -139,7 +139,7 @@ const NeonEditorialPage = () => {
                             {/* Main Title */}
                             <div className="diagonal-text text-center">
                                 <h1 className="text-5xl md:text-6xl font-bold uppercase leading-tight">
-                                    WE CURATE THE <span className="text-[#FF5BF1] drop-shadow-md">HEART</span> OF <span className="text-[#6370E7] drop-shadow-md">BRANDS</span>
+                                    WE CURATE THE <span className="text-[#FF5BF1] drop-shadow-md">HEART</span> OF <span className="bg-[#FF5BF1] text-white px-2">BRANDS</span>
                                 </h1>
                                 <div className="mt-4">
                                     <p className="text-lg font-bold uppercase">AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
@@ -149,7 +149,7 @@ const NeonEditorialPage = () => {
                             {/* Services Section */}
                              <div id="services">
                                 <div className="flex items-center mb-4">
-                                    <h2 className="text-2xl font-bold">SERVICES</h2>
+                                     <h2 className="text-2xl font-bold bg-[#FF5BF1] text-white px-4 py-2">SERVICES</h2>
                                 </div>
                                 <div className="h-1 bg-[#EBF998] mb-6"></div>
                                 
@@ -188,7 +188,7 @@ const NeonEditorialPage = () => {
                         
                         {/* Side Panel / News Feed */}
                         <div className="span-4 space-y-4">
-                             <div className="border-4 border-[#6370E7] p-6 bg-white">
+                             <div className="border-4 border-[#FF5BF1] p-6 bg-white">
                                 <h3 className="font-bold text-xl mb-2 text-[#6370E7]">GOOD VIBES FROM CURATIONSLA</h3>
                                 {loading && <p>Loading...</p>}
                                 {error && <p className="text-red-500">{error}</p>}
@@ -325,3 +325,5 @@ const NeonEditorialPage = () => {
 };
 
 export default NeonEditorialPage;
+
+    
