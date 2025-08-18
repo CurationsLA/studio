@@ -50,9 +50,9 @@ const NeonEditorialPage = () => {
       }
 
     const cardStyles = [
-        { bg: 'bg-[#008080]', border: 'border-[#f474b4]', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#ffde59]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-black', border: 'border-[#008080]', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#008080]', border: 'border-[#004d4d]', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-[#ebf998]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
+        { bg: 'bg-black', border: 'border-[#f474b4]', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
     ];
 
 
@@ -145,10 +145,8 @@ const NeonEditorialPage = () => {
                 
                 <section className="px-4 md:px-8">
                      <div className="magazine-grid">
-                         <div id="services" className="span-12">
+                         <div id="services" className="span-8">
                             <div className="h-1 bg-[#f474b4] mb-6 mt-2"></div>
-                         </div>
-                         <div className="span-8">
                             <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block" style={{fontSize: '60%'}}>SERVICES</h2>
                             
                             <div className="magazine-grid">
