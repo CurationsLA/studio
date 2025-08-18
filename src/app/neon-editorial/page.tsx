@@ -51,9 +51,9 @@ const NeonEditorialPage = () => {
       }
 
     const cardStyles = [
-        { bg: 'bg-[#A7F3D0]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#FDE68A]', border: 'border-black', title: 'text-black', subtitle: 'text-black', dateBg: 'bg-transparent' },
-        { bg: 'bg-[#C4B5FD]', border: 'border-white', title: 'text-white', subtitle: 'text-white', dateBg: 'bg-transparent' },
+        { name: 'pastel-pop-1', classes: 'event-card-pp1' },
+        { name: 'pastel-pop-2', classes: 'event-card-pp2' },
+        { name: 'pastel-pop-3', classes: 'event-card-pp3' },
     ];
 
 
@@ -63,7 +63,6 @@ const NeonEditorialPage = () => {
                 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-                @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
                 
                 body {
                     font-family: 'IBM Plex Sans', sans-serif;
@@ -109,6 +108,39 @@ const NeonEditorialPage = () => {
                   padding: 1rem;
                   margin-bottom: 1rem;
                 }
+
+                .event-card-pp1 {
+                    background-color: rgb(234, 224, 255);
+                    border-color: rgb(60, 19, 97);
+                }
+                .event-card-pp1 .event-title {
+                    color: rgb(0, 0, 0);
+                }
+                .event-card-pp1 .event-subtitle {
+                    color: rgb(34, 34, 34);
+                }
+
+                .event-card-pp2 {
+                    background-color: rgb(255, 239, 200);
+                    border-color: rgb(180, 90, 0);
+                }
+                .event-card-pp2 .event-title {
+                    color: rgb(0, 0, 0);
+                }
+                .event-card-pp2 .event-subtitle {
+                    color: rgb(34, 34, 34);
+                }
+
+                .event-card-pp3 {
+                    background-color: rgb(210, 245, 230);
+                    border-color: rgb(0, 120, 90);
+                }
+                .event-card-pp3 .event-title {
+                    color: rgb(0, 0, 0);
+                }
+                .event-card-pp3 .event-subtitle {
+                    color: rgb(34, 34, 34);
+                }
             `}</style>
             <div className="bg-[#f8f8f8] text-black">
                 {/* Sticky Side Navigation */}
@@ -149,12 +181,12 @@ const NeonEditorialPage = () => {
                                 {!loading && !error && feed.map((item, index) => {
                                     const style = cardStyles[index % cardStyles.length];
                                     return (
-                                        <div key={item.link} className={`event-card ${style.bg} ${style.border}`}>
-                                            <p className={`text-xs font-bold ${style.subtitle}`}>
-                                                <span className={`${style.dateBg} font-bold`}>{formatDate(item.pubDate)}</span>
+                                        <div key={item.link} className={`event-card ${style.classes}`}>
+                                            <p className="text-xs font-bold event-subtitle">
+                                                <span className="font-bold">{formatDate(item.pubDate)}</span>
                                             </p>
-                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className={`font-bold hover:underline uppercase text-sm ${style.title}`}>{item.title}</a>
-                                            <p className={`text-sm ${style.subtitle}`}>{item.description}</p>
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase text-sm event-title">{item.title}</a>
+                                            <p className="text-sm event-subtitle">{item.description}</p>
                                         </div>
                                     )
                                 })}
