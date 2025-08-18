@@ -140,12 +140,19 @@ const NeonEditorialPage = () => {
                         {/* Main Content Column */}
                         <div className="span-8 space-y-4">
                             {/* Main Title */}
-                            <div className="diagonal-text text-center">
-                                <h1 className="text-4xl md:text-5xl font-bold uppercase leading-tight">
-                                    WE CURATE THE <span className="bg-[#F0469B] text-white px-4 py-1 mx-2">HEART</span> OF <span className="bg-[#F0469B] text-white px-4 py-1 mx-2">BRANDS</span>
-                                </h1>
-                                <div className="mt-4">
-                                    <p className="text-lg font-bold uppercase">AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
+                            <div className="relative text-center py-10" style={{ transform: 'rotate(-2deg)' }}>
+                                <div className="font-bold uppercase leading-tight text-4xl md:text-5xl space-y-2">
+                                    <span className="inline-block" style={{ transform: 'rotate(-2deg)' }}>WE</span>
+                                    <span className="inline-block bg-black text-white px-3 py-1 mx-2" style={{ transform: 'rotate(1deg)' }}>CURATE</span>
+                                    <span className="inline-block" style={{ transform: 'rotate(-3deg)' }}>THE</span>
+                                    <span className="inline-block text-outline text-7xl mx-2" style={{ transform: 'rotate(4deg)' }}>HEART</span>
+                                    <span className="inline-block" style={{ transform: 'rotate(-1deg)' }}>OF</span>
+                                    <span className="inline-block text-outline text-7xl mx-2" style={{ transform: 'rotate(2deg)' }}>BRANDS</span>
+                                </div>
+                                <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
+                                    <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
+                                        AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
+                                    </p>
                                 </div>
                             </div>
                             
@@ -240,7 +247,7 @@ const NeonEditorialPage = () => {
                                 <h2 className="text-5xl font-bold mb-4">
                                     <span className="text-[#f474b4]">CURATIONS</span> +
                                     <span className="text-[#6370E7]"> CurationsLA</span>
-                                </h2>
+                                _                                </h2>
                                 <p className="text-xl mb-6">The only dual-platform powerhouse in Los Angeles.</p>
                                 <p className="mb-6">While we craft your brand strategy, our sister company puts you directly in the inbox of LA's most influential community leaders, creators, and culture makers.</p>
                             </div>
