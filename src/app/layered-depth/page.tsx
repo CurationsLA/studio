@@ -203,7 +203,7 @@ const LayeredDepthPage = () => {
                 {/* Services Depth Grid */}
                 <section className="py-20 px-8">
                     <div className="max-w-7xl mx-auto">
-                        <h2 className="text-7xl font-bold mb-16 text-center">
+                        <h2 className="text-7xl font-bold mb-16 text-center text-neon-pink">
                             VIBES
                         </h2>
                         
