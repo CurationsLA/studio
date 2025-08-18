@@ -56,7 +56,7 @@ const NeonEditorialPage = () => {
                 }
                 
                 .diagonal-text {
-                    transform: rotate(-2deg);
+                    transform: rotate(-3deg);
                 }
             `}</style>
             <div className="bg-white text-black">
@@ -84,9 +84,12 @@ const NeonEditorialPage = () => {
                     <div className="magazine-grid h-screen items-center">
                         {/* Main Title */}
                         <div className="span-8">
-                            <h1 className="text-5xl md:text-7xl font-bold diagonal-text uppercase leading-tight">
-                                WE CURATE THE <span className="text-[#FF5BF1]">HEART</span> OF <span className="text-[#6370E7]">BRANDS</span>
-                            </h1>
+                            <div className="diagonal-text">
+                                <span className="neon-pink text-white font-bold text-xl md:text-2xl px-4 py-1 mb-4 inline-block">CURATIONS</span>
+                                <h1 className="text-5xl md:text-6xl font-bold uppercase leading-tight">
+                                    WE CURATE THE <span className="text-[#FF5BF1]">HEART</span><br/>OF <span className="text-[#6370E7]">BRANDS</span>
+                                </h1>
+                            </div>
                             <div className="mt-8 space-y-2">
                                 <p className="text-3xl font-bold">And the news they <span className="neon-pink text-white px-2">BREAK</span></p>
                             </div>
@@ -132,9 +135,9 @@ const NeonEditorialPage = () => {
                         
                         <div className="magazine-grid">
                             {/* Feature Service */}
-                            <div className="span-6 bg-[#FF5BF1] text-white p-8 min-h-[400px]">
+                            <div className="span-6 bg-black text-white p-8 min-h-[400px]">
                                 <span className="text-6xl">🍽️</span>
-                                <h3 className="text-3xl font-bold mt-4 mb-4">RESTAURANT & BUSINESS</h3>
+                                <h3 className="text-3xl font-bold mt-4 mb-4 text-[#EBF998]">RESTAURANT & BUSINESS</h3>
                                 <p className="mb-4">From ghost kitchens to grand openings, we know food.</p>
                                 <ul className="space-y-1 text-sm">
                                     <li>✓ Grand Openings & Events</li>
@@ -146,10 +149,10 @@ const NeonEditorialPage = () => {
                             </div>
                             
                             {/* AI Discovery */}
-                            <div className="span-6 border-4 border-black p-8 min-h-[400px]">
+                            <div className="span-6 bg-[#6370E7] text-white p-8 min-h-[400px]">
                                 <span className="text-6xl">🤖</span>
                                 <h3 className="text-3xl font-bold mt-4 mb-4">AI DISCOVERY</h3>
-                                <p className="mb-4 text-[#6370E7] font-bold">"Vibe Coding" & Beyond</p>
+                                <p className="mb-4 font-bold">"Vibe Coding" & Beyond</p>
                                 <ul className="space-y-1">
                                     <li>• AI Prompt Engineering</li>
                                     <li>• SEO & AI Citations</li>
@@ -160,8 +163,8 @@ const NeonEditorialPage = () => {
                             </div>
                             
                             {/* Media Buying */}
-                            <div className="span-4 bg-black text-white p-6">
-                                <h3 className="text-2xl font-bold mb-4 text-[#EBF998]">MEDIA BUYING</h3>
+                            <div className="span-4 bg-[#EBF998] text-black p-6">
+                                <h3 className="text-2xl font-bold mb-4 text-[#6370E7]">MEDIA BUYING</h3>
                                 <div className="space-y-2 text-sm">
                                     <p>📺 Netflix | KTLA | NBC</p>
                                     <p>📻 Podcast Placement</p>
@@ -172,8 +175,8 @@ const NeonEditorialPage = () => {
                             </div>
                             
                             {/* Influencer */}
-                            <div className="span-4 bg-[#6370E7] text-white p-6">
-                                <h3 className="text-2xl font-bold mb-4">CREATIVE COLLABS</h3>
+                            <div className="span-4 border-4 border-[#FF5BF1] p-6">
+                                <h3 className="text-2xl font-bold mb-4 text-[#FF5BF1]">CREATIVE COLLABS</h3>
                                 <p className="text-sm mb-4">UGC that actually converts.</p>
                                 <ul className="text-sm space-y-1">
                                     <li>→ Social Strategy</li>
@@ -184,8 +187,8 @@ const NeonEditorialPage = () => {
                             </div>
                             
                             {/* Communications */}
-                            <div className="span-4 border-4 border-[#EBF998] p-6">
-                                <h3 className="text-2xl font-bold mb-4">COMMUNICATIONS</h3>
+                            <div className="span-4 bg-black text-white p-6">
+                                <h3 className="text-2xl font-bold mb-4 text-[#FF5BF1]">COMMUNICATIONS</h3>
                                 <ul className="text-sm space-y-1">
                                     <li>Corporate Comms</li>
                                     <li>Executive Branding</li>
@@ -206,7 +209,7 @@ const NeonEditorialPage = () => {
                                         <span className="bg-white/20 px-3 py-1 rounded">LINEAR TV</span>
                                         <span className="bg-white/20 px-3 py-1 rounded">EMAIL/CRM</span>
                                     </div>
-                                 сохрани</div>
+                                </div>
                             </div>
                         </div>
                     </div>
