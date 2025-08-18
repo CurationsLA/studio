@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @layer base {
   :root {
     --background: 304 100% 98%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 0 0% 10%;
     --card: 304 71% 92%;
     --card-foreground: 240 10% 3.9%;
     --popover: 304 100% 98%;

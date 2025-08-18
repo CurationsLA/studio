@@ -51,7 +51,7 @@ const ServiceCard = ({ title, description, icon }: { title: string, description:
     <Card className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
             <div className="text-accent">{icon}</div>
-            <CardTitle className="text-base font-bold text-gray-800">{title}</CardTitle>
+            <CardTitle className="text-base font-bold text-[#1A1A1A]">{title}</CardTitle>
         </CardHeader>
         <CardContent>
             <p className="text-sm text-gray-600">{description}</p>
@@ -62,14 +62,14 @@ const ServiceCard = ({ title, description, icon }: { title: string, description:
 export default function Services() {
   return (
     <div className="bg-white p-6">
-      <h2 className="text-sm font-bold font-headline mb-4 text-center tracking-widest text-muted-foreground">
-        PUBLIC RELATIONSHIPS | BRANDING | MEDIA
+      <h2 className="text-sm font-bold font-headline mb-4 text-center tracking-widest text-muted-foreground uppercase">
+        Public Relationships | Branding | Media
       </h2>
       <Tabs defaultValue="pr" className="w-full">
-        <TabsList className="grid w-full grid-cols-3 bg-gray-100 rounded-lg">
-          <TabsTrigger value="pr" className="text-xs sm:text-sm">Public Relationships</TabsTrigger>
-          <TabsTrigger value="branding" className="text-xs sm:text-sm">Branding</TabsTrigger>
-          <TabsTrigger value="media" className="text-xs sm:text-sm">Media</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-3 bg-transparent rounded-lg">
+          <TabsTrigger value="pr" className="text-xs sm:text-sm uppercase data-[state=active]:bg-[#EBF998] data-[state=active]:text-[#1A1A1A] text-[#1A1A1A]">Public Relationships</TabsTrigger>
+          <TabsTrigger value="branding" className="text-xs sm:text-sm uppercase data-[state=active]:bg-[#EBF998] data-[state=active]:text-[#1A1A1A] text-[#1A1A1A]">Branding</TabsTrigger>
+          <TabsTrigger value="media" className="text-xs sm:text-sm uppercase data-[state=active]:bg-[#EBF998] data-[state=active]:text-[#1A1A1A] text-[#1A1A1A]">Media</TabsTrigger>
         </TabsList>
         <TabsContent value="pr" className="mt-4">
           <div className="grid gap-4">
@@ -92,7 +92,7 @@ export default function Services() {
         <Card className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
             <CardHeader className="flex flex-row items-center gap-4 pb-2">
                  <div className="text-accent">✨</div>
-                <CardTitle className="text-base font-bold text-gray-800">Collaborations</CardTitle>
+                <CardTitle className="text-base font-bold text-[#1A1A1A]">Collaborations</CardTitle>
             </CardHeader>
             <CardContent>
                 <p className="text-sm text-gray-600">Creative, digital, partnership-driven projects that move culture.</p>
