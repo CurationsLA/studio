@@ -56,6 +56,7 @@ const NeonEditorialPage = () => {
                 
                 body {
                     font-family: 'IBM Plex Sans', sans-serif;
+                    background: #f0f0f0;
                 }
 
                 .neon-pink {
@@ -148,10 +149,8 @@ const NeonEditorialPage = () => {
                             
                             {/* Services Section */}
                              <div id="services">
-                                <div className="flex items-center mb-4">
-                                     <h2 className="text-2xl font-bold bg-[#EBF998] text-black px-4 py-2">SERVICES</h2>
-                                </div>
-                                <div className="h-1 bg-[#FF5BF1] mb-6"></div>
+                                <h2 className="text-xl font-bold bg-[#EBF998] text-black px-4 py-2 inline-block">SERVICES</h2>
+                                <div className="h-1 bg-[#FF5BF1] mb-6 mt-2"></div>
                                 
                                 <div className="magazine-grid">
                                     {/* Feature Service */}
@@ -188,8 +187,8 @@ const NeonEditorialPage = () => {
                         
                         {/* Side Panel / News Feed */}
                         <div className="span-4 space-y-4">
-                             <div className="border-4 border-[#FF5BF1] p-6 bg-white">
-                                <h3 className="font-bold text-xl mb-2 text-[#6370E7]">GOOD VIBES FROM CURATIONSLA</h3>
+                             <div className="border-4 border-pink-400 p-6 bg-white">
+                                <h3 className="font-bold text-xl mb-2 text-[#6370E7] uppercase">Good vibes from curationsla</h3>
                                 {loading && <p>Loading...</p>}
                                 {error && <p className="text-red-500">{error}</p>}
                                 {!loading && !error && feed.map(item => (
@@ -199,11 +198,6 @@ const NeonEditorialPage = () => {
                                         <p className="text-sm">{item.description}</p>
                                     </div>
                                 ))}
-                            </div>
-                            
-                            <div className="border-4 border-[#6370E7] p-6">
-                                <p className="font-bold">IN YOUR INBOX:</p>
-                                <p className="text-2xl mt-2">💌 WEEKLY DROPS</p>
                             </div>
                             
                             <div className="bg-black text-white p-6 text-center">
@@ -255,11 +249,6 @@ const NeonEditorialPage = () => {
                                     <p>→ The Best Tacos in East LA (Eats)</p>
                                     <p>→ Indie Film Fest This Weekend (Events)</p>
                                     <p>→ Vibe Coding: Our Latest Obsession (Newsletter)</p>
-                                </div>
-                                
-                                <div className="border-4 border-[#6370E7] p-6 bg-white">
-                                    <p className="font-bold">IN YOUR INBOX:</p>
-                                    <p className="text-2xl mt-2">💌 WEEKLY DROPS</p>
                                 </div>
                                 
                                 <div className="bg-black text-white p-6 text-center">
