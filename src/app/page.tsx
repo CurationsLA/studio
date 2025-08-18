@@ -1,4 +1,3 @@
-import AITools from "@/components/landing/AITools";
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
@@ -14,7 +13,6 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Services />
-        <AITools />
         <Partnerships />
         <Work />
         <Newsletter />

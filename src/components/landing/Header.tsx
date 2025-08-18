@@ -10,7 +10,6 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '#services', label: 'Services' },
-  { href: '#ai-tools', label: 'AI Tools' },
   { href: '#work', label: 'Work' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -34,9 +33,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Button asChild>
-            <Link href="#contact">Get Started</Link>
-          </Button>
         </nav>
         <div className="md:hidden">
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
@@ -57,9 +53,6 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button asChild>
-              <Link href="#contact" onClick={() => setIsOpen(false)}>Get Started</Link>
-            </Button>
           </nav>
         </div>
       )}
