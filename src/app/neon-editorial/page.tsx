@@ -117,10 +117,12 @@ const NeonEditorialPage = () => {
             <div className="bg-[#f8f8f8] text-black">
                 {/* Sticky Side Navigation */}
                 <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
-                    <a href="#home" className="w-3 h-3 rounded-full bg-[#f474b4] hover:scale-150 transition"></a>
-                    <a href="#services" className="w-3 h-3 rounded-full bg-[#6370E7] hover:scale-150 transition"></a>
-                    <a href="#work" className="w-3 h-3 rounded-full bg-[#EBF998] hover:scale-150 transition"></a>
-                    <a href="#connect" className="w-3 h-3 rounded-full bg-black hover:scale-150 transition"></a>
+                    <div className="flex flex-col gap-y-4 ml-4">
+                        <a href="#home" className="w-3 h-3 rounded-full bg-[#f474b4] hover:scale-150 transition"></a>
+                        <a href="#services" className="w-3 h-3 rounded-full bg-[#6370E7] hover:scale-150 transition"></a>
+                        <a href="#work" className="w-3 h-3 rounded-full bg-[#EBF998] hover:scale-150 transition"></a>
+                        <a href="#connect" className="w-3 h-3 rounded-full bg-black hover:scale-150 transition"></a>
+                    </div>
                 </div>
 
                 {/* Top Bar */}
@@ -140,7 +142,7 @@ const NeonEditorialPage = () => {
                             {/* Main Title */}
                             <div className="diagonal-text text-center">
                                 <h1 className="text-4xl md:text-5xl font-bold uppercase leading-tight">
-                                    WE CURATE THE <span className="text-[#7676F4] drop-shadow-md">HEART</span> OF <span className="bg-[#F0469B] text-white px-2">BRANDS</span>
+                                    WE CURATE THE <span className="bg-[#F0469B] text-white px-4 py-1 mx-2">HEART</span> OF <span className="bg-[#F0469B] text-white px-4 py-1 mx-2">BRANDS</span>
                                 </h1>
                                 <div className="mt-4">
                                     <p className="text-lg font-bold uppercase">AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
