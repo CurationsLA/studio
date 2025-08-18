@@ -1,3 +1,4 @@
+
 'use client';
 import { useEffect } from 'react';
 
@@ -203,7 +204,7 @@ const LayeredDepthPage = () => {
                 <section className="py-20 px-8">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-7xl font-bold mb-16 text-center">
-                            SERVICES IN <span className="text-neon-pink">3D</span>
+                            SERVICES IN <span className="text-neon-pink">VIBES</span>
                         </h2>
                         
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -228,7 +229,7 @@ const LayeredDepthPage = () => {
                                     <span className="text-5xl">🤖</span>
                                     <h3 className="text-2xl font-bold mt-4 text-[#6370E7]">AI DISCOVERY</h3>
                                     <ul className="mt-4 space-y-2 text-sm">
-                                        <li>• "Vibe Coding"</li>
+                                        <li>• Citation + Sourcing</li>
                                         <li>• Prompt Engineering</li>
                                         <li>• Tech Stack</li>
                                         <li>• Team Workshops</li>
