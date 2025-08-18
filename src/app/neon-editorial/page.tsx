@@ -126,14 +126,36 @@ const NeonEditorialPage = () => {
                 {/* Hero Grid Layout */}
                 <section id="home" className="pt-24 px-4 md:px-8">
                     <div className="magazine-grid">
-                        <div className="span-12 space-y-4">
-                            <div className="relative text-center py-10">
-                                <h1 className="text-3xl md:text-4xl font-normal leading-tight">We curate the heart of brands</h1>
+                        <div className="span-9 space-y-4">
+                            <div className="relative text-left py-10">
+                                <h1 className="text-5xl md:text-6xl font-anton font-bold leading-tight uppercase">We curate the heart of brands</h1>
                                 <div className="mt-6 font-bold uppercase" style={{ transform: 'rotate(1deg)' }}>
                                     <p className="inline-block bg-[#EBF998] px-3 py-1 text-lg">
                                         AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span>
                                     </p>
                                 </div>
+                            </div>
+                        </div>
+                         {/* Side Panel / News Feed */}
+                         <div className="span-3 space-y-4">
+                             <div className="bg-white p-4">
+                                <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
+                                {loading && <p>Loading...</p>}
+                                {error && <p className="text-red-500">{error}</p>}
+                                {!loading && !error && feed.map(item => (
+                                    <div key={item.link} className="event-card">
+                                        <p className="text-xs font-bold"><span className="bg-[#EBF998] font-bold">{formatDate(item.pubDate)}</span></p>
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase text-sm">{item.title}</a>
+                                        <p className="text-sm">{item.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            
+                            <div className="bg-black text-white p-6 text-center">
+                                <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition"
+                                 style={{ fontFamily: "'Fredoka One', cursive", boxShadow: '2px 2px 5px rgba(0,0,0,0.3)', transform: 'rotate(-2deg)'}}>
+                                    SUBSCRIBE TO CURATIONSLA
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -142,7 +164,7 @@ const NeonEditorialPage = () => {
                 <section className="px-4 md:px-8">
                      <div className="magazine-grid">
                         {/* Services Section */}
-                         <div id="services" className="span-9">
+                         <div id="services" className="span-12">
                             <div className="h-1 bg-[#f474b4] mb-6 mt-2"></div>
                             <h2 className="text-lg font-bold bg-[#EBF998] text-black px-4 py-2 inline-block" style={{fontSize: '60%'}}>SERVICES</h2>
                             
@@ -175,29 +197,6 @@ const NeonEditorialPage = () => {
                                 <div className="span-4 bg-black text-white p-4">
                                     <h3 className="text-lg font-bold text-[#f474b4]">COMMUNICATIONS</h3>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        {/* Side Panel / News Feed */}
-                        <div className="span-3 space-y-4">
-                             <div className="bg-white p-4">
-                                <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
-                                {loading && <p>Loading...</p>}
-                                {error && <p className="text-red-500">{error}</p>}
-                                {!loading && !error && feed.map(item => (
-                                    <div key={item.link} className="event-card">
-                                        <p className="text-xs font-bold"><span className="bg-[#EBF998] font-bold">{formatDate(item.pubDate)}</span></p>
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase text-sm">{item.title}</a>
-                                        <p className="text-sm">{item.description}</p>
-                                    </div>
-                                ))}
-                            </div>
-                            
-                            <div className="bg-black text-white p-6 text-center">
-                                <button className="w-full px-6 py-3 bg-[#f474b4] text-black font-bold hover:bg-[#6370E7] hover:text-white transition"
-                                 style={{ fontFamily: "'Fredoka One', cursive", boxShadow: '2px 2px 5px rgba(0,0,0,0.3)', transform: 'rotate(-2deg)'}}>
-                                    SUBSCRIBE TO CURATIONSLA
-                                </button>
                             </div>
                         </div>
                     </div>
