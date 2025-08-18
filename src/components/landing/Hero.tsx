@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="bg-white py-14 sm:py-20 text-center shadow-[0_7px_38px_#EBF99813]">
       <div className="container max-w-5xl">
-        <h1 className="font-headline text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
+        <h1 className="font-body text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
           We curate the <span className="text-primary">HEART</span> of <span className="text-accent">brands</span>
           <br />
           And the <span className="text-accent">NEWS</span> they <span className="text-primary">CREATE</span>
