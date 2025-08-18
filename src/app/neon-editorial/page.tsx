@@ -149,9 +149,9 @@ const NeonEditorialPage = () => {
                             {/* Services Section */}
                              <div id="services">
                                 <div className="flex items-center mb-4">
-                                     <h2 className="text-2xl font-bold bg-[#FF5BF1] text-white px-4 py-2">SERVICES</h2>
+                                     <h2 className="text-2xl font-bold bg-[#EBF998] text-black px-4 py-2">SERVICES</h2>
                                 </div>
-                                <div className="h-1 bg-[#EBF998] mb-6"></div>
+                                <div className="h-1 bg-[#FF5BF1] mb-6"></div>
                                 
                                 <div className="magazine-grid">
                                     {/* Feature Service */}
@@ -325,5 +325,3 @@ const NeonEditorialPage = () => {
 };
 
 export default NeonEditorialPage;
-
-    
