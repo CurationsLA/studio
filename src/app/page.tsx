@@ -26,6 +26,9 @@ export default function Home() {
         <Link href="/college-chaos" className="text-lg text-accent hover:underline">
           College Chaos
         </Link>
+        <Link href="/layered-depth" className="text-lg text-accent hover:underline">
+          Layered Depth
+        </Link>
       </div>
     </div>
   );
