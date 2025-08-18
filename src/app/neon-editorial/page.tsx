@@ -45,7 +45,7 @@ const NeonEditorialPage = () => {
           year: 'numeric',
           month: 'short',
           day: 'numeric',
-        });
+        }).toUpperCase();
       }
 
 
@@ -113,7 +113,7 @@ const NeonEditorialPage = () => {
                     transform: rotate(-3deg);
                 }
             `}</style>
-            <div className="bg-white text-black">
+            <div className="bg-[#F5F5F5] text-black">
                 {/* Sticky Side Navigation */}
                 <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
                     <a href="#home" className="w-3 h-3 rounded-full bg-[#FF5BF1] hover:scale-150 transition"></a>
@@ -138,11 +138,10 @@ const NeonEditorialPage = () => {
                         <div className="span-8">
                             <div className="diagonal-text text-center">
                                 <h1 className="text-5xl md:text-6xl font-bold uppercase leading-tight">
-                                    WE CURATE THE <span className="text-[#FF5BF1] drop-shadow-md">HEART</span><br/>
-                                    OF <span className="text-[#FF5BF1] drop-shadow-md">BRANDS</span>
+                                    WE CURATE THE <span className="text-[#FF5BF1] drop-shadow-md">HEART</span> OF <span className="text-[#6370E7] drop-shadow-md">BRANDS</span>
                                 </h1>
-                                <div className="mt-8 space-y-2">
-                                    <p className="text-3xl font-bold">And the news they <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
+                                <div className="mt-4">
+                                    <p className="text-lg font-bold uppercase">AND THE NEWS THEY <span className="bg-[#6370E7] text-white px-2">BREAK</span></p>
                                 </div>
                             </div>
                         </div>
@@ -150,13 +149,14 @@ const NeonEditorialPage = () => {
                         {/* Side Panel / News Feed */}
                         <div className="span-4 space-y-4">
                              <div className="border-4 border-[#6370E7] p-6 bg-white">
-                                <h3 className="font-bold text-xl mb-2 text-[#6370E7]">NEWS FROM CURATIONSLA</h3>
+                                <h3 className="font-bold text-xl mb-2 text-[#6370E7]">GOOD VIBES FROM CURATIONSLA</h3>
                                 {loading && <p>Loading...</p>}
                                 {error && <p className="text-red-500">{error}</p>}
                                 {!loading && !error && feed.map(item => (
                                     <div key={item.link} className="mb-4">
-                                        <p className="text-xs">{formatDate(item.pubDate)}</p>
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline">{item.title}</a>
+                                        <p className="text-xs font-bold"><span className="bg-[#EBF998]">{formatDate(item.pubDate)}</span></p>
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline uppercase">{item.title}</a>
+                                        <p className="text-sm">{item.description}</p>
                                     </div>
                                 ))}
                             </div>
@@ -167,7 +167,6 @@ const NeonEditorialPage = () => {
                             </div>
                             
                             <div className="bg-black text-white p-6 text-center">
-                                <p className="font-bold mb-2">GET THE ALPHA</p>
                                 <button className="w-full px-6 py-3 bg-[#FF5BF1] text-black font-bold hover:bg-[#6370E7] hover:text-white transition">
                                     SUBSCRIBE TO CURATIONSLA
                                 </button>
@@ -177,24 +176,20 @@ const NeonEditorialPage = () => {
                 </section>
 
                 {/* Services Magazine Spread */}
-                <section id="services" className="py-20 px-4 md:px-8 bg-[#F5F5F5]">
+                <section id="services" className="py-20 px-4 md:px-8">
                     <div className="max-w-7xl mx-auto">
                         {/* Section Header */}
-                        <div className="flex items-center justify-between mb-12">
-                            <h2 className="text-5xl md:text-7xl font-bold">SERVICES</h2>
-                            <div className="text-right">
-                                <p className="text-sm">ISSUE 02</p>
-                                <p className="text-sm">2025 EDITION</p>
-                            </div>
+                        <div className="flex items-center justify-center mb-12">
+                            <h2 className="text-4xl font-bold bg-[#FF5BF1] text-white px-6 py-2">SERVICES</h2>
                         </div>
                         
                         <div className="magazine-grid">
                             {/* Feature Service */}
-                            <div className="span-6 bg-black text-white p-8 min-h-[400px]">
-                                <span className="text-6xl">🍽️</span>
-                                <h3 className="text-3xl font-bold mt-4 mb-4 text-[#EBF998]">RESTAURANT & BUSINESS</h3>
-                                <p className="mb-4">From ghost kitchens to grand openings, we know food.</p>
-                                <ul className="space-y-1 text-sm">
+                            <div className="span-6 bg-black text-white p-8 min-h-[350px]">
+                                <span className="text-5xl">🍽️</span>
+                                <h3 className="text-2xl font-bold mt-4 mb-4 text-[#EBF998]">RESTAURANT & BUSINESS</h3>
+                                <p className="mb-4 text-sm">From ghost kitchens to grand openings, we know food.</p>
+                                <ul className="space-y-1 text-xs">
                                     <li>✓ Grand Openings & Events</li>
                                     <li>✓ Menu Marketing</li>
                                     <li>✓ Third-Party App Strategy</li>
@@ -204,11 +199,11 @@ const NeonEditorialPage = () => {
                             </div>
                             
                             {/* AI Discovery */}
-                            <div className="span-6 bg-[#6370E7] text-white p-8 min-h-[400px]">
-                                <span className="text-6xl">🤖</span>
-                                <h3 className="text-3xl font-bold mt-4 mb-4">AI DISCOVERY</h3>
-                                <p className="mb-4 font-bold">"Vibe Coding" & Beyond</p>
-                                <ul className="space-y-1">
+                            <div className="span-6 bg-[#6370E7] text-white p-8 min-h-[350px]">
+                                <span className="text-5xl">🤖</span>
+                                <h3 className="text-2xl font-bold mt-4 mb-4">AI DISCOVERY</h3>
+                                <p className="mb-4 font-bold text-sm">"Vibe Coding" & Beyond</p>
+                                <ul className="space-y-1 text-xs">
                                     <li>• AI Prompt Engineering</li>
                                     <li>• SEO & AI Citations</li>
                                     <li>• Tech Stack Discovery</li>
@@ -219,8 +214,8 @@ const NeonEditorialPage = () => {
                             
                             {/* Media Buying */}
                             <div className="span-4 bg-[#EBF998] text-black p-6">
-                                <h3 className="text-2xl font-bold mb-4 text-[#6370E7]">MEDIA BUYING</h3>
-                                <div className="space-y-2 text-sm">
+                                <h3 className="text-xl font-bold mb-4 text-[#6370E7]">MEDIA BUYING</h3>
+                                <div className="space-y-2 text-xs">
                                     <p>📺 Netflix | KTLA | NBC</p>
                                     <p>📻 Podcast Placement</p>
                                     <p>📍 Geofencing</p>
@@ -230,10 +225,10 @@ const NeonEditorialPage = () => {
                             </div>
                             
                             {/* Influencer */}
-                            <div className="span-4 border-4 border-[#FF5BF1] p-6">
-                                <h3 className="text-2xl font-bold mb-4 text-[#FF5BF1]">CREATIVE COLLABS</h3>
-                                <p className="text-sm mb-4">UGC that actually converts.</p>
-                                <ul className="text-sm space-y-1">
+                            <div className="span-4 border-4 border-[#FF5BF1] p-6 bg-white">
+                                <h3 className="text-xl font-bold mb-4 text-[#FF5BF1]">CREATIVE COLLABS</h3>
+                                <p className="text-xs mb-4">UGC that actually converts.</p>
+                                <ul className="text-xs space-y-1">
                                     <li>→ Social Strategy</li>
                                     <li>→ Content Gaps</li>
                                     <li>→ Digital Listening</li>
@@ -243,8 +238,8 @@ const NeonEditorialPage = () => {
                             
                             {/* Communications */}
                             <div className="span-4 bg-black text-white p-6">
-                                <h3 className="text-2xl font-bold mb-4 text-[#FF5BF1]">COMMUNICATIONS</h3>
-                                <ul className="text-sm space-y-1">
+                                <h3 className="text-xl font-bold mb-4 text-[#FF5BF1]">COMMUNICATIONS</h3>
+                                <ul className="text-xs space-y-1">
                                     <li>Corporate Comms</li>
                                     <li>Executive Branding</li>
                                     <li>Newsletter Design</li>
@@ -256,13 +251,13 @@ const NeonEditorialPage = () => {
                             {/* Full Stack */}
                             <div className="span-12 bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                                 <div className="flex flex-wrap justify-between items-center">
-                                    <h3 className="text-3xl font-bold">FULL-STACK DIGITAL</h3>
+                                    <h3 className="text-2xl font-bold">FULL-STACK DIGITAL</h3>
                                     <div className="flex flex-wrap gap-4 mt-4 md:mt-0">
-                                        <span className="bg-white/20 px-3 py-1 rounded">PAID SEARCH</span>
-                                        <span className="bg-white/20 px-3 py-1 rounded">PAID SOCIAL</span>
-                                        <span className="bg-white/20 px-3 py-1 rounded">DISPLAY ADS</span>
-                                        <span className="bg-white/20 px-3 py-1 rounded">LINEAR TV</span>
-                                        <span className="bg-white/20 px-3 py-1 rounded">EMAIL/CRM</span>
+                                        <span className="bg-white/20 px-3 py-1 rounded text-xs">PAID SEARCH</span>
+                                        <span className="bg-white/20 px-3 py-1 rounded text-xs">PAID SOCIAL</span>
+                                        <span className="bg-white/20 px-3 py-1 rounded text-xs">DISPLAY ADS</span>
+                                        <span className="bg-white/20 px-3 py-1 rounded text-xs">LINEAR TV</span>
+                                        <span className="bg-white/20 px-3 py-1 rounded text-xs">EMAIL/CRM</span>
                                     </div>
                                 </div>
                             </div>
@@ -291,13 +286,12 @@ const NeonEditorialPage = () => {
                                     <p>→ Vibe Coding: Our Latest Obsession (Newsletter)</p>
                                 </div>
                                 
-                                <div className="border-4 border-[#6370E7] p-6">
+                                <div className="border-4 border-[#6370E7] p-6 bg-white">
                                     <p className="font-bold">IN YOUR INBOX:</p>
                                     <p className="text-2xl mt-2">💌 WEEKLY DROPS</p>
                                 </div>
                                 
                                 <div className="bg-black text-white p-6 text-center">
-                                    <p className="font-bold mb-2">GET THE ALPHA</p>
                                     <button className="w-full px-6 py-3 bg-[#FF5BF1] text-black font-bold hover:bg-[#6370E7] hover:text-white transition">
                                         SUBSCRIBE TO CURATIONSLA
                                     </button>
@@ -328,7 +322,7 @@ const NeonEditorialPage = () => {
                 </section>
 
                 {/* Footer */}
-                <footer className="py-12 px-4 md:px-8 bg-[#F5F5F5]">
+                <footer className="py-12 px-4 md:px-8 bg-white">
                     <div className="max-w-6xl mx-auto">
                         <div className="grid md:grid-cols-4 gap-8">
                             <div>
@@ -360,3 +354,5 @@ const NeonEditorialPage = () => {
 };
 
 export default NeonEditorialPage;
+
+    
