@@ -8,7 +8,7 @@ import Work from "@/components/landing/Work";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-dvh bg-background">
+    <div className="flex flex-col min-h-dvh bg-[#f8f6f0]">
       <Header />
       <main className="flex-1">
         <Hero />

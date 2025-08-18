@@ -2,7 +2,7 @@ import { Award, Heart } from 'lucide-react';
 
 export default function Partnerships() {
   return (
-    <section className="bg-secondary/50 py-24 sm:py-32">
+    <section className="bg-transparent py-24 sm:py-32">
       <div className="container max-w-7xl">
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">

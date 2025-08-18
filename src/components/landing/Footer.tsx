@@ -11,15 +11,15 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t">
-      <div className="container max-w-7xl py-12">
+    <footer className="bg-transparent pt-8 pb-12">
+      <div className="container max-w-7xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <Link href="/">
               <CurationCraftLogo />
             </Link>
           <div className="flex gap-4">
             {socialLinks.map((item) => (
-              <Button key={item.name} asChild variant="ghost" size="icon">
+              <Button key={item.name} asChild variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
                 <Link href={item.href}>
                   <span className="sr-only">{item.name}</span>
                   {item.icon}
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} CURATIONS. All rights reserved.</p>
+           <p>&copy; {new Date().getFullYear()} Curations Creative. Built for humans, curated by design.</p>
         </div>
       </div>
     </footer>

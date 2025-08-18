@@ -1,56 +1,30 @@
-import { Card, CardContent } from "@/components/ui/card";
-import NewsFeed from "./NewsFeed";
+import Link from "next/link";
 
 const services = [
-    { title: "Business Coverage", description: "Grand openings, special events, and membership campaigns." },
-    { title: "Restaurant Curation", description: "Menu launches, events, and third-party app representation." },
-    { title: "Partnership Orchestration", description: "Hyper-focused campaigns with influencers and brands." },
-    { title: "Executive & Corporate Branding", description: "Crafting powerful narratives for leaders and companies." },
-    { title: "Nonprofit & Charity", description: "Mission-driven branding with our Digital Steward Discount." },
-    { title: "Chaos Communications", description: "Expert navigation through complex PR landscapes." },
-    { title: "Content Gap Fulfillment", description: "Creative copy, think tanks, and strategy to fill voids." },
-    { title: "UGC & Influencer Campaigns", description: "Authentic content with a bunker-in community feel." },
-    { title: "Newsletter Design", description: "Engaging newsletter creation from concept to delivery." },
-    { title: "Social Media Listening", description: "Cross-platform insights to inform creative direction." },
-    { title: "Clipping & Shorts", description: "Creating viral short-form video content." },
-    { title: "Full-Service Content & Experiences", description: "From ideation to execution, we build brand worlds." },
-    { title: "Search Engine Optimization", description: "AI-powered discovery, citation sourcing, and rich snippets." },
-    { title: "Media Buying", description: "Geofencing, programmatic ads on Amazon, LinkedIn, Reddit, Yelp." },
-    { title: "Linear TV & Streaming", description: "Placements on Netflix, KTLA, NBC, ABC, CBS, and more." },
-    { title: "Podcast Placement", description: "Connecting your brand with top-tier podcast audiences." },
-    { title: "Paid Search & Social", description: "Expert management of Google Ads, Meta, TikTok campaigns." },
-    { title: "Email, CRM & CMS", description: "Building and managing your customer relationships." },
-    { title: "AI Prompt Engineering", description: "Harnessing generative AI for creative and business solutions." },
-    { title: "Full-Stack Tech Discovery", description: "Navigating the AI landscape to find the right tools for you." },
-    { title: "Team Workshops & Consulting", description: "AI integration, 'Vibe Coding', and hand-holding for your team." },
-    { title: "Law Firm Matching", description: "Connecting you with legal experts for complex situations." },
+    { title: "Public Relationships", description: "Media outreach, next-gen PR, influencer collaborations, and strategy.", href:"/services#pr" },
+    { title: "Collaborations", description: "Creative, digital, partnership-driven projects that move culture.", href:"/services#collaborations" },
+    { title: "Branding & Digital", description: "Concept, design, storytelling, and newsletters for modern brands.", href:"/services#branding" },
+    { title: "Media Buying & Ads", description: "Bespoke campaigns, digital and IRL presence, all channels covered.", href:"/services#media" },
+    { title: "News & Editorial", description: "CurationsLA stories, happenings, and cultural features, always current.", href:"/blog" },
+    { title: "AI & Tech Strategy", description: "Prompt engineering, creative AI, digital innovation, hands-on discovery.", href:"/services#ai" },
 ];
 
-const ServiceCard = ({ title, description }: { title: string, description: string }) => (
-    <Card className="text-left bg-transparent border-0 border-l-4 border-highlight shadow-none rounded-none">
-        <CardContent className="pt-0">
-             <h3 className="font-headline text-lg font-bold">{title}</h3>
-            <p className="text-muted-foreground mt-1">{description}</p>
-        </CardContent>
-    </Card>
+const ServiceCard = ({ title, description, href }: { title: string, description: string, href: string }) => (
+    <div className="bg-white p-6 sm:p-8 flex-1 min-w-[248px] max-w-[320px] rounded-tl-3xl rounded-tr-lg rounded-br-2xl rounded-bl-xl shadow-[0_4px_26px_#ff5bf188,0_1px_12px_#6370E744] hover:shadow-[0_8px_42px_#6370E7aa,0_8px_24px_#FF5BF1dd] transition-all duration-200 hover:-translate-y-1.5">
+        <h3 className="text-base uppercase font-bold tracking-wider text-[#303030] border-l-4 border-highlight pl-3 mb-3">{title}</h3>
+        <p className="text-[#5f5f5f] mb-3">{description}</p>
+        <Link href={href} className="text-accent font-bold underline hover:text-primary">
+          LEARN MORE
+        </Link>
+    </div>
 );
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 sm:py-32 bg-secondary/50">
+    <section id="services" className="py-16 sm:py-24">
       <div className="container max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-base font-semibold leading-7 text-primary">Our Services</h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">The CURATIONS Craft</p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">We offer a full-scope, rare breed of services. From AI-powered insights to full-service linear TV campaigns, we are the architects of modern branding.</p>
-        </div>
-        <div className="mt-16 grid lg:grid-cols-2 gap-8">
-            <div>
-                <NewsFeed />
-            </div>
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-4">
-                {services.map(s => <ServiceCard key={s.title} {...s} />)}
-            </div>
+        <div className="flex flex-wrap gap-8 justify-center">
+            {services.map(s => <ServiceCard key={s.title} {...s} />)}
         </div>
       </div>
     </section>
