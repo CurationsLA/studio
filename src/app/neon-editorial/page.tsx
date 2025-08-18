@@ -84,10 +84,11 @@ const NeonEditorialPage = () => {
                 .span-4 { grid-column: span 4; }
                 .span-3 { grid-column: span 3; }
                 .span-8 { grid-column: span 8; }
+                .span-9 { grid-column: span 9; }
                 .span-12 { grid-column: span 12; }
                 
                 @media (max-width: 768px) {
-                    .span-6, .span-4, .span-3, .span-8 { grid-column: span 12; }
+                    .span-6, .span-4, .span-3, .span-8, .span-9 { grid-column: span 12; }
                 }
             `}</style>
             <div className="bg-[#f8f8f8] text-black">
@@ -114,7 +115,7 @@ const NeonEditorialPage = () => {
                 <section id="home" className="pt-24 px-4 md:px-8">
                     <div className="magazine-grid">
                         {/* Main Content Column */}
-                        <div className="span-8 space-y-4">
+                        <div className="span-9 space-y-4">
                             {/* Main Title */}
                             <div className="relative text-center py-10">
                                 <div className="font-bold uppercase leading-tight text-4xl md:text-5xl space-y-2">
@@ -175,7 +176,7 @@ const NeonEditorialPage = () => {
                         </div>
                         
                         {/* Side Panel / News Feed */}
-                        <div className="span-4 space-y-4">
+                        <div className="span-3 space-y-4">
                              <div className="border-4 border-[#f474b4] p-6 bg-white">
                                 <h3 className="font-bold text-xl mb-2 text-black uppercase">GOOD VIBES FROM CURATIONSLA</h3>
                                 {loading && <p>Loading...</p>}
