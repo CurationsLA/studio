@@ -1,6 +1,54 @@
 'use client';
+import { useState, useEffect } from 'react';
+
+interface FeedItem {
+    title: string;
+    pubDate: string;
+    link: string;
+    description: string;
+}
 
 const NeonEditorialPage = () => {
+    const [feed, setFeed] = useState<FeedItem[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        async function loadFeed() {
+          try {
+            const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/tXcBFCgC6G.xml');
+            const data = await response.json();
+    
+            if (!data.items) {
+              throw new Error('No items found');
+            }
+    
+            const items = data.items.map((item: any) => ({
+                ...item,
+                link: item.link.replace('.cc', '.org')
+            }))
+    
+            setFeed(items.slice(0, 3));
+          } catch (err) {
+            setError('Failed to load articles.');
+            console.error('RSS Load Error:', err);
+          } finally {
+            setLoading(false);
+          }
+        }
+    
+        loadFeed();
+      }, []);
+
+    const formatDate = (dateString: string) => {
+        return new Date(dateString).toLocaleDateString(undefined, {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        });
+      }
+
+
     return (
         <>
             <style jsx global>{`
@@ -68,12 +116,10 @@ const NeonEditorialPage = () => {
             <div className="bg-white text-black">
                 {/* Sticky Side Navigation */}
                 <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
-                    <div className="flex flex-col space-y-2 p-4">
-                        <a href="#home" className="w-3 h-3 rounded-full bg-[#FF5BF1] hover:scale-150 transition"></a>
-                        <a href="#services" className="w-3 h-3 rounded-full bg-[#6370E7] hover:scale-150 transition"></a>
-                        <a href="#work" className="w-3 h-3 rounded-full bg-[#EBF998] hover:scale-150 transition"></a>
-                        <a href="#connect" className="w-3 h-3 rounded-full bg-black hover:scale-150 transition"></a>
-                    </div>
+                    <a href="#home" className="w-3 h-3 rounded-full bg-[#FF5BF1] hover:scale-150 transition"></a>
+                    <a href="#services" className="w-3 h-3 rounded-full bg-[#6370E7] hover:scale-150 transition"></a>
+                    <a href="#work" className="w-3 h-3 rounded-full bg-[#EBF998] hover:scale-150 transition"></a>
+                    <a href="#connect" className="w-3 h-3 rounded-full bg-black hover:scale-150 transition"></a>
                 </div>
 
                 {/* Top Bar */}
@@ -92,21 +138,27 @@ const NeonEditorialPage = () => {
                         <div className="span-8">
                             <div className="diagonal-text">
                                 <h1 className="text-5xl md:text-6xl font-bold uppercase leading-tight">
-                                    WE CURATE THE <span className="text-[#FF5BF1]">HEART</span><br/>OF <span className="text-[#6370E7]">BRANDS</span>
+                                    WE CURATE THE <span className="text-[#FF5BF1] drop-shadow-md">HEART</span><br/>
+                                    OF <span className="text-[#6370E7] drop-shadow-md">BRANDS</span>
                                 </h1>
                             </div>
                             <div className="mt-8 space-y-2">
-                                <p className="text-3xl font-bold">And the news they BREAK</p>
+                                <p className="text-3xl font-bold">And the news they <span className="bg-[#FF5BF1] text-white px-2">BREAK</span></p>
                             </div>
                         </div>
                         
                         {/* Side Panel / News Feed */}
                         <div className="span-4 space-y-4">
                              <div className="bg-[#EBF998] p-6">
-                                <h3 className="font-bold text-xl mb-2">RECENTLY IN <span className="text-[#6370E7]">CurationsLA</span></h3>
-                                <p>→ The Best Tacos in East LA (Eats)</p>
-                                <p>→ Indie Film Fest This Weekend (Events)</p>
-                                <p>→ Vibe Coding: Our Latest Obsession (Newsletter)</p>
+                                <h3 className="font-bold text-xl mb-2 text-[#6370E7]">NEWS FROM CURATIONSLA</h3>
+                                {loading && <p>Loading...</p>}
+                                {error && <p className="text-red-500">{error}</p>}
+                                {!loading && !error && feed.map(item => (
+                                    <div key={item.link} className="mb-4">
+                                        <p className="text-xs">{formatDate(item.pubDate)}</p>
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline">{item.title}</a>
+                                    </div>
+                                ))}
                             </div>
                             
                             <div className="border-4 border-[#6370E7] p-6">
