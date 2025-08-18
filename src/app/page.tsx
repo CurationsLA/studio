@@ -23,6 +23,9 @@ export default function Home() {
         <Link href="/asymmetric-grid" className="text-lg text-accent hover:underline">
           Asymmetric Grid
         </Link>
+        <Link href="/college-chaos" className="text-lg text-accent hover:underline">
+          College Chaos
+        </Link>
       </div>
     </div>
   );
