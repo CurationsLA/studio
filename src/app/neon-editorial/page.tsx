@@ -85,14 +85,10 @@ const NeonEditorialPage = () => {
                         {/* Main Title */}
                         <div className="span-8">
                             <h1 className="text-5xl md:text-7xl font-bold diagonal-text uppercase leading-tight">
-                                <span className="block">We Curate The</span>
-                                <span className="block text-[#FF5BF1]">Heart of Brands.</span>
-                                <span className="block text-outline">And The News</span>
-                                <span className="block text-[#6370E7]">They Break.</span>
+                                WE CURATE THE <span className="text-[#FF5BF1]">HEART</span> OF <span className="text-[#6370E7]">BRANDS</span>
                             </h1>
                             <div className="mt-8 space-y-2">
-                                <p className="text-2xl">We don't just market brands.</p>
-                                <p className="text-3xl font-bold">We make them <span className="neon-pink text-white px-2">UNFORGETTABLE</span></p>
+                                <p className="text-3xl font-bold">And the news they <span className="neon-pink text-white px-2">BREAK</span></p>
                             </div>
                         </div>
                         
@@ -210,7 +206,7 @@ const NeonEditorialPage = () => {
                                         <span className="bg-white/20 px-3 py-1 rounded">LINEAR TV</span>
                                         <span className="bg-white/20 px-3 py-1 rounded">EMAIL/CRM</span>
                                     </div>
-                                </div>
+                                 сохрани</div>
                             </div>
                         </div>
                     </div>
