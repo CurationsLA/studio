@@ -9,6 +9,9 @@ export default function Home() {
         <Link href="/v2-inspirations" className="text-lg text-primary hover:underline font-black text-2xl">
           V2 INSPIRATIONS
         </Link>
+        <Link href="/bold-grid-system" className="text-lg text-primary hover:underline font-bold">
+          Bold Grid System (Claude)
+        </Link>
         <Link href="/editorial-stack" className="text-lg text-primary hover:underline font-bold">
           Editorial Stack (Claude)
         </Link>
