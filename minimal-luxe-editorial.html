@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Curations — Minimal Luxe Editorial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700;900&display=swap');
+
+    :root { --ink:#111; --cream:#FAF7F2; --pink:#FF5BF1; --indigo:#6370E7; }
+
+    body { font-family:'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--cream); color: var(--ink); }
+
+    .luxe-underline:hover { text-decoration: line-through; text-decoration-color: var(--pink); text-decoration-thickness: 2px; }
+
+    .rule { height:1px; background: linear-gradient(to right, transparent, #000 30%, #000 70%, transparent); opacity:0.2; }
+
+    .deck { max-width: 46ch; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="px-6 sm:px-10 py-4 border-b border-black/20 bg-white/70 backdrop-blur">
+    <div class="flex items-center justify-between">
+      <h1 class="text-xl font-black tracking-tight">[CURATIONS]</h1>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="#" class="luxe-underline">Work</a>
+        <a href="#" class="luxe-underline">Services</a>
+        <a href="#" class="luxe-underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="px-6 sm:px-10 py-12 sm:py-20">
+    <div class="grid md:grid-cols-12 gap-10 items-end">
+      <div class="md:col-span-8">
+        <h2 class="text-[12vw] md:text-[8rem] font-black leading-[0.9] uppercase tracking-tight">CURATIONS</h2>
+        <p class="mt-6 text-xl deck">We craft cultural communication—editorial strategies that fuse brutalist clarity with modern luxury.</p>
+      </div>
+      <aside class="md:col-span-4">
+        <div class="p-6 bg-white border border-black/15">
+          <h3 class="font-black uppercase">Recent Posts</h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><span class="luxe-underline">[1] Type‑First Design Systems</span></li>
+            <li><span class="luxe-underline">Luxury Minimalism as Branding</span></li>
+            <li><span class="luxe-underline">Editorial Brutalism in 2025</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div class="rule mx-6 sm:mx-10 my-6"></div>
+
+  <!-- Services -->
+  <section class="px-6 sm:px-10 pb-12 grid md:grid-cols-3 gap-6">
+    <div class="p-6 bg-white border border-black/15">
+      <h3 class="font-black text-2xl">🍽️ Restaurant Strategy</h3>
+      <p class="text-sm mt-2">High‑touch hospitality launches.</p>
+    </div>
+    <div class="p-6 bg-white border border-black/15">
+      <h3 class="font-black text-2xl">🛰️ Brand Systems</h3>
+      <p class="text-sm mt-2">Design ops, style maps, governance.</p>
+    </div>
+    <div class="p-6 bg-white border border-black/15">
+      <h3 class="font-black text-2xl">📡 Signal Amplification</h3>
+      <p class="text-sm mt-2">Editorial, SEO, cultural reach.</p>
+    </div>
+  </section>
+
+  <!-- Subscribe -->
+  <section class="px-6 sm:px-10 py-12 flex justify-center">
+    <button class="px-8 py-3 bg-black text-white font-black text-base tracking-wide hover:bg-[var(--pink)] transition">SUBSCRIBE</button>
+  </section>
+
+  <!-- Editorial Grid -->
+  <section class="px-6 sm:px-10 pb-16 grid md:grid-cols-3 gap-6">
+    <aside class="p-6 bg-white border border-black/15">
+      <h3 class="font-black uppercase">Recent Posts</h3>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li>[1] Anti‑Design Futures</li>
+        <li>Marketing Brutalism 2025</li>
+      </ul>
+    </aside>
+    <aside class="p-6 bg-black text-white">
+      <h3 class="font-black text-2xl text-[var(--pink)]">Editorial Feed</h3>
+      <ul class="mt-3 space-y-2 text-sm text-white/90">
+        <li>Glitch Systems 101</li>
+        <li>Night Moves: LA to Tokyo</li>
+      </ul>
+    </aside>
+    <aside class="p-6 bg-white border border-black/15">
+      <h3 class="font-black uppercase">Studio Notes</h3>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li class="luxe-underline">Type‑First Design Systems</li>
+        <li class="luxe-underline">Luxury Minimalism as Branding</li>
+      </ul>
+    </aside>
+  </section>
+</body>
+</html>
