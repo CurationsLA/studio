@@ -47,6 +47,9 @@ export default function Home() {
         <Link href="/magazine-stack" className="text-lg text-accent hover:underline">
           Magazine Stack
         </Link>
+        <Link href="/neon-typography" className="text-lg text-accent hover:underline">
+          Neon Typography
+        </Link>
       </div>
     </div>
   );
