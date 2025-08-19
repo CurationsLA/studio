@@ -219,8 +219,8 @@ const GoodVibes74Page = () => {
                 /* Corner Badge */
                 .corner-badge {
                     position: fixed;
-                    top: 80px;
-                    right: 20px;
+                    top: 90px;
+                    right: 25px;
                     z-index: 50;
                     background: #FF5BF1;
                     color: white;
@@ -475,10 +475,10 @@ const GoodVibes74Page = () => {
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>EMAIL/CRM</span>
                                 </div>
-                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: '#FF5BF1', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>SEO</span>
                                 </div>
-                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: '#FF5BF1', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>UI/UX</span>
                                 </div>
                             </div>
@@ -598,4 +598,5 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
+
 
