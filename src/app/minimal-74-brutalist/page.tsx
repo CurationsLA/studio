@@ -145,10 +145,10 @@ const Minimal74BrutalistPage = () => {
                                 <span className="text-5xl">🍽️</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">Restaurant & Biz</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold">
-                                    <li>• Grand Openings</li>
-                                    <li>• Ghost Kitchens</li>
-                                    <li>• Menu Marketing</li>
-                                    <li>• Third-Party Apps</li>
+                                    <li>• Grand Openings & Events</li>
+                                    <li>• Menu Marketing Magic</li>
+                                    <li>• Third-Party App Strategy</li>
+                                    <li>• Delivery Optimization</li>
                                 </ul>
                             </div>
                             
@@ -156,9 +156,9 @@ const Minimal74BrutalistPage = () => {
                                 <span className="text-5xl">🤖</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">AI Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold">
-                                    <li>• Citation + Sourcing</li>
-                                    <li>• Prompt Engineering</li>
-                                    <li>• Tech Stack</li>
+                                    <li>• AI Prompt Engineering</li>
+                                    <li>• SEO & AI Citations</li>
+                                    <li>• Tech Stack Discovery</li>
                                     <li>• Team Workshops</li>
                                 </ul>
                             </div>
@@ -178,10 +178,9 @@ const Minimal74BrutalistPage = () => {
                                 <span className="text-5xl">👋</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">Creative Collabs</h3>
                                  <ul className="mt-4 space-y-2 text-sm font-bold">
-                                  <li>• Influencer Matching</li>
-                                  <li>• UGC Campaigns</li>
-                                  <li>• Content Creation</li>
                                   <li>• Social Strategy</li>
+                                  <li>• Content Gaps</li>
+                                  <li>• UGC that Converts</li>
                                 </ul>
                             </div>
                             
@@ -189,35 +188,33 @@ const Minimal74BrutalistPage = () => {
                                 <span className="text-5xl">📰</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">Communications</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold">
-                                  <li>• Crisis Management</li>
+                                  <li>• Corporate Comms</li>
                                   <li>• Executive Branding</li>
-                                  <li>• PR Strategy</li>
-                                  <li>• Media Relations</li>
+                                  <li>• Newsletter Design</li>
                                 </ul>
                             </div>
                             
                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
                                 <span className="text-5xl">🚀</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">Full-Stack</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase">SEO & Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold">
-                                  <li>• SEO & SEM</li>
-                                  <li>• Email/CRM</li>
-                                  <li>• Analytics</li>
-                                  <li>• Conversion</li>
+                                  <li>• Google #1</li>
+                                  <li>• AI Citations</li>
+                                  <li>• Rich Snippets</li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="mt-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                             <div className="flex flex-wrap justify-between items-center">
-                                <h3 className="text-3xl font-black">FULL STACK DIGITAL DOMINATION</h3>
+                                <h3 className="text-3xl font-black">FULL STACK DIGITAL</h3>
                                 <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
                                     <span className="bg-white/20 px-4 py-2 font-bold">PAID SEARCH</span>
                                     <span className="bg-white/20 px-4 py-2 font-bold">PAID SOCIAL</span>
                                     <span className="bg-white/20 px-4 py-2 font-bold">DISPLAY ADS</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">LINEAR TV</span>
                                     <span className="bg-white/20 px-4 py-2 font-bold">EMAIL/CRM</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">INFLUENCER</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold">SEO</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold">UI/UX</span>
                                 </div>
                             </div>
                         </div>
