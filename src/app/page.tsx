@@ -77,7 +77,7 @@ const Minimal74BrutalistPage = () => {
                                 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="brutal-box bg-[#FF5BF1] text-white p-8 pulse-brutal" style={{animationDelay: '0.3s'}}>
-                                        <h3 className="text-2xl md:text-4xl font-black text-center uppercase">
+                                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-center uppercase">
                                             [HEART]
                                         </h3>
                                         <div className="mt-2 text-center text-sm font-bold">
@@ -86,7 +86,7 @@ const Minimal74BrutalistPage = () => {
                                     </div>
                                     
                                     <div className="brutal-box bg-[#6370E7] text-white p-8 pulse-brutal" style={{animationDelay: '0.6s'}}>
-                                        <h3 className="text-2xl md:text-4xl font-black text-center uppercase">
+                                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-center uppercase">
                                             [HEADLINES]
                                         </h3>
                                         <div className="mt-2 text-center text-sm font-bold">
@@ -127,7 +127,7 @@ const Minimal74BrutalistPage = () => {
                 {/* Services Section */}
                 <section className="pt-16 pb-12 px-4 md:px-8 bg-white">
                     <div className="max-w-7xl mx-auto">
-                        <h2 className="text-6xl md:text-7xl font-black mb-16 text-center uppercase text-[#FF5BF1]">
+                        <h2 className="text-5xl md:text-7xl font-black mb-16 text-center uppercase text-[#FF5BF1]">
                             [SERVICES]
                         </h2>
                         
@@ -228,7 +228,7 @@ const Minimal74BrutalistPage = () => {
 
                         <div className="mt-16 mb-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                             <div className="flex flex-wrap justify-between items-center">
-                                <h3 className="text-3xl font-black shrink-0 mr-6">FULL STACK DIGITAL</h3>
+                                <h3 className="text-2xl md:text-3xl font-black shrink-0 mr-6">FULL STACK DIGITAL</h3>
                                 <div className="flex flex-wrap justify-center gap-3 mt-4 md:mt-0 flex-grow">
                                     <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SEARCH</span>
                                     <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SOCIAL</span>
