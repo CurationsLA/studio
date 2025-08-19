@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CurationCraft - Curated Mix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        
+        .neon-pink {
+            background: #FF5BF1;
+            box-shadow: 0 0 30px rgba(255, 91, 241, 0.5);
+        }
+        
+        .neon-blue {
+            background: #6370E7;
+            box-shadow: 0 0 30px rgba(99, 112, 231, 0.5);
+        }
+        
+        .neon-green {
+            background: #EBF998;
+            box-shadow: 0 0 30px rgba(235, 249, 152, 0.3);
+        }
+        
+        .magazine-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1rem;
+        }
+        
+        .span-6 { grid-column: span 6; }
+        .span-4 { grid-column: span 4; }
+        .span-3 { grid-column: span 3; }
+        .span-8 { grid-column: span 8; }
+        .span-12 { grid-column: span 12; }
+        .span-2 { grid-column: span 2; }
+        
+        @media (max-width: 768px) {
+            .span-6, .span-4, .span-3, .span-8, .span-2, .span-12 { grid-column: span 12; }
+        }
+        
+        .text-outline {
+            -webkit-text-stroke: 2px #FF5BF1;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .diagonal-text {
+            transform: rotate(-3deg);
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+        .layer-1 { z-index: 10; }
+        .layer-2 { z-index: 20; }
+        .layer-3 { z-index: 30; }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .neon-glow-pink {
+            box-shadow: 0 0 40px rgba(255, 91, 241, 0.6),
+                        inset 0 0 40px rgba(255, 91, 241, 0.1);
+        }
+        
+        .neon-glow-blue {
+            box-shadow: 0 0 40px rgba(99, 112, 231, 0.6),
+                        inset 0 0 40px rgba(99, 112, 231, 0.1);
+        }
+        
+        .text-neon-pink {
+            color: #FF5BF1;
+            text-shadow: 0 0 20px rgba(255, 91, 241, 0.8);
+        }
+        
+        .text-neon-blue {
+            color: #6370E7;
+            text-shadow: 0 0 20px rgba(99, 112, 231, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-white text-black">
+        <!-- Floating Corner Badge -->
+        <div class="fixed top-20 right-4 z-50 bg-[#FF5BF1] text-white px-4 py-2 rotate-12 shadow-xl">
+            <span class="text-xs font-bold">V2 DROPPING 🔥</span>
+        </div>
+
+        <!-- Top Bar - Extended with More Info -->
+        <div class="fixed top-0 w-full z-40 bg-black text-white">
+            <div class="flex justify-between items-center px-6 py-2 text-xs">
+                <span>📍 Los Angeles | 🌐 Worldwide</span>
+                <span class="hidden md:block">CURATIONS × CurationsLA | Since 2017</span>
+                <span>✨ Grow with Google Partner</span>
+            </div>
+            <div class="bg-[#EBF998] text-black px-6 py-1 text-center">
+                <marquee class="text-sm font-bold">
+                    BREAKING: NEW CLIENTS GET 20% OFF FIRST CAMPAIGN • AI DISCOVERY WORKSHOPS NOW BOOKING • CURATIONSLA REACHES 50K SUBSCRIBERS • WE'RE HIRING CREATIVE DIRECTORS 
+                </marquee>
+            </div>
+        </div>
+
+        <!-- Hero Grid Layout - Enhanced -->
+        <section id="home" class="min-h-screen pt-20 px-4 md:px-8 bg-white">
+            <div class="magazine-grid items-center min-h-screen">
+                <!-- Main Title - Bigger, Bolder -->
+                <div class="span-8 z-10">
+                    <div class="diagonal-text">
+                        <h1 class="text-7xl md:text-9xl font-bold leading-none">
+                            <span class="block slide-in">CURATIONS</span>
+                            <span class="block text-outline slide-in" style="animation-delay: 0.2s">CURATIONS</span>
+                            <span class="block text-[#FF5BF1] slide-in" style="animation-delay: 0.4s">CURATIONS</span>
+                        </h1>
+                    </div>
+                    <div class="mt-8 space-y-3">
+                        <p class="text-3xl font-bold">
+                          We <span class="neon-pink text-white px-3 py-1 inline-block">CURATE</span> the <span class="neon-pink text-white px-3 py-1 inline-block">HEART</span> and <span class="neon-blue text-white px-3 py-1 inline-block">HEADLINES</span> of <span class="neon-pink text-white px-3 py-1 inline-block">BRANDS</span>.
+                        </p>
+                    </div>
+                    
+                    <!-- Quick Stats -->
+                    <div class="mt-8 flex gap-4">
+                        <div class="bg-black text-white p-3">
+                            <p class="text-2xl font-bold">500+</p>
+                            <p class="text-xs">Brands Elevated</p>
+                        </div>
+                        <div class="bg-[#6370E7] text-white p-3">
+                            <p class="text-2xl font-bold">50K+</p>
+                            <p class="text-xs">Newsletter Subs</p>
+                        </div>
+                        <div class="bg-[#EBF998] text-black p-3">
+                            <p class="text-2xl font-bold">8 Years</p>
+                            <p class="text-xs">LA Domination</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Side Panel - More Dynamic -->
+                <div class="span-4 space-y-4 z-20">
+                    <div class="bg-[#EBF998] p-6 transform hover:scale-105 transition">
+                        <h3 class="font-bold text-xl mb-3">TODAY'S MENU 🍽️</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><span class="mr-2">🚀</span> Restaurant Launches</li>
+                            <li class="flex items-center"><span class="mr-2">🤖</span> AI Discovery</li>
+                            <li class="flex items-center"><span class="mr-2">📺</span> Media Buying</li>
+                            <li class="flex items-center"><span class="mr-2">✨</span> Influencer Collabs</li>
+                            <li class="flex items-center"><span class="mr-2">📰</span> Executive Branding</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border-4 border-[#6370E7] p-6 bg-white">
+                        <p class="font-bold text-lg">BESTIE STATUS:</p>
+                        <p class="text-3xl mt-2">🚀 READY</p>
+                        <div class="mt-3 space-y-1">
+                            <div class="w-full bg-gray-200 h-2">
+                                <div class="bg-[#6370E7] h-2 w-full"></div>
+                            </div>
+                            <p class="text-xs text-right">100% Caffeinated</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-black text-white p-6">
+                        <p class="text-sm font-bold mb-2">🏆 SPECIAL PROGRAM</p>
+                        <p class="text-xs">One deserving brand receives full service FREE yearly through our Grow with Google Partnership</p>
+                        <button class="mt-3 text-[#EBF998] text-xs underline">Apply Now →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-gradient-to-b from-black via-gray-900 to-black text-white">
+            <!-- Services Depth Grid -->
+            <section class="py-20 px-8">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="text-7xl font-bold mb-16 text-center text-neon-pink">
+                        VIBES
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Service Cards with Depth -->
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-[#FF5BF1] transform rotate-3 group-hover:rotate-6 transition"></div>
+                            <div class="relative bg-black p-8 border-2 border-[#FF5BF1]">
+                                <span class="text-5xl">🍽️</span>
+                                <h3 class="text-2xl font-bold mt-4 text-[#FF5BF1]">RESTAURANT & BUSINESS</h3>
+                                <ul class="mt-4 space-y-2 text-sm">
+                                    <li>• Grand Openings</li>
+                                    <li>• Ghost Kitchens</li>
+                                    <li>• Menu Marketing</li>
+                                    <li>• Third-Party Apps</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-[#6370E7] transform -rotate-3 group-hover:-rotate-6 transition"></div>
+                            <div class="relative bg-black p-8 border-2 border-[#6370E7]">
+                                <span class="text-5xl">🤖</span>
+                                <h3 class="text-2xl font-bold mt-4 text-[#6370E7]">AI DISCOVERY</h3>
+                                <ul class="mt-4 space-y-2 text-sm">
+                                    <li>• Citation + Sourcing</li>
+                                    <li>• Prompt Engineering</li>
+                                    <li>• Tech Stack</li>
+                                    <li>• Team Workshops</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-[#EBF998] transform rotate-3 group-hover:rotate-6 transition"></div>
+                            <div class="relative bg-black p-8 border-2 border-[#EBF998]">
+                                <span class="text-5xl">📺</span>
+                                <h3 class="text-2xl font-bold mt-4 text-[#EBF998]">MEDIA BUYING</h3>
+                                <ul class="mt-4 space-y-2 text-sm">
+                                    <li>• Netflix Placement</li>
+                                    <li>• Podcast Ads</li>
+                                    <li>• Linear TV</li>
+                                    <li>• Social Media</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] transform -rotate-3 group-hover:-rotate-6 transition"></div>
+                            <div class="relative bg-black p-8 border-2 border-white">
+                                <span class="text-5xl">✨</span>
+                                <h3 class="text-2xl font-bold mt-4">CREATIVE COLLABS</h3>
+                                <ul class="mt-4 space-y-2 text-sm">
+                                    <li>• Influencer Matching</li>
+                                    <li>• UGC Campaigns</li>
+                                    <li>• Content Creation</li>
+                                    <li>• Social Strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-white transform rotate-3 group-hover:rotate-6 transition"></div>
+                            <div class="relative bg-black p-8 border-2 border-white">
+                                <span class="text-5xl">📰</span>
+                                <h3 class="text-2xl font-bold mt-4">COMMUNICATIONS</h3>
+                                <ul class="mt-4 space-y-2 text-sm">
+                                    <li>• Crisis Management</li>
+                                    <li>• Executive Branding</li>
+                                    <li>• PR Strategy</li>
+                                    <li>• Media Relations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#EBF998] to-[#FF5BF1] transform -rotate-3 group-hover:-rotate-6 transition"></div>
+                            <div class="relative bg-black p-8 border-2 border-[#EBF998]">
+                                <span class="text-5xl">🚀</span>
+                                <h3 class="text-2xl font-bold mt-4 text-[#EBF998]">FULL-STACK</h3>
+                                <ul class="mt-4 space-y-2 text-sm">
+                                    <li>• SEO & SEM</li>
+                                    <li>• Email/CRM</li>
+                                    <li>• Analytics</li>
+                                    <li>• Conversion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Partner -->
+                    <div class="mt-16 text-center">
+                        <div class="inline-block glass-effect p-8 border-2 border-[#EBF998]">
+                            <p class="text-2xl font-bold text-[#EBF998]">🏆 GROW WITH GOOGLE PARTNER</p>
+                            <p class="mt-2 text-sm">One deserving brand gets a full-service partnership for free, yearly.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CurationsLA Deep Dive -->
+            <section class="py-20 px-8 relative">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-6xl md:text-8xl font-bold">
+                            GOOD VIBES FROM
+                        </h2>
+                        <h2 class="text-6xl md:text-8xl font-bold">
+                            <span class="text-neon-pink">CURATIONS</span><span class="text-neon-blue">LA</span>
+                        </h2>
+                    </div>
+                    
+                    <!-- Layered Post Cards -->
+                    <div class="relative h-[700px] md:h-[500px]">
+                        <!-- Back Layer -->
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl layer-1">
+                            <div class="bg-gray-800 p-8 opacity-50">
+                                <span class="text-xs">COMING NEXT WEEK</span>
+                                <h3 class="text-2xl font-bold mt-2">🎸 Summer Concert Series</h3>
+                            </div>
+                        </div>
+                        
+                        <!-- Middle Layer -->
+                        <div class="absolute top-20 left-0 w-full md:w-1/2 layer-2">
+                            <div class="bg-[#FF8C00] p-8 glass-effect">
+                                <span class="text-sm font-bold">AUG 15, 2025</span>
+                                <h3 class="text-3xl font-bold mt-3 mb-4">🌮 FRIDAY AFTERNOON VIBES</h3>
+                                <p>Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
+                                <button class="mt-4 bg-white text-[#FF8C00] px-6 py-3 font-bold">EXPLORE WEEKEND →</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Front Layer -->
+                        <div class="absolute top-40 right-0 w-full md:w-1/2 layer-3">
+                            <div class="bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] p-8 neon-glow-pink">
+                                <span class="text-sm font-bold bg-white text-black px-2 py-1 inline-block">AUG 17, 2025</span>
+                                <h3 class="text-3xl font-bold mt-3 mb-4">📅 EVENTS: WEEK OF MONDAY</h3>
+                                <p class="mb-4">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
+                                <ul class="space-y-2 mb-6">
+                                    <li>🎤 Comedy Shows</li>
+                                    <li>🎸 Live Music</li>
+                                    <li>🍷 Wine Tastings</li>
+                                </ul>
+                                <button class="bg-white text-[#FF5BF1] px-6 py-3 font-bold">FULL LINEUP →</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Bottom Layer -->
+                        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-xl layer-2">
+                            <div class="bg-black border-2 border-[#EBF998] p-8">
+                                <span class="text-[#EBF998] text-sm font-bold">AUG 9, 2025</span>
+                                <h3 class="text-2xl font-bold mt-2 mb-3">📅 SUMMER HEAT EVENTS</h3>
+                                <p>Your guide to surviving LA summer in style</p>
+                                <button class="mt-4 text-[#EBF998] font-bold">DISCOVER →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+         <!-- Subscribe CTA -->
+        <section class="py-20 px-8 bg-gradient-to-b from-black to-black">
+            <div class="max-w-7xl mx-auto">
+                <div class="bg-black text-white p-12 text-center transform -skew-y-1">
+                    <h3 class="text-4xl font-bold mb-4 text-white">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
+                    <p class="text-xl mb-6 text-white">Curate Los Angeles with us</p>
+                    <button class="px-8 py-4 bg-[#FF5BF1] text-white font-bold text-lg hover:bg-[#EBF998] hover:text-black transition">
+                        SUBSCRIBE TO CURATIONSLA →
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+    
