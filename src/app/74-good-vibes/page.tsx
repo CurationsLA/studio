@@ -85,6 +85,17 @@ const GoodVibes74Page = () => {
                     justify-content: space-between;
                     align-items: center;
                 }
+
+                .logo-link {
+                    text-decoration: none;
+                    color: black;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                }
+
+                .logo-link:hover {
+                    color: #FF5BF1;
+                }
                 
                 .nav-links {
                     display: flex;
@@ -217,18 +228,20 @@ const GoodVibes74Page = () => {
                     transform: rotate(12deg);
                     cursor: pointer;
                     text-decoration: none;
-                    transition: transform 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
                 }
                 
                 .corner-badge:hover {
                     transform: rotate(12deg) scale(1.1);
+                    background: white;
+                    color: #FF5BF1;
                 }
             `}</style>
             
             <nav className="nav">
                 <div className="nav-container">
                     <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>
-                        <a onClick={() => showPage('home')} style={{ textDecoration: 'none', color: 'black', cursor: 'pointer' }}>[CURATIONS]</a>
+                        <a onClick={() => showPage('home')} className="logo-link">[CURATIONS]</a>
                     </div>
                     <button className="menu-toggle brutal-box" onClick={toggleMenu}>MENU</button>
                     <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`} id="navLinks">
@@ -241,7 +254,7 @@ const GoodVibes74Page = () => {
             </nav>
 
             <a href="mailto:hello@curations.la" className="corner-badge brutal-box">
-                <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>EMAIL US! 📧</span>
+                <span style={{ fontSize: '1rem', fontWeight: 700 }}>EMAIL US! ✉️</span>
             </a>
 
             <div id="home" className={`page-section ${activePage === 'home' ? 'active' : ''}`}>
@@ -357,10 +370,10 @@ const GoodVibes74Page = () => {
                     </p>
                 </div>
                 <div className="service-content">
-                    <div className="grid grid-3">
+                     <div className="grid grid-3">
                          <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🍽️</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Restaurant & Biz</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Restaurant & Biz</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Grand Openings & Events</li>
                                 <li style={{marginBottom: '0.5rem'}}>• Menu Marketing Magic</li>
@@ -375,7 +388,7 @@ const GoodVibes74Page = () => {
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🤖</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>AI Discovery</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>AI Discovery</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• AI Prompt Engineering</li>
                                 <li style={{marginBottom: '0.5rem'}}>• SEO & AI Citations</li>
@@ -390,7 +403,7 @@ const GoodVibes74Page = () => {
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>📺</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Media Buying</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Media Buying</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Netflix Placement</li>
                                 <li style={{marginBottom: '0.5rem'}}>• Podcast Ads</li>
@@ -405,7 +418,7 @@ const GoodVibes74Page = () => {
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>👋</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Creative Collabs</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Creative Collabs</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Social Strategy</li>
                                 <li style={{marginBottom: '0.5rem'}}>• UGC that Converts</li>
@@ -419,7 +432,7 @@ const GoodVibes74Page = () => {
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>📰</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Communications</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Communications</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Corporate Comms</li>
                                 <li style={{marginBottom: '0.5rem'}}>• Executive Branding</li>
@@ -433,7 +446,7 @@ const GoodVibes74Page = () => {
                         </div>
                          <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🚀</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>SEO & Discovery</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>SEO & Discovery</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Big Search</li>
                                 <li style={{marginBottom: '0.5rem'}}>• AI Citations</li>
@@ -483,8 +496,8 @@ const GoodVibes74Page = () => {
             </div>
             
             <div id="contact" className={`page-section ${activePage === 'contact' ? 'active' : ''}`}>
-                 <section style={{padding: '3rem 2rem', background: 'white'}}>
-                        <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+                 <section style={{paddingTop: '0', background: 'white'}}>
+                        <div style={{maxWidth: '1400px', margin: '0 auto', padding: '3rem 2rem'}}>
                             <div className="text-center mb-8">
                                 <h2 style={{fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, background: 'linear-gradient(to right, #FF5BF1, #6370E7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
                                     GOOD VIBES FROM CURATIONSLA
@@ -585,3 +598,4 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
+
