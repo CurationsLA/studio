@@ -132,9 +132,9 @@ const Minimal74BrutalistPage = () => {
                         </h2>
                         
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
+                            <div className="brutal-box bg-white p-6 flex flex-col">
                                 <span className="text-5xl">🍽️</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">Restaurant &amp; Biz</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">Restaurant &amp; Biz</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                     <li>• Grand Openings &amp; Events</li>
                                     <li>• Menu Marketing Magic</li>
@@ -148,9 +148,9 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
+                            <div className="brutal-box bg-white p-6 flex flex-col">
                                 <span className="text-5xl">🤖</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">AI Discovery</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">AI Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                     <li>• AI Prompt Engineering</li>
                                     <li>• SEO &amp; AI Citations</li>
@@ -164,9 +164,9 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
+                            <div className="brutal-box bg-white p-6 flex flex-col">
                                 <span className="text-5xl">📺</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">Media Buying</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">Media Buying</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                   <li>• Netflix Placement</li>
                                   <li>• Podcast Ads</li>
@@ -180,9 +180,9 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
+                            <div className="brutal-box bg-white p-6 flex flex-col">
                                 <span className="text-5xl">👋</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">Creative Collabs</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">Creative Collabs</h3>
                                  <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                   <li>• Social Strategy</li>
                                   <li>• UGC that Converts</li>
@@ -195,9 +195,9 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
+                            <div className="brutal-box bg-white p-6 flex flex-col">
                                 <span className="text-5xl">📰</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">Communications</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">Communications</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                   <li>• Corporate Comms</li>
                                   <li>• Executive Branding</li>
@@ -210,9 +210,9 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
+                            <div className="brutal-box bg-white p-6 flex flex-col">
                                 <span className="text-5xl">🚀</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">SEO &amp; Discovery</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">SEO &amp; Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                   <li>• Big Search</li>
                                   <li>• AI Citations</li>
@@ -226,18 +226,16 @@ const Minimal74BrutalistPage = () => {
                             </div>
                         </div>
 
-                        <div className="mt-16 mb-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
+                        <div className="mt-16 mb-16 brutal-box" style={{background: 'linear-gradient(to right, #FF5BF1, #6370E7, #EBF998)', padding: '2rem', color: 'white'}}>
                             <div className="flex flex-wrap justify-between items-center">
                                 <h3 className="text-xl md:text-2xl lg:text-3xl font-black shrink-0 mr-6">FULL STACK DIGITAL</h3>
                                 <div className="flex flex-wrap justify-center gap-3 mt-4 md:mt-0 flex-grow">
-                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SEARCH</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SOCIAL</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">DISPLAY ADS</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">EMAIL/CRM</span>
-                                    <div className="flex flex-wrap gap-3">
-                                        <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">SEO</span>
-                                        <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">UI/UX</span>
-                                    </div>
+                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>PAID SEARCH</span>
+                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>PAID SOCIAL</span>
+                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>DISPLAY ADS</span>
+                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>EMAIL/CRM</span>
+                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>SEO</span>
+                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>UI/UX</span>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +289,7 @@ const Minimal74BrutalistPage = () => {
                     <div className="max-w-7xl mx-auto">
                         <div className="brutal-box bg-white text-black p-12 text-center">
                             <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
-                            <p className="text-xl mb-6 font-bold">Curate Los Angeles with&nbsp;us</p>
+                            <p className="text-xl mb-6 font-bold">Curate Los Angeles with us</p>
                             <button className="brutal-box px-8 py-4 bg-[#FF5BF1] text-white font-black text-lg uppercase hover:bg-[#6370E7] transition">
                                 SUBSCRIBE TO CURATIONSLA
                             </button>
