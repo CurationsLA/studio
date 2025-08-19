@@ -63,7 +63,7 @@ const CuratedMixPage = () => {
                 
                 @keyframes slideIn {
                     from { transform: translateX(-100%); }
-                    to { transform: translateX(0); }
+                    to { translateX(0); }
                 }
                 
                 .slide-in {
@@ -123,7 +123,7 @@ const CuratedMixPage = () => {
                 <section id="home" className="min-h-screen pt-20 px-4 md:px-8 bg-white">
                     <div className="magazine-grid items-center min-h-screen">
                         {/* Main Title - Bigger, Bolder */}
-                        <div className="span-8">
+                        <div className="span-8 z-10">
                             <div className="diagonal-text">
                                 <h1 className="text-7xl md:text-9xl font-bold leading-none">
                                     <span className="block slide-in">CURATIONS</span>
@@ -132,9 +132,9 @@ const CuratedMixPage = () => {
                                 </h1>
                             </div>
                             <div className="mt-8 space-y-3">
-                                <p className="text-2xl">We don't just market brands.</p>
-                                <p className="text-3xl font-bold">We make them <span className="neon-pink text-white px-3 py-1 inline-block">UNFORGETTABLE</span></p>
-                                <p className="text-lg text-gray-600">Full-service agency + Media powerhouse = Your next level</p>
+                                <p className="text-3xl font-bold">
+                                  We <span className="neon-pink text-white px-3 py-1 inline-block">CURATE</span> the <span className="neon-pink text-white px-3 py-1 inline-block">HEART</span> and <span className="neon-blue text-white px-3 py-1 inline-block">HEADLINES</span> of <span className="neon-pink text-white px-3 py-1 inline-block">BRANDS</span>.
+                                </p>
                             </div>
                             
                             {/* Quick Stats */}
@@ -155,7 +155,7 @@ const CuratedMixPage = () => {
                         </div>
                         
                         {/* Side Panel - More Dynamic */}
-                        <div className="span-4 space-y-4">
+                        <div className="span-4 space-y-4 z-20">
                             <div className="bg-[#EBF998] p-6 transform hover:scale-105 transition">
                                 <h3 className="font-bold text-xl mb-3">TODAY'S MENU 🍽️</h3>
                                 <ul className="space-y-2">
