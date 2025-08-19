@@ -23,6 +23,9 @@ const GoodVibes74Page = () => {
         const hash = window.location.hash.substring(1);
         if (hash) {
             setActivePage(hash);
+        } else {
+            // If no hash, scroll to top
+            window.scrollTo(0, 0);
         }
     }, []);
 
@@ -429,11 +432,11 @@ const GoodVibes74Page = () => {
                     <div className="grid grid-2">
                         <div className="brutal-box philosophy-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
+                            <p style={{ lineHeight: 1.8, color: 'black' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
                         </div>
                          <div className="brutal-box dual-powerhouse-box" style={{ background: '#6370E7', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
+                            <p style={{ lineHeight: 1.8, color: 'black' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
                         </div>
                     </div>
                 </div>
@@ -536,10 +539,10 @@ const GoodVibes74Page = () => {
                             </div>
                         </div>
                     </div>
-                     <div className="brutal-box mt-8" style={{background: 'linear-gradient(to right, #FF5BF1, #a9c248, #6370E7)', padding: '2rem', color: 'white'}}>
+                     <div className="brutal-box mt-8" style={{background: 'linear-gradient(to right, rgb(255, 91, 241), rgb(169, 194, 72), rgb(99, 112, 231))', padding: '2rem', color: 'white'}}>
                         <div className="text-center">
                             <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
-                            <div className="arsenal-grid-container" style={{display: 'flex', flexWrap: 'wrap', gap: '1rem'}}>
+                            <div className="arsenal-grid-container" style={{display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center'}}>
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>PAID SEARCH</span>
                                 </div>
