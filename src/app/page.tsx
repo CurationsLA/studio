@@ -240,13 +240,13 @@ const Minimal74BrutalistPage = () => {
                         <div className="mt-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                             <div className="flex flex-wrap justify-between items-center">
                                 <h3 className="text-3xl font-black">FULL STACK DIGITAL</h3>
-                                <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
-                                    <span className="bg-white/20 px-4 py-2 font-bold">PAID SEARCH</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">PAID SOCIAL</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">DISPLAY ADS</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">EMAIL/CRM</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">SEO</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">UI/UX</span>
+                                <div className="flex flex-wrap justify-center gap-3 mt-4 md:mt-0 flex-grow">
+                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SEARCH</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SOCIAL</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">DISPLAY ADS</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">EMAIL/CRM</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">SEO</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">UI/UX</span>
                                 </div>
                             </div>
                         </div>
