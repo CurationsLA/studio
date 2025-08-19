@@ -273,20 +273,26 @@ const GoodVibes74Page = () => {
 
                 .philosophy-box:hover {
                     background: white !important;
-                    color: black;
+                    color: black !important;
                 }
                 .philosophy-box:hover h3 {
                     background: #FF5BF1;
                     color: white;
                 }
+                .philosophy-box:hover p {
+                    color: black;
+                }
 
                  .dual-powerhouse-box:hover {
                     background: white !important;
-                    color: black;
+                    color: black !important;
                 }
                 .dual-powerhouse-box:hover h3 {
                     background: #6370E7;
                     color: white;
+                }
+                .dual-powerhouse-box:hover p {
+                    color: black;
                 }
             `}</style>
             
@@ -527,10 +533,10 @@ const GoodVibes74Page = () => {
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>EMAIL/CRM</span>
                                 </div>
-                                 <div style={{background: '#6370E7', padding: '1rem', border: '2px solid black'}}>
+                                 <div style={{background: 'rgba(0,0,0,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>SEO</span>
                                 </div>
-                                <div style={{background: '#6370E7', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: 'rgba(0,0,0,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>UI/UX</span>
                                 </div>
                             </div>
@@ -650,6 +656,7 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
+
 
 
 
