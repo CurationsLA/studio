@@ -20,6 +20,11 @@ const LayeredDepthPage = () => {
                 body {
                     font-family: 'IBM Plex Sans', sans-serif;
                 }
+
+                .brutal-box {
+                    border: 4px solid black;
+                    box-shadow: 8px 8px 0px black;
+                }
                 
                 .layer-1 { z-index: 10; }
                 .layer-2 { z-index: 20; }
@@ -55,12 +60,16 @@ const LayeredDepthPage = () => {
                 
                 .text-neon-pink {
                     color: #FF5BF1;
-                    text-shadow: 0 0 20px rgba(255, 91, 241, 0.8);
+                    text-shadow: 0 0 20px rgba(255, 91, 241, 0.8), 0 0 40px rgba(255, 91, 241, 0.5);
                 }
                 
                 .text-neon-blue {
                     color: #6370E7;
-                    text-shadow: 0 0 20px rgba(99, 112, 231, 0.8);
+                    text-shadow: 0 0 20px rgba(99, 112, 231, 0.8), 0 0 40px rgba(99, 112, 231, 0.5);
+                }
+
+                .rajdhani {
+                    font-family: 'Rajdhani', sans-serif;
                 }
             `}</style>
             <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white">
@@ -82,7 +91,7 @@ const LayeredDepthPage = () => {
                 </nav>
 
                 {/* Layered Hero */}
-                <section className="min-h-screen relative overflow-hidden pt-20">
+                <section className="min-h-screen relative overflow-hidden pt-20 flex items-center justify-center">
                     {/* Background Layers */}
                     <div className="absolute inset-0 layer-1">
                         <div className="absolute top-20 left-20 w-96 h-96 bg-[#FF5BF1] opacity-10 rounded-full blur-3xl"></div>
@@ -103,202 +112,83 @@ const LayeredDepthPage = () => {
                             </div>
                             
                             <div className="text-center mt-8 space-y-4 slide-up" style={{animationDelay: '0.3s'}}>
-                                <p className="text-3xl">We curate the <span className="text-[#FF5BF1]">HEART</span> of brands</p>
-                                <p className="text-2xl">And the <span className="text-[#6370E7]">NEWS</span> they break</p>
-                            </div>
-                            
-                            {/* Floating Cards */}
-                            <div className="grid md:grid-cols-3 gap-6 mt-16">
-                                <div className="glass-effect p-6 neon-glow-pink slide-up" style={{animationDelay: '0.5s'}}>
-                                    <h3 className="text-2xl font-bold mb-3">AGENCY</h3>
-                                    <p>Full-service creative powerhouse</p>
-                                    <div className="mt-4 text-4xl">🚀</div>
-                                </div>
-                                <div className="glass-effect p-6 neon-glow-blue slide-up" style={{animationDelay: '0.7s'}}>
-                                    <h3 className="text-2xl font-bold mb-3">MEDIA</h3>
-                                    <p>50K+ newsletter subscribers</p>
-                                    <div className="mt-4 text-4xl">📰</div>
-                                </div>
-                                <div className="glass-effect p-6 border-2 border-[#EBF998] slide-up" style={{animationDelay: '0.9s'}}>
-                                    <h3 className="text-2xl font-bold mb-3 text-[#EBF998]">IMPACT</h3>
-                                    <p>100M+ impressions delivered</p>
-                                    <div className="mt-4 text-4xl">✨</div>
-                                </div>
+                               <p className="text-3xl font-bold">
+                                    We <span className="text-neon-pink">CURATE</span> the <span className="text-neon-pink">HEART</span> and the <span className="text-neon-blue">HEADLINES</span> of BRANDS
+                                </p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* CurationsLA Deep Dive */}
-                <section className="py-20 px-8 relative">
+                <section className="py-20 px-8 relative bg-white text-black">
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-6xl md:text-8xl font-bold">
-                                GOOD VIBES FROM
+                            <h2 className="text-6xl md:text-8xl font-bold rajdhani">
+                                CURATIONS <span className="text-[#FF5BF1]">+</span> CurationsLA
                             </h2>
-                            <h2 className="text-6xl md:text-8xl font-bold">
-                                <span className="text-neon-pink">CURATIONS</span><span className="text-neon-blue">LA</span>
-                            </h2>
+                             <p className="text-lg max-w-3xl mx-auto mt-4 text-gray-700">
+                                This isn't just a newsletter. It's the pulse of LA. While <span className="font-bold">[CURATIONS]</span> builds your brand, <span className="font-bold text-[#6370E7]">CurationsLA</span> puts you in the inbox of the city's most influential voices, creating a dual-powerhouse for cultural impact.
+                            </p>
                         </div>
                         
-                        {/* Layered Post Cards */}
-                        <div className="relative h-[700px] md:h-[500px]">
-                            {/* Back Layer */}
-                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl layer-1">
-                                <div className="bg-gray-800 p-8 opacity-50">
-                                    <span className="text-xs">COMING NEXT WEEK</span>
-                                    <h3 className="text-2xl font-bold mt-2">🎸 Summer Concert Series</h3>
-                                </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div className="brutal-box bg-white text-black p-8">
+                                <h3 className="text-xl font-bold mb-4 rajdhani">FRIDAY AFTERNOON VIBES</h3>
+                                <p className="text-sm">Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
+                                <button className="mt-4 bg-black text-white px-4 py-2 font-bold text-sm">EXPLORE WEEKEND →</button>
                             </div>
-                            
-                            {/* Middle Layer */}
-                            <div className="absolute top-20 left-0 w-full md:w-1/2 layer-2">
-                                <div className="bg-[#FF8C00] p-8 glass-effect">
-                                    <span className="text-sm font-bold">AUG 15, 2025</span>
-                                    <h3 className="text-3xl font-bold mt-3 mb-4">🌮 FRIDAY AFTERNOON VIBES</h3>
-                                    <p>Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
-                                    <button className="mt-4 bg-white text-[#FF8C00] px-6 py-3 font-bold">EXPLORE WEEKEND →</button>
-                                </div>
+                            <div className="brutal-box bg-white text-black p-8">
+                                <h3 className="text-xl font-bold mb-4 rajdhani">EVENTS: WEEK OF MONDAY</h3>
+                                <p className="text-sm">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
+                                <button className="mt-4 bg-black text-white px-4 py-2 font-bold text-sm">FULL LINEUP →</button>
                             </div>
-                            
-                            {/* Front Layer */}
-                            <div className="absolute top-40 right-0 w-full md:w-1/2 layer-3">
-                                <div className="bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] p-8 neon-glow-pink">
-                                    <span className="text-sm font-bold bg-white text-black px-2 py-1 inline-block">AUG 17, 2025</span>
-                                    <h3 className="text-3xl font-bold mt-3 mb-4">📅 EVENTS: WEEK OF MONDAY</h3>
-                                    <p className="mb-4">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
-                                    <ul className="space-y-2 mb-6">
-                                        <li>🎤 Comedy Shows</li>
-                                        <li>🎸 Live Music</li>
-                                        <li>🍷 Wine Tastings</li>
-                                    </ul>
-                                    <button className="bg-white text-[#FF5BF1] px-6 py-3 font-bold">FULL LINEUP →</button>
-                                </div>
-                            </div>
-                            
-                            {/* Bottom Layer */}
-                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-xl layer-2">
-                                <div className="bg-black border-2 border-[#EBF998] p-8">
-                                    <span className="text-[#EBF998] text-sm font-bold">AUG 9, 2025</span>
-                                    <h3 className="text-2xl font-bold mt-2 mb-3">📅 SUMMER HEAT EVENTS</h3>
-                                    <p>Your guide to surviving LA summer in style</p>
-                                    <button className="mt-4 text-[#EBF998] font-bold">DISCOVER →</button>
-                                </div>
+                            <div className="brutal-box bg-white text-black p-8">
+                               <h3 className="text-xl font-bold mb-4 rajdhani">SUMMER HEAT EVENTS</h3>
+                                <p className="text-sm">Your guide to surviving LA summer in style. Concerts, festivals, and more.</p>
+                                <button className="mt-4 bg-black text-white px-4 py-2 font-bold text-sm">DISCOVER →</button>
                             </div>
                         </div>
                         
-                        {/* Subscribe CTA */}
-                        <div className="mt-20 text-center">
-                            <div className="inline-block glass-effect p-12 neon-glow-blue">
-                                <h3 className="text-4xl font-bold mb-4">JOIN 50,000+ ANGELENOS</h3>
-                                <p className="text-xl mb-6">Get the inside scoop on LA culture, weekly.</p>
-                                <button className="px-8 py-4 bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] font-bold text-lg">
-                                    SUBSCRIBE TO CURATIONSLA →
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </section>
 
                 {/* Services Depth Grid */}
-                <section className="py-20 px-8">
+                <section className="py-20 px-8 bg-white text-black">
                     <div className="max-w-7xl mx-auto">
-                        <h2 className="text-7xl font-bold mb-16 text-center text-neon-pink">
+                        <h2 className="text-7xl font-bold mb-16 text-center rajdhani">
                             VIBES
                         </h2>
                         
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {/* Service Cards with Depth */}
-                            <div className="group relative">
-                                <div className="absolute inset-0 bg-[#FF5BF1] transform rotate-3 group-hover:rotate-6 transition"></div>
-                                <div className="relative bg-black p-8 border-2 border-[#FF5BF1]">
-                                    <span className="text-5xl">🍽️</span>
-                                    <h3 className="text-2xl font-bold mt-4 text-[#FF5BF1]">RESTAURANT & BUSINESS</h3>
-                                    <ul className="mt-4 space-y-2 text-sm">
-                                        <li>• Grand Openings</li>
-                                        <li>• Ghost Kitchens</li>
-                                        <li>• Menu Marketing</li>
-                                        <li>• Third-Party Apps</li>
-                                    </ul>
-                                </div>
+                            <div className="span-6 bg-[#FF5BF1] text-white p-8 min-h-[400px] relative overflow-hidden brutal-box">
+                                <span className="text-8xl opacity-20 absolute -right-4 -top-4">🍽️</span>
+                                <span className="text-6xl relative z-10">🍽️</span>
+                                <h3 className="text-3xl font-bold mt-4 mb-4 relative z-10 rajdhani">RESTAURANT & BUSINESS</h3>
+                                <p className="mb-4 relative z-10">From ghost kitchens to grand openings, we know food.</p>
+                                <ul className="space-y-1 text-sm relative z-10">
+                                    <li>✓ Grand Openings & Events</li>
+                                    <li>✓ Menu Marketing Magic</li>
+                                    <li>✓ Third-Party App Strategy</li>
+                                    <li>✓ Delivery Optimization</li>
+                                    <li>✓ Staff & Vendor Relations</li>
+                                </ul>
+                                <button className="mt-4 bg-white text-[#FF5BF1] px-4 py-2 font-bold text-sm">LEARN MORE</button>
                             </div>
-                            
-                            <div className="group relative">
-                                <div className="absolute inset-0 bg-[#6370E7] transform -rotate-3 group-hover:-rotate-6 transition"></div>
-                                <div className="relative bg-black p-8 border-2 border-[#6370E7]">
-                                    <span className="text-5xl">🤖</span>
-                                    <h3 className="text-2xl font-bold mt-4 text-[#6370E7]">AI DISCOVERY</h3>
-                                    <ul className="mt-4 space-y-2 text-sm">
-                                        <li>• Citation + Sourcing</li>
-                                        <li>• Prompt Engineering</li>
-                                        <li>• Tech Stack</li>
-                                        <li>• Team Workshops</li>
-                                    </ul>
+                            <div className="span-6 border-4 border-black p-8 min-h-[400px] brutal-box">
+                                <span className="text-6xl">🤖</span>
+                                <h3 className="text-3xl font-bold mt-4 mb-4 rajdhani">AI DISCOVERY</h3>
+                                <p className="mb-4 text-[#6370E7] font-bold text-lg">"Vibe Coding" & Beyond</p>
+                                <ul className="space-y-2">
+                                    <li>• AI Prompt Engineering</li>
+                                    <li>• SEO & AI Citations</li>
+                                    <li>• Tech Stack Discovery</li>
+                                    <li>• Business Consultations</li>
+                                    <li>• Team Workshops</li>
+                                </ul>
+                                <div className="mt-4 p-3 bg-[#EBF998] brutal-box">
+                                    <p className="text-xs font-bold">HOT: AI workshops booking fast!</p>
                                 </div>
-                            </div>
-                            
-                            <div className="group relative">
-                                <div className="absolute inset-0 bg-[#EBF998] transform rotate-3 group-hover:rotate-6 transition"></div>
-                                <div className="relative bg-black p-8 border-2 border-[#EBF998]">
-                                    <span className="text-5xl">📺</span>
-                                    <h3 className="text-2xl font-bold mt-4 text-[#EBF998]">MEDIA BUYING</h3>
-                                    <ul className="mt-4 space-y-2 text-sm">
-                                        <li>• Netflix Placement</li>
-                                        <li>• Podcast Ads</li>
-                                        <li>• Linear TV</li>
-                                        <li>• Social Media</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div className="group relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] transform -rotate-3 group-hover:-rotate-6 transition"></div>
-                                <div className="relative bg-black p-8 border-2 border-white">
-                                    <span className="text-5xl">✨</span>
-                                    <h3 className="text-2xl font-bold mt-4">CREATIVE COLLABS</h3>
-                                    <ul className="mt-4 space-y-2 text-sm">
-                                        <li>• Influencer Matching</li>
-                                        <li>• UGC Campaigns</li>
-                                        <li>• Content Creation</li>
-                                        <li>• Social Strategy</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div className="group relative">
-                                <div className="absolute inset-0 bg-white transform rotate-3 group-hover:rotate-6 transition"></div>
-                                <div className="relative bg-black p-8 border-2 border-white">
-                                    <span className="text-5xl">📰</span>
-                                    <h3 className="text-2xl font-bold mt-4">COMMUNICATIONS</h3>
-                                    <ul className="mt-4 space-y-2 text-sm">
-                                        <li>• Crisis Management</li>
-                                        <li>• Executive Branding</li>
-                                        <li>• PR Strategy</li>
-                                        <li>• Media Relations</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div className="group relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#EBF998] to-[#FF5BF1] transform -rotate-3 group-hover:-rotate-6 transition"></div>
-                                <div className="relative bg-black p-8 border-2 border-[#EBF998]">
-                                    <span className="text-5xl">🚀</span>
-                                    <h3 className="text-2xl font-bold mt-4 text-[#EBF998]">FULL-STACK</h3>
-                                    <ul className="mt-4 space-y-2 text-sm">
-                                        <li>• SEO & SEM</li>
-                                        <li>• Email/CRM</li>
-                                        <li>• Analytics</li>
-                                        <li>• Conversion</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        {/* Google Partner */}
-                        <div className="mt-16 text-center">
-                            <div className="inline-block glass-effect p-8 border-2 border-[#EBF998]">
-                                <p className="text-2xl font-bold text-[#EBF998]">🏆 GROW WITH GOOGLE PARTNER</p>
-                                <p className="mt-2 text-sm">One deserving brand gets a full-service partnership for free, yearly.</p>
                             </div>
                         </div>
                     </div>
