@@ -475,7 +475,7 @@ const GoodVibes74Page = () => {
                             </div>
                         </div>
                     </div>
-                     <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, #FF5BF1, #6370E7, #EBF998)', padding: '2rem', color: 'white'}}>
+                     <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, #FF5BF1, #5262d1, #a9c248)', padding: '2rem', color: 'white'}}>
                         <div className="text-center">
                             <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
                             <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem'}}>
@@ -491,10 +491,10 @@ const GoodVibes74Page = () => {
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>EMAIL/CRM</span>
                                 </div>
-                                <div style={{background: '#6370E7', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>SEO</span>
                                 </div>
-                                <div style={{background: '#6370E7', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>UI/UX</span>
                                 </div>
                             </div>
@@ -614,6 +614,7 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
+
 
 
 
