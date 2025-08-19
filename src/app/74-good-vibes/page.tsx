@@ -495,11 +495,47 @@ const GoodVibes74Page = () => {
                             <button type="submit" className="brutal-box btn-primary" style={{ width: '100%', padding: '1rem' }}>SEND IT</button>
                         </form>
                     </div>
-                     <section style={{padding: '5rem 2rem', background: 'black', marginTop: '4rem'}}>
+
+                    <section style={{padding: '3rem 2rem', background: 'white'}}>
+                        <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+                            <div className="text-center mb-8">
+                                <h2 style={{fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, background: 'linear-gradient(to right, #FF5BF1, #6370E7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+                                    GOOD VIBES FROM CURATIONSLA
+                                </h2>
+                                <p style={{fontSize: '1.125rem', maxWidth: '800px', margin: '1rem auto', color: '#333'}}>
+                                    This isn&apos;t just a newsletter. It&apos;s the pulse of LA. While <span style={{fontWeight: 700}}>[CURATIONS]</span> builds your brand, 
+                                    <span style={{fontWeight: 700, color: '#6370E7'}}> CurationsLA</span> puts you in the inbox of the city&apos;s most influential voices, 
+                                    creating a dual-powerhouse for cultural impact.
+                                </p>
+                            </div>
+                            
+                            <div className="grid grid-3">
+                                <div className="brutal-box" style={{background: '#FF5BF1', color: 'white', padding: '1.5rem'}}>
+                                    <span style={{fontSize: '0.875rem', fontWeight: 800}}>AUG 15, 2025</span>
+                                    <h3 style={{fontSize: '1.5rem', fontWeight: 800, margin: '0.75rem 0'}}>🌮 FRIDAY AFTERNOON VIBES</h3>
+                                    <p style={{fontSize: '0.875rem'}}>Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
+                                </div>
+                                
+                                <div className="brutal-box" style={{background: 'linear-gradient(135deg, #FF5BF1, #6370E7)', padding: '1.5rem', color: 'white'}}>
+                                    <span style={{fontSize: '0.875rem', fontWeight: 700, background: 'white', color: 'black', padding: '0.25rem 0.5rem', display: 'inline-block'}}>AUG 17, 2025</span>
+                                    <h3 style={{fontSize: '1.5rem', fontWeight: 800, color: 'white', margin: '0.75rem 0'}}>📅 EVENTS: WEEK OF MONDAY</h3>
+                                    <p style={{marginBottom: '0.75rem', color: 'white', fontSize: '0.875rem'}}>Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
+                                </div>
+                                
+                                <div className="brutal-box" style={{background: 'white', color: 'black', padding: '1.5rem', border: '4px solid black'}}>
+                                    <span style={{color: 'black', fontSize: '0.875rem', fontWeight: 700}}>AUG 9, 2025</span>
+                                    <h3 style={{fontSize: '1.25rem', fontWeight: 800, margin: '0.5rem 0'}}>📅 SUMMER HEAT EVENTS</h3>
+                                    <p style={{fontSize: '0.875rem'}}>Your guide to surviving LA summer in style</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section style={{padding: '5rem 2rem', background: 'black'}}>
                         <div style={{maxWidth: '1400px', margin: '0 auto'}}>
                             <div className="brutal-box" style={{background: 'white', color: 'black', padding: '3rem', textAlign: 'center'}}>
                                 <h3 style={{fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase'}}>RECEIVE GOOD VIBES IN YOUR INBOX</h3>
-                                <p style={{fontSize: '1.25rem', marginBottom: '1.5rem', fontWeight: 700}}>Curate Los Angeles with&nbsp;us</p>
+                                <p style={{fontSize: '1.25rem', marginBottom: '1.5rem', fontWeight: 700}}>Curate Los Angeles with us</p>
                                 <button className="brutal-box btn-primary" style={{padding: '1rem 2rem', fontSize: '1.125rem'}}>
                                     SUBSCRIBE TO CURATIONSLA
                                 </button>
