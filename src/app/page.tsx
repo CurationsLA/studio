@@ -16,8 +16,8 @@ const Minimal74BrutalistPage = () => {
                     box-shadow: 8px 8px 0px black;
                 }
 
-                .text-outline {
-                    -webkit-text-stroke: 3px #FF5BF1;
+                .text-outline-subtle {
+                    -webkit-text-stroke: 1.5px #FF5BF1;
                     -webkit-text-fill-color: transparent;
                 }
                 
@@ -62,7 +62,7 @@ const Minimal74BrutalistPage = () => {
                             <div>
                                 <h1 className="text-4xl md:text-6xl font-black leading-tight uppercase">
                                     <span className="block slide-in">CURATIONS</span>
-                                    <span className="block text-outline slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
+                                    <span className="block text-outline-subtle slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
                                     <span className="block text-[#6370E7] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
                                 </h1>
                             </div>
@@ -125,7 +125,7 @@ const Minimal74BrutalistPage = () => {
                 </section>
 
                 {/* Services Section */}
-                <section className="py-12 px-8 bg-white">
+                <section className="py-12 px-4 md:px-8 bg-white">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-7xl font-black mb-16 text-center uppercase text-[#FF5BF1]">
                             [SERVICES]
@@ -243,7 +243,7 @@ const Minimal74BrutalistPage = () => {
                 </section>
                 
                 {/* Google Partner */}
-                <div className="py-6 bg-black">
+                <div className="py-12 px-4 md:px-8 bg-black">
                     <div className="text-center">
                          <div className="inline-block brutal-box p-8 border-2 border-[#EBF998] neon-glow-pink">
                             <p className="text-2xl font-black text-[#EBF998] uppercase">🏆 GROW WITH GOOGLE PARTNER</p>
@@ -253,7 +253,7 @@ const Minimal74BrutalistPage = () => {
                 </div>
 
                 {/* CurationsLA Deep Dive */}
-                <section className="py-12 px-8 relative bg-white">
+                <section className="py-12 px-4 md:px-8 relative bg-white">
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-8">
                             <h2 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] text-transparent bg-clip-text">
@@ -285,7 +285,7 @@ const Minimal74BrutalistPage = () => {
                 </section>
                 
                 {/* Subscribe CTA */}
-                <section className="py-20 px-8 bg-black">
+                <section className="py-20 px-4 md:px-8 bg-black">
                     <div className="max-w-7xl mx-auto">
                         <div className="brutal-box bg-white text-black p-12 text-center">
                             <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
