@@ -358,7 +358,7 @@ const GoodVibes74Page = () => {
                 </div>
                 <div className="service-content">
                     <div className="grid grid-3">
-                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexdirection: 'column'}}>
+                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🍽️</span>
                             <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Restaurant & Biz</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
@@ -373,7 +373,7 @@ const GoodVibes74Page = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexdirection: 'column'}}>
+                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🤖</span>
                             <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>AI Discovery</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
@@ -388,7 +388,7 @@ const GoodVibes74Page = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexdirection: 'column'}}>
+                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>📺</span>
                             <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Media Buying</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
@@ -403,7 +403,7 @@ const GoodVibes74Page = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexdirection: 'column'}}>
+                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>👋</span>
                             <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Creative Collabs</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
@@ -417,7 +417,7 @@ const GoodVibes74Page = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexdirection: 'column'}}>
+                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>📰</span>
                             <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Communications</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
@@ -431,7 +431,7 @@ const GoodVibes74Page = () => {
                                 </a>
                             </div>
                         </div>
-                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexdirection: 'column'}}>
+                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🚀</span>
                             <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>SEO & Discovery</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
@@ -538,5 +538,3 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
-
-    
