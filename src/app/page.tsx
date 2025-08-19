@@ -228,7 +228,7 @@ const Minimal74BrutalistPage = () => {
 
                         <div className="mt-16 mb-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                             <div className="flex flex-wrap justify-between items-center">
-                                <h3 className="text-2xl md:text-3xl font-black shrink-0 mr-6">FULL STACK DIGITAL</h3>
+                                <h3 className="text-xl md:text-2xl lg:text-3xl font-black shrink-0 mr-6">FULL STACK DIGITAL</h3>
                                 <div className="flex flex-wrap justify-center gap-3 mt-4 md:mt-0 flex-grow">
                                     <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SEARCH</span>
                                     <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SOCIAL</span>
@@ -304,5 +304,3 @@ const Minimal74BrutalistPage = () => {
 };
 
 export default Minimal74BrutalistPage;
-
-    
