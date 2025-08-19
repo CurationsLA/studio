@@ -41,6 +41,9 @@ export default function Home() {
         <Link href="/elevated-editorial" className="text-lg text-accent hover:underline">
           ELEVATED EDITORIAL
         </Link>
+        <Link href="/heartbeat-pulse" className="text-lg text-accent hover:underline">
+          Heartbeat Pulse
+        </Link>
       </div>
     </div>
   );
