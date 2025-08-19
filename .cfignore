@@ -39,3 +39,6 @@ out
 # Misc
 .pnp*
 .yarn/*
+.next/cache/
+node_modules/
+.next/server/
