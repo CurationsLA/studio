@@ -266,7 +266,7 @@ const Minimal74BrutalistPage = () => {
                             </p>
                         </div>
                         
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid justify-center md:justify-start md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <div className="brutal-box bg-[#FF5BF1] text-white p-6">
                                 <span className="text-sm font-black">AUG 15, 2025</span>
                                 <h3 className="text-2xl font-black mt-3 mb-3">🌮 FRIDAY AFTERNOON VIBES</h3>
@@ -277,7 +277,7 @@ const Minimal74BrutalistPage = () => {
                                 <h3 className="text-2xl font-black text-white mt-3 mb-3">📅 EVENTS: WEEK OF MONDAY</h3>
                                 <p className="mb-3 text-white text-sm">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
                             </div>
-                             <div className="brutal-box bg-white text-black p-6 border-4 border-black">
+                             <div className="brutal-box bg-white text-black p-6 border-4 border-black lg:col-start-2 xl:col-start-auto">
                                 <span className="text-black text-sm font-bold">AUG 9, 2025</span>
                                 <h3 className="text-xl font-black mt-2 mb-2">📅 SUMMER HEAT EVENTS</h3>
                                 <p className="text-sm">Your guide to surviving LA summer in style</p>
