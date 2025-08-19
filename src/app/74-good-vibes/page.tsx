@@ -215,39 +215,43 @@ const GoodVibes74Page = () => {
                             </div>
                             
                            <div className="span-3 bg-black text-white p-6 brutal-box">
-                                <h3 className="text-xl font-black mb-4 text-[#EBF998]">📺 MEDIA BUYING</h3>
-                                <div className="space-y-2 text-sm">
-                                    <p>Netflix</p>
-                                    <p>KTLA</p>
-                                    <p>Podcasts</p>
-                                    <p>Geofencing</p>
-                                </div>
+                                <span className="text-4xl">📺</span>
+                                <h3 className="text-xl font-black my-2 text-[#EBF998]">MEDIA BUYING</h3>
+                                <ul className="space-y-1 text-xs">
+                                  <li>• Netflix</li>
+                                  <li>• KTLA</li>
+                                  <li>• Podcasts</li>
+                                  <li>• Geofencing</li>
+                                </ul>
                             </div>
                             
                             <div className="span-3 bg-[#6370E7] text-white p-6 brutal-box">
-                                <h3 className="text-xl font-black mb-4">✨ CREATIVE COLLABS</h3>
-                                <p className="text-sm mb-4">UGC that converts.</p>
-                                <ul className="text-sm space-y-1">
-                                    <li>→ Social Strategy</li>
-                                    <li>→ Content Gaps</li>
+                                <span className="text-4xl">✨</span>
+                                <h3 className="text-xl font-black my-2">CREATIVE COLLABS</h3>
+                                <ul className="space-y-1 text-xs">
+                                  <li>• Social Strategy</li>
+                                  <li>• Content Gaps</li>
+                                  <li>• UGC that Converts</li>
                                 </ul>
                             </div>
                             
                             <div className="span-3 border-4 border-[#EBF998] p-6 brutal-box">
-                                <h3 className="text-xl font-black mb-4">📰 COMMUNICATIONS</h3>
-                                <ul className="text-sm space-y-1">
-                                    <li>Corporate Comms</li>
-                                    <li>Executive Branding</li>
-                                    <li>Newsletter Design</li>
+                                <span className="text-4xl">📰</span>
+                                <h3 className="text-xl font-black my-2">COMMUNICATIONS</h3>
+                                <ul className="space-y-1 text-xs">
+                                  <li>• Corporate Comms</li>
+                                  <li>• Executive Branding</li>
+                                  <li>• Newsletter Design</li>
                                 </ul>
                             </div>
                             
                             <div className="span-3 bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] text-white p-6 brutal-box">
-                                <h3 className="text-xl font-black mb-4">🔍 SEO & DISCOVERY</h3>
-                                <p className="text-sm mb-3">Be found everywhere:</p>
-                                <ul className="text-sm space-y-1">
-                                    <li>Google #1</li>
-                                    <li>AI Citations</li>
+                                <span className="text-4xl">🔍</span>
+                                <h3 className="text-xl font-black my-2">SEO & DISCOVERY</h3>
+                                 <ul className="space-y-1 text-xs">
+                                  <li>• Google #1</li>
+                                  <li>• AI Citations</li>
+                                  <li>• Rich Snippets</li>
                                 </ul>
                             </div>
                             
@@ -340,13 +344,12 @@ const GoodVibes74Page = () => {
                 </section>
 
                 {/* Subscribe CTA */}
-                <section className="py-12 px-8 bg-black">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="bg-black text-white p-10 text-center transform -skew-y-1 brutal-box border-4 border-white">
-                            <h3 className="text-3xl font-black mb-3 text-white">Good Vibes 74</h3>
-                            <p className="text-lg mb-5 text-white">Curate Los Angeles with us</p>
-                            <button className="px-8 py-3 bg-[#FF5BF1] text-white font-black text-lg hover:bg-[#EBF998] hover:text-black transition">
-                                SUBSCRIBE TO CURATIONSLA →
+                <section className="py-12 px-8 bg-white">
+                    <div className="max-w-7xl mx-auto flex justify-end items-center">
+                        <div className="flex items-center gap-4">
+                            <span className="text-4xl">💌</span>
+                             <button className="px-6 py-3 bg-black text-white font-black text-lg hover:bg-[#FF5BF1] transition brutal-box">
+                                SUBSCRIBE TO CURATIONSLA
                             </button>
                         </div>
                     </div>
