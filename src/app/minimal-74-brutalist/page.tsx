@@ -64,8 +64,8 @@ const Minimal74BrutalistPage = () => {
                 </div>
 
                 {/* Hero Grid Layout */}
-                <section id="home" className="min-h-screen pt-20 px-4 md:px-8 bg-white">
-                    <div className="grid md:grid-cols-12 gap-6 items-center min-h-[80vh]">
+                <section id="home" className="min-h-[70vh] pt-20 px-4 md:px-8 bg-white">
+                    <div className="grid md:grid-cols-12 gap-6 items-center h-full">
                         {/* Main Title */}
                         <div className="md:col-span-8 z-10">
                             <div>
@@ -77,7 +77,7 @@ const Minimal74BrutalistPage = () => {
                             </div>
                             
                             {/* Brutalist Motto Expression */}
-                            <div className="mt-12 space-y-6">
+                            <div className="mt-8 space-y-6">
                                 <div className="brutal-box bg-black text-white p-6 pulse-brutal">
                                     <h2 className="text-2xl md:text-3xl font-black uppercase text-center">
                                         WE CURATE THE
@@ -121,7 +121,7 @@ const Minimal74BrutalistPage = () => {
                             
                             <div className="brutal-box bg-white p-6">
                                 <p className="font-black text-lg uppercase">SYSTEMS:</p>
-                                <p className="text-3xl mt-2 pulse-brutal font-black text-green-500">[ONLINE]</p>
+                                <p className="text-3xl mt-2 pulse-brutal font-black text-[#FF5BF1]">[ONLINE]</p>
                                 <div className="mt-3 space-y-1">
                                     <div className="w-full bg-gray-300 h-4 brutal-box">
                                         <div className="bg-[#6370E7] h-full w-full pulse-brutal"></div>
@@ -134,57 +134,90 @@ const Minimal74BrutalistPage = () => {
                 </section>
 
                 {/* Services Section */}
-                <section className="py-20 px-8 bg-white">
+                <section className="py-12 px-8 bg-white">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-7xl font-black mb-16 text-center uppercase text-[#FF5BF1]">
                             [SERVICES]
                         </h2>
                         
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-[#FF5BF1]">
+                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-[#FF5BF1]">
                                 <span className="text-5xl">🍽️</span>
-                                <h3 className="text-xl font-black mt-4 uppercase">Restaurant & Biz</h3>
-                                <p className="mt-2 text-sm">Strategy to opening night.</p>
+                                <h3 className="font-black text-2xl mt-4 uppercase">Restaurant & Biz</h3>
+                                <ul className="mt-4 space-y-2 text-sm font-bold">
+                                    <li>• Grand Openings</li>
+                                    <li>• Ghost Kitchens</li>
+                                    <li>• Menu Marketing</li>
+                                    <li>• Third-Party Apps</li>
+                                </ul>
                             </div>
                             
                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-[#6370E7]">
                                 <span className="text-5xl">🤖</span>
-                                <h3 className="text-xl font-black mt-4 uppercase">AI Discovery</h3>
-                                <p className="mt-2 text-sm">"Vibe-Coding" & Team Workshops.</p>
+                                <h3 className="font-black text-2xl mt-4 uppercase">AI Discovery</h3>
+                                <ul className="mt-4 space-y-2 text-sm font-bold">
+                                    <li>• Citation + Sourcing</li>
+                                    <li>• Prompt Engineering</li>
+                                    <li>• Tech Stack</li>
+                                    <li>• Team Workshops</li>
+                                </ul>
                             </div>
                             
                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-[#EBF998]">
                                 <span className="text-5xl">📺</span>
-                                <h3 className="text-xl font-black mt-4 uppercase">Media Buying</h3>
-                                <p className="mt-2 text-sm">Netflix, KTLA, Podcasts & more.</p>
+                                <h3 className="font-black text-2xl mt-4 uppercase">Media Buying</h3>
+                                <ul className="mt-4 space-y-2 text-sm font-bold">
+                                  <li>• Netflix Placement</li>
+                                  <li>• Podcast Ads</li>
+                                  <li>• Linear TV</li>
+                                  <li>• Social Media</li>
+                                </ul>
                             </div>
                             
                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
-                                <span className="text-5xl">✨</span>
-                                <h3 className="text-xl font-black mt-4 uppercase">Creative Collabs</h3>
-                                <p className="mt-2 text-sm">UGC that converts, content strategy.</p>
+                                <span className="text-5xl">👋</span>
+                                <h3 className="font-black text-2xl mt-4 uppercase">Creative Collabs</h3>
+                                <ul className="mt-4 space-y-2 text-sm font-bold">
+                                  <li>• Influencer Matching</li>
+                                  <li>• UGC Campaigns</li>
+                                  <li>• Content Creation</li>
+                                  <li>• Social Strategy</li>
+                                </ul>
                             </div>
                             
                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
                                 <span className="text-5xl">📰</span>
-                                <h3 className="text-xl font-black mt-4 uppercase">Communications</h3>
-                                <p className="mt-2 text-sm">Executive branding, newsletters.</p>
+                                <h3 className="font-black text-2xl mt-4 uppercase">Communications</h3>
+                                <ul className="mt-4 space-y-2 text-sm font-bold">
+                                  <li>• Crisis Management</li>
+                                  <li>• Executive Branding</li>
+                                  <li>• PR Strategy</li>
+                                  <li>• Media Relations</li>
+                                </ul>
                             </div>
                             
                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
                                 <span className="text-5xl">🚀</span>
-                                <h3 className="text-xl font-black mt-4 uppercase">Full-Stack</h3>
-                                <p className="mt-2 text-sm">SEO, Paid Social, Email, CRM.</p>
+                                <h3 className="font-black text-2xl mt-4 uppercase">Full-Stack</h3>
+                                <ul className="mt-4 space-y-2 text-sm font-bold">
+                                  <li>• SEO & SEM</li>
+                                  <li>• Email/CRM</li>
+                                  <li>• Analytics</li>
+                                  <li>• Conversion</li>
+                                </ul>
                             </div>
                         </div>
 
-                         <div className="mt-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
+                         <div className="mt-16 brutal-box bg-black text-white p-8">
                             <div className="flex flex-wrap justify-between items-center">
-                                <h3 className="text-3xl font-black">FULL-STACK DIGITAL DOMINATION</h3>
+                                <h3 className="text-3xl font-black">FULL STACK DIGITAL</h3>
                                 <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
-                                    <span className="bg-white/20 px-4 py-2 font-bold">PAID SEARCH</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">PAID SOCIAL</span>
-                                    <span className="bg-white/20 px-4 py-2 font-bold">INFLUENCER</span>
+                                    <span className="font-bold">PAID SEARCH</span>
+                                    <span className="font-bold">PAID SOCIAL</span>
+                                    <span className="font-bold">DISPLAY ADS</span>
+                                    <span className="font-bold">EMAIL/CRM</span>
+                                    <span className="font-bold">SEO</span>
+                                    <span className="font-bold">UI/UX</span>
                                 </div>
                             </div>
                         </div>
@@ -224,8 +257,8 @@ const Minimal74BrutalistPage = () => {
                                 <h3 className="text-2xl font-black text-white mt-3 mb-3">📅 EVENTS: WEEK OF MONDAY</h3>
                                 <p className="mb-3 text-white text-sm">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
                             </div>
-                             <div className="brutal-box bg-black border-2 border-[#EBF998] p-6 text-white">
-                                <span className="text-[#EBF998] text-sm font-bold">AUG 9, 2025</span>
+                             <div className="brutal-box bg-white text-black p-6 border-4 border-black">
+                                <span className="text-black text-sm font-bold">AUG 9, 2025</span>
                                 <h3 className="text-xl font-black mt-2 mb-2">📅 SUMMER HEAT EVENTS</h3>
                                 <p className="text-sm">Your guide to surviving LA summer in style</p>
                             </div>
@@ -237,10 +270,10 @@ const Minimal74BrutalistPage = () => {
                 <section className="py-20 px-8 bg-black">
                     <div className="max-w-7xl mx-auto">
                         <div className="brutal-box bg-white text-black p-12 text-center">
-                            <h3 className="text-4xl font-black mb-4 uppercase">INBOX_SYNC.EXE</h3>
+                            <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
                             <p className="text-xl mb-6 font-bold">Curate Los Angeles with us</p>
                             <button className="brutal-box px-8 py-4 bg-[#FF5BF1] text-white font-black text-lg uppercase hover:bg-[#6370E7] transition">
-                                SUBSCRIBE_NOW &gt;&gt;&gt;
+                                SUBSCRIBE TO CURATIONSLA
                             </button>
                         </div>
                     </div>
