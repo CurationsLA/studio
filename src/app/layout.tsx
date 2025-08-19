@@ -24,6 +24,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;900&family=Archivo+Narrow:wght@700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
         {children}
