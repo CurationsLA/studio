@@ -1,3 +1,4 @@
+
 'use client';
 
 const MagazineStackPage = () => {
@@ -385,3 +386,5 @@ const MagazineStackPage = () => {
 };
 
 export default MagazineStackPage;
+
+    
