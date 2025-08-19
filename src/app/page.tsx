@@ -258,7 +258,7 @@ const Minimal74BrutalistPage = () => {
                 <section className="py-12 px-4 md:px-8 relative bg-white">
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-8">
-                            <h2 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] text-transparent bg-clip-text">
+                            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] text-transparent bg-clip-text">
                                 GOOD VIBES FROM CURATIONSLA
                             </h2>
                             <p className="text-lg max-w-3xl mx-auto mt-4 text-gray-700">
@@ -304,3 +304,5 @@ const Minimal74BrutalistPage = () => {
 };
 
 export default Minimal74BrutalistPage;
+
+    
