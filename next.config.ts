@@ -1,23 +1,18 @@
-import type {NextConfig} from 'next';
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'standalone', // Reduce build size for deployment
+  experimental: {
+    granularChunks: true, // Split JS chunks to avoid huge files
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    unoptimized: true, // Optional: if using many local images
+  },
+  eslint: {
+    ignoreDuringBuilds: true, // Skip linting to speed up builds
+  },
+  typescript: {
+    ignoreBuildErrors: true, // Skip type errors if any
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
