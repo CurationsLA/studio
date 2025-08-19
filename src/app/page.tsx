@@ -125,7 +125,7 @@ const Minimal74BrutalistPage = () => {
                 </section>
 
                 {/* Services Section */}
-                <section className="py-12 px-4 md:px-8 bg-white">
+                <section className="pb-12 px-4 md:px-8 bg-white">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-7xl font-black mb-16 text-center uppercase text-[#FF5BF1]">
                             [SERVICES]
@@ -134,9 +134,9 @@ const Minimal74BrutalistPage = () => {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                              <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
                                 <span className="text-5xl">🍽️</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">Restaurant & Biz</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase">Restaurant &amp; Biz</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
-                                    <li>• Grand Openings & Events</li>
+                                    <li>• Grand Openings &amp; Events</li>
                                     <li>• Menu Marketing Magic</li>
                                     <li>• Third-Party App Strategy</li>
                                     <li>• Delivery Optimization</li>
@@ -153,7 +153,7 @@ const Minimal74BrutalistPage = () => {
                                 <h3 className="font-black text-2xl mt-4 uppercase">AI Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                     <li>• AI Prompt Engineering</li>
-                                    <li>• SEO & AI Citations</li>
+                                    <li>• SEO &amp; AI Citations</li>
                                     <li>• Tech Stack Discovery</li>
                                     <li>• Team Workshops</li>
                                 </ul>
@@ -212,7 +212,7 @@ const Minimal74BrutalistPage = () => {
                             
                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
                                 <span className="text-5xl">🚀</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase">SEO & Discovery</h3>
+                                <h3 className="font-black text-2xl mt-4 uppercase">SEO &amp; Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                   <li>• Big Search</li>
                                   <li>• AI Citations</li>
@@ -228,7 +228,7 @@ const Minimal74BrutalistPage = () => {
 
                         <div className="mt-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                             <div className="flex flex-wrap justify-between items-center">
-                                <h3 className="text-3xl font-black">FULL STACK DIGITAL</h3>
+                                <h3 className="text-3xl font-black shrink-0 mr-6">FULL STACK DIGITAL</h3>
                                 <div className="flex flex-wrap justify-center gap-3 mt-4 md:mt-0 flex-grow">
                                     <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SEARCH</span>
                                     <span className="bg-white/20 px-4 py-2 font-bold border-2 border-black">PAID SOCIAL</span>
