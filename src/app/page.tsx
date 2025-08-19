@@ -29,6 +29,9 @@ export default function Home() {
         <Link href="/layered-depth" className="text-lg text-accent hover:underline">
           Layered Depth
         </Link>
+        <Link href="/clean-zine-layers" className="text-lg text-accent hover:underline">
+          Clean Zine Layers
+        </Link>
       </div>
     </div>
   );
