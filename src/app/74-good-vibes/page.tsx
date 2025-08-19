@@ -210,7 +210,7 @@ const GoodVibes74Page = () => {
                 .learn-more-link:hover span {
                    background: white;
                    color: #FF5BF1;
-                   border: 4px solid black;
+                   border-color: black;
                 }
 
 
@@ -334,7 +334,7 @@ const GoodVibes74Page = () => {
                 <span style={{ fontSize: '1rem', fontWeight: 700 }}>EMAIL US! ✉️</span>
             </a>
 
-            <div id="home" className="page-section">
+            <div id="home" className="page-section" style={{paddingTop: '60px'}}>
                 <section style={{ minHeight: '70vh', padding: '4rem 2rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div className="grid grid-2" style={{ alignItems: 'center' }}>
@@ -412,7 +412,7 @@ const GoodVibes74Page = () => {
                     </p>
                 </div>
                 
-                <div className="service-content">
+                <div className="service-content" style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
                     <div className="brutal-box mb-8 our-story-box" style={{ background: '#EBF998', padding: '2rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>OUR STORY</h2>
                         <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
@@ -426,7 +426,7 @@ const GoodVibes74Page = () => {
                         </p>
                     </div>
         
-                    <div className="grid grid-2 mb-8">
+                    <div className="grid grid-2">
                         <div className="brutal-box philosophy-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
                             <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
@@ -439,14 +439,14 @@ const GoodVibes74Page = () => {
                 </div>
             </div>
             
-            <div id="services" className="page-section">
+            <div id="services" className="page-section" style={{paddingTop: '0'}}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CURATIONS</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         A full-stack arsenal for modern brands.
                     </p>
                 </div>
-                <div className="service-content">
+                <div className="service-content" style={{paddingTop: '2rem'}}>
                      <div className="grid grid-3">
                          <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🍽️</span>
@@ -536,7 +536,7 @@ const GoodVibes74Page = () => {
                             </div>
                         </div>
                     </div>
-                     <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, #FF5BF1, #a9c248, #6370E7)', padding: '2rem', color: 'white'}}>
+                     <div className="brutal-box mt-8" style={{background: 'linear-gradient(to right, #FF5BF1, #a9c248, #6370E7)', padding: '2rem', color: 'white'}}>
                         <div className="text-center">
                             <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
                             <div className="arsenal-grid-container" style={{display: 'flex', flexWrap: 'wrap', gap: '1rem'}}>
@@ -623,7 +623,7 @@ const GoodVibes74Page = () => {
                         Have a project, a question, or just want to vibe? Drop us a line.
                     </p>
                 </div>
-                <div className="service-content">
+                <div className="service-content" style={{paddingTop: '2rem'}}>
                     <div className="brutal-box" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
                         <form action="mailto:curate@curations.org" method="post" encType="text/plain">
                             <div style={{ marginBottom: '1rem' }}>
