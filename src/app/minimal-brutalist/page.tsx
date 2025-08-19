@@ -1,3 +1,4 @@
+
 'use client';
 
 const MinimalBrutalistPage = () => {
@@ -320,6 +321,8 @@ const MinimalBrutalistPage = () => {
                     </div>
                 </section>
             </div>
-        </body>
-        </html>
-    
+        </>
+    );
+};
+
+export default MinimalBrutalistPage;
