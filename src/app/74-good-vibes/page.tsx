@@ -447,15 +447,27 @@ const GoodVibes74Page = () => {
                         </div>
                     </div>
                      <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, #FF5BF1, #6370E7, #EBF998)', padding: '2rem', color: 'white'}}>
-                        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center'}}>
-                            <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginRight: '1.5rem'}}>FULL STACK DIGITAL</h3>
-                            <div style={{display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '1rem'}}>
-                                <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>PAID SEARCH</span>
-                                <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>PAID SOCIAL</span>
-                                <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>DISPLAY ADS</span>
-                                <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>EMAIL/CRM</span>
-                                <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>SEO</span>
-                                <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>UI/UX</span>
+                        <div className="text-center">
+                            <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
+                            <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem'}}>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>PAID SEARCH</span>
+                                </div>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>PAID SOCIAL</span>
+                                </div>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>DISPLAY ADS</span>
+                                </div>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>EMAIL/CRM</span>
+                                </div>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>SEO</span>
+                                </div>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>UI/UX</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -471,8 +483,7 @@ const GoodVibes74Page = () => {
             </div>
             
             <div id="contact" className={`page-section ${activePage === 'contact' ? 'active' : ''}`}>
-                <div className="service-content">
-                    <section style={{padding: '3rem 2rem', background: 'white'}}>
+                 <section style={{padding: '3rem 2rem', background: 'white'}}>
                         <div style={{maxWidth: '1400px', margin: '0 auto'}}>
                             <div className="text-center mb-8">
                                 <h2 style={{fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, background: 'linear-gradient(to right, #FF5BF1, #6370E7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
@@ -518,7 +529,6 @@ const GoodVibes74Page = () => {
                             </div>
                         </div>
                     </section>
-                </div>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
