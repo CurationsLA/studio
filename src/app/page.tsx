@@ -66,23 +66,23 @@ export default function Home() {
         <Link href="/74-good-vibes" className="text-lg text-accent hover:underline">
           74 Good Vibes
         </Link>
-        <Link href="/perplexity-elements-3.html" className="text-lg text-accent hover:underline font-bold">
-          [Perplexity] Elements 3
+        <Link href="/perplexity-elements-3" className="text-lg text-accent hover:underline font-bold">
+          Perplexity Elements 3
         </Link>
-        <Link href="/ultra-brutalist-newspaper-grid.html" className="text-lg text-accent hover:underline font-bold">
-          [Copilot] Ultra Brutalist Newspaper Grid
+        <Link href="/ultra-brutalist-newspaper-grid" className="text-lg text-accent hover:underline font-bold">
+          Ultra Brutalist Newspaper Grid
         </Link>
-        <Link href="/techno-neon-pulse.html" className="text-lg text-accent hover:underline font-bold">
-          [Copilot] Techno Neon Pulse
+        <Link href="/techno-neon-pulse" className="text-lg text-accent hover:underline font-bold">
+          Techno Neon Pulse
         </Link>
-        <Link href="/minimal-luxe-editorial.html" className="text-lg text-accent hover:underline font-bold">
-          [Copilot] Minimal Luxe Editorial
+        <Link href="/minimal-luxe-editorial" className="text-lg text-accent hover:underline font-bold">
+          Minimal Luxe Editorial
         </Link>
-        <Link href="/zine-collage-energy.html" className="text-lg text-accent hover:underline font-bold">
-          [Copilot] Zine Collage Energy
+        <Link href="/zine-collage-energy" className="text-lg text-accent hover:underline font-bold">
+          Zine Collage Energy
         </Link>
-        <Link href="/system-grid-modular.html" className="text-lg text-accent hover:underline font-bold">
-          [Copilot] System Grid Modular
+        <Link href="/system-grid-modular" className="text-lg text-accent hover:underline font-bold">
+          System Grid Modular
         </Link>
       </div>
     </div>
