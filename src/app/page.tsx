@@ -50,23 +50,14 @@ const Minimal74BrutalistPage = () => {
                                 inset 0 0 40px rgba(255, 91, 241, 0.1);
                 }
             `}</style>
-            <div className="bg-white text-black">
+            <div className="bg-white text-black pt-8">
                 {/* Floating Corner Badge */}
                 <div className="fixed top-20 right-4 z-50 bg-[#FF5BF1] text-white px-4 py-2 rotate-12 shadow-xl brutal-box">
                     <span className="text-xs font-bold">SUMMER 2025 🔥</span>
                 </div>
 
-                {/* Top Bar */}
-                <div className="fixed top-0 w-full z-40 bg-black text-white">
-                    <div className="flex justify-between items-center px-6 py-2 text-xs">
-                        <span>📍 Los Angeles | 🌐 Worldwide</span>
-                        <span className="hidden md:block">CURATIONS × CurationsLA | Since 2017</span>
-                        <span>✨ Grow with Google Partner</span>
-                    </div>
-                </div>
-
                 {/* Hero Grid Layout */}
-                <section id="home" className="min-h-[70vh] pt-24 px-4 md:px-8 bg-white">
+                <section id="home" className="min-h-[70vh] pt-16 px-4 md:px-8 bg-white">
                     <div className="grid md:grid-cols-12 gap-6 items-center h-full">
                         {/* Main Title */}
                         <div className="md:col-span-8 z-10">
@@ -128,7 +119,7 @@ const Minimal74BrutalistPage = () => {
                                     <div className="w-full bg-gray-300 h-4 brutal-box">
                                         <div className="bg-[#6370E7] h-full w-full pulse-brutal"></div>
                                     </div>
-                                    <p className="text-xs text-right font-bold mt-2"><span className="bg-[#EBF998] px-1">100% READY</span></p>
+                                    <p className="text-xs text-right font-black mt-4"><span className="bg-[#EBF998] px-1">100% READY</span></p>
                                 </div>
                             </div>
                         </div>
@@ -313,5 +304,3 @@ const Minimal74BrutalistPage = () => {
 };
 
 export default Minimal74BrutalistPage;
-
-    
