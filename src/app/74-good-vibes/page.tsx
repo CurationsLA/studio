@@ -283,7 +283,7 @@ const GoodVibes74Page = () => {
                     background: #FF5BF1;
                     color: white;
                 }
-                .philosophy-box p {
+                .philosophy-box:hover p {
                     color: black !important;
                 }
 
@@ -294,7 +294,7 @@ const GoodVibes74Page = () => {
                     background: #6370E7;
                     color: white;
                 }
-                .dual-powerhouse-box p {
+                .dual-powerhouse-box:hover p {
                     color: black !important;
                 }
                 .curationsla-brutal-box {
@@ -424,12 +424,12 @@ const GoodVibes74Page = () => {
         
                     <div className="grid grid-2 mb-8">
                         <div className="brutal-box philosophy-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>[PHILOSOPHY]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'black' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
                         </div>
                          <div className="brutal-box dual-powerhouse-box" style={{ background: '#6370E7', padding: '2rem' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>[DUAL POWERHOUSE]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'black' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
                         </div>
                     </div>
                 </div>
