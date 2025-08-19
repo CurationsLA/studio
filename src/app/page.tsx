@@ -38,6 +38,9 @@ export default function Home() {
         <Link href="/curated-mix" className="text-lg text-green-500 hover:underline">
           Curated Mix
         </Link>
+        <Link href="/elevated-editorial" className="text-lg text-accent hover:underline">
+          ELEVATED EDITORIAL
+        </Link>
       </div>
     </div>
   );
