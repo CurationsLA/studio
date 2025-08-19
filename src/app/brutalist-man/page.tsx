@@ -5,10 +5,10 @@ const BrutalistManPage = () => {
     return (
         <>
             <style jsx global>{`
-                @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap');
                 
                 body {
-                    font-family: 'JetBrains Mono', monospace;
+                    font-family: 'Courier Prime', monospace;
                 }
                 
                 .magazine-grid {
@@ -72,6 +72,10 @@ const BrutalistManPage = () => {
                     border: 4px solid black;
                     box-shadow: 8px 8px 0px black;
                 }
+
+                .rajdhani {
+                    font-family: 'Rajdhani', sans-serif;
+                }
             `}</style>
             <div className="bg-white text-black">
                 {/* Floating Corner Badge */}
@@ -98,7 +102,7 @@ const BrutalistManPage = () => {
                     <div className="magazine-grid items-center min-h-screen">
                         {/* Main Title */}
                         <div className="span-8 z-10">
-                            <div>
+                            <div className="rajdhani">
                                 <h1 className="text-4xl md:text-6xl font-black leading-tight uppercase">
                                     <span className="block slide-in">CURATIONS</span>
                                     <span className="block text-outline slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
@@ -109,14 +113,14 @@ const BrutalistManPage = () => {
                             {/* Brutalist Motto Expression */}
                             <div className="mt-12 space-y-6">
                                 <div className="brutal-box bg-black text-white p-6 pulse-brutal">
-                                    <h2 className="text-2xl md:text-3xl font-black uppercase text-center">
+                                    <h2 className="text-2xl md:text-3xl font-black uppercase text-center rajdhani">
                                         WE_CURATE_THE
                                     </h2>
                                 </div>
                                 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="brutal-box bg-[#FF5BF1] text-white p-8 pulse-brutal" style={{animationDelay: '0.3s'}}>
-                                        <h3 className="text-3xl md:text-4xl font-black text-center uppercase">
+                                        <h3 className="text-3xl md:text-4xl font-black text-center uppercase rajdhani">
                                             [HEART]
                                         </h3>
                                         <div className="mt-2 text-center text-sm font-bold">
@@ -125,7 +129,7 @@ const BrutalistManPage = () => {
                                     </div>
                                     
                                     <div className="brutal-box bg-[#6370E7] text-white p-8 pulse-brutal" style={{animationDelay: '0.6s'}}>
-                                        <h3 className="text-3xl md:text-4xl font-black text-center uppercase">
+                                        <h3 className="text-3xl md:text-4xl font-black text-center uppercase rajdhani">
                                             [HEADLINES]
                                         </h3>
                                         <div className="mt-2 text-center text-sm font-bold">
@@ -135,7 +139,7 @@ const BrutalistManPage = () => {
                                 </div>
                                 
                                 <div className="brutal-box bg-[#EBF998] text-black p-6 pulse-brutal" style={{animationDelay: '0.9s'}}>
-                                    <h2 className="text-3xl md:text-4xl font-black uppercase text-center">
+                                    <h2 className="text-3xl md:text-4xl font-black uppercase text-center rajdhani">
                                         OF &gt;&gt; BRANDS &lt;&lt; 
                                     </h2>
                                 </div>
@@ -161,7 +165,7 @@ const BrutalistManPage = () => {
                         {/* Side Panel */}
                         <div className="span-4 space-y-4 z-20">
                             <div className="brutal-box bg-[#EBF998] text-black p-6 hover:scale-105 transition">
-                                <h3 className="font-black text-xl mb-3 uppercase">MENU.EXE</h3>
+                                <h3 className="font-black text-xl mb-3 uppercase rajdhani">MENU.EXE</h3>
                                 <ul className="space-y-2 text-sm">
                                     <li className="flex items-center font-bold"><span className="mr-2">[01]</span> Restaurant Launches</li>
                                     <li className="flex items-center font-bold"><span className="mr-2">[02]</span> AI Discovery</li>
@@ -172,7 +176,7 @@ const BrutalistManPage = () => {
                             </div>
                             
                             <div className="brutal-box bg-white p-6">
-                                <p className="font-black text-lg uppercase">SYS_STATUS:</p>
+                                <p className="font-black text-lg uppercase rajdhani">SYS_STATUS:</p>
                                 <p className="text-3xl mt-2 pulse-brutal font-black">[ACTIVE]</p>
                                 <div className="mt-3 space-y-1">
                                     <div className="w-full bg-gray-300 h-4 brutal-box">
@@ -192,101 +196,136 @@ const BrutalistManPage = () => {
                 </section>
 
                 {/* Services Section */}
-                <div className="bg-white">
-                    <section className="py-20 px-8">
-                        <div className="max-w-7xl mx-auto">
-                            <h2 className="text-7xl font-black mb-16 text-center uppercase">
-                                [VIBES]
-                            </h2>
+                <section id="services" className="py-20 px-4 md:px-8 bg-white">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="flex items-center justify-between mb-12">
+                            <div>
+                                <h2 className="text-6xl md:text-8xl font-bold rajdhani">SERVICES</h2>
+                                <p className="text-lg text-gray-600 mt-2">Everything you need. Nothing you don't.</p>
+                            </div>
+                            <div className="text-right">
+                                <p className="text-sm">ISSUE 02</p>
+                                <p className="text-sm">2025 EDITION</p>
+                            </div>
+                        </div>
+                        
+                        <div className="magazine-grid">
+                            {/* Feature Service - Restaurant */}
+                            <div className="span-6 bg-[#FF5BF1] text-white p-8 min-h-[400px] relative overflow-hidden brutal-box">
+                                <span className="text-8xl opacity-20 absolute -right-4 -top-4">🍽️</span>
+                                <span className="text-6xl relative z-10">🍽️</span>
+                                <h3 className="text-3xl font-bold mt-4 mb-4 relative z-10 rajdhani">RESTAURANT & BUSINESS</h3>
+                                <p className="mb-4 relative z-10">From ghost kitchens to grand openings, we know food.</p>
+                                <ul className="space-y-1 text-sm relative z-10">
+                                    <li>✓ Grand Openings & Events</li>
+                                    <li>✓ Menu Marketing Magic</li>
+                                    <li>✓ Third-Party App Strategy</li>
+                                    <li>✓ Delivery Optimization</li>
+                                    <li>✓ Staff & Vendor Relations</li>
+                                </ul>
+                                <button className="mt-4 bg-white text-[#FF5BF1] px-4 py-2 font-bold text-sm">LEARN MORE</button>
+                            </div>
                             
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {/* Service Cards */}
-                                <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
-                                    <span className="text-5xl">🍽️</span>
-                                    <h3 className="text-xl font-black mt-4 uppercase text-[#FF5BF1]">RESTAURANT_SYS</h3>
-                                    <ul className="mt-4 space-y-2 text-sm font-bold">
-                                        <li>• Grand_Openings</li>
-                                        <li>• Ghost_Kitchens</li>
-                                        <li>• Menu_Marketing</li>
-                                        <li>• Third_Party_Apps</li>
-                                    </ul>
-                                </div>
-                                
-                                <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
-                                    <span className="text-5xl">🤖</span>
-                                    <h3 className="text-xl font-black mt-4 uppercase text-[#6370E7]">AI_DISCOVERY</h3>
-                                    <ul className="mt-4 space-y-2 text-sm font-bold">
-                                        <li>• Citation_Engine</li>
-                                        <li>• Prompt_Engineering</li>
-                                        <li>• Tech_Stack</li>
-                                        <li>• Team_Workshops</li>
-                                    </ul>
-                                </div>
-                                
-                                <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
-                                    <span className="text-5xl">📺</span>
-                                    <h3 className="text-xl font-black mt-4 uppercase text-black">MEDIA_BUY</h3>
-                                    <ul className="mt-4 space-y-2 text-sm font-bold">
-                                        <li>• Netflix_Placement</li>
-                                        <li>• Podcast_Ads</li>
-                                        <li>• Linear_TV</li>
-                                        <li>• Social_Media</li>
-                                    </ul>
-                                </div>
-                                
-                                <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
-                                    <span className="text-5xl">✨</span>
-                                    <h3 className="text-xl font-black mt-4 uppercase text-[#FF5BF1]">CREATIVE_COLLAB</h3>
-                                    <ul className="mt-4 space-y-2 text-sm font-bold">
-                                        <li>• Influencer_Match</li>
-                                        <li>• UGC_Campaigns</li>
-                                        <li>• Content_Creation</li>
-                                        <li>• Social_Strategy</li>
-                                    </ul>
-                                </div>
-                                
-                                <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
-                                    <span className="text-5xl">📰</span>
-                                    <h3 className="text-xl font-black mt-4 uppercase text-[#6370E7]">COMMUNICATIONS</h3>
-                                    <ul className="mt-4 space-y-2 text-sm font-bold">
-                                        <li>• Crisis_Management</li>
-                                        <li>• Executive_Branding</li>
-                                        <li>• PR_Strategy</li>
-                                        <li>• Media_Relations</li>
-                                    </ul>
-                                </div>
-                                
-                                <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
-                                    <span className="text-5xl">🚀</span>
-                                    <h3 className="text-xl font-black mt-4 uppercase text-black">FULL_STACK</h3>
-                                    <ul className="mt-4 space-y-2 text-sm font-bold">
-                                        <li>• SEO_&_SEM</li>
-                                        <li>• Email/CRM</li>
-                                        <li>• Analytics</li>
-                                        <li>• Conversion</li>
-                                    </ul>
+                            {/* AI Discovery */}
+                            <div className="span-6 border-4 border-black p-8 min-h-[400px] brutal-box">
+                                <span className="text-6xl">🤖</span>
+                                <h3 className="text-3xl font-bold mt-4 mb-4 rajdhani">AI DISCOVERY</h3>
+                                <p className="mb-4 text-[#6370E7] font-bold text-lg">"Vibe Coding" & Beyond</p>
+                                <ul className="space-y-2">
+                                    <li>• AI Prompt Engineering</li>
+                                    <li>• SEO & AI Citations</li>
+                                    <li>• Tech Stack Discovery</li>
+                                    <li>• Business Consultations</li>
+                                    <li>• Team Workshops</li>
+                                </ul>
+                                <div className="mt-4 p-3 bg-[#EBF998] brutal-box">
+                                    <p className="text-xs font-bold">HOT: AI workshops booking fast!</p>
                                 </div>
                             </div>
                             
-                            {/* Google Partner */}
-                            <div className="mt-16 text-center">
-                                <div className="inline-block brutal-box bg-black text-white p-8 neon-glow-lime">
-                                    <p className="text-2xl font-black text-[#EBF998] uppercase">🏆 GROW WITH GOOGLE PARTNER</p>
-                                    <p className="mt-2 text-sm font-bold text-white">One deserving brand gets a full-service partnership for free, yearly.</p>
+                            {/* Media Buying */}
+                            <div className="span-3 bg-black text-white p-6 brutal-box">
+                                <h3 className="text-xl font-bold mb-4 text-[#EBF998] rajdhani">MEDIA BUYING</h3>
+                                <div className="space-y-2 text-sm">
+                                    <p>📺 Netflix</p>
+                                    <p>📰 KTLA</p>
+                                    <p>📻 Podcasts</p>
+                                    <p>📍 Geofencing</p>
+                                    <p>🎯 Amazon</p>
+                                    <p>💼 LinkedIn</p>
+                                    <p>🔴 Live Stream</p>
+                                </div>
+                            </div>
+                            
+                            {/* Influencer */}
+                            <div className="span-3 bg-[#6370E7] text-white p-6 brutal-box">
+                                <h3 className="text-xl font-bold mb-4 rajdhani">CREATIVE COLLABS</h3>
+                                <p className="text-sm mb-4">UGC that converts.</p>
+                                <ul className="text-sm space-y-1">
+                                    <li>→ Social Strategy</li>
+                                    <li>→ Content Gaps</li>
+                                    <li>→ Digital Listening</li>
+                                    <li>→ Clips & Shorts</li>
+                                </ul>
+                            </div>
+                            
+                            {/* Communications */}
+                            <div className="span-3 border-4 border-[#EBF998] p-6 brutal-box">
+                                <h3 className="text-xl font-bold mb-4 rajdhani">COMMUNICATIONS</h3>
+                                <ul className="text-sm space-y-1">
+                                    <li>Corporate Comms</li>
+                                    <li>Executive Branding</li>
+                                    <li>Newsletter Design</li>
+                                    <li>Chaos Management</li>
+                                    <li>Legal Matching</li>
+                                </ul>
+                            </div>
+                            
+                            {/* SEO Block */}
+                            <div className="span-3 bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] text-white p-6 brutal-box">
+                                <h3 className="text-xl font-bold mb-4 rajdhani">SEO & DISCOVERY</h3>
+                                <p className="text-sm mb-3">Be found everywhere:</p>
+                                <ul className="text-sm space-y-1">
+                                    <li>🔍 Google #1</li>
+                                    <li>🤖 AI Citations</li>
+                                    <li>📊 Rich Snippets</li>
+                                </ul>
+                            </div>
+                            
+                            {/* Full Stack Banner */}
+                            <div className="span-12 bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white brutal-box">
+                                <div className="flex flex-wrap justify-between items-center">
+                                    <h3 className="text-3xl font-bold rajdhani">FULL-STACK DIGITAL DOMINATION</h3>
+                                    <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
+                                        <span className="bg-white/20 px-4 py-2 rounded-full">PAID SEARCH</span>
+                                        <span className="bg-white/20 px-4 py-2 rounded-full">PAID SOCIAL</span>
+                                        <span className="bg-white/20 px-4 py-2 rounded-full">DISPLAY ADS</span>
+                                        <span className="bg-white/20 px-4 py-2 rounded-full">LINEAR TV</span>
+                                        <span className="bg-white/20 px-4 py-2 rounded-full">EMAIL/CRM</span>
+                                        <span className="bg-white/20 px-4 py-2 rounded-full">INFLUENCER</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
                 
+                {/* Google Partner */}
+                <div className="mt-16 text-center py-10">
+                    <div className="inline-block brutal-box glass-effect p-8 border-2 border-[#EBF998]">
+                        <p className="text-2xl font-bold text-[#EBF998] uppercase rajdhani">🏆 GROW WITH GOOGLE PARTNER</p>
+                        <p className="mt-2 text-sm text-white">One deserving brand gets a full-service partnership for free, yearly.</p>
+                    </div>
+                </div>
+
                 {/* Subscribe CTA */}
-                <section className="py-20 px-8 bg-black">
+                <section className="py-20 px-8 bg-gradient-to-b from-black to-black">
                     <div className="max-w-7xl mx-auto">
-                        <div className="brutal-box bg-white text-black p-12 text-center">
-                            <h3 className="text-4xl font-black mb-4 uppercase">INBOX_SYNC.EXE</h3>
-                            <p className="text-xl mb-6 font-bold">Curate Los Angeles with us</p>
-                            <button className="brutal-box px-8 py-4 bg-[#FF5BF1] text-white font-black text-lg uppercase hover:bg-[#EBF998] hover:text-black transition">
-                                SUBSCRIBE_NOW &gt;&gt;&gt;
+                        <div className="bg-black text-white p-12 text-center transform -skew-y-1">
+                            <h3 className="text-4xl font-bold mb-4 text-white rajdhani">Good Vibes 74</h3>
+                            <p className="text-xl mb-6 text-white">Curate Los Angeles with us</p>
+                            <button className="px-8 py-4 bg-[#FF5BF1] text-white font-bold text-lg hover:bg-[#EBF998] hover:text-black transition">
+                                SUBSCRIBE TO CURATIONSLA →
                             </button>
                         </div>
                     </div>
@@ -297,3 +336,5 @@ const BrutalistManPage = () => {
 };
 
 export default BrutalistManPage;
+
+    

@@ -54,7 +54,7 @@ export default function Home() {
           Minimal Brutalist
         </Link>
         <Link href="/brutalist-man" className="text-lg text-accent hover:underline">
-          Brutalist Man
+          Brutalist Man v2
         </Link>
         <Link href="/arctic-terminal" className="text-lg text-accent hover:underline">
           Arctic Terminal
@@ -66,3 +66,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
