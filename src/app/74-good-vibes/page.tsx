@@ -64,35 +64,6 @@ const GoodVibes74Page = () => {
                     border: 4px solid black;
                     box-shadow: 8px 8px 0px black;
                 }
-                
-                .diagonal-text {
-                    transform: rotate(-3deg);
-                }
-
-                @keyframes slideIn {
-                    from { transform: translateX(-100%); }
-                    to { transform: translateX(0); }
-                }
-                
-                .slide-in {
-                    animation: slideIn 0.8s ease-out;
-                }
-
-                .text-outline-subtle {
-                    -webkit-text-stroke: 1.5px #FF5BF1;
-                    -webkit-text-fill-color: transparent;
-                }
-
-                .glass-effect {
-                    background: rgba(255, 255, 255, 0.1);
-                    backdrop-filter: blur(10px);
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                }
-                
-                 .neon-glow-pink {
-                    box-shadow: 0 0 40px rgba(255, 91, 241, 0.6),
-                                inset 0 0 40px rgba(255, 91, 241, 0.1);
-                }
 
                 .magazine-grid {
                     display: grid;
@@ -118,6 +89,15 @@ const GoodVibes74Page = () => {
                     box-shadow: 0 0 40px rgba(255, 91, 241, 0.6),
                                 inset 0 0 40px rgba(255, 91, 241, 0.1);
                 }
+
+                .glitch { position: relative; font-weight: 900; letter-spacing:-0.02em; }
+                .glitch::before, .glitch::after {
+                    content: attr(data-text); position: absolute; inset: 0; pointer-events:none;
+                }
+                .glitch::before { transform: translateX(2px); text-shadow: -2px 0 #FF5BF1; animation: g1 1.2s infinite linear alternate; }
+                .glitch::after { transform: translateX(-2px); text-shadow: 2px 0 #6370E7; animation: g2 1.4s infinite linear alternate; }
+                @keyframes g1 { 0%{clip-path: inset(0 0 40% 0);} 50%{clip-path: inset(60% 0 0 0);} 100%{clip-path: inset(0 0 40% 0);} }
+                @keyframes g2 { 0%{clip-path: inset(60% 0 0 0);} 50%{clip-path: inset(0 0 55% 0);} 100%{clip-path: inset(60% 0 0 0);} }
             `}</style>
             <div className="bg-white text-black">
                 {/* Refined Top Bar */}
@@ -143,12 +123,8 @@ const GoodVibes74Page = () => {
                     <div className="magazine-grid items-center min-h-[80vh]">
                         {/* Main Title Block */}
                         <div className="span-8 z-10">
-                            <div className="diagonal-text -mb-8">
-                                <h1 className="text-7xl md:text-[8rem] lg:text-[9rem] font-black leading-none">
-                                    <span className="block slide-in">CURATIONS</span>
-                                    <span className="block text-outline-subtle slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
-                                    <span className="block text-[#FF5BF1] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
-                                </h1>
+                            <div className="bg-black text-white p-4 brutal-box">
+                                <h1 className="glitch text-[5.75rem] md:text-[5.75rem] lg:text-[6.5rem] leading-none" data-text="[CURATIONS]">[CURATIONS]</h1>
                             </div>
                              <div className="mt-8 brutal-box bg-black text-white p-4">
                                 <h2 className="text-2xl md:text-3xl font-black uppercase text-center">
