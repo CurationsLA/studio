@@ -64,7 +64,7 @@ const Minimal74BrutalistPage = () => {
                 </div>
 
                 {/* Hero Grid Layout */}
-                <section id="home" className="min-h-[70vh] pt-20 px-4 md:px-8 bg-white">
+                <section id="home" className="min-h-[70vh] pt-24 px-4 md:px-8 bg-white">
                     <div className="grid md:grid-cols-12 gap-6 items-center h-full">
                         {/* Main Title */}
                         <div className="md:col-span-8 z-10">
@@ -177,7 +177,7 @@ const Minimal74BrutalistPage = () => {
                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8">
                                 <span className="text-5xl">👋</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">Creative Collabs</h3>
-                                <ul className="mt-4 space-y-2 text-sm font-bold">
+                                 <ul className="mt-4 space-y-2 text-sm font-bold">
                                   <li>• Influencer Matching</li>
                                   <li>• UGC Campaigns</li>
                                   <li>• Content Creation</li>
@@ -208,16 +208,16 @@ const Minimal74BrutalistPage = () => {
                             </div>
                         </div>
 
-                         <div className="mt-16 brutal-box bg-black text-white p-8">
+                        <div className="mt-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                             <div className="flex flex-wrap justify-between items-center">
-                                <h3 className="text-3xl font-black">FULL STACK DIGITAL</h3>
+                                <h3 className="text-3xl font-black">FULL STACK DIGITAL DOMINATION</h3>
                                 <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
-                                    <span className="font-bold">PAID SEARCH</span>
-                                    <span className="font-bold">PAID SOCIAL</span>
-                                    <span className="font-bold">DISPLAY ADS</span>
-                                    <span className="font-bold">EMAIL/CRM</span>
-                                    <span className="font-bold">SEO</span>
-                                    <span className="font-bold">UI/UX</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold">PAID SEARCH</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold">PAID SOCIAL</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold">DISPLAY ADS</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold">LINEAR TV</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold">EMAIL/CRM</span>
+                                    <span className="bg-white/20 px-4 py-2 font-bold">INFLUENCER</span>
                                 </div>
                             </div>
                         </div>
