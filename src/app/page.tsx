@@ -50,6 +50,9 @@ export default function Home() {
         <Link href="/neon-typography" className="text-lg text-accent hover:underline">
           Neon Typography
         </Link>
+        <Link href="/minimal-brutalist" className="text-lg text-accent hover:underline">
+          Minimal Brutalist
+        </Link>
       </div>
     </div>
   );
