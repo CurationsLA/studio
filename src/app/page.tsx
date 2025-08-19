@@ -226,7 +226,7 @@ const Minimal74BrutalistPage = () => {
                             </div>
                         </div>
 
-                        <div className="mt-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
+                        <div className="mt-16 mb-16 brutal-box bg-gradient-to-r from-[#FF5BF1] via-[#6370E7] to-[#EBF998] p-8 text-white">
                             <div className="flex flex-wrap justify-between items-center">
                                 <h3 className="text-3xl font-black shrink-0 mr-6">FULL STACK DIGITAL</h3>
                                 <div className="flex flex-wrap justify-center gap-3 mt-4 md:mt-0 flex-grow">
