@@ -56,6 +56,9 @@ export default function Home() {
         <Link href="/brutalist-man" className="text-lg text-accent hover:underline">
           Brutalist Man
         </Link>
+        <Link href="/arctic-terminal" className="text-lg text-accent hover:underline">
+          Arctic Terminal
+        </Link>
       </div>
     </div>
   );
