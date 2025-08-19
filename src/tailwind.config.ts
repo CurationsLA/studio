@@ -17,9 +17,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['IBM Plex Sans', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
         headline: ['Space Grotesk', 'sans-serif'],
-        code: ['monospace'],
+        code: ['JetBrains Mono', 'monospace'],
       },
       colors: {
         'highlight': '#EBF998',
@@ -66,8 +66,8 @@ export default {
       },
       borderRadius: {
         lg: 'var(--radius)',
-        md: 'calc(var(--radius))',
-        sm: 'calc(var(--radius))',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
         'accordion-down': {
