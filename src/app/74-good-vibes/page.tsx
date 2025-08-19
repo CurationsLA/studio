@@ -134,13 +134,13 @@ const GoodVibes74Page = () => {
                 </div>
 
                 {/* Hero Grid Layout */}
-                <section id="home" className="pt-24 px-4 md:px-8 bg-white">
-                    <div className="magazine-grid items-center min-h-[80vh]">
+                <section id="home" className="pt-20 px-4 md:px-8 bg-white">
+                    <div className="magazine-grid items-center">
                         {/* Main Title Block */}
                         <div className="span-8 z-10">
-                            <div className="flex justify-center mb-8">
-                                <div className="bg-black text-white p-3 brutal-box inline-block">
-                                    <h1 className="glitch text-[2.7rem] md:text-[2.7rem] lg:text-[3rem] leading-none" data-text="[CURATIONS]">[CURATIONS]</h1>
+                            <div className="flex justify-center">
+                                <div className="bg-black text-white p-2 brutal-box inline-block">
+                                    <h1 className="glitch text-[1.89rem] md:text-[1.89rem] lg:text-[2.1rem] leading-none" data-text="[CURATIONS]">[CURATIONS]</h1>
                                 </div>
                             </div>
                         </div>
@@ -165,9 +165,9 @@ const GoodVibes74Page = () => {
                     </div>
                 </section>
                 
-                <div className="px-4 md:px-8">
-                    <div className="mb-12 brutal-box bg-white text-black p-2">
-                        <h2 className="text-base md:text-lg font-black uppercase text-center" style={{color: '#474747'}}>
+                <div className="px-4 md:px-8 mt-8">
+                    <div className="mb-12 brutal-box bg-white text-black p-1">
+                        <h2 className="text-xs font-black uppercase text-center" style={{color: '#474747'}}>
                             We <span className="text-[#FF5BF1] text-neon-pink">CURATE</span> the <span className="text-[#EBF998] text-neon-lime">HEART</span> and <span className="text-[#6370E7] text-neon-blue">HEADLINES</span> of BRANDS
                         </h2>
                     </div>
