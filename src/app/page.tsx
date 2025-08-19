@@ -304,3 +304,5 @@ const Minimal74BrutalistPage = () => {
 };
 
 export default Minimal74BrutalistPage;
+
+    
