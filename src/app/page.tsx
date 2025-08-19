@@ -59,6 +59,9 @@ export default function Home() {
         <Link href="/arctic-terminal" className="text-lg text-accent hover:underline">
           Arctic Terminal
         </Link>
+        <Link href="/crimson-command" className="text-lg text-accent hover:underline">
+          Crimson Command
+        </Link>
       </div>
     </div>
   );
