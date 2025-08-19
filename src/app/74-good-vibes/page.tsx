@@ -471,31 +471,7 @@ const GoodVibes74Page = () => {
             </div>
             
             <div id="contact" className={`page-section ${activePage === 'contact' ? 'active' : ''}`}>
-                <div className="service-hero">
-                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
-                    <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
-                        Have a project, a question, or just want to vibe? Drop us a line.
-                    </p>
-                </div>
                 <div className="service-content">
-                    <div className="brutal-box" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
-                        <form action="mailto:hello@curations.la" method="post" encType="text/plain">
-                            <div style={{ marginBottom: '1rem' }}>
-                                <label htmlFor="name" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>NAME</label>
-                                <input type="text" id="name" name="name" className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required />
-                            </div>
-                            <div style={{ marginBottom: '1rem' }}>
-                                <label htmlFor="email" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>EMAIL</label>
-                                <input type="email" id="email" name="email" className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required />
-                            </div>
-                            <div style={{ marginBottom: '1.5rem' }}>
-                                <label htmlFor="message" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>MESSAGE</label>
-                                <textarea id="message" name="message" rows={6} className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required></textarea>
-                            </div>
-                            <button type="submit" className="brutal-box btn-primary" style={{ width: '100%', padding: '1rem' }}>SEND IT</button>
-                        </form>
-                    </div>
-
                     <section style={{padding: '3rem 2rem', background: 'white'}}>
                         <div style={{maxWidth: '1400px', margin: '0 auto'}}>
                             <div className="text-center mb-8">
@@ -534,7 +510,7 @@ const GoodVibes74Page = () => {
                     <section style={{padding: '5rem 2rem', background: 'black'}}>
                         <div style={{maxWidth: '1400px', margin: '0 auto'}}>
                             <div className="brutal-box" style={{background: 'white', color: 'black', padding: '3rem', textAlign: 'center'}}>
-                                <h3 style={{fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase'}}>RECEIVE GOOD VIBES IN YOUR INBOX</h3>
+                                <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
                                 
                                 <button className="brutal-box btn-primary" style={{padding: '1rem 2rem', fontSize: '1.125rem'}}>
                                     SUBSCRIBE TO CURATIONSLA
@@ -542,6 +518,31 @@ const GoodVibes74Page = () => {
                             </div>
                         </div>
                     </section>
+                </div>
+                <div className="service-hero">
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
+                    <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+                        Have a project, a question, or just want to vibe? Drop us a line.
+                    </p>
+                </div>
+                <div className="service-content">
+                    <div className="brutal-box" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
+                        <form action="mailto:hello@curations.la" method="post" encType="text/plain">
+                            <div style={{ marginBottom: '1rem' }}>
+                                <label htmlFor="name" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>NAME</label>
+                                <input type="text" id="name" name="name" className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required />
+                            </div>
+                            <div style={{ marginBottom: '1rem' }}>
+                                <label htmlFor="email" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>EMAIL</label>
+                                <input type="email" id="email" name="email" className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required />
+                            </div>
+                            <div style={{ marginBottom: '1.5rem' }}>
+                                <label htmlFor="message" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>MESSAGE</label>
+                                <textarea id="message" name="message" rows={6} className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required></textarea>
+                            </div>
+                            <button type="submit" className="brutal-box btn-primary" style={{ width: '100%', padding: '1rem' }}>SEND IT</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             
