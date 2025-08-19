@@ -24,6 +24,9 @@ export default function Home() {
         <Link href="/bold-newspaper" className="text-lg text-primary hover:underline font-bold">
           Bold Newspaper (Claude)
         </Link>
+        <Link href="/stark-brutalist" className="text-lg text-primary hover:underline font-bold">
+          Stark Brutalist (Claude)
+        </Link>
         <Link href="/traditional-mock-1" className="text-lg text-primary hover:underline">
           Traditional Mock 1 - Current Vibes
         </Link>
@@ -109,5 +112,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
