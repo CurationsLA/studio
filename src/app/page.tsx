@@ -62,9 +62,10 @@ export default function Home() {
         <Link href="/crimson-command" className="text-lg text-accent hover:underline">
           Crimson Command
         </Link>
+        <Link href="/74-good-vibes" className="text-lg text-accent hover:underline">
+          74 Good Vibes
+        </Link>
       </div>
     </div>
   );
 }
-
-    
