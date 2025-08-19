@@ -1,3 +1,4 @@
+
 'use client';
 
 const BrutalistManPage = () => {
@@ -269,9 +270,9 @@ const BrutalistManPage = () => {
                             
                             {/* Google Partner */}
                             <div className="mt-16 text-center">
-                                <div className="inline-block brutal-box bg-white p-8 glass-effect neon-glow-lime">
+                                <div className="inline-block brutal-box bg-black text-white p-8 neon-glow-lime">
                                     <p className="text-2xl font-black text-[#EBF998] uppercase">🏆 GROW WITH GOOGLE PARTNER</p>
-                                    <p className="mt-2 text-sm font-bold text-black">One deserving brand gets a full-service partnership for free, yearly.</p>
+                                    <p className="mt-2 text-sm font-bold text-white">One deserving brand gets a full-service partnership for free, yearly.</p>
                                 </div>
                             </div>
                         </div>
