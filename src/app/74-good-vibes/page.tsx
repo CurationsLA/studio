@@ -165,6 +165,10 @@ const GoodVibes74Page = () => {
                     .nav-links.open {
                         display: flex;
                     }
+
+                    .arsenal-grid-container {
+                        justify-content: center;
+                    }
                 }
                 
                 /* Service page styles */
@@ -304,7 +308,7 @@ const GoodVibes74Page = () => {
                     color: #FF5BF1;
                     padding: 2px 4px;
                     transition: color 0.3s ease;
-                    border: 4px solid black;
+                    border: 2px solid black;
                 }
                 .curationsla-brutal-box:hover {
                     color: #6370E7;
@@ -326,7 +330,7 @@ const GoodVibes74Page = () => {
                 </div>
             </nav>
 
-            <a href="mailto:hello@curations.la" className="corner-badge brutal-box">
+            <a href="mailto:curate@curations.org" className="corner-badge brutal-box">
                 <span style={{ fontSize: '1rem', fontWeight: 700 }}>EMAIL US! ✉️</span>
             </a>
 
@@ -535,7 +539,7 @@ const GoodVibes74Page = () => {
                      <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, #FF5BF1, #a9c248, #6370E7)', padding: '2rem', color: 'white'}}>
                         <div className="text-center">
                             <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
-                            <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem'}}>
+                            <div className="arsenal-grid-container" style={{display: 'flex', flexWrap: 'wrap', gap: '1rem'}}>
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>PAID SEARCH</span>
                                 </div>
@@ -621,7 +625,7 @@ const GoodVibes74Page = () => {
                 </div>
                 <div className="service-content">
                     <div className="brutal-box" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
-                        <form action="mailto:hello@curations.la" method="post" encType="text/plain">
+                        <form action="mailto:curate@curations.org" method="post" encType="text/plain">
                             <div style={{ marginBottom: '1rem' }}>
                                 <label htmlFor="name" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>NAME</label>
                                 <input type="text" id="name" name="name" className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required />
