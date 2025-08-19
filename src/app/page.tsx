@@ -289,7 +289,7 @@ const Minimal74BrutalistPage = () => {
                     <div className="max-w-7xl mx-auto">
                         <div className="brutal-box bg-white text-black p-12 text-center">
                             <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
-                            <p className="text-xl mb-6 font-bold">Curate Los Angeles with us</p>
+                            <p className="text-xl mb-6 font-bold">Curate Los Angeles with us&nbsp;now</p>
                             <button className="brutal-box px-8 py-4 bg-[#FF5BF1] text-white font-black text-lg uppercase hover:bg-[#6370E7] transition">
                                 SUBSCRIBE TO CURATIONSLA
                             </button>
