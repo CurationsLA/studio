@@ -1,7 +1,29 @@
 
 'use client';
+import { useState, useEffect } from 'react';
 
 const GoodVibes74Page = () => {
+    const [activePage, setActivePage] = useState('home');
+    const [isMenuOpen, setMenuOpen] = useState(false);
+
+    const showPage = (pageId: string) => {
+        setActivePage(pageId);
+        setMenuOpen(false); // Close menu on navigation
+        window.scrollTo(0, 0);
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    };
+
+    useEffect(() => {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            setActivePage(hash);
+        }
+    }, []);
+
+
     return (
         <>
             <style jsx global>{`
@@ -76,6 +98,7 @@ const GoodVibes74Page = () => {
                     font-weight: 700;
                     text-transform: uppercase;
                     transition: all 0.3s;
+                    cursor: pointer;
                 }
                 
                 .nav-links a:hover {
@@ -146,14 +169,15 @@ const GoodVibes74Page = () => {
                     gap: 2rem;
                 }
                 
-                .grid-2 {
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                @media (min-width: 768px) {
+                    .grid-2 {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    .grid-3 {
+                         grid-template-columns: repeat(3, 1fr);
+                    }
                 }
-                
-                .grid-3 {
-                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                }
-                
+
                 /* Utility classes */
                 .text-center { text-align: center; }
                 .mb-2 { margin-bottom: 1rem; }
@@ -201,18 +225,17 @@ const GoodVibes74Page = () => {
                 }
             `}</style>
             
-            {/* The rest of your HTML converted to JSX */}
             <nav className="nav">
                 <div className="nav-container">
                     <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>
-                        <a href="#home" style={{ textDecoration: 'none', color: 'black' }}>[CURATIONS]</a>
+                        <a onClick={() => showPage('home')} style={{ textDecoration: 'none', color: 'black', cursor: 'pointer' }}>[CURATIONS]</a>
                     </div>
-                    <button className="menu-toggle brutal-box">MENU</button>
-                    <ul className="nav-links" id="navLinks">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <button className="menu-toggle brutal-box" onClick={toggleMenu}>MENU</button>
+                    <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`} id="navLinks">
+                        <li><a href="#home" onClick={() => showPage('home')}>Home</a></li>
+                        <li><a href="#about" onClick={() => showPage('about')}>About</a></li>
+                        <li><a href="#services" onClick={() => showPage('services')}>Services</a></li>
+                        <li><a href="#contact" onClick={() => showPage('contact')}>Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -221,7 +244,7 @@ const GoodVibes74Page = () => {
                 <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>EMAIL US! 📧</span>
             </a>
 
-            <div id="home" className="page-section active">
+            <div id="home" className={`page-section ${activePage === 'home' ? 'active' : ''}`}>
                 <section style={{ minHeight: '70vh', padding: '4rem 2rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div className="grid grid-2" style={{ alignItems: 'center' }}>
@@ -291,7 +314,7 @@ const GoodVibes74Page = () => {
                 </section>
             </div>
             
-            <div id="about" className="page-section">
+            <div id="about" className={`page-section ${activePage === 'about' ? 'active' : ''}`}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>ABOUT [CURATIONS]</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -326,7 +349,7 @@ const GoodVibes74Page = () => {
                 </div>
             </div>
             
-            <div id="services" className="page-section">
+            <div id="services" className={`page-section ${activePage === 'services' ? 'active' : ''}`}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CAPABILITIES</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -335,27 +358,27 @@ const GoodVibes74Page = () => {
                 </div>
                 <div className="service-content">
                      <div className="grid grid-3">
-                         <a href="#restaurant-biz" className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block' }}>
+                         <a href="#restaurant-biz" onClick={() => showPage('restaurant-biz')} className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block', cursor:'pointer' }}>
                             <span style={{ fontSize: '3rem' }}>🍽️</span>
                             <h3 style={{ fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase' }}>Restaurant & Biz</h3>
                         </a>
-                        <a href="#ai-discovery" className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block' }}>
+                        <a href="#ai-discovery" onClick={() => showPage('ai-discovery')} className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block', cursor:'pointer' }}>
                             <span style={{ fontSize: '3rem' }}>🤖</span>
                             <h3 style={{ fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase' }}>AI Discovery</h3>
                         </a>
-                        <a href="#media-buying" className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block' }}>
+                        <a href="#media-buying" onClick={() => showPage('media-buying')} className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block', cursor:'pointer' }}>
                             <span style={{ fontSize: '3rem' }}>📺</span>
                             <h3 style={{ fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase' }}>Media Buying</h3>
                         </a>
-                        <a href="#creative-collabs" className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block' }}>
+                        <a href="#creative-collabs" onClick={() => showPage('creative-collabs')} className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block', cursor:'pointer' }}>
                             <span style={{ fontSize: '3rem' }}>👋</span>
                             <h3 style={{ fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase' }}>Creative Collabs</h3>
                         </a>
-                        <a href="#communications" className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block' }}>
+                        <a href="#communications" onClick={() => showPage('communications')} className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block', cursor:'pointer' }}>
                             <span style={{ fontSize: '3rem' }}>📰</span>
                             <h3 style={{ fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase' }}>Communications</h3>
                         </a>
-                         <a href="#seo-discovery" className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block' }}>
+                         <a href="#seo-discovery" onClick={() => showPage('seo-discovery')} className="brutal-box" style={{ textDecoration: 'none', color: 'black', background: 'white', padding: '2rem', display: 'block', cursor:'pointer' }}>
                             <span style={{ fontSize: '3rem' }}>🚀</span>
                             <h3 style={{ fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase' }}>SEO & Discovery</h3>
                         </a>
@@ -363,7 +386,7 @@ const GoodVibes74Page = () => {
                 </div>
             </div>
             
-            <div id="contact" className="page-section">
+            <div id="contact" className={`page-section ${activePage === 'contact' ? 'active' : ''}`}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CREATE</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -391,27 +414,27 @@ const GoodVibes74Page = () => {
                 </div>
             </div>
             
-            <div id="restaurant-biz" className="page-section">
+            <div id="restaurant-biz" className={`page-section ${activePage === 'restaurant-biz' ? 'active' : ''}`}>
                 <div className="service-hero"><h1>🍽️ Restaurant & Biz</h1></div>
                 <div className="service-content"><p>Details about Restaurant & Biz services...</p></div>
             </div>
-            <div id="ai-discovery" className="page-section">
+            <div id="ai-discovery" className={`page-section ${activePage === 'ai-discovery' ? 'active' : ''}`}>
                 <div className="service-hero"><h1>🤖 AI Discovery</h1></div>
                 <div className="service-content"><p>Details about AI Discovery services...</p></div>
             </div>
-            <div id="media-buying" className="page-section">
+            <div id="media-buying" className={`page-section ${activePage === 'media-buying' ? 'active' : ''}`}>
                 <div className="service-hero"><h1>📺 Media Buying</h1></div>
                 <div className="service-content"><p>Details about Media Buying services...</p></div>
             </div>
-            <div id="creative-collabs" className="page-section">
+            <div id="creative-collabs" className={`page-section ${activePage === 'creative-collabs' ? 'active' : ''}`}>
                 <div className="service-hero"><h1>👋 Creative Collabs</h1></div>
                 <div className="service-content"><p>Details about Creative Collabs services...</p></div>
             </div>
-            <div id="communications" className="page-section">
+            <div id="communications" className={`page-section ${activePage === 'communications' ? 'active' : ''}`}>
                 <div className="service-hero"><h1>📰 Communications</h1></div>
                 <div className="service-content"><p>Details about Communications services...</p></div>
             </div>
-            <div id="seo-discovery" className="page-section">
+            <div id="seo-discovery" className={`page-section ${activePage === 'seo-discovery' ? 'active' : ''}`}>
                 <div className="service-hero"><h1>🚀 SEO & Discovery</h1></div>
                 <div className="service-content"><p>Details about SEO & Discovery services...</p></div>
             </div>
