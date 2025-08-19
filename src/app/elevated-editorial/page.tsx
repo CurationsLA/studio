@@ -50,6 +50,10 @@ const ElevatedEditorialPage = () => {
                 .editorial-tilt {
                     transform: rotate(-1.5deg);
                 }
+
+                .diagonal-text {
+                    transform: rotate(-3deg);
+                }
                 
                 @keyframes fadeInUp {
                     from { 
@@ -64,6 +68,15 @@ const ElevatedEditorialPage = () => {
                 
                 .fade-in-up {
                     animation: fadeInUp 0.6s ease-out;
+                }
+
+                @keyframes slideIn {
+                    from { transform: translateX(-100%); }
+                    to { transform: translateX(0); }
+                }
+                
+                .slide-in {
+                    animation: slideIn 0.8s ease-out;
                 }
                 
                 .layer-depth-1 {
@@ -125,14 +138,14 @@ const ElevatedEditorialPage = () => {
 
                 {/* Editorial Hero Section */}
                 <section className="min-h-screen pt-24 px-4 md:px-8">
-                    <div className="magazine-grid items-center min-h-[85vh]">
+                    <div className="magazine-grid items-center min-h-[85vh] relative">
                         {/* Main Title Block */}
-                        <div className="span-8">
-                            <div className="editorial-tilt">
-                                <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none fade-in-up">
-                                    <span className="block text-gray-900">CURATIONS</span>
-                                    <span className="block text-outline-subtle" style={{animationDelay: '0.2s'}}>CURATIONS</span>
-                                    <span className="block text-[#FF5BF1]" style={{animationDelay: '0.4s'}}>CURATIONS</span>
+                        <div className="span-8 z-10">
+                            <div className="diagonal-text">
+                                <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none">
+                                    <span className="block slide-in">CURATIONS</span>
+                                    <span className="block text-outline-subtle slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
+                                    <span className="block text-[#FF5BF1] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
                                 </h1>
                             </div>
                             
@@ -163,7 +176,7 @@ const ElevatedEditorialPage = () => {
                         </div>
                         
                         {/* Side Panel - Refined */}
-                        <div className="span-4 space-y-4 fade-in-up" style={{animationDelay: '1s'}}>
+                        <div className="span-4 space-y-4 fade-in-up z-20" style={{animationDelay: '1s'}}>
                             <div className="premium-glass p-6 hover-elegant">
                                 <h3 className="font-bold text-lg mb-3">TODAY'S FOCUS</h3>
                                 <div className="space-y-2 text-sm">
@@ -431,5 +444,7 @@ const ElevatedEditorialPage = () => {
 };
 
 export default ElevatedEditorialPage;
+
+    
 
     
