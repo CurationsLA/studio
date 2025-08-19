@@ -128,7 +128,7 @@ const Minimal74BrutalistPage = () => {
                                     <div className="w-full bg-gray-300 h-4 brutal-box">
                                         <div className="bg-[#6370E7] h-full w-full pulse-brutal"></div>
                                     </div>
-                                    <p className="text-xs text-right font-bold">100% READY</p>
+                                    <p className="text-xs text-right font-bold mt-2"><span className="bg-[#EBF998] px-1">100% READY</span></p>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +225,7 @@ const Minimal74BrutalistPage = () => {
                                 <span className="text-5xl">🚀</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">SEO & Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
-                                  <li>• Google #1</li>
+                                  <li>• Big Search</li>
                                   <li>• AI Citations</li>
                                   <li>• Rich Snippets</li>
                                 </ul>
