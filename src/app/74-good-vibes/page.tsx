@@ -143,8 +143,8 @@ const GoodVibes74Page = () => {
                     <div className="magazine-grid items-center min-h-screen">
                         {/* Main Title Block */}
                         <div className="span-8 z-10">
-                            <div className="diagonal-text">
-                                <h1 className="text-7xl md:text-[9rem] lg:text-[10rem] font-black leading-none -mb-4">
+                            <div className="diagonal-text -mb-8">
+                                <h1 className="text-7xl md:text-[8rem] lg:text-[9rem] font-black leading-none">
                                     <span className="block slide-in">CURATIONS</span>
                                     <span className="block text-outline-subtle slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
                                     <span className="block text-[#FF5BF1] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
@@ -282,13 +282,13 @@ const GoodVibes74Page = () => {
                 {/* CurationsLA Deep Dive */}
                 <section className="py-20 px-8 relative bg-white">
                     <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-16">
-                            <h2 className="text-6xl md:text-8xl font-black">
-                                GOOD VIBES FROM
+                        <div className="text-center mb-12">
+                            <h2 className="text-6xl md:text-8xl font-black bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] text-transparent bg-clip-text">
+                                GOOD VIBES FROM CURATIONSLA
                             </h2>
-                            <h2 className="text-6xl md:text-8xl font-black">
-                                <span className="text-[#FF5BF1]">CURATIONS</span><span className="text-[#6370E7]">LA</span>
-                            </h2>
+                            <p className="text-lg max-w-3xl mx-auto mt-4 text-gray-700">
+                                This isn't just a newsletter. It's the pulse of LA. While <span className="font-bold">[CURATIONS]</span> builds your brand, <span className="font-bold text-[#6370E7]">CurationsLA</span> puts you in the inbox of the city's most influential voices, creating a dual-powerhouse for cultural impact.
+                            </p>
                         </div>
                         
                         {/* Layered Post Cards */}
@@ -303,11 +303,11 @@ const GoodVibes74Page = () => {
                             
                             {/* Middle Layer */}
                             <div className="absolute top-20 left-0 w-full md:w-1/2 layer-2">
-                                <div className="bg-[#FF8C00] p-8 brutal-box">
-                                    <span className="text-sm font-black text-white">AUG 15, 2025</span>
-                                    <h3 className="text-3xl font-black mt-3 mb-4 text-white">🌮 FRIDAY AFTERNOON VIBES</h3>
-                                    <p className="text-white">Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
-                                    <button className="mt-4 bg-white text-[#FF8C00] px-6 py-3 font-black">EXPLORE WEEKEND →</button>
+                                <div className="bg-[#FF5BF1] text-white p-8 brutal-box">
+                                    <span className="text-sm font-black">AUG 15, 2025</span>
+                                    <h3 className="text-3xl font-black mt-3 mb-4">🌮 FRIDAY AFTERNOON VIBES</h3>
+                                    <p>Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
+                                    <button className="mt-4 bg-white text-[#FF5BF1] px-6 py-3 font-black">EXPLORE WEEKEND →</button>
                                 </div>
                             </div>
                             
@@ -357,4 +357,3 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
-
