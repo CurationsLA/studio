@@ -53,6 +53,9 @@ export default function Home() {
         <Link href="/minimal-brutalist" className="text-lg text-accent hover:underline">
           Minimal Brutalist
         </Link>
+        <Link href="/brutalist-man" className="text-lg text-accent hover:underline">
+          Brutalist Man
+        </Link>
       </div>
     </div>
   );
