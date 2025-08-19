@@ -7,12 +7,12 @@ const GoodVibes74Page = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
 
     const showPage = (pageId: string) => {
-        setActivePage(pageId);
-        setMenuOpen(false); // Close menu on navigation
-        const element = document.getElementById(pageId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+        const section = document.getElementById(pageId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setActivePage(pageId);
         }
+        setMenuOpen(false); // Close menu on navigation
     };
 
     const toggleMenu = () => {
@@ -28,9 +28,9 @@ const GoodVibes74Page = () => {
 
 
     return (
-        <div style={{ scrollBehavior: 'smooth', overflowY: 'auto' }}>
+        <div style={{ scrollBehavior: 'smooth' }}>
             <style jsx global>{`
-                html, body {
+                html {
                     scroll-behavior: smooth;
                 }
                 body {
@@ -123,9 +123,8 @@ const GoodVibes74Page = () => {
                     transform: scale(1.1);
                 }
                 
-                /* Page sections */
                 .page-section {
-                    padding-top: 80px; /* Adjust based on nav height */
+                    padding-top: 80px; 
                     min-height: 100vh;
                 }
                 
@@ -315,14 +314,14 @@ const GoodVibes74Page = () => {
             <nav className="nav">
                 <div className="nav-container">
                     <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>
-                        <a href="#home" onClick={(e) => { e.preventDefault(); showPage('home');}} className="logo-link">[CURATIONS]</a>
+                        <a onClick={(e) => { e.preventDefault(); showPage('home');}} className="logo-link">[CURATIONS]</a>
                     </div>
                     <button className="menu-toggle brutal-box" onClick={toggleMenu}>MENU</button>
                     <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`} id="navLinks">
-                        <li><a href="#home" onClick={(e) => { e.preventDefault(); showPage('home');}}>Home</a></li>
-                        <li><a href="#about" onClick={(e) => { e.preventDefault(); showPage('about');}}>About</a></li>
-                        <li><a href="#services" onClick={(e) => { e.preventDefault(); showPage('services');}}>Services</a></li>
-                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); showPage('contact');}}>Contact</a></li>
+                        <li><a onClick={(e) => { e.preventDefault(); showPage('home');}}>Home</a></li>
+                        <li><a onClick={(e) => { e.preventDefault(); showPage('about');}}>About</a></li>
+                        <li><a onClick={(e) => { e.preventDefault(); showPage('services');}}>Services</a></li>
+                        <li><a onClick={(e) => { e.preventDefault(); showPage('contact');}}>Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -331,7 +330,7 @@ const GoodVibes74Page = () => {
                 <span style={{ fontSize: '1rem', fontWeight: 700 }}>EMAIL US! ✉️</span>
             </a>
 
-            <div id="home" className={`page-section ${activePage === 'home' ? 'active' : ''}`}>
+            <div id="home" className="page-section">
                 <section style={{ minHeight: '70vh', padding: '4rem 2rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div className="grid grid-2" style={{ alignItems: 'center' }}>
@@ -401,7 +400,7 @@ const GoodVibes74Page = () => {
                 </section>
             </div>
             
-            <div id="about" className={`page-section ${activePage === 'about' ? 'active' : ''}`}>
+            <div id="about" className="page-section">
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>ABOUT [CURATIONS]</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', fontWeight: 900 }}>
@@ -436,7 +435,7 @@ const GoodVibes74Page = () => {
                 </div>
             </div>
             
-            <div id="services" className={`page-section ${activePage === 'services' ? 'active' : ''}`}>
+            <div id="services" className="page-section">
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CURATIONS</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -455,7 +454,7 @@ const GoodVibes74Page = () => {
                                 <li>• Delivery Optimization</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a href="#restaurant-biz" onClick={(e) => { e.preventDefault(); showPage('restaurant-biz');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('restaurant-biz');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                     <span>Learn More</span>
                                 </a>
                             </div>
@@ -470,7 +469,7 @@ const GoodVibes74Page = () => {
                                 <li>• Team Workshops</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a href="#ai-discovery" onClick={(e) => { e.preventDefault(); showPage('ai-discovery');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('ai-discovery');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
                                 </a>
                             </div>
@@ -485,7 +484,7 @@ const GoodVibes74Page = () => {
                                 <li>• Social Media</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a href="#media-buying" onClick={(e) => { e.preventDefault(); showPage('media-buying');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('media-buying');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
                                 </a>
                             </div>
@@ -499,7 +498,7 @@ const GoodVibes74Page = () => {
                                 <li>• Content Gaps</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a href="#creative-collabs" onClick={(e) => { e.preventDefault(); showPage('creative-collabs');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('creative-collabs');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
                                 </a>
                             </div>
@@ -513,7 +512,7 @@ const GoodVibes74Page = () => {
                                 <li>• Newsletter Design</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a href="#communications" onClick={(e) => { e.preventDefault(); showPage('communications');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('communications');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
                                 </a>
                             </div>
@@ -527,7 +526,7 @@ const GoodVibes74Page = () => {
                                 <li>• Rich Snippets</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a href="#seo-discovery" onClick={(e) => { e.preventDefault(); showPage('seo-discovery');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('seo-discovery');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
                                 </a>
                             </div>
@@ -569,53 +568,54 @@ const GoodVibes74Page = () => {
                 </div>
             </div>
             
-            <div id="contact" className={`page-section ${activePage === 'contact' ? 'active' : ''}`}>
-                 <section style={{paddingTop: '0', background: 'white'}}>
-                        <div style={{maxWidth: '1400px', margin: '0 auto', padding: '3rem 2rem'}}>
-                            <div className="text-center mb-8">
-                                <h2 style={{fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, background: 'linear-gradient(to right, #FF5BF1, #6370E7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
-                                    GOOD VIBES FROM CURATIONSLA
-                                </h2>
-                                <p style={{fontSize: '1.125rem', maxWidth: '800px', margin: '1rem auto', color: '#333'}}>
-                                    This isn&apos;t just a newsletter. It&apos;s the pulse of LA. While <span style={{fontWeight: 700}}>[CURATIONS]</span> builds your brand, 
-                                    <span className="curationsla-brutal-box">CurationsLA</span> puts you in the inbox of the city&apos;s most influential voices, 
-                                    creating a dual-powerhouse for cultural impact.
-                                </p>
+            <div id="contact" className="page-section">
+                <section style={{paddingTop: '0', background: 'white'}}>
+                    <div style={{maxWidth: '1400px', margin: '0 auto', padding: '3rem 2rem'}}>
+                        <div className="text-center mb-8">
+                            <h2 style={{fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, background: 'linear-gradient(to right, #FF5BF1, #6370E7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+                                GOOD VIBES FROM CURATIONSLA
+                            </h2>
+                            <p style={{fontSize: '1.125rem', maxWidth: '800px', margin: '1rem auto', color: '#333'}}>
+                                This isn&apos;t just a newsletter. It&apos;s the pulse of LA. While <span style={{fontWeight: 700}}>[CURATIONS]</span> builds your brand, 
+                                <span className="curationsla-brutal-box">CurationsLA</span> puts you in the inbox of the city&apos;s most influential voices, 
+                                creating a dual-powerhouse for cultural impact.
+                            </p>
+                        </div>
+                        
+                        <div className="grid grid-3">
+                            <div className="brutal-box" style={{background: '#FF5BF1', color: 'white', padding: '1.5rem'}}>
+                                <span style={{fontSize: '0.875rem', fontWeight: 800}}>AUG 15, 2025</span>
+                                <h3 style={{fontSize: '1.5rem', fontWeight: 800, margin: '0.75rem 0'}}>🌮 FRIDAY AFTERNOON VIBES</h3>
+                                <p style={{fontSize: '0.875rem'}}>Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
                             </div>
                             
-                            <div className="grid grid-3">
-                                <div className="brutal-box" style={{background: '#FF5BF1', color: 'white', padding: '1.5rem'}}>
-                                    <span style={{fontSize: '0.875rem', fontWeight: 800}}>AUG 15, 2025</span>
-                                    <h3 style={{fontSize: '1.5rem', fontWeight: 800, margin: '0.75rem 0'}}>🌮 FRIDAY AFTERNOON VIBES</h3>
-                                    <p style={{fontSize: '0.875rem'}}>Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
-                                </div>
-                                
-                                <div className="brutal-box" style={{background: 'linear-gradient(135deg, #FF5BF1, #6370E7)', padding: '1.5rem', color: 'white'}}>
-                                    <span style={{fontSize: '0.875rem', fontWeight: 700, background: 'white', color: 'black', padding: '0.25rem 0.5rem', display: 'inline-block'}}>AUG 17, 2025</span>
-                                    <h3 style={{fontSize: '1.5rem', fontWeight: 800, color: 'white', margin: '0.75rem 0'}}>📅 EVENTS: WEEK OF MONDAY</h3>
-                                    <p style={{marginBottom: '0.75rem', color: 'white', fontSize: '0.875rem'}}>Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
-                                </div>
-                                
-                                <div className="brutal-box" style={{background: 'white', color: 'black', padding: '1.5rem', border: '4px solid black'}}>
-                                    <span style={{color: 'black', fontSize: '0.875rem', fontWeight: 700}}>AUG 9, 2025</span>
-                                    <h3 style={{fontSize: '1.25rem', fontWeight: 800, margin: '0.5rem 0'}}>📅 SUMMER HEAT EVENTS</h3>
-                                    <p style={{fontSize: '0.875rem'}}>Your guide to surviving LA summer in style</p>
-                                </div>
+                            <div className="brutal-box" style={{background: 'linear-gradient(135deg, #FF5BF1, #6370E7)', padding: '1.5rem', color: 'white'}}>
+                                <span style={{fontSize: '0.875rem', fontWeight: 700, background: 'white', color: 'black', padding: '0.25rem 0.5rem', display: 'inline-block'}}>AUG 17, 2025</span>
+                                <h3 style={{fontSize: '1.5rem', fontWeight: 800, color: 'white', margin: '0.75rem 0'}}>📅 EVENTS: WEEK OF MONDAY</h3>
+                                <p style={{marginBottom: '0.75rem', color: 'white', fontSize: '0.875rem'}}>Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
+                            </div>
+                            
+                            <div className="brutal-box" style={{background: 'white', color: 'black', padding: '1.5rem', border: '4px solid black'}}>
+                                <span style={{color: 'black', fontSize: '0.875rem', fontWeight: 700}}>AUG 9, 2025</span>
+                                <h3 style={{fontSize: '1.25rem', fontWeight: 800, margin: '0.5rem 0'}}>📅 SUMMER HEAT EVENTS</h3>
+                                <p style={{fontSize: '0.875rem'}}>Your guide to surviving LA summer in style</p>
                             </div>
                         </div>
-                    </section>
-                    
-                    <section style={{padding: '5rem 2rem', background: 'black'}}>
-                        <div style={{maxWidth: '1400px', margin: '0 auto'}}>
-                            <div className="brutal-box" style={{background: 'white', color: 'black', padding: '3rem', textAlign: 'center'}}>
-                                <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
-                                
-                                <button className="brutal-box btn-primary" style={{padding: '1rem 2rem', fontSize: '1.125rem'}}>
-                                    SUBSCRIBE TO CURATIONSLA
-                                </button>
-                            </div>
+                    </div>
+                </section>
+                
+                <section style={{padding: '5rem 2rem', background: 'black'}}>
+                    <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+                        <div className="brutal-box" style={{background: 'white', color: 'black', padding: '3rem', textAlign: 'center'}}>
+                            <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
+                            
+                            <button className="brutal-box btn-primary" style={{padding: '1rem 2rem', fontSize: '1.125rem'}}>
+                                SUBSCRIBE TO CURATIONSLA
+                            </button>
                         </div>
-                    </section>
+                    </div>
+                </section>
+
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -643,27 +643,27 @@ const GoodVibes74Page = () => {
                 </div>
             </div>
             
-            <div id="restaurant-biz" className={`page-section ${activePage === 'restaurant-biz' ? 'active' : ''}`}>
+            <div id="restaurant-biz" className="page-section" style={{display: activePage === 'restaurant-biz' ? 'block' : 'none'}}>
                 <div className="service-hero"><h1>🍽️ Restaurant & Biz</h1></div>
                 <div className="service-content"><p>Details about Restaurant & Biz services...</p></div>
             </div>
-            <div id="ai-discovery" className={`page-section ${activePage === 'ai-discovery' ? 'active' : ''}`}>
+            <div id="ai-discovery" className="page-section" style={{display: activePage === 'ai-discovery' ? 'block' : 'none'}}>
                 <div className="service-hero"><h1>🤖 AI Discovery</h1></div>
                 <div className="service-content"><p>Details about AI Discovery services...</p></div>
             </div>
-            <div id="media-buying" className={`page-section ${activePage === 'media-buying' ? 'active' : ''}`}>
+            <div id="media-buying" className="page-section" style={{display: activePage === 'media-buying' ? 'block' : 'none'}}>
                 <div className="service-hero"><h1>📺 Media Buying</h1></div>
                 <div className="service-content"><p>Details about Media Buying services...</p></div>
             </div>
-            <div id="creative-collabs" className={`page-section ${activePage === 'creative-collabs' ? 'active' : ''}`}>
+            <div id="creative-collabs" className="page-section" style={{display: activePage === 'creative-collabs' ? 'block' : 'none'}}>
                 <div className="service-hero"><h1>👋 Creative Collabs</h1></div>
                 <div className="service-content"><p>Details about Creative Collabs services...</p></div>
             </div>
-            <div id="communications" className={`page-section ${activePage === 'communications' ? 'active' : ''}`}>
+            <div id="communications" className="page-section" style={{display: activePage === 'communications' ? 'block' : 'none'}}>
                 <div className="service-hero"><h1>📰 Communications</h1></div>
                 <div className="service-content"><p>Details about Communications services...</p></div>
             </div>
-            <div id="seo-discovery" className={`page-section ${activePage === 'seo-discovery' ? 'active' : ''}`}>
+            <div id="seo-discovery" className="page-section" style={{display: activePage === 'seo-discovery' ? 'block' : 'none'}}>
                 <div className="service-hero"><h1>🚀 SEO & Discovery</h1></div>
                 <div className="service-content"><p>Details about SEO & Discovery services...</p></div>
             </div>
@@ -672,5 +672,3 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
-
-    
