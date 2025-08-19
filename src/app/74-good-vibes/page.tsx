@@ -543,9 +543,6 @@ const GoodVibes74Page = () => {
                                     <span style={{fontWeight: 700}}>PAID SOCIAL</span>
                                 </div>
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
-                                    <span style={{fontWeight: 700}}>DISPLAY ADS</span>
-                                </div>
-                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>EMAIL/CRM</span>
                                 </div>
                                  <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
