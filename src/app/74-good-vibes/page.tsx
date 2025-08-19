@@ -54,12 +54,14 @@ const GoodVibes74Page = () => {
     return (
         <>
             <style jsx global>{`
-                @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700;900&display=swap');
-                
                 body {
-                    font-family: 'IBM Plex Sans', sans-serif;
+                    font-family: 'Courier Prime', monospace;
                 }
                 
+                .rajdhani {
+                    font-family: 'Rajdhani', sans-serif;
+                }
+
                 .brutal-box {
                     border: 4px solid black;
                     box-shadow: 8px 8px 0px black;
@@ -94,8 +96,8 @@ const GoodVibes74Page = () => {
                 .glitch::before, .glitch::after {
                     content: attr(data-text); position: absolute; inset: 0; pointer-events:none;
                 }
-                .glitch::before { transform: translateX(2px); text-shadow: -2px 0 #A020F0; animation: g1 2.5s infinite linear alternate; }
-                .glitch::after { transform: translateX(-2px); text-shadow: 2px 0 #6370E7; animation: g2 2.8s infinite linear alternate; }
+                .glitch::before { transform: translateX(2px); text-shadow: -2px 0 #A020F0; animation: g1 4s infinite linear alternate; }
+                .glitch::after { transform: translateX(-2px); text-shadow: 2px 0 #6370E7; animation: g2 4.5s infinite linear alternate; }
                 @keyframes g1 { 0%{clip-path: inset(0 0 40% 0);} 50%{clip-path: inset(60% 0 0 0);} 100%{clip-path: inset(0 0 40% 0);} }
                 @keyframes g2 { 0%{clip-path: inset(60% 0 0 0);} 50%{clip-path: inset(0 0 55% 0);} 100%{clip-path: inset(60% 0 0 0);} }
 
@@ -109,7 +111,10 @@ const GoodVibes74Page = () => {
                     text-shadow: 0 0 8px rgba(99, 112, 231, 0.8), 0 0 20px rgba(99, 112, 231, 0.5);
                 }
             `}</style>
-            <div className="bg-white text-black">
+            <div className="bg-white text-black rajdhani">
+                <div className="fixed top-20 right-4 z-50 bg-[#FF5BF1] text-white px-4 py-2 rotate-12 shadow-xl brutal-box">
+                    <span className="text-xs font-bold">SUMMER 2025 🔥</span>
+                </div>
                 {/* Refined Top Bar */}
                 <div className="fixed top-0 w-full z-50">
                     <div className="bg-white/95 backdrop-blur-md border-b border-gray-200">
@@ -129,20 +134,17 @@ const GoodVibes74Page = () => {
                 </div>
 
                 {/* Hero Grid Layout */}
-                <section id="home" className="pt-12 px-4 md:px-8 bg-white">
+                <section id="home" className="pt-24 px-4 md:px-8 bg-white">
                     <div className="magazine-grid items-center min-h-[80vh]">
                         {/* Main Title Block */}
                         <div className="span-8 z-10">
-                            <div className="bg-black text-white p-4 brutal-box">
-                                <h1 className="glitch text-[4.7rem] md:text-[4.7rem] lg:text-[5.3rem] leading-none" data-text="[CURATIONS]">[CURATIONS]</h1>
-                            </div>
-                             <div className="mt-8 brutal-box bg-white text-black p-4">
-                                <h2 className="text-2xl md:text-3xl font-black uppercase text-center" style={{color: '#474747'}}>
-                                    We <span className="text-[#FF5BF1] text-neon-pink">CURATE</span> the <span className="text-[#EBF998] text-neon-lime">HEART</span> and <span className="text-[#6370E7] text-neon-blue">HEADLINES</span> of BRANDS
-                                </h2>
+                            <div className="flex justify-center mb-8">
+                                <div className="bg-black text-white p-3 brutal-box inline-block">
+                                    <h1 className="glitch text-[2.7rem] md:text-[2.7rem] lg:text-[3rem] leading-none" data-text="[CURATIONS]">[CURATIONS]</h1>
+                                </div>
                             </div>
                         </div>
-                        
+
                         {/* Side Panel placeholder*/}
                         <div className="span-4 space-y-4 z-20">
                              <div className="brutal-box bg-[#EBF998] text-black p-6 hover:scale-105 transition">
@@ -162,6 +164,14 @@ const GoodVibes74Page = () => {
                         </div>
                     </div>
                 </section>
+                
+                <div className="px-4 md:px-8">
+                    <div className="mb-12 brutal-box bg-white text-black p-2">
+                        <h2 className="text-base md:text-lg font-black uppercase text-center" style={{color: '#474747'}}>
+                            We <span className="text-[#FF5BF1] text-neon-pink">CURATE</span> the <span className="text-[#EBF998] text-neon-lime">HEART</span> and <span className="text-[#6370E7] text-neon-blue">HEADLINES</span> of BRANDS
+                        </h2>
+                    </div>
+                </div>
 
                 {/* Services Section */}
                 <section id="services" className="py-12 px-4 md:px-8 bg-white">
