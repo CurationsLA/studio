@@ -131,7 +131,7 @@ const MinimalBrutalistPage = () => {
                                 <h1 className="text-4xl md:text-6xl font-black leading-tight uppercase">
                                     <span className="block slide-in">CURATIONS</span>
                                     <span className="block text-outline slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
-                                    <span className="block text-[#FF0080] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
+                                    <span className="block text-[#0080FF] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
                                 </h1>
                             </div>
                             
