@@ -35,6 +35,9 @@ export default function Home() {
         <Link href="/gradient-flow-zine" className="text-lg text-accent hover:underline">
           Gradient Flow Zine
         </Link>
+        <Link href="/curated-mix" className="text-lg text-green-500 hover:underline">
+          Curated Mix
+        </Link>
       </div>
     </div>
   );
