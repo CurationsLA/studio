@@ -25,8 +25,11 @@ const GoodVibes74Page = () => {
 
 
     return (
-        <>
+        <div style={{ scrollBehavior: 'smooth', overflowY: 'auto' }}>
             <style jsx global>{`
+                html, body {
+                    scroll-behavior: smooth;
+                }
                 body {
                     font-family: 'JetBrains Mono', monospace;
                     background: white;
@@ -142,6 +145,8 @@ const GoodVibes74Page = () => {
                 @media (max-width: 768px) {
                     .menu-toggle {
                         display: block;
+                        background: #EBF998;
+                        color: black;
                     }
                     
                     .nav-links {
@@ -194,14 +199,13 @@ const GoodVibes74Page = () => {
                     color: black; 
                     padding: 0.25rem 0.5rem;
                     transition: all 0.3s ease;
+                    border: 4px solid transparent;
                 }
 
                 .learn-more-link:hover span {
                    background: white;
                    color: #FF5BF1;
                    border: 4px solid black;
-                   box-shadow: 8px 8px 0px black;
-                   padding: 0.5rem 1rem;
                 }
 
 
@@ -273,7 +277,6 @@ const GoodVibes74Page = () => {
 
                 .philosophy-box:hover {
                     background: white !important;
-                    color: black !important;
                 }
                 .philosophy-box:hover h3 {
                     background: #FF5BF1;
@@ -285,7 +288,6 @@ const GoodVibes74Page = () => {
 
                  .dual-powerhouse-box:hover {
                     background: white !important;
-                    color: black !important;
                 }
                 .dual-powerhouse-box:hover h3 {
                     background: #6370E7;
@@ -517,7 +519,7 @@ const GoodVibes74Page = () => {
                             </div>
                         </div>
                     </div>
-                     <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, #FF5BF1, #5262d1, #a9c248)', padding: '2rem', color: 'white'}}>
+                     <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, #FF5BF1, #a9c248, #a9c248)', padding: '2rem', color: 'white'}}>
                         <div className="text-center">
                             <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
                             <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem'}}>
@@ -533,10 +535,10 @@ const GoodVibes74Page = () => {
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>EMAIL/CRM</span>
                                 </div>
-                                 <div style={{background: 'rgba(0,0,0,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                 <div style={{background: 'transparent', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>SEO</span>
                                 </div>
-                                <div style={{background: 'rgba(0,0,0,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: 'transparent', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>UI/UX</span>
                                 </div>
                             </div>
@@ -651,14 +653,8 @@ const GoodVibes74Page = () => {
                 <div className="service-hero"><h1>🚀 SEO & Discovery</h1></div>
                 <div className="service-content"><p>Details about SEO & Discovery services...</p></div>
             </div>
-        </>
+        </div>
     );
 };
 
 export default GoodVibes74Page;
-
-
-
-
-
-
