@@ -8,7 +8,7 @@ const Minimal74BrutalistPage = () => {
         <>
             <style jsx global>{`
                 body {
-                    font-family: 'IBM Plex Sans', monospace;
+                    font-family: 'JetBrains Mono', monospace;
                 }
                 
                 .brutal-box {
@@ -185,8 +185,8 @@ const Minimal74BrutalistPage = () => {
                                 <h3 className="font-black text-2xl mt-4 uppercase">Creative Collabs</h3>
                                  <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
                                   <li>• Social Strategy</li>
-                                  <li>• Content Gaps</li>
                                   <li>• UGC that Converts</li>
+                                  <li>• Content Gaps</li>
                                 </ul>
                                 <div className="mt-4">
                                     <Link href="/services/creative-collabs" className="font-bold text-sm uppercase inline-block">
