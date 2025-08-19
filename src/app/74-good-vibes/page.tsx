@@ -284,7 +284,7 @@ const GoodVibes74Page = () => {
                     color: white;
                 }
                 .philosophy-box p {
-                    color: black;
+                    color: black !important;
                 }
 
                  .dual-powerhouse-box:hover {
@@ -295,7 +295,7 @@ const GoodVibes74Page = () => {
                     color: white;
                 }
                 .dual-powerhouse-box p {
-                    color: black;
+                    color: black !important;
                 }
                 .curationsla-brutal-box {
                     font-weight: 900;
@@ -342,7 +342,7 @@ const GoodVibes74Page = () => {
                                 </h1>
                                 
                                 <div className="mt-8">
-                                    <div className="brutal-box pulse-brutal" style={{ background: 'black', color: 'white', padding: '1.5rem' }}>
+                                    <div className="brutal-box pulse-brutal" style={{ background: 'white', color: 'black', padding: '1.5rem' }}>
                                         <h2 style={{ fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase', textAlign: 'center' }}>
                                             WE CURATE THE
                                         </h2>
@@ -374,7 +374,7 @@ const GoodVibes74Page = () => {
                                 <div className="brutal-box mb-4" style={{ background: '#EBF998', padding: '1.5rem' }}>
                                     <h3 style={{ fontWeight: 800, fontSize: '1.25rem', marginBottom: '0.75rem', textTransform: 'uppercase' }}>OUR FOCUS</h3>
                                     <ul style={{ listStyle: 'none', fontSize: '0.875rem' }}>
-                                        <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[1] Restaurant Launches</li>
+                                        <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[1] Eats + Biz</li>
                                         <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[2] AI Discovery</li>
                                         <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[3] Media Buying</li>
                                         <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[4] Creative Collabs</li>
@@ -411,13 +411,13 @@ const GoodVibes74Page = () => {
                 <div className="service-content">
                     <div className="brutal-box mb-8 our-story-box" style={{ background: '#EBF998', padding: '2rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>OUR STORY</h2>
-                        <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
+                        <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
                             Born from the creative chaos of Los Angeles, CURATIONS emerged when we realized brands weren&apos;t just competing for market share—they were competing for cultural relevance. In a city where trends are born at food trucks and go global through TikTok, we saw an opportunity to bridge the gap between authentic local culture and ambitious brand storytelling.
                         </p>
-                        <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
+                        <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
                             We started with a simple observation: the brands that win hearts don&apos;t just advertise, they participate. They show up at the right moments, in the right places, with the right message. They understand that in LA, your next customer might be at a warehouse party in DTLA, a farmers market in Santa Monica, or scrolling through their phone at a coffee shop in Silver Lake.
                         </p>
-                        <p style={{ lineHeight: 1.8 }}>
+                        <p style={{ lineHeight: 1.8, color: 'black' }}>
                             Today, CURATIONS operates at the intersection of digital innovation and street-level culture. We&apos;re not just another agency—we&apos;re cultural architects, building bridges between what brands want to say and what people actually want to hear.
                         </p>
                     </div>
