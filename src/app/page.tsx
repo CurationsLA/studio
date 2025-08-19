@@ -77,7 +77,7 @@ const Minimal74BrutalistPage = () => {
                                 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="brutal-box bg-[#FF5BF1] text-white p-8 pulse-brutal" style={{animationDelay: '0.3s'}}>
-                                        <h3 className="text-3xl md:text-4xl font-black text-center uppercase">
+                                        <h3 className="text-2xl md:text-4xl font-black text-center uppercase">
                                             [HEART]
                                         </h3>
                                         <div className="mt-2 text-center text-sm font-bold">
@@ -86,7 +86,7 @@ const Minimal74BrutalistPage = () => {
                                     </div>
                                     
                                     <div className="brutal-box bg-[#6370E7] text-white p-8 pulse-brutal" style={{animationDelay: '0.6s'}}>
-                                        <h3 className="text-3xl md:text-4xl font-black text-center uppercase">
+                                        <h3 className="text-2xl md:text-4xl font-black text-center uppercase">
                                             [HEADLINES]
                                         </h3>
                                         <div className="mt-2 text-center text-sm font-bold">
@@ -117,7 +117,7 @@ const Minimal74BrutalistPage = () => {
                                     <div className="w-full bg-gray-300 h-4 brutal-box">
                                         <div className="bg-[#6370E7] h-full w-full pulse-brutal"></div>
                                     </div>
-                                    <p className="text-xs text-right font-black mt-4"><span className="bg-[#EBF998] px-1">100% READY</span></p>
+                                    <p className="text-xs text-right font-black mt-4"><span className="bg-[#EBF998] px-1 font-extrabold">100% READY</span></p>
                                 </div>
                             </div>
                         </div>
