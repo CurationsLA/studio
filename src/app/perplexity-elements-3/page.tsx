@@ -45,7 +45,7 @@ const PerplexityElementsPage = () => {
                     <div className="mb-12 border-4 border-black p-4">
                         <h3 className="text-2xl font-bold mb-4">Theme 1: Ultra Brutalist Gold (Monochrome x Modular)</h3>
                         <div className="bg-white text-black">
-                             <header className="relative top-0 w-full border-b-4 border-black bg-white z-10">
+                             <header className="relative w-full border-b-4 border-black bg-white z-10">
                                 <div className="flex justify-between items-center px-8 py-4">
                                 <h1 className="font-black text-3xl">[CURATIONS]</h1>
                                 <div className="flex items-center gap-6">
@@ -76,7 +76,7 @@ const PerplexityElementsPage = () => {
                     <div className="mb-12 border-4 border-black p-4">
                         <h3 className="text-2xl font-bold mb-4">Theme 2: Techno-Neon Brutalism (Glitch x Motion)</h3>
                         <div className="bg-black text-white">
-                            <header className="relative top-0 w-full bg-black border-b border-white z-10 px-8 py-4 flex justify-between items-center">
+                            <header className="relative w-full bg-black border-b border-white z-10 px-8 py-4 flex justify-between items-center">
                                 <span className="font-black text-2xl">[CURATIONS]</span>
                                 <button className="bg-[#FF5BF1] px-4 py-2 font-bold hover:bg-[#6370E7] transition">START PROJECT</button>
                             </header>
@@ -135,14 +135,14 @@ const PerplexityElementsPage = () => {
                     <div className="mb-12 border-4 border-black p-4">
                         <h3 className="text-xl font-bold mb-4">Element 1: Branded Header Navigation</h3>
                         <div className="space-y-4">
-                            <header className="flex justify-between items-center px-8 py-4 border-4 border-black bg-white">
+                            <header className="flex justify-between items-center px-8 py-4 border-b-4 border-black bg-white">
                                 <h1 className="font-black text-3xl">[CURATIONS]</h1>
                                 <nav className="flex items-center gap-6">
                                 <span className="text-sm font-medium">Los Angeles × Worldwide</span>
                                 <button className="brutal-box bg-black text-white font-bold hover:bg-[#FF5BF1] transition">START PROJECT</button>
                                 </nav>
                             </header>
-                            <header className="flex justify-between items-center px-8 py-4 bg-black border border-white">
+                            <header className="flex justify-between items-center px-8 py-4 bg-black border-b border-white">
                                 <span className="font-black text-2xl text-white">[CURATIONS]</span>
                                 <button className="bg-[#FF5BF1] px-4 py-2 font-bold hover:bg-[#6370E7] transition">START PROJECT</button>
                             </header>
