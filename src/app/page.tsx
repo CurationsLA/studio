@@ -69,6 +69,9 @@ export default function Home() {
         <Link href="/74-good-vibes" className="text-lg text-accent hover:underline">
           74 Good Vibes
         </Link>
+        <Link href="/minimal-74-brutalist" className="text-lg text-accent hover:underline font-bold">
+          Minimal 74 Brutalist
+        </Link>
         <Link href="/perplexity-elements-3" className="text-lg text-accent hover:underline font-bold">
           Perplexity Elements 3
         </Link>
