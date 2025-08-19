@@ -132,19 +132,23 @@ const GoodVibes74Page = () => {
                 /* Mobile menu toggle */
                 .menu-toggle {
                     display: none;
-                    background: #FF5BF1;
-                    color: white;
+                    background: #EBF998;
+                    color: black;
                     border: none;
                     padding: 0.5rem 1rem;
                     font-weight: 700;
                     cursor: pointer;
+                    transition: all 0.3s ease;
                 }
                 
                 @media (max-width: 768px) {
                     .menu-toggle {
                         display: block;
-                        background: #EBF998;
-                        color: black;
+                    }
+
+                    .menu-toggle:hover {
+                        background: #FF5BF1;
+                        color: white;
                     }
                     
                     .nav-links {
@@ -297,10 +301,11 @@ const GoodVibes74Page = () => {
                 .curationsla-brutal-box {
                     font-weight: 900;
                     text-transform: uppercase;
-                    background-color: black;
+                    background-color: white;
                     color: #FF5BF1;
                     padding: 2px 4px;
                     transition: color 0.3s ease;
+                    border: 4px solid black;
                 }
                 .curationsla-brutal-box:hover {
                     color: #6370E7;
@@ -667,3 +672,5 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
+
+    
