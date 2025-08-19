@@ -235,8 +235,8 @@ const GoodVibes74Page = () => {
                 /* Corner Badge */
                 .corner-badge {
                     position: fixed;
-                    top: 95px;
-                    right: 30px;
+                    top: 100px;
+                    right: 25px;
                     z-index: 50;
                     background: #FF5BF1;
                     color: white;
@@ -251,6 +251,42 @@ const GoodVibes74Page = () => {
                     transform: rotate(12deg) scale(1.1);
                     background: white;
                     color: #FF5BF1;
+                }
+
+                .our-story-box, .philosophy-box, .dual-powerhouse-box {
+                    transition: all 0.3s ease-in-out;
+                }
+
+                .our-story-box h2, .philosophy-box h3, .dual-powerhouse-box h3 {
+                    transition: all 0.3s ease-in-out;
+                    display: inline-block; /* To contain highlight */
+                    padding: 0.25rem 0.5rem;
+                }
+
+                .our-story-box:hover {
+                    background: white !important;
+                }
+                .our-story-box:hover h2 {
+                    background: #EBF998;
+                    color: black;
+                }
+
+                .philosophy-box:hover {
+                    background: white !important;
+                    color: black;
+                }
+                .philosophy-box:hover h3 {
+                    background: #FF5BF1;
+                    color: white;
+                }
+
+                 .dual-powerhouse-box:hover {
+                    background: white !important;
+                    color: black;
+                }
+                .dual-powerhouse-box:hover h3 {
+                    background: #6370E7;
+                    color: white;
                 }
             `}</style>
             
@@ -352,7 +388,7 @@ const GoodVibes74Page = () => {
                 </div>
                 
                 <div className="service-content">
-                    <div className="brutal-box mb-8" style={{ background: '#EBF998', padding: '2rem' }}>
+                    <div className="brutal-box mb-8 our-story-box" style={{ background: '#EBF998', padding: '2rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>OUR STORY</h2>
                         <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
                             Born from the creative chaos of Los Angeles, CURATIONS emerged when we realized brands weren&apos;t just competing for market share—they were competing for cultural relevance. In a city where trends are born at food trucks and go global through TikTok, we saw an opportunity to bridge the gap between authentic local culture and ambitious brand storytelling.
@@ -366,11 +402,11 @@ const GoodVibes74Page = () => {
                     </div>
         
                     <div className="grid grid-2 mb-8">
-                        <div className="brutal-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem' }}>
+                        <div className="brutal-box philosophy-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>[PHILOSOPHY]</h3>
                             <p style={{ lineHeight: 1.8 }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
                         </div>
-                         <div className="brutal-box" style={{ background: '#6370E7', color: 'white', padding: '2rem' }}>
+                         <div className="brutal-box dual-powerhouse-box" style={{ background: '#6370E7', color: 'white', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>[DUAL POWERHOUSE]</h3>
                             <p style={{ lineHeight: 1.8 }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
                         </div>
@@ -491,10 +527,10 @@ const GoodVibes74Page = () => {
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>EMAIL/CRM</span>
                                 </div>
-                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                 <div style={{background: '#6370E7', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>SEO</span>
                                 </div>
-                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: '#6370E7', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>UI/UX</span>
                                 </div>
                             </div>
@@ -614,6 +650,7 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
+
 
 
 
