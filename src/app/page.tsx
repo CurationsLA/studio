@@ -7,10 +7,8 @@ const Minimal74BrutalistPage = () => {
     return (
         <>
             <style jsx global>{`
-                @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap');
-                
                 body {
-                    font-family: 'JetBrains Mono', monospace;
+                    font-family: 'IBM Plex Sans', monospace;
                 }
                 
                 .brutal-box {
@@ -134,7 +132,7 @@ const Minimal74BrutalistPage = () => {
                         </h2>
                         
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-[#FF5BF1] flex flex-col">
+                             <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
                                 <span className="text-5xl">🍽️</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">Restaurant & Biz</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
@@ -150,7 +148,7 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-[#6370E7] flex flex-col">
+                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
                                 <span className="text-5xl">🤖</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">AI Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
@@ -166,7 +164,7 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-[#EBF998] flex flex-col">
+                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
                                 <span className="text-5xl">📺</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">Media Buying</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
@@ -182,7 +180,7 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 flex flex-col">
+                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
                                 <span className="text-5xl">👋</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">Creative Collabs</h3>
                                  <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
@@ -197,7 +195,7 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 flex flex-col">
+                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
                                 <span className="text-5xl">📰</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">Communications</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
@@ -212,7 +210,7 @@ const Minimal74BrutalistPage = () => {
                                 </div>
                             </div>
                             
-                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 flex flex-col">
+                            <div className="brutal-box bg-white hover:bg-gray-100 transition p-8 border-black flex flex-col">
                                 <span className="text-5xl">🚀</span>
                                 <h3 className="font-black text-2xl mt-4 uppercase">SEO & Discovery</h3>
                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
