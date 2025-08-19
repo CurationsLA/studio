@@ -32,6 +32,9 @@ export default function Home() {
         <Link href="/clean-zine-layers" className="text-lg text-accent hover:underline">
           Clean Zine Layers
         </Link>
+        <Link href="/gradient-flow-zine" className="text-lg text-accent hover:underline">
+          Gradient Flow Zine
+        </Link>
       </div>
     </div>
   );
