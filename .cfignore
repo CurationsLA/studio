@@ -1,6 +1,41 @@
-# Ignore Next.js build cache and dev files
+# --------------------------------------------------
+# Cloudflare Pages ignore for Next.js / Node.js
+# --------------------------------------------------
+
+# Next.js build cache and webpack packs (can get very large)
 .next/cache
 .next/webpack
+.next/traces
+.next/build-state.json
+
+# Next.js production build outputs you don't need to upload
+.next/server/chunks/**/*.js.map
+.next/static/chunks/**/*.js.map
+
+# Node dependencies
 node_modules
+
+# Logs
 *.log
-.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment files
+.env*
+.next.env.local
+
+# MacOS system files
+.DS_Store
+
+# Firebase / Vercel / other local files
+firebase-debug.log
+firestore-debug.log
+.vercel
+build
+out
+
+# Misc
+.pnp*
+.yarn/*
