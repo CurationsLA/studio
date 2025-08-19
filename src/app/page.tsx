@@ -18,6 +18,9 @@ export default function Home() {
         <Link href="/minimal-swiss" className="text-lg text-primary hover:underline font-bold">
           Minimal Swiss (Claude)
         </Link>
+        <Link href="/bold-newspaper" className="text-lg text-primary hover:underline font-bold">
+          Bold Newspaper (Claude)
+        </Link>
         <Link href="/traditional-mock-1" className="text-lg text-primary hover:underline">
           Traditional Mock 1 - Current Vibes
         </Link>
