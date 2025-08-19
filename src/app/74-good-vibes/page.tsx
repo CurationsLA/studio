@@ -139,8 +139,8 @@ const GoodVibes74Page = () => {
                 </div>
 
                 {/* Hero Grid Layout */}
-                <section id="home" className="pt-20 px-4 md:px-8 bg-white">
-                    <div className="magazine-grid items-center min-h-screen">
+                <section id="home" className="pt-16 px-4 md:px-8 bg-white">
+                    <div className="magazine-grid items-center min-h-[80vh]">
                         {/* Main Title Block */}
                         <div className="span-8 z-10">
                             <div className="diagonal-text -mb-8">
@@ -150,7 +150,7 @@ const GoodVibes74Page = () => {
                                     <span className="block text-[#FF5BF1] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
                                 </h1>
                             </div>
-                             <div className="mt-12 brutal-box bg-black text-white p-4">
+                             <div className="mt-8 brutal-box bg-black text-white p-4">
                                 <h2 className="text-2xl md:text-3xl font-black uppercase text-center">
                                     We <span className="text-[#FF5BF1]">CURATE</span> the <span className="text-[#EBF998]">HEART</span> and <span className="text-[#6370E7]">HEADLINES</span> of BRANDS
                                 </h2>
@@ -178,7 +178,7 @@ const GoodVibes74Page = () => {
                 </section>
 
                 {/* Services Section */}
-                <section id="services" className="py-20 px-4 md:px-8 bg-white">
+                <section id="services" className="py-12 px-4 md:px-8 bg-white">
                     <div className="max-w-7xl mx-auto">
                         <div className="magazine-grid">
                             {/* Feature Service - Restaurant */}
@@ -270,7 +270,7 @@ const GoodVibes74Page = () => {
                 </section>
                 
                 {/* Google Partner */}
-                <div className="py-10 bg-black">
+                <div className="py-6 bg-black">
                     <div className="text-center">
                          <div className="inline-block brutal-box p-8 border-2 border-[#EBF998] neon-glow-pink">
                             <p className="text-2xl font-black text-[#EBF998] uppercase">🏆 GROW WITH GOOGLE PARTNER</p>
@@ -280,10 +280,10 @@ const GoodVibes74Page = () => {
                 </div>
 
                 {/* CurationsLA Deep Dive */}
-                <section className="py-20 px-8 relative bg-white">
+                <section className="py-12 px-8 relative bg-white">
                     <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-6xl md:text-8xl font-black bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] text-transparent bg-clip-text">
+                        <div className="text-center mb-8">
+                            <h2 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] text-transparent bg-clip-text">
                                 GOOD VIBES FROM CURATIONSLA
                             </h2>
                             <p className="text-lg max-w-3xl mx-auto mt-4 text-gray-700">
@@ -292,47 +292,47 @@ const GoodVibes74Page = () => {
                         </div>
                         
                         {/* Layered Post Cards */}
-                        <div className="relative h-[700px] md:h-[500px]">
+                        <div className="relative h-[600px] md:h-[450px]">
                             {/* Back Layer */}
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl layer-1">
-                                <div className="bg-gray-200 p-8 opacity-50 brutal-box">
+                                <div className="bg-gray-200 p-6 opacity-50 brutal-box">
                                     <span className="text-xs">COMING NEXT WEEK</span>
-                                    <h3 className="text-2xl font-black mt-2">🎸 Summer Concert Series</h3>
+                                    <h3 className="text-xl font-black mt-2">🎸 Summer Concert Series</h3>
                                 </div>
                             </div>
                             
                             {/* Middle Layer */}
-                            <div className="absolute top-20 left-0 w-full md:w-1/2 layer-2">
-                                <div className="bg-[#FF5BF1] text-white p-8 brutal-box">
+                            <div className="absolute top-16 left-0 w-full md:w-1/2 layer-2">
+                                <div className="bg-[#FF5BF1] text-white p-6 brutal-box">
                                     <span className="text-sm font-black">AUG 15, 2025</span>
-                                    <h3 className="text-3xl font-black mt-3 mb-4">🌮 FRIDAY AFTERNOON VIBES</h3>
-                                    <p>Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
-                                    <button className="mt-4 bg-white text-[#FF5BF1] px-6 py-3 font-black">EXPLORE WEEKEND →</button>
+                                    <h3 className="text-2xl font-black mt-3 mb-3">🌮 FRIDAY AFTERNOON VIBES</h3>
+                                    <p className="text-sm">Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
+                                    <button className="mt-3 bg-white text-[#FF5BF1] px-5 py-2 font-black">EXPLORE WEEKEND →</button>
                                 </div>
                             </div>
                             
                             {/* Front Layer */}
-                            <div className="absolute top-40 right-0 w-full md:w-1/2 layer-3">
-                                <div className="bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] p-8 brutal-box">
+                            <div className="absolute top-32 right-0 w-full md:w-1/2 layer-3">
+                                <div className="bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] p-6 brutal-box">
                                     <span className="text-sm font-bold bg-white text-black px-2 py-1 inline-block">AUG 17, 2025</span>
-                                    <h3 className="text-3xl font-black text-white mt-3 mb-4">📅 EVENTS: WEEK OF MONDAY</h3>
-                                    <p className="mb-4 text-white">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
-                                    <ul className="space-y-2 mb-6 text-white">
+                                    <h3 className="text-2xl font-black text-white mt-3 mb-3">📅 EVENTS: WEEK OF MONDAY</h3>
+                                    <p className="mb-3 text-white text-sm">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
+                                    <ul className="space-y-1 mb-4 text-white text-sm">
                                         <li>🎤 Comedy Shows</li>
                                         <li>🎸 Live Music</li>
                                         <li>🍷 Wine Tastings</li>
                                     </ul>
-                                    <button className="bg-white text-[#FF5BF1] px-6 py-3 font-black">FULL LINEUP →</button>
+                                    <button className="bg-white text-[#FF5BF1] px-5 py-2 font-black">FULL LINEUP →</button>
                                 </div>
                             </div>
                             
                             {/* Bottom Layer */}
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-xl layer-2">
-                                <div className="bg-black border-2 border-[#EBF998] p-8 brutal-box">
+                                <div className="bg-black border-2 border-[#EBF998] p-6 brutal-box">
                                     <span className="text-[#EBF998] text-sm font-bold">AUG 9, 2025</span>
-                                    <h3 className="text-2xl font-black mt-2 mb-3 text-white">📅 SUMMER HEAT EVENTS</h3>
-                                    <p className="text-white">Your guide to surviving LA summer in style</p>
-                                    <button className="mt-4 text-[#EBF998] font-black">DISCOVER →</button>
+                                    <h3 className="text-xl font-black mt-2 mb-2 text-white">📅 SUMMER HEAT EVENTS</h3>
+                                    <p className="text-white text-sm">Your guide to surviving LA summer in style</p>
+                                    <button className="mt-3 text-[#EBF998] font-black">DISCOVER →</button>
                                 </div>
                             </div>
                         </div>
@@ -340,12 +340,12 @@ const GoodVibes74Page = () => {
                 </section>
 
                 {/* Subscribe CTA */}
-                <section className="py-20 px-8 bg-black">
+                <section className="py-12 px-8 bg-black">
                     <div className="max-w-7xl mx-auto">
-                        <div className="bg-black text-white p-12 text-center transform -skew-y-1 brutal-box border-4 border-white">
-                            <h3 className="text-4xl font-black mb-4 text-white">Good Vibes 74</h3>
-                            <p className="text-xl mb-6 text-white">Curate Los Angeles with us</p>
-                            <button className="px-8 py-4 bg-[#FF5BF1] text-white font-black text-lg hover:bg-[#EBF998] hover:text-black transition">
+                        <div className="bg-black text-white p-10 text-center transform -skew-y-1 brutal-box border-4 border-white">
+                            <h3 className="text-3xl font-black mb-3 text-white">Good Vibes 74</h3>
+                            <p className="text-lg mb-5 text-white">Curate Los Angeles with us</p>
+                            <button className="px-8 py-3 bg-[#FF5BF1] text-white font-black text-lg hover:bg-[#EBF998] hover:text-black transition">
                                 SUBSCRIBE TO CURATIONSLA →
                             </button>
                         </div>
