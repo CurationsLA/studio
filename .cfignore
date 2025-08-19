@@ -1,5 +1,6 @@
-# Ignore build cache and unnecessary dev files
+# Ignore Next.js build cache and dev files
 .next/cache
+.next/webpack
 node_modules
 *.log
 .env
