@@ -351,7 +351,7 @@ const GoodVibes74Page = () => {
             
             <div id="services" className={`page-section ${activePage === 'services' ? 'active' : ''}`}>
                 <div className="service-hero">
-                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CAPABILITIES</h1>
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CURATIONS</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         A full-stack arsenal for modern brands.
                     </p>
