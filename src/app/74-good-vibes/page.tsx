@@ -535,7 +535,7 @@ const GoodVibes74Page = () => {
                         <div style={{maxWidth: '1400px', margin: '0 auto'}}>
                             <div className="brutal-box" style={{background: 'white', color: 'black', padding: '3rem', textAlign: 'center'}}>
                                 <h3 style={{fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase'}}>RECEIVE GOOD VIBES IN YOUR INBOX</h3>
-                                <p style={{fontSize: '1.25rem', marginBottom: '1.5rem', fontWeight: 700}}>Curate Los Angeles with us</p>
+                                
                                 <button className="brutal-box btn-primary" style={{padding: '1rem 2rem', fontSize: '1.125rem'}}>
                                     SUBSCRIBE TO CURATIONSLA
                                 </button>
