@@ -1,7 +1,56 @@
 
 'use client';
 
+import { useEffect, useState } from 'react';
+
+interface FeedItem {
+    title: string;
+    pubDate: string;
+    link: string;
+    description: string;
+}
+
 const GoodVibes74Page = () => {
+    const [feed, setFeed] = useState<FeedItem[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+     useEffect(() => {
+        async function loadFeed() {
+          try {
+            const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/cbPjFUPGbR.xml');
+            const data = await response.json();
+    
+            if (!data.items) {
+              throw new Error('No items found');
+            }
+    
+            const items = data.items.map((item: any) => ({
+                ...item,
+                link: item.link.replace('.cc', '.org')
+            }))
+    
+            setFeed(items.slice(0, 5));
+          } catch (err) {
+            setError('Failed to load articles.');
+            console.error('RSS Load Error:', err);
+          } finally {
+            setLoading(false);
+          }
+        }
+    
+        loadFeed();
+      }, []);
+
+    const formatDate = (dateString: string) => {
+        return new Date(dateString).toLocaleDateString(undefined, {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        }).toUpperCase();
+      }
+
+
     return (
         <>
             <style jsx global>{`
@@ -38,6 +87,11 @@ const GoodVibes74Page = () => {
                     background: rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(10px);
                     border: 1px solid rgba(255, 255, 255, 0.2);
+                }
+                
+                 .neon-glow-pink {
+                    box-shadow: 0 0 40px rgba(255, 91, 241, 0.6),
+                                inset 0 0 40px rgba(255, 91, 241, 0.1);
                 }
 
                 .magazine-grid {
@@ -82,35 +136,41 @@ const GoodVibes74Page = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#FF5BF1] text-white px-8 py-1 text-center">
-                        <p className="text-xs font-medium">✨ Grow with Google Partner • One Free Annual Partnership Available</p>
-                    </div>
                 </div>
 
                 {/* Hero Grid Layout */}
-                <section id="home" className="min-h-screen pt-20 px-4 md:px-8 bg-white">
+                <section id="home" className="pt-20 px-4 md:px-8 bg-white">
                     <div className="magazine-grid items-center min-h-screen">
                         {/* Main Title Block */}
                         <div className="span-8 z-10">
                             <div className="diagonal-text">
-                                <h1 className="text-7xl md:text-[9rem] lg:text-[10rem] font-black leading-none">
+                                <h1 className="text-7xl md:text-[9rem] lg:text-[10rem] font-black leading-none -mb-4">
                                     <span className="block slide-in">CURATIONS</span>
                                     <span className="block text-outline-subtle slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
                                     <span className="block text-[#FF5BF1] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
                                 </h1>
+                            </div>
+                             <div className="mt-12 brutal-box bg-black text-white p-4">
+                                <h2 className="text-2xl md:text-3xl font-black uppercase text-center">
+                                    We <span className="text-[#FF5BF1]">CURATE</span> the <span className="text-[#EBF998]">HEART</span> and <span className="text-[#6370E7]">HEADLINES</span> of BRANDS
+                                </h2>
                             </div>
                         </div>
                         
                         {/* Side Panel placeholder*/}
                         <div className="span-4 space-y-4 z-20">
                              <div className="brutal-box bg-[#EBF998] text-black p-6 hover:scale-105 transition">
-                                <h3 className="font-black text-xl mb-3 uppercase">MENU.EXE</h3>
+                                <h3 className="font-black text-xl mb-3 uppercase">Recent Posts</h3>
                                 <ul className="space-y-2 text-sm">
-                                    <li className="flex items-center font-bold"><span className="mr-2">[01]</span> Restaurant Launches</li>
-                                    <li className="flex items-center font-bold"><span className="mr-2">[02]</span> AI Discovery</li>
-                                    <li className="flex items-center font-bold"><span className="mr-2">[03]</span> Media Buying</li>
-                                    <li className="flex items-center font-bold"><span className="mr-2">[04]</span> Influencer Collabs</li>
-                                    <li className="flex items-center font-bold"><span className="mr-2">[05]</span> Executive Branding</li>
+                                {loading && <p className="font-bold">Loading feed...</p>}
+                                {error && <p className="text-red-500 font-bold">{error}</p>}
+                                {!loading && !error && feed.map((item, index) => (
+                                    <li key={item.link} className="font-bold">
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                           [{index + 1}] {item.title}
+                                        </a>
+                                    </li>
+                                ))}
                                 </ul>
                             </div>
                         </div>
@@ -120,17 +180,6 @@ const GoodVibes74Page = () => {
                 {/* Services Section */}
                 <section id="services" className="py-20 px-4 md:px-8 bg-white">
                     <div className="max-w-7xl mx-auto">
-                        <div className="flex items-center justify-between mb-12">
-                            <div>
-                                <h2 className="text-6xl md:text-8xl font-black">SERVICES</h2>
-                                <p className="text-lg text-gray-600 mt-2">Everything you need. Nothing you don't.</p>
-                            </div>
-                            <div className="text-right">
-                                <p className="text-sm">ISSUE 02</p>
-                                <p className="text-sm">2025 EDITION</p>
-                            </div>
-                        </div>
-                        
                         <div className="magazine-grid">
                             {/* Feature Service - Restaurant */}
                             <div className="span-6 bg-[#FF5BF1] text-white p-8 min-h-[400px] relative overflow-hidden brutal-box">
@@ -165,52 +214,40 @@ const GoodVibes74Page = () => {
                                 </div>
                             </div>
                             
-                            {/* Media Buying */}
-                            <div className="span-3 bg-black text-white p-6 brutal-box">
-                                <h3 className="text-xl font-black mb-4 text-[#EBF998]">MEDIA BUYING</h3>
+                           <div className="span-3 bg-black text-white p-6 brutal-box">
+                                <h3 className="text-xl font-black mb-4 text-[#EBF998]">📺 MEDIA BUYING</h3>
                                 <div className="space-y-2 text-sm">
-                                    <p>📺 Netflix</p>
-                                    <p>📰 KTLA</p>
-                                    <p>📻 Podcasts</p>
-                                    <p>📍 Geofencing</p>
-                                    <p>🎯 Amazon</p>
-                                    <p>💼 LinkedIn</p>
-                                    <p>🔴 Live Stream</p>
+                                    <p>Netflix</p>
+                                    <p>KTLA</p>
+                                    <p>Podcasts</p>
+                                    <p>Geofencing</p>
                                 </div>
                             </div>
                             
-                            {/* Influencer */}
                             <div className="span-3 bg-[#6370E7] text-white p-6 brutal-box">
-                                <h3 className="text-xl font-black mb-4">CREATIVE COLLABS</h3>
+                                <h3 className="text-xl font-black mb-4">✨ CREATIVE COLLABS</h3>
                                 <p className="text-sm mb-4">UGC that converts.</p>
                                 <ul className="text-sm space-y-1">
                                     <li>→ Social Strategy</li>
                                     <li>→ Content Gaps</li>
-                                    <li>→ Digital Listening</li>
-                                    <li>→ Clips & Shorts</li>
                                 </ul>
                             </div>
                             
-                            {/* Communications */}
                             <div className="span-3 border-4 border-[#EBF998] p-6 brutal-box">
-                                <h3 className="text-xl font-black mb-4">COMMUNICATIONS</h3>
+                                <h3 className="text-xl font-black mb-4">📰 COMMUNICATIONS</h3>
                                 <ul className="text-sm space-y-1">
                                     <li>Corporate Comms</li>
                                     <li>Executive Branding</li>
                                     <li>Newsletter Design</li>
-                                    <li>Chaos Management</li>
-                                    <li>Legal Matching</li>
                                 </ul>
                             </div>
                             
-                            {/* SEO Block */}
                             <div className="span-3 bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] text-white p-6 brutal-box">
-                                <h3 className="text-xl font-black mb-4">SEO & DISCOVERY</h3>
+                                <h3 className="text-xl font-black mb-4">🔍 SEO & DISCOVERY</h3>
                                 <p className="text-sm mb-3">Be found everywhere:</p>
                                 <ul className="text-sm space-y-1">
-                                    <li>🔍 Google #1</li>
-                                    <li>🤖 AI Citations</li>
-                                    <li>📊 Rich Snippets</li>
+                                    <li>Google #1</li>
+                                    <li>AI Citations</li>
                                 </ul>
                             </div>
                             
@@ -233,10 +270,12 @@ const GoodVibes74Page = () => {
                 </section>
                 
                 {/* Google Partner */}
-                <div className="mt-16 text-center py-10 bg-black">
-                    <div className="inline-block brutal-box glass-effect p-8 border-2 border-[#EBF998]">
-                        <p className="text-2xl font-black text-[#EBF998] uppercase">🏆 GROW WITH GOOGLE PARTNER</p>
-                        <p className="mt-2 text-sm text-white">One deserving brand gets a full-service partnership for free, yearly.</p>
+                <div className="py-10 bg-black">
+                    <div className="text-center">
+                         <div className="inline-block brutal-box p-8 border-2 border-[#EBF998] neon-glow-pink">
+                            <p className="text-2xl font-black text-[#EBF998] uppercase">🏆 GROW WITH GOOGLE PARTNER</p>
+                            <p className="mt-2 text-sm text-white">One deserving brand gets a full-service partnership for free, yearly.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -303,7 +342,7 @@ const GoodVibes74Page = () => {
                 {/* Subscribe CTA */}
                 <section className="py-20 px-8 bg-black">
                     <div className="max-w-7xl mx-auto">
-                        <div className="bg-black text-white p-12 text-center transform -skew-y-1">
+                        <div className="bg-black text-white p-12 text-center transform -skew-y-1 brutal-box border-4 border-white">
                             <h3 className="text-4xl font-black mb-4 text-white">Good Vibes 74</h3>
                             <p className="text-xl mb-6 text-white">Curate Los Angeles with us</p>
                             <button className="px-8 py-4 bg-[#FF5BF1] text-white font-black text-lg hover:bg-[#EBF998] hover:text-black transition">
@@ -319,4 +358,3 @@ const GoodVibes74Page = () => {
 
 export default GoodVibes74Page;
 
-    
