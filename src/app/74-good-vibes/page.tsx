@@ -388,7 +388,7 @@ const GoodVibes74Page = () => {
             
             <div id="contact" className={`page-section ${activePage === 'contact' ? 'active' : ''}`}>
                 <div className="service-hero">
-                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CREATE</h1>
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         Have a project, a question, or just want to vibe? Drop us a line.
                     </p>
