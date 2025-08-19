@@ -189,6 +189,22 @@ const GoodVibes74Page = () => {
                     }
                 }
 
+                .learn-more-link span {
+                    background: #EBF998; 
+                    color: black; 
+                    padding: 0.25rem 0.5rem;
+                    transition: all 0.3s ease;
+                }
+
+                .learn-more-link:hover span {
+                   background: white;
+                   color: #FF5BF1;
+                   border: 4px solid black;
+                   box-shadow: 8px 8px 0px black;
+                   padding: 0.5rem 1rem;
+                }
+
+
                 /* Utility classes */
                 .text-center { text-align: center; }
                 .mb-2 { margin-bottom: 1rem; }
@@ -219,8 +235,8 @@ const GoodVibes74Page = () => {
                 /* Corner Badge */
                 .corner-badge {
                     position: fixed;
-                    top: 90px;
-                    right: 25px;
+                    top: 95px;
+                    right: 30px;
                     z-index: 50;
                     background: #FF5BF1;
                     color: white;
@@ -330,8 +346,8 @@ const GoodVibes74Page = () => {
             <div id="about" className={`page-section ${activePage === 'about' ? 'active' : ''}`}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>ABOUT [CURATIONS]</h1>
-                    <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
-                        Where Culture Meets Commerce in Los Angeles
+                    <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', fontWeight: 700 }}>
+                        We curate the HEART and HEADLINES of BRANDS
                     </p>
                 </div>
                 
@@ -373,7 +389,7 @@ const GoodVibes74Page = () => {
                      <div className="grid grid-3">
                          <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🍽️</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Restaurant & Biz</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Restaurant & Biz</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Grand Openings & Events</li>
                                 <li style={{marginBottom: '0.5rem'}}>• Menu Marketing Magic</li>
@@ -381,14 +397,14 @@ const GoodVibes74Page = () => {
                                 <li>• Delivery Optimization</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={() => showPage('restaurant-biz')} style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
-                                    <span style={{background: '#EBF998', color: 'black', padding: '0.25rem 0.5rem'}}>Learn More</span>
+                                <a onClick={() => showPage('restaurant-biz')} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                    <span>Learn More</span>
                                 </a>
                             </div>
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🤖</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>AI Discovery</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>AI Discovery</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• AI Prompt Engineering</li>
                                 <li style={{marginBottom: '0.5rem'}}>• SEO & AI Citations</li>
@@ -396,14 +412,14 @@ const GoodVibes74Page = () => {
                                 <li>• Team Workshops</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={() => showPage('ai-discovery')} style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
-                                    <span style={{background: '#EBF998', color: 'black', padding: '0.25rem 0.5rem'}}>Learn More</span>
+                                <a onClick={() => showPage('ai-discovery')} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
                                 </a>
                             </div>
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>📺</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Media Buying</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Media Buying</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Netflix Placement</li>
                                 <li style={{marginBottom: '0.5rem'}}>• Podcast Ads</li>
@@ -411,50 +427,50 @@ const GoodVibes74Page = () => {
                                 <li>• Social Media</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={() => showPage('media-buying')} style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
-                                    <span style={{background: '#EBF998', color: 'black', padding: '0.25rem 0.5rem'}}>Learn More</span>
+                                <a onClick={() => showPage('media-buying')} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
                                 </a>
                             </div>
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>👋</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Creative Collabs</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Creative Collabs</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Social Strategy</li>
                                 <li style={{marginBottom: '0.5rem'}}>• UGC that Converts</li>
                                 <li>• Content Gaps</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={() => showPage('creative-collabs')} style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
-                                    <span style={{background: '#EBF998', color: 'black', padding: '0.25rem 0.5rem'}}>Learn More</span>
+                                <a onClick={() => showPage('creative-collabs')} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
                                 </a>
                             </div>
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>📰</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Communications</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Communications</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Corporate Comms</li>
                                 <li style={{marginBottom: '0.5rem'}}>• Executive Branding</li>
                                 <li>• Newsletter Design</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={() => showPage('communications')} style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
-                                    <span style={{background: '#EBF998', color: 'black', padding: '0.25rem 0.5rem'}}>Learn More</span>
+                                <a onClick={() => showPage('communications')} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
                                 </a>
                             </div>
                         </div>
                          <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🚀</span>
-                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>SEO & Discovery</h3>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>SEO & Discovery</h3>
                             <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
                                 <li style={{marginBottom: '0.5rem'}}>• Big Search</li>
                                 <li style={{marginBottom: '0.5rem'}}>• AI Citations</li>
                                 <li>• Rich Snippets</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={() => showPage('seo-discovery')} style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
-                                    <span style={{background: '#EBF998', color: 'black', padding: '0.25rem 0.5rem'}}>Learn More</span>
+                                <a onClick={() => showPage('seo-discovery')} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
                                 </a>
                             </div>
                         </div>
@@ -475,10 +491,10 @@ const GoodVibes74Page = () => {
                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>EMAIL/CRM</span>
                                 </div>
-                                <div style={{background: '#FF5BF1', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: '#6370E7', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>SEO</span>
                                 </div>
-                                <div style={{background: '#FF5BF1', padding: '1rem', border: '2px solid black'}}>
+                                <div style={{background: '#6370E7', padding: '1rem', border: '2px solid black'}}>
                                     <span style={{fontWeight: 700}}>UI/UX</span>
                                 </div>
                             </div>
@@ -598,5 +614,6 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
+
 
 
