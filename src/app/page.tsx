@@ -125,9 +125,9 @@ const Minimal74BrutalistPage = () => {
                 </section>
 
                 {/* Services Section */}
-                <section className="pb-12 px-4 md:px-8 bg-white">
+                <section className="pt-16 pb-12 px-4 md:px-8 bg-white">
                     <div className="max-w-7xl mx-auto">
-                        <h2 className="text-7xl font-black mb-16 text-center uppercase text-[#FF5BF1]">
+                        <h2 className="text-6xl md:text-7xl font-black mb-16 text-center uppercase text-[#FF5BF1]">
                             [SERVICES]
                         </h2>
                         
@@ -302,3 +302,5 @@ const Minimal74BrutalistPage = () => {
 };
 
 export default Minimal74BrutalistPage;
+
+    
