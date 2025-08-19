@@ -6,6 +6,9 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-background p-4">
       <h1 className="text-4xl font-bold mb-8 text-center">CurationCraft Prototypes</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+        <Link href="/v2-inspirations" className="text-lg text-primary hover:underline font-black text-2xl">
+          V2 INSPIRATIONS
+        </Link>
         <Link href="/traditional-mock-1" className="text-lg text-primary hover:underline">
           Traditional Mock 1 - Current Vibes
         </Link>
