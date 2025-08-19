@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // Reduce build size for deployment
+  output: 'export', // Changed from 'standalone' to 'export' for static deployment
+  trailingSlash: true, // Required for static export
   experimental: {
     granularChunks: true, // Split JS chunks to avoid huge files
   },
   images: {
-    unoptimized: true, // Optional: if using many local images
+    unoptimized: true, // Required for static export
   },
   eslint: {
     ignoreDuringBuilds: true, // Skip linting to speed up builds
@@ -13,6 +14,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true, // Skip type errors if any
   },
+  webpack: (config) => {
+    config.cache = false; // Disable webpack cache to avoid the 25MB issue
+    return config;
+  },
 };
-
 module.exports = nextConfig;
