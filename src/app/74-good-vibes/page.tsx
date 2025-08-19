@@ -337,8 +337,8 @@ const GoodVibes74Page = () => {
                 <span style={{ fontSize: '1rem', fontWeight: 700 }}>EMAIL US! ✉️</span>
             </a>
 
-            <div id="home" className="page-section" style={{paddingTop: '60px'}}>
-                <section style={{ minHeight: '70vh', padding: '4rem 2rem', display: 'flex', alignItems: 'center' }}>
+            <div id="home" className="page-section" style={{paddingTop: '60px', minHeight: 'auto'}}>
+                <section style={{ padding: '2rem 2rem 4rem 2rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div className="grid grid-2" style={{ alignItems: 'center' }}>
                             <div>
@@ -407,7 +407,7 @@ const GoodVibes74Page = () => {
                 </section>
             </div>
             
-            <div id="about" className="page-section">
+            <div id="about" className="page-section" style={{paddingTop: 0, minHeight: 'auto'}}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>ABOUT [CURATIONS]</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', fontWeight: 900 }}>
@@ -432,24 +432,24 @@ const GoodVibes74Page = () => {
                     <div className="grid grid-2">
                         <div className="brutal-box philosophy-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'black' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
                         </div>
                          <div className="brutal-box dual-powerhouse-box" style={{ background: '#6370E7', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'black' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="services" className="page-section" style={{paddingTop: '0'}}>
+            <div id="services" className="page-section" style={{paddingTop: '0', minHeight: 'auto'}}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CURATIONS</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         A full-stack arsenal for modern brands.
                     </p>
                 </div>
-                <div className="service-content" style={{paddingTop: '2rem'}}>
+                <div className="service-content" style={{paddingTop: '2rem', paddingBottom: '0'}}>
                      <div className="grid grid-3">
                          <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🍽️</span>
@@ -561,7 +561,7 @@ const GoodVibes74Page = () => {
                             </div>
                         </div>
                     </div>
-                    <div style={{padding: '3rem 2rem', background: 'black'}}>
+                    <div style={{padding: '3rem 0', background: 'black', marginTop: '4rem'}}>
                         <div className="text-center">
                             <div className="brutal-box neon-glow-pink" style={{display: 'inline-block', padding: '2rem', border: '2px solid #EBF998'}}>
                                 <p style={{fontSize: '1.5rem', fontWeight: 800, color: '#EBF998', textTransform: 'uppercase'}}>🏆 GROW WITH GOOGLE PARTNER</p>
@@ -572,8 +572,8 @@ const GoodVibes74Page = () => {
                 </div>
             </div>
             
-            <div id="contact" className="page-section">
-                <section style={{paddingTop: '0', background: 'white'}}>
+            <div id="contact" className="page-section" style={{paddingTop: '0', minHeight: 'auto'}}>
+                <section style={{background: 'white'}}>
                     <div style={{maxWidth: '1400px', margin: '0 auto', padding: '3rem 2rem'}}>
                         <div className="text-center mb-8">
                             <h2 style={{fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, background: 'linear-gradient(to right, #FF5BF1, #6370E7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
@@ -676,3 +676,5 @@ const GoodVibes74Page = () => {
 };
 
 export default GoodVibes74Page;
+
+    
