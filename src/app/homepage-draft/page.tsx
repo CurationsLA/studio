@@ -676,3 +676,7 @@ const HomePageDraft = () => {
         </div>
     );
 };
+
+export default HomePageDraft;
+
+  
