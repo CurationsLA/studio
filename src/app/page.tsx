@@ -383,7 +383,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Services Preview */}
-                <div style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
+                <div id="services" style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div className="text-center mb-8">
                             <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
@@ -415,24 +415,45 @@ const HomePage = () => {
                             
                             <Link href="/public-relations" className="brutal-box service-card" style={{background: '#EBF998', color: 'black', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>📺</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Media Buying</h3>
-                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Netflix placements, podcast ads, linear TV, and strategic social media.</p>
+                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Media Buying & PR</h3>
+                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Netflix placements, podcast ads, linear TV, and strategic public relations.</p>
+                                <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
+                                    EXPLORE
+                                </div>
+                            </Link>
+
+                             <Link href="/creative-campaigns" className="brutal-box service-card" style={{background: 'white', color: 'black', padding: '2rem'}}>
+                                <span style={{fontSize: '3rem'}}>🎨</span>
+                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Creative Campaigns</h3>
+                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Campaigns that drive engagement and build authentic community connections.</p>
+                                <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
+                                    EXPLORE
+                                </div>
+                            </Link>
+
+                             <Link href="/influencer-ugc" className="brutal-box service-card" style={{background: 'white', color: 'black', padding: '2rem'}}>
+                                <span style={{fontSize: '3rem'}}>🤝</span>
+                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Influencer & UGC</h3>
+                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Strategic partnerships and user-generated content programs that build trust.</p>
+                                <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
+                                    EXPLORE
+                                </div>
+                            </Link>
+
+                             <Link href="/newsletter-services" className="brutal-box service-card" style={{background: 'white', color: 'black', padding: '2rem'}}>
+                                <span style={{fontSize: '3rem'}}>📧</span>
+                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Newsletter Services</h3>
+                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Newsletters that don't just reach inboxes, they create communities.</p>
                                 <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
                                     EXPLORE
                                 </div>
                             </Link>
                         </div>
-                        
-                        <div className="text-center mt-8">
-                            <Link href="/homepage-draft#services" className="brutal-box btn-primary" style={{padding: '1.5rem 3rem', fontSize: '1.25rem'}}>
-                                VIEW ALL SERVICES
-                            </Link>
-                        </div>
                     </div>
                 </div>
 
-                {/* CTA Section */}
-                <div style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem' }}>
+                 {/* Contact Section */}
+                <div id="contact" style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                             READY TO CURATE YOUR SUCCESS?
@@ -441,11 +462,11 @@ const HomePage = () => {
                             Join 100+ brands that chose culture over algorithms, authenticity over automation.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                             <a href="/homepage-draft#contact" className="brutal-box" style={{background: 'white', color: 'hsl(var(--primary))', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer', textDecoration: 'none'}}>
+                             <a href="mailto:curate@curations.org" className="brutal-box" style={{background: 'white', color: 'hsl(var(--primary))', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer', textDecoration: 'none'}}>
                                 START YOUR CURATION
                             </a>
-                            <a href="/homepage-draft#about" className="brutal-box" style={{background: '#EBF998', color: 'black', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer', textDecoration: 'none'}}>
-                                VIEW OUR WORK
+                            <a href="https://la.curations.org" target="_blank" rel="noopener noreferrer" className="brutal-box" style={{background: '#EBF998', color: 'black', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer', textDecoration: 'none'}}>
+                                SEE CURATIONSLA
                             </a>
                         </div>
                     </div>
