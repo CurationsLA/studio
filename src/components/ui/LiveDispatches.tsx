@@ -41,7 +41,7 @@ const LiveDispatches = () => {
         <div className="brutal-box mb-4 bg-black text-white p-6">
             <h3 className="font-headline font-bold text-xl mb-3 uppercase flex items-center gap-2">
                 <Rss className="w-5 h-5 text-highlight" />
-                FIELD REPORTS
+                LOCAL HEADLINES
             </h3>
             {loading ? (
                  <div className="space-y-3">
