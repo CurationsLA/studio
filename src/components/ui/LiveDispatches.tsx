@@ -38,7 +38,7 @@ const LiveDispatches = () => {
     };
 
     return (
-        <div className="brutal-box mb-4 bg-black text-white p-6 border-highlight" style={{borderWidth: '4px'}}>
+        <div className="brutal-box mb-4 bg-black text-white p-6 border-highlight" style={{borderColor: '#EBF998', borderWidth: '4px'}}>
             <h3 className="font-headline font-bold text-xl mb-3 uppercase flex items-center gap-2">
                 <Rss className="w-5 h-5 text-highlight" />
                 LOCAL HEADLINES
