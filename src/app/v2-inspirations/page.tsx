@@ -16,10 +16,10 @@ const InspirationCard = ({ inspiration }: { inspiration: Inspiration }) => {
         color: inspiration.themeColor
     }
 
-    const ctaStyle = {
-        backgroundColor: inspiration.themeColor,
-        color: inspiration.themeColor === '#FFFFFF' || inspiration.themeColor === '#EBF998' || inspiration.themeColor === '#00FF99' ? '#000' : '#fff'
-    }
+    const ctaStyle = (color: string) => ({
+        backgroundColor: color,
+        color: color === '#FFFFFF' || color === '#EBF998' || color === '#00FF99' || color === '#FFD700' || color === '#C0C0C0' ? '#000' : '#fff'
+    })
 
     return (
         <div className="bg-gray-900 border-2 border-gray-700 rounded-lg p-6 flex flex-col h-full hover:border-primary transition-all duration-300" style={cardStyle}>
@@ -60,14 +60,24 @@ const InspirationCard = ({ inspiration }: { inspiration: Inspiration }) => {
                         <Badge key={tag} variant="secondary" className="bg-gray-700 text-gray-300">{tag}</Badge>
                     ))}
                 </div>
-                {inspiration.cta && (
-                    <Button asChild className="w-full font-bold" style={ctaStyle}>
-                        <Link href={inspiration.cta.url}>
-                            {inspiration.cta.label}
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                    </Button>
-                )}
+                <div className="flex flex-col gap-2">
+                    {inspiration.cta && (
+                        <Button asChild className="w-full font-bold" style={ctaStyle(inspiration.themeColor)}>
+                            <Link href={inspiration.cta.url}>
+                                {inspiration.cta.label}
+                                <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                        </Button>
+                    )}
+                    {inspiration.ctas && inspiration.ctas.map(cta => (
+                         <Button key={cta.url} asChild className="w-full font-bold" style={ctaStyle(inspiration.themeColor)}>
+                            <Link href={cta.url}>
+                                {cta.label}
+                                <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                        </Button>
+                    ))}
+                </div>
             </div>
         </div>
     )

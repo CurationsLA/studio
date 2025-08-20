@@ -8,6 +8,7 @@ export interface Inspiration {
   description?: string;
   tags: string[];
   cta?: { label: string; url: string };
+  ctas?: Array<{ label: string; url: string }>; // For multiple CTAs
   stats?: Array<{ label: string; value: string }>;
   posts?: Array<{ title: string; date?: string; category?: string }>;
 }
