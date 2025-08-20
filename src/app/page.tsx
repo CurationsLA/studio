@@ -38,7 +38,7 @@ const HomePage = () => {
                 }
                 body {
                     font-family: 'JetBrains Mono', monospace;
-                    background: white;
+                    background: #FDFDFC;
                     color: black;
                     overflow-x: hidden;
                 }
@@ -341,7 +341,7 @@ const HomePage = () => {
                 <span style={{ fontSize: '1rem', fontWeight: 700 }}>EMAIL US! ✉️</span>
             </a>
 
-            <div id="home" className="page-section" style={{paddingTop: '60px', minHeight: 'auto'}}>
+            <div id="home" className="page-section" style={{paddingTop: '80px', minHeight: 'auto'}}>
                 <section style={{ padding: '2rem 2rem 4rem 2rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div className="grid grid-2" style={{ alignItems: 'center' }}>
@@ -419,7 +419,7 @@ const HomePage = () => {
                     </p>
                 </div>
                 
-                <div className="service-content" style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
+                <div className="service-content" style={{paddingTop: '4rem', paddingBottom: '4rem'}}>
                     <div className="brutal-box mb-8 our-story-box" style={{ background: '#EBF998', padding: '2rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>OUR STORY</h2>
                         <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
@@ -440,20 +440,20 @@ const HomePage = () => {
                         </div>
                          <div className="brutal-box dual-powerhouse-box" style={{ background: '#6370E7', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, <a href="https://curations.org" target="_blank" rel="noopener noreferrer" className="curationsla-brutal-box">CurationsLA</a>, amplifies it. With a newsletter reaching LA&apos;s most engaged locals and tourists, we don&apos;t just hope for media pickup—we create it.</p>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, <a href="https://curations.org" target="_blank" rel="noopener noreferrer" className="curationsla-brutal-box">CurationsLA</a>, amplifies it. With a newsletter reaching LA's most engaged locals and tourists, we don't just hope for media pickup—we create it.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="services" className="page-section" style={{paddingTop: '2rem', minHeight: 'auto'}}>
+            <div id="services" className="page-section" style={{paddingTop: 0, minHeight: 'auto'}}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CURATIONS</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         A full-stack arsenal for modern brands.
                     </p>
                 </div>
-                <div className="service-content" style={{paddingTop: '2rem', paddingBottom: '0'}}>
+                <div className="service-content" style={{paddingTop: '4rem', paddingBottom: '0'}}>
                      <div className="grid grid-3">
                          <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
                             <span style={{fontSize: '3rem'}}>🍽️</span>
@@ -543,7 +543,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-                     <div className="brutal-box mt-4 mb-4" style={{background: 'linear-gradient(to right, rgb(255, 91, 241), rgb(169, 194, 72), rgb(99, 112, 231))', padding: '2rem', color: 'white'}}>
+                     <div className="brutal-box mt-8" style={{background: 'linear-gradient(to right, rgb(255, 91, 241), rgb(169, 194, 72), rgb(99, 112, 231))', padding: '2rem', color: 'white'}}>
                         <div className="text-center">
                             <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
                             <div className="arsenal-grid-container" style={{display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center'}}>
@@ -568,7 +568,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div id="google-partner-section" style={{padding: '1rem 0', background: 'black'}}>
+            <div id="google-partner-section" style={{padding: '2rem 0', background: 'black'}}>
                 <div className="text-center">
                     <div className="brutal-box neon-glow-pink" style={{display: 'inline-block', padding: '2rem', border: '2px solid #EBF998'}}>
                         <p style={{fontSize: '1.5rem', fontWeight: 800, color: '#EBF998', textTransform: 'uppercase'}}>🏆 GROW WITH GOOGLE PARTNER</p>
@@ -577,8 +577,8 @@ const HomePage = () => {
                 </div>
             </div>
             
-            <div id="contact" className="page-section" style={{paddingTop: '1rem', minHeight: 'auto'}}>
-                <section style={{background: 'white'}}>
+            <div id="contact" className="page-section" style={{paddingTop: '2rem', minHeight: 'auto'}}>
+                <section style={{background: 'white', paddingTop: '2rem'}}>
                     <div style={{maxWidth: '1400px', margin: '0 auto', padding: '3rem 2rem'}}>
                         <div className="text-center mb-8">
                             <h2 style={{fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, background: 'linear-gradient(to right, #FF5BF1, #6370E7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
@@ -613,7 +613,7 @@ const HomePage = () => {
                     </div>
                 </section>
                 
-                <section style={{padding: '2rem', background: 'black'}}>
+                <section style={{padding: '4rem 2rem', background: 'black'}}>
                     <div style={{maxWidth: '1400px', margin: '0 auto'}}>
                         <div className="brutal-box" style={{background: 'white', color: 'black', padding: '3rem', textAlign: 'center'}}>
                             <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
@@ -625,13 +625,13 @@ const HomePage = () => {
                     </div>
                 </section>
 
-                <div className="service-hero" style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
+                <div className="service-hero" style={{paddingTop: '4rem', paddingBottom: '4rem'}}>
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         Have a project, a question, or just want to vibe? Drop us a line.
                     </p>
                 </div>
-                <div className="service-content" style={{paddingTop: '2rem'}}>
+                <div className="service-content" style={{paddingTop: '4rem', paddingBottom: '4rem'}}>
                     <div className="brutal-box" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
                         <form action="mailto:curate@curations.org" method="post" encType="text/plain">
                             <div style={{ marginBottom: '1rem' }}>
