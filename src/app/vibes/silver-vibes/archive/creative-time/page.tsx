@@ -477,4 +477,4 @@ const CreativeTimePage = () => {
     );
 };
 
-export default HomePage;
+export default CreativeTimePage;
