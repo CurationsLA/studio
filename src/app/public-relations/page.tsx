@@ -21,10 +21,10 @@ const PublicRelationsPage = () => {
     };
 
     const prMetrics = [
-        { metric: '10M+', label: 'Media Impressions Generated', color: '#FF5BF1' },
-        { metric: '95%', label: 'Positive Sentiment Score', color: '#6370E7' },
+        { metric: '10M+', label: 'Media Impressions Generated', color: 'hsl(var(--primary))' },
+        { metric: '95%', label: 'Positive Sentiment Score', color: 'hsl(var(--accent))' },
         { metric: '200+', label: 'Media Placements Secured', color: '#EBF998' },
-        { metric: '48hrs', label: 'Average Crisis Response Time', color: '#FF5BF1' }
+        { metric: '48hrs', label: 'Average Crisis Response Time', color: 'hsl(var(--primary))' }
     ];
 
     const mediaOutlets = [
@@ -39,7 +39,7 @@ const PublicRelationsPage = () => {
     ];
 
     return (
-        <div style={{ fontFamily: "'JetBrains Mono', monospace", background: '#FDFDFC', minHeight: '100vh' }}>
+        <div style={{ background: 'hsl(var(--background))', minHeight: '100vh' }}>
              <DraftNav />
             <script 
                 type="application/ld+json"
@@ -65,13 +65,13 @@ const PublicRelationsPage = () => {
                 }
                 
                 .service-tab.active {
-                    background: #FF5BF1;
+                    background: hsl(var(--primary));
                     color: white;
                     transform: translateY(-3px);
                 }
                 
                 .service-tab:hover {
-                    background: #6370E7;
+                    background: hsl(var(--accent));
                     color: white;
                 }
                 
@@ -105,11 +105,11 @@ const PublicRelationsPage = () => {
                     transform: scale(1.1);
                 }
                 
-                .tier-1 { border-color: #FF5BF1; }
-                .tier-2 { border-color: #6370E7; }
+                .tier-1 { border-color: hsl(var(--primary)); }
+                .tier-2 { border-color: hsl(var(--accent)); }
                 
                 .crisis-simulator {
-                    background: linear-gradient(45deg, #FF0000, #FF5BF1);
+                    background: linear-gradient(45deg, #FF0000, hsl(var(--primary)));
                     color: white;
                     padding: 2rem;
                     margin: 2rem 0;
@@ -145,7 +145,7 @@ const PublicRelationsPage = () => {
                     top: 0;
                     bottom: 0;
                     width: 4px;
-                    background: #FF5BF1;
+                    background: hsl(var(--primary));
                 }
                 
                 .timeline-item {
@@ -161,13 +161,13 @@ const PublicRelationsPage = () => {
                     top: 0;
                     width: 20px;
                     height: 20px;
-                    background: #FF5BF1;
+                    background: hsl(var(--primary));
                     border: 4px solid black;
                     border-radius: 50%;
                 }
                 
                 .executive-profile {
-                    background: linear-gradient(135deg, #6370E7, #FF5BF1);
+                    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
                     color: white;
                     padding: 2rem;
                     margin: 1rem 0;
@@ -181,10 +181,10 @@ const PublicRelationsPage = () => {
             `}</style>
 
             {/* Hero Section */}
-            <div style={{ background: 'linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%)', padding: '4rem 2rem', color: 'white' }}>
+            <div style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem', color: 'white' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>📰</div>
-                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}>
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
                         PUBLIC RELATIONS
                     </h1>
                     <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto' }}>
@@ -197,7 +197,7 @@ const PublicRelationsPage = () => {
             {/* Key Metrics */}
             <div style={{ padding: '4rem 2rem', background: 'black' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                         PR PERFORMANCE METRICS
                     </h2>
                     
@@ -209,7 +209,7 @@ const PublicRelationsPage = () => {
                                 style={{ background: item.color === '#EBF998' ? '#EBF998' : item.color, color: item.color === '#EBF998' ? 'black' : 'white' }}
                                 onClick={() => setSelectedMetric(item)}
                             >
-                                <div style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1rem' }}>
+                                <div style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">
                                     {item.metric}
                                 </div>
                                 <div style={{ fontWeight: 700, fontSize: '0.875rem' }}>
@@ -222,7 +222,7 @@ const PublicRelationsPage = () => {
             </div>
 
             {/* Service Tabs */}
-            <div style={{ padding: '2rem', background: 'white', borderBottom: '4px solid black' }}>
+            <div style={{ padding: '2rem', background: 'hsl(var(--background))', borderBottom: '4px solid black' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                     <button 
                         className={`service-tab ${activeService === 'corporate' ? 'active' : ''}`}
@@ -263,13 +263,13 @@ const PublicRelationsPage = () => {
                 {/* Corporate Communications */}
                 {activeService === 'corporate' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             CORPORATE COMMUNICATIONS
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-                            <div className="brutal-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     STRATEGIC MESSAGING
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -283,8 +283,8 @@ const PublicRelationsPage = () => {
                                 </ul>
                             </div>
 
-                            <div className="brutal-box" style={{ background: '#6370E7', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     THOUGHT LEADERSHIP
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -299,7 +299,7 @@ const PublicRelationsPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: '#EBF998', color: 'black', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     INVESTOR RELATIONS
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -314,8 +314,8 @@ const PublicRelationsPage = () => {
                             </div>
                         </div>
 
-                        <div className="brutal-box" style={{ background: 'linear-gradient(135deg, #FF5BF1, #6370E7)', color: 'white', padding: '3rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                        <div className="brutal-box" style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)))', color: 'white', padding: '3rem', textAlign: 'center' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                 CORPORATE COMMUNICATION AUDIT
                             </h3>
                             <p style={{ fontSize: '1.25rem', marginBottom: '2rem', lineHeight: 1.8 }}>
@@ -342,12 +342,12 @@ const PublicRelationsPage = () => {
                 {/* Executive Branding */}
                 {activeService === 'executive' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             EXECUTIVE BRANDING
                         </h2>
                         
                         <div className="executive-profile brutal-box">
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 TRANSFORM LEADERS INTO INDUSTRY VOICES
                             </h3>
                             <p style={{ fontSize: '1.25rem', lineHeight: 1.8 }}>
@@ -358,7 +358,7 @@ const PublicRelationsPage = () => {
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎯</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     PERSONAL BRAND STRATEGY
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -372,7 +372,7 @@ const PublicRelationsPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📱</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     DIGITAL PRESENCE
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -386,7 +386,7 @@ const PublicRelationsPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎤</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     SPEAKING & MEDIA
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -400,7 +400,7 @@ const PublicRelationsPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>✍️</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CONTENT CREATION
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -414,7 +414,7 @@ const PublicRelationsPage = () => {
                         </div>
 
                         <div className="pr-timeline" style={{ marginTop: '3rem' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                 90-DAY EXECUTIVE BRAND LAUNCH
                             </h3>
                             
@@ -439,12 +439,12 @@ const PublicRelationsPage = () => {
                 {/* Crisis Management */}
                 {activeService === 'crisis' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             CRISIS MANAGEMENT
                         </h2>
                         
                         <div className="crisis-simulator brutal-box">
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                 CRISIS RESPONSE PROTOCOL
                             </h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
@@ -464,8 +464,8 @@ const PublicRelationsPage = () => {
                         </div>
 
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
-                            <div className="brutal-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CRISIS PREVENTION
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -480,8 +480,8 @@ const PublicRelationsPage = () => {
                                 </ul>
                             </div>
 
-                            <div className="brutal-box" style={{ background: '#6370E7', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CRISIS RESPONSE
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -497,7 +497,7 @@ const PublicRelationsPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: '#EBF998', color: 'black', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     REPUTATION RECOVERY
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -518,12 +518,12 @@ const PublicRelationsPage = () => {
                 {/* Media Relations */}
                 {activeService === 'media' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             MEDIA RELATIONS
                         </h2>
                         
-                        <div className="brutal-box" style={{ background: 'linear-gradient(135deg, #FF5BF1, #6370E7)', color: 'white', padding: '3rem', marginBottom: '3rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                        <div className="brutal-box" style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)))', color: 'white', padding: '3rem', marginBottom: '3rem', textAlign: 'center' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                 OUR MEDIA NETWORK
                             </h3>
                             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem' }}>
@@ -545,7 +545,7 @@ const PublicRelationsPage = () => {
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📧</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     MEDIA OUTREACH
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -559,7 +559,7 @@ const PublicRelationsPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📊</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     MEDIA MONITORING
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -573,7 +573,7 @@ const PublicRelationsPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎥</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     MEDIA TRAINING
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -587,7 +587,7 @@ const PublicRelationsPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📈</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     MEDIA ANALYTICS
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -605,12 +605,12 @@ const PublicRelationsPage = () => {
                 {/* Newsletter Design */}
                 {activeService === 'newsletter' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             NEWSLETTER DESIGN & STRATEGY
                         </h2>
                         
                         <div className="brutal-box" style={{ background: '#EBF998', color: 'black', padding: '3rem', marginBottom: '3rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                 NEWSLETTER SUCCESS METRICS
                             </h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '2rem' }}>
@@ -634,8 +634,8 @@ const PublicRelationsPage = () => {
                         </div>
 
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-                            <div className="brutal-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     STRATEGIC PLANNING
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -647,8 +647,8 @@ const PublicRelationsPage = () => {
                                 </ul>
                             </div>
 
-                            <div className="brutal-box" style={{ background: '#6370E7', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     DESIGN & BRANDING
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -661,7 +661,7 @@ const PublicRelationsPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: 'white', color: 'black', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CONTENT CREATION
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -674,7 +674,7 @@ const PublicRelationsPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: 'black', color: '#EBF998', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     ANALYTICS & OPTIMIZATION
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -687,8 +687,8 @@ const PublicRelationsPage = () => {
                             </div>
                         </div>
 
-                        <div className="brutal-box" style={{ background: 'linear-gradient(135deg, #FF5BF1, #6370E7)', color: 'white', padding: '3rem', marginTop: '3rem' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }}>
+                        <div className="brutal-box" style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)))', color: 'white', padding: '3rem', marginTop: '3rem' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                 CURATIONSLA: CASE STUDY
                             </h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
@@ -717,18 +717,18 @@ const PublicRelationsPage = () => {
             </div>
 
             {/* Investment Packages */}
-            <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%)' }}>
+            <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                         PR INVESTMENT PACKAGES
                     </h2>
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         <div className="brutal-box" style={{ background: 'white', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 FOUNDATION
                             </h3>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$12K</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$12K</div>
                             <div style={{ marginBottom: '2rem' }}>Essential PR services</div>
                             <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                 <li>Media relations setup</li>
@@ -740,10 +740,10 @@ const PublicRelationsPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: '#EBF998', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 AMPLIFICATION
                             </h3>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$35K</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$35K</div>
                             <div style={{ marginBottom: '2rem' }}>Comprehensive PR strategy</div>
                             <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                 <li>Full-service media relations</li>
@@ -755,10 +755,10 @@ const PublicRelationsPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: 'black', color: 'white', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 DOMINATION
                             </h3>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$75K+</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$75K+</div>
                             <div style={{ marginBottom: '2rem' }}>Enterprise PR solutions</div>
                             <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                 <li>Dedicated PR team</li>
@@ -774,7 +774,7 @@ const PublicRelationsPage = () => {
 
             {/* CTA Section */}
             <div style={{ background: 'black', padding: '4rem 2rem', textAlign: 'center' }}>
-                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                     READY TO CONTROL YOUR NARRATIVE?
                 </h2>
                 <p style={{ fontSize: '1.25rem', color: 'white', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
@@ -782,12 +782,12 @@ const PublicRelationsPage = () => {
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <a href="mailto:pr@curations.org" className="brutal-box" style={{
-                        background: '#FF5BF1', 
+                        background: 'hsl(var(--primary))', 
                         color: 'white', 
                         padding: '1rem 2rem', 
                         fontWeight: 800, 
                         textTransform: 'uppercase', 
-                        border: '4px solid #FF5BF1', 
+                        border: '4px solid hsl(var(--primary))', 
                         textDecoration: 'none',
                         display: 'inline-block'
                     }}>

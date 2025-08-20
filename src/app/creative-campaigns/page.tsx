@@ -255,7 +255,7 @@ const CreativeCampaignsPage = () => {
                 <div style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, #EBF998 100%)', padding: '4rem 2rem', color: 'white' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🎨</div>
-                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}>
+                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
                             CREATIVE CAMPAIGNS
                         </h1>
                         <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto 2rem auto' }}>
@@ -275,7 +275,7 @@ const CreativeCampaignsPage = () => {
                 {/* Engagement Stats */}
                 <div style={{ padding: '4rem 2rem', background: 'black' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                             CREATIVE IMPACT METRICS
                         </h2>
                         
@@ -322,7 +322,7 @@ const CreativeCampaignsPage = () => {
                             <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>
                                 {campaignTypes[activeCampaignType].icon}
                             </div>
-                            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 {campaignTypes[activeCampaignType].title}
                             </h2>
                             <p style={{ fontSize: '1.25rem', marginBottom: '2rem', lineHeight: 1.8 }}>
@@ -348,7 +348,7 @@ const CreativeCampaignsPage = () => {
                 {/* Creative Process */}
                 <div style={{ padding: '4rem 2rem', background: 'hsl(var(--background))' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             OUR CREATIVE PROCESS
                         </h2>
                         
@@ -356,7 +356,7 @@ const CreativeCampaignsPage = () => {
                             <div className="process-step">
                                 <div className="step-icon">1</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         CULTURAL IMMERSION
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -369,7 +369,7 @@ const CreativeCampaignsPage = () => {
                             <div className="process-step">
                                 <div className="step-icon" style={{ background: 'hsl(var(--accent))' }}>2</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         CREATIVE IDEATION
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -382,7 +382,7 @@ const CreativeCampaignsPage = () => {
                             <div className="process-step">
                                 <div className="step-icon" style={{ background: '#EBF998', color: 'black' }}>3</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         RAPID PROTOTYPING
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -395,7 +395,7 @@ const CreativeCampaignsPage = () => {
                             <div className="process-step">
                                 <div className="step-icon" style={{ background: 'hsl(var(--primary))' }}>4</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         CULTURAL LAUNCH
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -408,7 +408,7 @@ const CreativeCampaignsPage = () => {
                             <div className="process-step">
                                 <div className="step-icon" style={{ background: 'hsl(var(--accent))' }}>5</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         OPTIMIZATION & AMPLIFICATION
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -424,14 +424,14 @@ const CreativeCampaignsPage = () => {
                 {/* Service Offerings Grid */}
                 <div style={{ padding: '4rem 2rem', background: 'white' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             CREATIVE SERVICES BREAKDOWN
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
                             <div className="creative-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📱</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     SOCIAL STRATEGY
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
@@ -448,7 +448,7 @@ const CreativeCampaignsPage = () => {
 
                             <div className="creative-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📸</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     UGC THAT CONVERTS
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
@@ -465,7 +465,7 @@ const CreativeCampaignsPage = () => {
 
                             <div className="creative-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎯</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CONTENT GAPS
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
@@ -482,7 +482,7 @@ const CreativeCampaignsPage = () => {
 
                             <div className="creative-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎪</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     EXPERIENTIAL CAMPAIGNS
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
@@ -499,7 +499,7 @@ const CreativeCampaignsPage = () => {
 
                             <div className="creative-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎬</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     VIDEO PRODUCTION
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
@@ -516,7 +516,7 @@ const CreativeCampaignsPage = () => {
 
                             <div className="creative-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🤝</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     BRAND COLLABORATIONS
                                 </h3>
                                 <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
@@ -537,14 +537,14 @@ const CreativeCampaignsPage = () => {
                 {/* Campaign Showcase */}
                 <div style={{ padding: '4rem 2rem', background: 'black' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                             CAMPAIGN HIGHLIGHTS
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
                             <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
                                 <div className="viral-element" style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>🌮</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     "TACO TRUCK TAKEOVER"
                                 </h3>
                                 <div style={{ background: 'rgba(255,255,255,0.2)', padding: '1rem', marginBottom: '1rem' }}>
@@ -559,7 +559,7 @@ const CreativeCampaignsPage = () => {
 
                             <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
                                 <div className="viral-element" style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>☕</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     "COFFEE SHOP COLLECTIVE"
                                 </h3>
                                 <div style={{ background: 'rgba(255,255,255,0.2)', padding: '1rem', marginBottom: '1rem' }}>
@@ -574,7 +574,7 @@ const CreativeCampaignsPage = () => {
 
                             <div className="brutal-box" style={{ background: '#EBF998', color: 'black', padding: '2rem' }}>
                                 <div className="viral-element" style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>🎨</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     "ARTIST SPOTLIGHT SERIES"
                                 </h3>
                                 <div style={{ background: 'black', color: '#EBF998', padding: '1rem', marginBottom: '1rem' }}>
@@ -593,16 +593,16 @@ const CreativeCampaignsPage = () => {
                 {/* Investment Packages */}
                 <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                             CREATIVE INVESTMENT PACKAGES
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CREATIVE STARTER
                                 </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$10K</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$10K</div>
                                 <div style={{ marginBottom: '2rem' }}>Essential creative services</div>
                                 <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                     <li>Social strategy development</li>
@@ -614,10 +614,10 @@ const CreativeCampaignsPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: '#EBF998', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CREATIVE ACCELERATOR
                                 </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$30K</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$30K</div>
                                 <div style={{ marginBottom: '2rem' }}>Comprehensive creative campaigns</div>
                                 <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                     <li>Multi-platform strategy</li>
@@ -629,10 +629,10 @@ const CreativeCampaignsPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: 'black', color: 'white', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CREATIVE DOMINATION
                                 </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$75K+</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$75K+</div>
                                 <div style={{ marginBottom: '2rem' }}>Full creative transformation</div>
                                 <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                     <li>Dedicated creative team</li>
@@ -648,7 +648,7 @@ const CreativeCampaignsPage = () => {
 
                 {/* CTA Section */}
                 <div style={{ background: 'black', padding: '4rem 2rem', textAlign: 'center' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                         READY TO CREATE CULTURAL MOMENTS?
                     </h2>
                     <p style={{ fontSize: '1.25rem', color: 'white', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>

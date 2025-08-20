@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -36,7 +35,7 @@ const InfluencerUGCPage = () => {
             engagement: '5-8%',
             cost: '$500-3K',
             strength: 'Niche authority',
-            color: '#6370E7'
+            color: 'hsl(var(--accent))'
         },
         macro: {
             name: 'MACRO INFLUENCERS',
@@ -44,7 +43,7 @@ const InfluencerUGCPage = () => {
             engagement: '2-5%',
             cost: '$3K-25K',
             strength: 'Broad reach',
-            color: '#FF5BF1'
+            color: 'hsl(var(--primary))'
         },
         mega: {
             name: 'MEGA CREATORS',
@@ -57,7 +56,7 @@ const InfluencerUGCPage = () => {
     };
 
     return (
-        <div style={{ fontFamily: "'JetBrains Mono', monospace", background: '#FDFDFC', minHeight: '100vh' }}>
+        <div style={{ background: 'hsl(var(--background))', minHeight: '100vh' }}>
             <DraftNav />
             <script 
                 type="application/ld+json"
@@ -83,13 +82,13 @@ const InfluencerUGCPage = () => {
                 }
                 
                 .tab-selector.active {
-                    background: #FF5BF1;
+                    background: hsl(var(--primary));
                     color: white;
                     transform: translateY(-3px);
                 }
                 
                 .tab-selector:hover {
-                    background: #6370E7;
+                    background: hsl(var(--accent));
                     color: white;
                 }
                 
@@ -145,7 +144,7 @@ const InfluencerUGCPage = () => {
                     top: 0;
                     bottom: 0;
                     width: 4px;
-                    background: #FF5BF1;
+                    background: hsl(var(--primary));
                     transform: translateX(-50%);
                 }
                 
@@ -169,7 +168,7 @@ const InfluencerUGCPage = () => {
                 }
                 
                 .timeline-marker {
-                    background: #FF5BF1;
+                    background: hsl(var(--primary));
                     color: white;
                     width: 60px;
                     height: 60px;
@@ -201,7 +200,7 @@ const InfluencerUGCPage = () => {
                 }
                 
                 .creator-network {
-                    background: linear-gradient(135deg, #FF5BF1, #6370E7, #EBF998);
+                    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)), #EBF998);
                     padding: 3rem;
                     color: white;
                     text-align: center;
@@ -243,10 +242,10 @@ const InfluencerUGCPage = () => {
             `}</style>
 
             {/* Hero Section */}
-            <div style={{ background: 'linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%)', padding: '4rem 2rem', color: 'white' }}>
+            <div style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem', color: 'white' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🤝</div>
-                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}>
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
                         INFLUENCER COLLABORATIONS
                     </h1>
                     <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto' }}>
@@ -258,7 +257,7 @@ const InfluencerUGCPage = () => {
             {/* Performance Metrics */}
             <div style={{ padding: '4rem 2rem', background: 'black' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                         INFLUENCER CAMPAIGN RESULTS
                     </h2>
                     
@@ -284,7 +283,7 @@ const InfluencerUGCPage = () => {
             </div>
 
             {/* Tab Navigation */}
-            <div style={{ padding: '2rem', background: 'white', borderBottom: '4px solid black' }}>
+            <div style={{ padding: '2rem', background: 'hsl(var(--background))', borderBottom: '4px solid black' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                     <button 
                         className={`tab-selector ${activeTab === 'strategy' ? 'active' : ''}`}
@@ -319,7 +318,7 @@ const InfluencerUGCPage = () => {
                 {/* Strategy & Planning Tab */}
                 {activeTab === 'strategy' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             STRATEGIC INFLUENCER PLANNING
                         </h2>
                         
@@ -328,7 +327,7 @@ const InfluencerUGCPage = () => {
                             
                             <div className="timeline-step">
                                 <div className="timeline-content">
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                         AUDIENCE ANALYSIS
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -341,7 +340,7 @@ const InfluencerUGCPage = () => {
 
                             <div className="timeline-step">
                                 <div className="timeline-content">
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                         CREATOR MATCHING
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -349,12 +348,12 @@ const InfluencerUGCPage = () => {
                                         We prioritize authentic fit over follower count every time.
                                     </p>
                                 </div>
-                                <div className="timeline-marker" style={{ background: '#6370E7' }}>2</div>
+                                <div className="timeline-marker" style={{ background: 'hsl(var(--accent))' }}>2</div>
                             </div>
 
                             <div className="timeline-step">
                                 <div className="timeline-content">
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                         CAMPAIGN ARCHITECTURE
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -367,7 +366,7 @@ const InfluencerUGCPage = () => {
 
                             <div className="timeline-step">
                                 <div className="timeline-content">
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                         PERFORMANCE OPTIMIZATION
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -384,12 +383,12 @@ const InfluencerUGCPage = () => {
                 {/* Creator Network Tab */}
                 {activeTab === 'creators' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             OUR CREATOR NETWORK
                         </h2>
                         
                         <div className="creator-network brutal-box">
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                 500+ VETTED CREATORS
                             </h3>
                             <p style={{ fontSize: '1.25rem', marginBottom: '2rem', lineHeight: 1.8 }}>
@@ -417,7 +416,7 @@ const InfluencerUGCPage = () => {
                             </div>
                         </div>
 
-                        <h3 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                        <h3 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                             CREATOR TIER BREAKDOWN
                         </h3>
                         
@@ -429,7 +428,7 @@ const InfluencerUGCPage = () => {
                                     style={{ borderColor: tier.color }}
                                     onClick={() => setCreatorTier(key)}
                                 >
-                                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: tier.color }}>
+                                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: tier.color }} className="font-headline">
                                         {tier.name}
                                     </h4>
                                     <div style={{ marginBottom: '1rem' }}>
@@ -449,33 +448,33 @@ const InfluencerUGCPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: 'white', padding: '3rem' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                 CREATOR VETTING PROCESS
                             </h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                                 <div>
-                                    <h4 style={{ fontWeight: 800, marginBottom: '1rem' }}>AUDIENCE AUTHENTICITY</h4>
+                                    <h4 style={{ fontWeight: 800, marginBottom: '1rem' }} className="font-headline">AUDIENCE AUTHENTICITY</h4>
                                     <p style={{ lineHeight: 1.8 }}>
                                         Comprehensive analysis of follower quality, engagement patterns, and audience demographics 
                                         to ensure genuine influence and reach.
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 style={{ fontWeight: 800, marginBottom: '1rem' }}>BRAND SAFETY AUDIT</h4>
+                                    <h4 style={{ fontWeight: 800, marginBottom: '1rem' }} className="font-headline">BRAND SAFETY AUDIT</h4>
                                     <p style={{ lineHeight: 1.8 }}>
                                         Thorough review of past content, partnerships, and public statements to ensure 
                                         alignment with brand values and safety standards.
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 style={{ fontWeight: 800, marginBottom: '1rem' }}>CONTENT QUALITY ASSESSMENT</h4>
+                                    <h4 style={{ fontWeight: 800, marginBottom: '1rem' }} className="font-headline">CONTENT QUALITY ASSESSMENT</h4>
                                     <p style={{ lineHeight: 1.8 }}>
                                         Evaluation of creative style, production quality, and storytelling ability to 
                                         ensure professional-grade content creation capabilities.
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 style={{ fontWeight: 800, marginBottom: '1rem' }}>COLLABORATION HISTORY</h4>
+                                    <h4 style={{ fontWeight: 800, marginBottom: '1rem' }} className="font-headline">COLLABORATION HISTORY</h4>
                                     <p style={{ lineHeight: 1.8 }}>
                                         Review of past brand partnerships, professionalism, and campaign performance 
                                         to predict future collaboration success.
@@ -489,12 +488,12 @@ const InfluencerUGCPage = () => {
                 {/* UGC Programs Tab */}
                 {activeTab === 'ugc' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             UGC THAT CONVERTS
                         </h2>
                         
                         <div className="brutal-box" style={{ background: '#EBF998', padding: '3rem', marginBottom: '3rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                 UGC PERFORMANCE STATS
                             </h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '2rem' }}>
@@ -518,8 +517,8 @@ const InfluencerUGCPage = () => {
                         </div>
 
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-                            <div className="brutal-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     UGC CAMPAIGN STRATEGY
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -531,8 +530,8 @@ const InfluencerUGCPage = () => {
                                 </ul>
                             </div>
 
-                            <div className="brutal-box" style={{ background: '#6370E7', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CREATOR RECRUITMENT
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -545,7 +544,7 @@ const InfluencerUGCPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: 'white', color: 'black', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     CONTENT MODERATION
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -601,14 +600,14 @@ const InfluencerUGCPage = () => {
                 {/* Campaign Management Tab */}
                 {activeTab === 'management' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             CAMPAIGN MANAGEMENT
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📋</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     PROJECT COORDINATION
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -622,7 +621,7 @@ const InfluencerUGCPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📊</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     PERFORMANCE TRACKING
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -636,7 +635,7 @@ const InfluencerUGCPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>⚖️</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     LEGAL & COMPLIANCE
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -650,7 +649,7 @@ const InfluencerUGCPage = () => {
 
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🔄</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     RELATIONSHIP MANAGEMENT
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -663,8 +662,8 @@ const InfluencerUGCPage = () => {
                             </div>
                         </div>
 
-                        <div className="brutal-box" style={{ background: 'linear-gradient(135deg, #FF5BF1, #6370E7)', color: 'white', padding: '3rem' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }}>
+                        <div className="brutal-box" style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)))', color: 'white', padding: '3rem' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                 CAMPAIGN SUCCESS FRAMEWORK
                             </h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
@@ -691,18 +690,18 @@ const InfluencerUGCPage = () => {
             </div>
 
             {/* Investment Packages */}
-            <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%)' }}>
+            <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                         INFLUENCER INVESTMENT PACKAGES
                     </h2>
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         <div className="brutal-box" style={{ background: 'white', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 MICRO COLLECTIVE
                             </h3>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$15K</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$15K</div>
                             <div style={{ marginBottom: '2rem' }}>5-10 micro influencers</div>
                             <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                 <li>Strategy development</li>
@@ -714,10 +713,10 @@ const InfluencerUGCPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: '#EBF998', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 CREATOR AMPLIFICATION
                             </h3>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$45K</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$45K</div>
                             <div style={{ marginBottom: '2rem' }}>Multi-tier creator program</div>
                             <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                 <li>20+ creator partnerships</li>
@@ -729,10 +728,10 @@ const InfluencerUGCPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: 'black', color: 'white', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 CULTURAL TAKEOVER
                             </h3>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$100K+</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$100K+</div>
                             <div style={{ marginBottom: '2rem' }}>Full ecosystem activation</div>
                             <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                 <li>Celebrity and mega influencer partnerships</li>
@@ -748,7 +747,7 @@ const InfluencerUGCPage = () => {
 
             {/* CTA Section */}
             <div style={{ background: 'black', padding: '4rem 2rem', textAlign: 'center' }}>
-                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                     READY TO BUILD YOUR CREATOR COMMUNITY?
                 </h2>
                 <p style={{ fontSize: '1.25rem', color: 'white', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
@@ -756,12 +755,12 @@ const InfluencerUGCPage = () => {
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <a href="mailto:influencers@curations.org" className="brutal-box" style={{
-                        background: '#FF5BF1', 
+                        background: 'hsl(var(--primary))', 
                         color: 'white', 
                         padding: '1rem 2rem', 
                         fontWeight: 800, 
                         textTransform: 'uppercase', 
-                        border: '4px solid #FF5BF1', 
+                        border: '4px solid hsl(var(--primary))', 
                         textDecoration: 'none',
                         display: 'inline-block'
                     }}>

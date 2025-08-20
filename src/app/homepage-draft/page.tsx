@@ -37,7 +37,6 @@ const HomePageDraft = () => {
                     scroll-behavior: smooth;
                 }
                 body {
-                    font-family: 'JetBrains Mono', monospace;
                     background: #FDFDFC;
                     color: black;
                     overflow-x: hidden;
@@ -703,5 +702,3 @@ const HomePageDraft = () => {
 };
 
 export default HomePageDraft;
-
-    

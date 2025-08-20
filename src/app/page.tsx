@@ -71,7 +71,7 @@ const HomePage = () => {
 
     return (
         <>
-            <div style={{ scrollBehavior: 'smooth', fontFamily: "'JetBrains Mono', monospace" }}>
+            <div style={{ scrollBehavior: 'smooth' }}>
                  <DraftNav />
                 <script 
                     type="application/ld+json"
@@ -83,7 +83,6 @@ const HomePage = () => {
                         scroll-behavior: smooth;
                     }
                     body {
-                        font-family: 'JetBrains Mono', monospace;
                         background: #FDFDFC;
                         color: black;
                         overflow-x: hidden;
@@ -95,7 +94,7 @@ const HomePage = () => {
                     }
                     
                     .text-outline-subtle {
-                        -webkit-text-stroke: 1.5px #FF5BF1;
+                        -webkit-text-stroke: 1.5px hsl(var(--primary));
                         -webkit-text-fill-color: transparent;
                     }
                     
@@ -133,8 +132,8 @@ const HomePage = () => {
                     }
                     
                     .neon-glow-pink {
-                        box-shadow: 0 0 40px rgba(255, 91, 241, 0.6),
-                                    inset 0 0 40px rgba(255, 91, 241, 0.1);
+                        box-shadow: 0 0 40px hsla(var(--primary), 0.6),
+                                    inset 0 0 40px hsla(var(--primary), 0.1);
                     }
                     
                     .parallax-element {
@@ -143,7 +142,7 @@ const HomePage = () => {
                     
                     /* Hero section enhancements */
                     .hero-gradient {
-                        background: linear-gradient(135deg, #FF5BF1 0%, #6370E7 50%, #EBF998 100%);
+                        background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, #EBF998 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
@@ -176,7 +175,7 @@ const HomePage = () => {
                         top: 100px;
                         right: 15px;
                         z-index: 50;
-                        background: #FF5BF1;
+                        background: hsl(var(--primary));
                         color: white;
                         padding: 0.25rem 0.5rem;
                         transform: rotate(12deg);
@@ -204,7 +203,7 @@ const HomePage = () => {
                     .corner-badge:hover {
                         transform: rotate(12deg) scale(1.1);
                         background: white;
-                        color: #FF5BF1;
+                        color: hsl(var(--primary));
                     }
 
                     /* Enhanced service cards */
@@ -229,7 +228,7 @@ const HomePage = () => {
                     .p-8 { padding: 4rem; }
                     
                     .btn-primary {
-                        background: #FF5BF1;
+                        background: hsl(var(--primary));
                         color: white;
                         padding: 1rem 2rem;
                         border: none;
@@ -242,7 +241,7 @@ const HomePage = () => {
                     }
                     
                     .btn-primary:hover {
-                        background: #6370E7;
+                        background: hsl(var(--accent));
                     }
                     
                     .grid {
@@ -273,7 +272,7 @@ const HomePage = () => {
                         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                             <div className="grid grid-2" style={{ alignItems: 'center' }}>
                                 <div>
-                                    <h1 style={{ fontSize: 'clamp(3rem, 6vw, 6rem)', fontWeight: 800, lineHeight: 1, textTransform: 'uppercase' }}>
+                                    <h1 style={{ fontSize: 'clamp(3rem, 6vw, 6rem)', fontWeight: 800, lineHeight: 1, textTransform: 'uppercase' }} className="font-headline">
                                         <span className="slide-in" style={{ display: 'block' }}>CURATIONS</span>
                                         <span className="text-outline-subtle slide-in" style={{ display: 'block', animationDelay: '0.2s' }}>CURATIONS</span>
                                         <span className="slide-in hero-gradient" style={{ display: 'block', animationDelay: '0.4s' }}>CURATIONS</span>
@@ -281,14 +280,14 @@ const HomePage = () => {
                                     
                                     <div className="mt-8">
                                         <div className="brutal-box pulse-brutal" style={{ background: 'white', color: 'black', padding: '1.5rem' }}>
-                                            <h2 style={{ fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase', textAlign: 'center' }}>
+                                            <h2 style={{ fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase', textAlign: 'center' }} className="font-headline">
                                                 WE CURATE THE
                                             </h2>
                                         </div>
                                         
                                         <div className="grid grid-2 mt-4">
-                                            <div className="brutal-box pulse-brutal service-card" style={{ background: '#FF5BF1', color: 'white', padding: '2rem', animationDelay: '0.3s' }}>
-                                                <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, textAlign: 'center', textTransform: 'uppercase' }}>
+                                            <div className="brutal-box pulse-brutal service-card" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem', animationDelay: '0.3s' }}>
+                                                <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                                     [HEART]
                                                 </h3>
                                                 <div style={{ marginTop: '0.5rem', textAlign: 'center', fontSize: '0.875rem', fontWeight: 700 }}>
@@ -296,8 +295,8 @@ const HomePage = () => {
                                                 </div>
                                             </div>
                                             
-                                            <div className="brutal-box pulse-brutal service-card" style={{ background: '#6370E7', color: 'white', padding: '2rem', animationDelay: '0.6s' }}>
-                                                <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, textAlign: 'center', textTransform: 'uppercase' }}>
+                                            <div className="brutal-box pulse-brutal service-card" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem', animationDelay: '0.6s' }}>
+                                                <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                                     [HEADLINES]
                                                 </h3>
                                                 <div style={{ marginTop: '0.5rem', textAlign: 'center', fontSize: '0.875rem', fontWeight: 700 }}>
@@ -310,7 +309,7 @@ const HomePage = () => {
                                 
                                 <div style={{ marginTop: '2rem' }}>
                                     <div className="brutal-box mb-4 fade-in-up" style={{ background: '#EBF998', padding: '1.5rem' }}>
-                                        <h3 style={{ fontWeight: 800, fontSize: '1.25rem', marginBottom: '0.75rem', textTransform: 'uppercase' }}>OUR FOCUS</h3>
+                                        <h3 style={{ fontWeight: 800, fontSize: '1.25rem', marginBottom: '0.75rem', textTransform: 'uppercase' }} className="font-headline">OUR FOCUS</h3>
                                         <ul style={{ listStyle: 'none', fontSize: '0.875rem' }}>
                                             <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[1] Eats + Biz</li>
                                             <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[2] AI Discovery</li>
@@ -321,11 +320,11 @@ const HomePage = () => {
                                     </div>
                                     
                                     <div className="brutal-box fade-in-up" style={{ background: 'white', padding: '1.5rem', animationDelay: '0.2s' }}>
-                                        <p style={{ fontWeight: 800, fontSize: '1.125rem', textTransform: 'uppercase' }}>SYSTEMS:</p>
-                                        <p className="pulse-brutal" style={{ fontSize: '1.875rem', marginTop: '0.5rem', fontWeight: 800, color: '#FF5BF1' }}>[ONLINE]</p>
+                                        <p style={{ fontWeight: 800, fontSize: '1.125rem', textTransform: 'uppercase' }} className="font-headline">SYSTEMS:</p>
+                                        <p className="pulse-brutal" style={{ fontSize: '1.875rem', marginTop: '0.5rem', fontWeight: 800, color: 'hsl(var(--primary))' }}>[ONLINE]</p>
                                         <div style={{ marginTop: '0.75rem' }}>
                                             <div className="brutal-box" style={{ width: '100%', background: '#e5e5e5', height: '1rem', border: '2px solid black', boxShadow: 'none' }}>
-                                                <div className="pulse-brutal" style={{ background: '#6370E7', height: '100%', width: '100%' }}></div>
+                                                <div className="pulse-brutal" style={{ background: 'hsl(var(--accent))', height: '100%', width: '100%' }}></div>
                                             </div>
                                             <p style={{ fontSize: '0.75rem', textAlign: 'right', fontWeight: 800, marginTop: '1rem' }}>
                                                 <span style={{ background: '#EBF998', padding: '0.1rem 0.25rem', fontWeight: 800 }}>100% READY</span>
@@ -361,19 +360,19 @@ const HomePage = () => {
                     <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
                         <div className="grid grid-4">
                             <div className="text-center">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#FF5BF1' }}>100+</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'hsl(var(--primary))' }} className="font-headline">100+</div>
                                 <div style={{ color: 'white', fontWeight: 700, fontSize: '0.875rem' }}>BRANDS CURATED</div>
                             </div>
                             <div className="text-center">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#6370E7' }}>500%</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'hsl(var(--accent))' }} className="font-headline">500%</div>
                                 <div style={{ color: 'white', fontWeight: 700, fontSize: '0.875rem' }}>AVG GROWTH</div>
                             </div>
                             <div className="text-center">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#EBF998' }}>24/7</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#EBF998' }} className="font-headline">24/7</div>
                                 <div style={{ color: 'white', fontWeight: 700, fontSize: '0.875rem' }}>AI MONITORING</div>
                             </div>
                             <div className="text-center">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#FF5BF1' }}>∞</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'hsl(var(--primary))' }} className="font-headline">∞</div>
                                 <div style={{ color: 'white', fontWeight: 700, fontSize: '0.875rem' }}>POSSIBILITIES</div>
                             </div>
                         </div>
@@ -384,7 +383,7 @@ const HomePage = () => {
                 <div style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div className="text-center mb-8">
-                            <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}>
+                            <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
                                 OUR <span className="hero-gradient">CURATIONS</span>
                             </h2>
                             <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto' }}>
@@ -393,27 +392,27 @@ const HomePage = () => {
                         </div>
                         
                         <div className="grid grid-3">
-                            <div className="brutal-box service-card" style={{background: '#FF5BF1', color: 'white', padding: '2rem'}}>
+                            <div className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>🍽️</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Restaurant & Biz</h3>
+                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Restaurant & Biz</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Grand openings, menu marketing, delivery optimization, and cultural integration.</p>
-                                <button onClick={() => showPage('services')} className="btn-primary" style={{marginTop: '1rem', background: 'white', color: '#FF5BF1'}}>
+                                <button onClick={() => showPage('services')} className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))'}}>
                                     EXPLORE
                                 </button>
                             </div>
                             
-                            <div className="brutal-box service-card" style={{background: '#6370E7', color: 'white', padding: '2rem'}}>
+                            <div className="brutal-box service-card" style={{background: 'hsl(var(--accent))', color: 'white', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>🤖</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>AI Discovery</h3>
+                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">AI Discovery</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Prompt engineering, SEO optimization, and tech stack discovery for the AI age.</p>
-                                <button onClick={() => showPage('services')} className="btn-primary" style={{marginTop: '1rem', background: 'white', color: '#6370E7'}}>
+                                <button onClick={() => showPage('services')} className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--accent))'}}>
                                     EXPLORE
                                 </button>
                             </div>
                             
                             <div className="brutal-box service-card" style={{background: '#EBF998', color: 'black', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>📺</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}}>Media Buying</h3>
+                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Media Buying</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Netflix placements, podcast ads, linear TV, and strategic social media.</p>
                                 <button onClick={() => showPage('services')} className="btn-primary" style={{marginTop: '1rem'}}>
                                     EXPLORE
@@ -430,16 +429,16 @@ const HomePage = () => {
                 </div>
 
                 {/* CTA Section */}
-                <div style={{ background: 'linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%)', padding: '4rem 2rem' }}>
+                <div style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
-                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                             READY TO CURATE YOUR SUCCESS?
                         </h2>
                         <p style={{ fontSize: '1.25rem', color: 'white', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
                             Join 100+ brands that chose culture over algorithms, authenticity over automation.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <button onClick={() => showPage('contact')} className="brutal-box" style={{background: 'white', color: '#FF5BF1', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer'}}>
+                            <button onClick={() => showPage('contact')} className="brutal-box" style={{background: 'white', color: 'hsl(var(--primary))', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer'}}>
                                 START YOUR CURATION
                             </button>
                             <button onClick={() => showPage('portfolio')} className="brutal-box" style={{background: '#EBF998', color: 'black', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer'}}>
