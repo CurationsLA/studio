@@ -28,7 +28,8 @@ const InfluencerUGCPage = () => {
             engagement: '8-12%',
             cost: '$100-500',
             strength: 'Hyper-local authenticity',
-            color: '#EBF998'
+            color: '#EBF998',
+            textColor: 'black'
         },
         micro: {
             name: 'MICRO INFLUENCERS',
@@ -36,7 +37,8 @@ const InfluencerUGCPage = () => {
             engagement: '5-8%',
             cost: '$500-3K',
             strength: 'Niche authority',
-            color: 'hsl(var(--accent))'
+            color: 'hsl(var(--accent))',
+            textColor: 'white'
         },
         macro: {
             name: 'MACRO INFLUENCERS',
@@ -44,7 +46,8 @@ const InfluencerUGCPage = () => {
             engagement: '2-5%',
             cost: '$3K-25K',
             strength: 'Broad reach',
-            color: 'hsl(var(--primary))'
+            color: 'hsl(var(--primary))',
+            textColor: 'white'
         },
         mega: {
             name: 'MEGA CREATORS',
@@ -52,7 +55,8 @@ const InfluencerUGCPage = () => {
             engagement: '1-3%',
             cost: '$25K+',
             strength: 'Cultural impact',
-            color: '#000000'
+            color: '#000000',
+            textColor: 'white'
         }
     };
 
@@ -84,9 +88,9 @@ const InfluencerUGCPage = () => {
                     }
                     
                     .tab-button.active {
-                        background: hsl(var(--primary));
-                        color: white;
-                        border-color: hsl(var(--primary));
+                        background: #EBF998;
+                        color: black;
+                        border-color: black;
                     }
                     
                     .tab-button:hover:not(.active) {
@@ -145,7 +149,7 @@ const InfluencerUGCPage = () => {
                         top: 0;
                         bottom: 0;
                         width: 4px;
-                        background: hsl(var(--primary));
+                        background: #EBF998;
                         transform: translateX(-50%);
                     }
                     
@@ -169,8 +173,8 @@ const InfluencerUGCPage = () => {
                     }
                     
                     .timeline-marker {
-                        background: hsl(var(--primary));
-                        color: white;
+                        background: #EBF998;
+                        color: black;
                         width: 60px;
                         height: 60px;
                         border: 4px solid black;
@@ -243,7 +247,7 @@ const InfluencerUGCPage = () => {
                 `}</style>
 
                 {/* Hero Section */}
-                <div style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem', color: 'white' }}>
+                <div style={{ background: '#EBF998', padding: '4rem 2rem', color: 'black' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🤝</div>
                         <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline font-bold">
@@ -349,7 +353,7 @@ const InfluencerUGCPage = () => {
                                             We prioritize authentic fit over follower count every time.
                                         </p>
                                     </div>
-                                    <div className="timeline-marker" style={{ background: 'hsl(var(--accent))' }}>2</div>
+                                    <div className="timeline-marker" style={{ background: 'hsl(var(--accent))', color: 'white' }}>2</div>
                                 </div>
 
                                 <div className="timeline-step">
@@ -362,7 +366,7 @@ const InfluencerUGCPage = () => {
                                             Clear guidelines that inspire rather than restrict authentic content creation.
                                         </p>
                                     </div>
-                                    <div className="timeline-marker" style={{ background: '#EBF998', color: 'black' }}>3</div>
+                                    <div className="timeline-marker" style={{ background: 'hsl(var(--primary))', color: 'white' }}>3</div>
                                 </div>
 
                                 <div className="timeline-step">
@@ -426,7 +430,7 @@ const InfluencerUGCPage = () => {
                                     <div 
                                         key={key}
                                         className={`creator-tier-card ${creatorTier === key ? 'active' : ''}`}
-                                        style={{ borderColor: tier.color }}
+                                        style={{ borderColor: 'black' }}
                                         onClick={() => setCreatorTier(key)}
                                     >
                                         <h4 style={{ fontSize: '1.25rem', marginBottom: '1rem', textTransform: 'uppercase', color: tier.color }} className="font-headline font-bold">
@@ -691,9 +695,9 @@ const InfluencerUGCPage = () => {
                 </div>
 
                 {/* Investment Packages */}
-                <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)' }}>
+                <div style={{ padding: '4rem 2rem', background: '#EBF998' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline font-bold">
+                        <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'black' }} className="font-headline font-bold">
                             INFLUENCER INVESTMENT PACKAGES
                         </h2>
                         
@@ -713,8 +717,8 @@ const InfluencerUGCPage = () => {
                                 </ul>
                             </div>
 
-                            <div className="brutal-box" style={{ background: '#EBF998', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline font-bold">
+                            <div className="brutal-box" style={{ background: 'black', color:'white', padding: '2rem', textAlign: 'center' }}>
+                                <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', textTransform: 'uppercase', color: '#EBF998' }} className="font-headline font-bold">
                                     CREATOR AMPLIFICATION
                                 </h3>
                                 <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }} className="font-headline font-bold">$45K</div>
@@ -728,7 +732,7 @@ const InfluencerUGCPage = () => {
                                 </ul>
                             </div>
 
-                            <div className="brutal-box" style={{ background: 'black', color: 'white', padding: '2rem', textAlign: 'center' }}>
+                            <div className="brutal-box" style={{ background: 'white', padding: '2rem', textAlign: 'center' }}>
                                 <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline font-bold">
                                     CULTURAL TAKEOVER
                                 </h3>
@@ -756,24 +760,24 @@ const InfluencerUGCPage = () => {
                     </p>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                         <a href="mailto:influencers@curations.org" className="brutal-box" style={{
-                            background: 'hsl(var(--primary))', 
-                            color: 'hsl(var(--primary-foreground))', 
+                            background: '#EBF998', 
+                            color: 'black', 
                             padding: '1rem 2rem', 
                             fontWeight: 800, 
                             textTransform: 'uppercase', 
-                            border: '4px solid hsl(var(--primary))', 
+                            border: '4px solid #EBF998', 
                             textDecoration: 'none',
                             display: 'inline-block'
                         }}>
                             START COLLABORATING
                         </a>
                         <a href="#creator-network" className="brutal-box" style={{
-                            background: '#EBF998', 
+                            background: 'white', 
                             color: 'black', 
                             padding: '1rem 2rem', 
                             fontWeight: 800, 
                             textTransform: 'uppercase', 
-                            border: '4px solid #EBF998',
+                            border: '4px solid white',
                             textDecoration: 'none',
                             display: 'inline-block'
                         }}>

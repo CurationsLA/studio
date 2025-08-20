@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -42,7 +43,7 @@ const NewsletterServicesPage = () => {
     };
 
     return (
-        <div style={{ fontFamily: "'JetBrains Mono', monospace", background: '#FDFDFC', minHeight: '100vh' }}>
+        <div style={{ fontFamily: "'Inter', sans-serif", background: '#FDFDFC', minHeight: '100vh' }}>
             <DraftNav />
             <script 
                 type="application/ld+json"
@@ -68,13 +69,13 @@ const NewsletterServicesPage = () => {
                 }
                 
                 .service-tab.active {
-                    background: #FF5BF1;
+                    background: hsl(var(--primary));
                     color: white;
                     transform: translateY(-3px);
                 }
                 
                 .service-tab:hover {
-                    background: #6370E7;
+                    background: hsl(var(--accent));
                     color: white;
                 }
                 
@@ -113,15 +114,15 @@ const NewsletterServicesPage = () => {
                 
                 .performance-stat {
                     background: black;
-                    color: #EBF998;
+                    color: hsl(var(--primary));
                     padding: 2rem;
                     text-align: center;
-                    border: 2px solid #EBF998;
+                    border: 2px solid hsl(var(--primary));
                     transition: all 0.3s ease;
                 }
                 
                 .performance-stat:hover {
-                    background: #EBF998;
+                    background: hsl(var(--primary));
                     color: black;
                     transform: scale(1.05);
                 }
@@ -196,10 +197,10 @@ const NewsletterServicesPage = () => {
             `}</style>
 
             {/* Hero Section */}
-            <div style={{ background: 'linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%)', padding: '4rem 2rem', color: 'white' }}>
+            <div style={{ background: 'hsl(var(--primary))', padding: '4rem 2rem', color: 'white' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>📧</div>
-                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}>
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
                         NEWSLETTER MASTERY
                     </h1>
                     <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto 2rem auto' }}>
@@ -207,8 +208,8 @@ const NewsletterServicesPage = () => {
                         that don't just reach inboxes, they create communities. This is where brands become voices people actually want to hear from.
                     </p>
                     
-                    <div className="brutal-box" style={{ background: 'rgba(255,255,255,0.2)', padding: '1.5rem', maxWidth: '600px', margin: '0 auto' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                    <div className="brutal-box" style={{ background: 'rgba(255,255,255,0.2)', padding: '1.5rem', maxWidth: '600px', margin: '0 auto', borderColor: 'white' }}>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                             OUR NEWSLETTER SUPERPOWER
                         </h3>
                         <p style={{ fontSize: '1.125rem', lineHeight: 1.8 }}>
@@ -222,7 +223,7 @@ const NewsletterServicesPage = () => {
             {/* Performance Metrics */}
             <div style={{ padding: '4rem 2rem', background: 'black' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                         NEWSLETTER PERFORMANCE EXCELLENCE
                     </h2>
                     
@@ -287,12 +288,12 @@ const NewsletterServicesPage = () => {
                 {/* Strategic Branding */}
                 {activeService === 'strategy' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             STRATEGIC NEWSLETTER BRANDING
                         </h2>
                         
                         <div className="content-showcase brutal-box">
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                 CURATIONSLA: CASE STUDY IN EXCELLENCE
                             </h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
@@ -319,7 +320,7 @@ const NewsletterServicesPage = () => {
 
                         <div className="feature-grid">
                             <div className="brutal-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     BRAND VOICE ARCHITECTURE
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -332,7 +333,7 @@ const NewsletterServicesPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: '#6370E7', color: 'white', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     EDITORIAL POSITIONING
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -345,7 +346,7 @@ const NewsletterServicesPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: '#EBF998', color: 'black', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     GROWTH FRAMEWORKS
                                 </h3>
                                 <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
@@ -363,11 +364,11 @@ const NewsletterServicesPage = () => {
                 {/* Visual Design */}
                 {activeService === 'design' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             VISUAL DESIGN MASTERY
                         </h2>
                         
-                        <h3 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                        <h3 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                             TEMPLATE STYLES
                         </h3>
                         
@@ -399,7 +400,7 @@ const NewsletterServicesPage = () => {
 
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '3rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                     DESIGN PHILOSOPHY
                                 </h3>
                                 <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
@@ -423,7 +424,7 @@ const NewsletterServicesPage = () => {
                             
                             <div className="newsletter-preview">
                                 <div style={{ borderBottom: '4px solid black', paddingBottom: '1rem', marginBottom: '1rem' }}>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase' }}>
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase' }} className="font-headline">
                                         {templateStyles[selectedTemplate].name} PREVIEW
                                     </h3>
                                 </div>
@@ -477,19 +478,19 @@ const NewsletterServicesPage = () => {
                 {/* Content Creation */}
                 {activeService === 'content' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             CONTENT THAT CONVERTS
                         </h2>
                         
                         <div className="brutal-box" style={{ background: '#EBF998', padding: '3rem', marginBottom: '3rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                 CONTENT CREATION PROCESS
                             </h3>
                             
                             <div className="process-step">
                                 <div className="step-number">1</div>
                                 <div>
-                                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         CULTURAL INTELLIGENCE
                                     </h4>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -502,7 +503,7 @@ const NewsletterServicesPage = () => {
                             <div className="process-step">
                                 <div className="step-number" style={{ background: '#6370E7' }}>2</div>
                                 <div>
-                                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         SUBJECT LINE SCIENCE
                                     </h4>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -515,7 +516,7 @@ const NewsletterServicesPage = () => {
                             <div className="process-step">
                                 <div className="step-number" style={{ background: '#FF5BF1' }}>3</div>
                                 <div>
-                                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         NARRATIVE ARCHITECTURE
                                     </h4>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -526,7 +527,7 @@ const NewsletterServicesPage = () => {
                             </div>
                         </div>
 
-                        <h3 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                        <h3 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                             CONTENT TYPE MASTERY
                         </h3>
 
@@ -567,12 +568,12 @@ const NewsletterServicesPage = () => {
                 {/* Ghostwriting */}
                 {activeService === 'ghostwriting' && (
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             EXECUTIVE GHOSTWRITING
                         </h2>
                         
                         <div className="content-showcase brutal-box">
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                 YOUR VOICE, AMPLIFIED
                             </h3>
                             <p style={{ fontSize: '1.25rem', lineHeight: 1.8, textAlign: 'center', marginBottom: '2rem' }}>
@@ -599,13 +600,13 @@ const NewsletterServicesPage = () => {
                             </div>
                         </div>
 
-                        <h3 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                        <h3 style={{ fontSize: '2rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                             GHOSTWRITING TIERS
                         </h3>
 
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
                             <div className="ghostwriting-tier">
-                                <h4 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#FF5BF1' }}>
+                                <h4 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#FF5BF1' }} className="font-headline">
                                     VOICE DEVELOPMENT
                                 </h4>
                                 <div style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem' }}>$2K/month</div>
@@ -619,7 +620,7 @@ const NewsletterServicesPage = () => {
                             </div>
 
                             <div className="ghostwriting-tier">
-                                <h4 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#6370E7' }}>
+                                <h4 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#6370E7' }} className="font-headline">
                                     THOUGHT LEADERSHIP
                                 </h4>
                                 <div style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem' }}>$5K/month</div>
@@ -633,7 +634,7 @@ const NewsletterServicesPage = () => {
                             </div>
 
                             <div className="ghostwriting-tier">
-                                <h4 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#EBF998', background: 'black', padding: '0.5rem' }}>
+                                <h4 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#EBF998', background: 'black', padding: '0.5rem' }} className="font-headline">
                                     CULTURAL AUTHORITY
                                 </h4>
                                 <div style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem' }}>$10K/month</div>
@@ -648,7 +649,7 @@ const NewsletterServicesPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: 'white', padding: '3rem' }}>
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                 GHOSTWRITING PROCESS
                             </h3>
                             
@@ -683,13 +684,13 @@ const NewsletterServicesPage = () => {
             {/* Investment Packages */}
             <div style={{ padding: '4rem 2rem', background: 'black' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                         NEWSLETTER INVESTMENT PACKAGES
                     </h2>
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         <div className="brutal-box" style={{ background: 'white', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 NEWSLETTER FOUNDATION
                             </h3>
                             <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$3K</div>
@@ -704,7 +705,7 @@ const NewsletterServicesPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: '#EBF998', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 NEWSLETTER EXCELLENCE
                             </h3>
                             <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$8K/month</div>
@@ -719,7 +720,7 @@ const NewsletterServicesPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 NEWSLETTER EMPIRE
                             </h3>
                             <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$25K/month</div>
@@ -739,13 +740,13 @@ const NewsletterServicesPage = () => {
             {/* Why Choose Our Newsletter Services */}
             <div style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                         WHY CURATIONS FOR NEWSLETTERS?
                     </h2>
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                         <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#FF5BF1' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#FF5BF1' }} className="font-headline">
                                 PROVEN TRACK RECORD
                             </h3>
                             <p style={{ lineHeight: 1.8 }}>
@@ -755,7 +756,7 @@ const NewsletterServicesPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#6370E7' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#6370E7' }} className="font-headline">
                                 CULTURAL INTELLIGENCE
                             </h3>
                             <p style={{ lineHeight: 1.8 }}>
@@ -765,7 +766,7 @@ const NewsletterServicesPage = () => {
                         </div>
 
                         <div className="brutal-box" style={{ background: 'white', padding: '2rem' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#EBF998', background: 'black', padding: '0.5rem' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: '#EBF998', background: 'black', padding: '0.5rem' }} className="font-headline">
                                 BRUTAL DESIGN MASTERY
                             </h3>
                             <p style={{ lineHeight: 1.8 }}>
@@ -779,7 +780,7 @@ const NewsletterServicesPage = () => {
 
             {/* CTA Section */}
             <div style={{ background: 'linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%)', padding: '4rem 2rem', textAlign: 'center' }}>
-                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                     READY TO DOMINATE INBOXES?
                 </h2>
                 <p style={{ fontSize: '1.25rem', color: 'white', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>

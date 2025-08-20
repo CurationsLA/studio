@@ -33,7 +33,7 @@ const CreativeCampaignsPage = () => {
             title: 'SOCIAL STRATEGY',
             description: 'Platform-specific strategies that turn followers into community members',
             icon: '📱',
-            color: 'hsl(var(--primary))',
+            color: 'hsl(var(--accent))',
             features: [
                 'Platform-specific content strategies',
                 'Community building frameworks',
@@ -46,7 +46,7 @@ const CreativeCampaignsPage = () => {
             title: 'UGC THAT CONVERTS',
             description: 'User-generated content programs that build trust and drive sales',
             icon: '📸',
-            color: 'hsl(var(--accent))',
+            color: 'hsl(var(--primary))',
             features: [
                 'UGC campaign strategy',
                 'Creator community management',
@@ -72,7 +72,7 @@ const CreativeCampaignsPage = () => {
             title: 'EXPERIENTIAL CAMPAIGNS',
             description: 'IRL experiences that create lasting brand memories',
             icon: '🎪',
-            color: 'hsl(var(--primary))',
+            color: 'hsl(var(--accent))',
             features: [
                 'Event concept development',
                 'Immersive experience design',
@@ -139,14 +139,14 @@ const CreativeCampaignsPage = () => {
                     }
                     
                     .campaign-type-button.active {
-                        background: hsl(var(--primary));
-                        color: hsl(var(--primary-foreground));
+                        background: hsl(var(--accent));
+                        color: hsl(var(--accent-foreground));
                         transform: translateY(-3px);
                     }
                     
                     .campaign-type-button:hover {
-                        background: hsl(var(--accent));
-                        color: hsl(var(--accent-foreground));
+                        background: hsl(var(--primary));
+                        color: hsl(var(--primary-foreground));
                     }
                     
                     .creative-card {
@@ -166,7 +166,7 @@ const CreativeCampaignsPage = () => {
                         left: -100%;
                         width: 100%;
                         height: 100%;
-                        background: linear-gradient(90deg, transparent, hsla(var(--primary), 0.1), transparent);
+                        background: linear-gradient(90deg, transparent, hsla(var(--accent), 0.1), transparent);
                         transition: all 0.5s ease;
                     }
                     
@@ -180,7 +180,7 @@ const CreativeCampaignsPage = () => {
                     }
                     
                     .collaboration-showcase {
-                        background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)), #EBF998, hsl(var(--primary)));
+                        background: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--primary)), #EBF998, hsl(var(--accent)));
                         background-size: 400% 400%;
                         animation: gradient-flow 8s ease-in-out infinite;
                         color: white;
@@ -237,7 +237,7 @@ const CreativeCampaignsPage = () => {
                     }
                     
                     .step-icon {
-                        background: hsl(var(--primary));
+                        background: hsl(var(--accent));
                         color: white;
                         width: 60px;
                         height: 60px;
@@ -252,7 +252,7 @@ const CreativeCampaignsPage = () => {
                 `}</style>
 
                 {/* Hero Section */}
-                <div style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, #EBF998 100%)', padding: '4rem 2rem', color: 'white' }}>
+                <div style={{ background: 'linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%)', padding: '4rem 2rem', color: 'white' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🎨</div>
                         <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
@@ -367,7 +367,7 @@ const CreativeCampaignsPage = () => {
                             </div>
                             
                             <div className="process-step">
-                                <div className="step-icon" style={{ background: 'hsl(var(--accent))' }}>2</div>
+                                <div className="step-icon" style={{ background: 'hsl(var(--primary))' }}>2</div>
                                 <div>
                                     <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         CREATIVE IDEATION
@@ -393,7 +393,7 @@ const CreativeCampaignsPage = () => {
                             </div>
 
                             <div className="process-step">
-                                <div className="step-icon" style={{ background: 'hsl(var(--primary))' }}>4</div>
+                                <div className="step-icon">4</div>
                                 <div>
                                     <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         CULTURAL LAUNCH
@@ -406,7 +406,7 @@ const CreativeCampaignsPage = () => {
                             </div>
                             
                             <div className="process-step">
-                                <div className="step-icon" style={{ background: 'hsl(var(--accent))' }}>5</div>
+                                <div className="step-icon" style={{ background: 'hsl(var(--primary))' }}>5</div>
                                 <div>
                                     <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
                                         OPTIMIZATION & AMPLIFICATION
@@ -542,7 +542,7 @@ const CreativeCampaignsPage = () => {
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
-                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
                                 <div className="viral-element" style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>🌮</div>
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     "TACO TRUCK TAKEOVER"
@@ -557,7 +557,7 @@ const CreativeCampaignsPage = () => {
                                 </p>
                             </div>
 
-                            <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
                                 <div className="viral-element" style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>☕</div>
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     "COFFEE SHOP COLLECTIVE"
@@ -591,7 +591,7 @@ const CreativeCampaignsPage = () => {
                 </div>
 
                 {/* Investment Packages */}
-                <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)' }}>
+                <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%)' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                             CREATIVE INVESTMENT PACKAGES
@@ -656,12 +656,12 @@ const CreativeCampaignsPage = () => {
                     </p>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                         <a href="mailto:creative@curations.org" className="brutal-box" style={{
-                            background: 'hsl(var(--primary))', 
+                            background: 'hsl(var(--accent))', 
                             color: 'white', 
                             padding: '1rem 2rem', 
                             fontWeight: 800, 
                             textTransform: 'uppercase', 
-                            border: '4px solid hsl(var(--primary))', 
+                            border: '4px solid hsl(var(--accent))', 
                             textDecoration: 'none',
                             display: 'inline-block'
                         }}>
