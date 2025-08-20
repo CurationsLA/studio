@@ -77,6 +77,22 @@ const silverInspirations: Inspiration[] = [
     styleFeatures: ['Holographic Text', 'Digital Glow', 'Serif/Classic Typography'],
     power: 91,
     href: '/vibes/silver-vibes/archive/digital-renaissance',
+  },
+  {
+    id: 'cultural-fusion',
+    title: 'Cultural Fusion',
+    description: 'A theme that masterfully blends neon-glow effects with our foundational brutalist structure and adds a dynamic "Creative Vibes" meter.',
+    styleFeatures: ['Neon-glow', 'Brutalist Structure', 'Dynamic Meter'],
+    power: 91,
+    href: '/vibes/silver-vibes/archive/cultural-fusion',
+  },
+  {
+    id: 'underground-movement',
+    title: 'Underground Movement',
+    description: 'A theme that captures the raw energy of street art and underground movements, using stencil fonts, graffiti styles, and textured backgrounds.',
+    styleFeatures: ['Stencil/Graffiti Typography', 'Textured Background', 'Underground Aesthetic'],
+    power: 89,
+    href: '/vibes/silver-vibes/archive/underground-movement',
   }
 ];
 
