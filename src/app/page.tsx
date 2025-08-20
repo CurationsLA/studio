@@ -2,6 +2,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import DraftNav from '@/components/ui/draft-nav';
+import Link from 'next/link';
 
 const HomePage = () => {
     const [activePage, setActivePage] = useState('home');
@@ -210,6 +211,8 @@ const HomePage = () => {
                     .service-card {
                         transition: all 0.3s ease;
                         cursor: pointer;
+                        display: block;
+                        text-decoration: none;
                     }
                     
                     .service-card:hover {
@@ -392,38 +395,38 @@ const HomePage = () => {
                         </div>
                         
                         <div className="grid grid-3">
-                            <div className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
+                            <Link href="/restaurant-biz" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>🍽️</span>
                                 <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Restaurant & Biz</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Grand openings, menu marketing, delivery optimization, and cultural integration.</p>
-                                <button onClick={() => showPage('services')} className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))'}}>
+                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
                                     EXPLORE
-                                </button>
-                            </div>
+                                </div>
+                            </Link>
                             
-                            <div className="brutal-box service-card" style={{background: 'hsl(var(--accent))', color: 'white', padding: '2rem'}}>
+                            <Link href="/ai-discovery" className="brutal-box service-card" style={{background: 'hsl(var(--accent))', color: 'white', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>🤖</span>
                                 <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">AI Discovery</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Prompt engineering, SEO optimization, and tech stack discovery for the AI age.</p>
-                                <button onClick={() => showPage('services')} className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--accent))'}}>
+                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--accent))', display: 'inline-block'}}>
                                     EXPLORE
-                                </button>
-                            </div>
+                                </div>
+                            </Link>
                             
-                            <div className="brutal-box service-card" style={{background: '#EBF998', color: 'black', padding: '2rem'}}>
+                            <Link href="/public-relations" className="brutal-box service-card" style={{background: '#EBF998', color: 'black', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>📺</span>
                                 <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Media Buying</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Netflix placements, podcast ads, linear TV, and strategic social media.</p>
-                                <button onClick={() => showPage('services')} className="btn-primary" style={{marginTop: '1rem'}}>
+                                <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
                                     EXPLORE
-                                </button>
-                            </div>
+                                </div>
+                            </Link>
                         </div>
                         
                         <div className="text-center mt-8">
-                            <button onClick={() => showPage('services')} className="brutal-box btn-primary" style={{padding: '1.5rem 3rem', fontSize: '1.25rem'}}>
+                            <Link href="/homepage-draft#services" className="brutal-box btn-primary" style={{padding: '1.5rem 3rem', fontSize: '1.25rem'}}>
                                 VIEW ALL SERVICES
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -438,12 +441,12 @@ const HomePage = () => {
                             Join 100+ brands that chose culture over algorithms, authenticity over automation.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <button onClick={() => showPage('contact')} className="brutal-box" style={{background: 'white', color: 'hsl(var(--primary))', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer'}}>
+                             <a href="/homepage-draft#contact" className="brutal-box" style={{background: 'white', color: 'hsl(var(--primary))', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer', textDecoration: 'none'}}>
                                 START YOUR CURATION
-                            </button>
-                            <button onClick={() => showPage('portfolio')} className="brutal-box" style={{background: '#EBF998', color: 'black', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer'}}>
+                            </a>
+                            <a href="/homepage-draft#about" className="brutal-box" style={{background: '#EBF998', color: 'black', padding: '1rem 2rem', fontWeight: 800, textTransform: 'uppercase', border: '4px solid black', cursor: 'pointer', textDecoration: 'none'}}>
                                 VIEW OUR WORK
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
