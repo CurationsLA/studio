@@ -15,6 +15,7 @@ import { inspiration as inspiration8 } from "./inspiration8";
 import { inspiration as inspiration9 } from "./inspiration9";
 import { inspiration as inspiration10 } from "./inspiration10";
 import { inspiration as inspiration11 } from "./inspiration11";
+import { inspiration as inspiration12 } from "./inspiration12";
 import { inspiration as homepage } from "./homepage";
 
 const silverVibes: Inspiration = {
@@ -72,4 +73,5 @@ export const inspirations: Inspiration[] = [
   inspiration9,
   inspiration10,
   inspiration11,
+  inspiration12,
 ];
