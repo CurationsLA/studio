@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -27,7 +28,7 @@ const CreativeCampaignsPage = () => {
         "areaServed": "Global"
     };
 
-    const campaignTypes = {
+    const campaignTypes: { [key: string]: any } = {
         social: {
             title: 'SOCIAL STRATEGY',
             description: 'Platform-specific strategies that turn followers into community members',
@@ -328,7 +329,7 @@ const CreativeCampaignsPage = () => {
                         </p>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
-                            {campaignTypes[activeCampaignType].features.map((feature, index) => (
+                            {campaignTypes[activeCampaignType].features.map((feature:string, index:number) => (
                                 <div key={index} style={{ 
                                     background: 'rgba(255,255,255,0.2)', 
                                     padding: '1rem', 
@@ -397,8 +398,8 @@ const CreativeCampaignsPage = () => {
                                     CULTURAL LAUNCH
                                 </h3>
                                 <p style={{ lineHeight: 1.8 }}>
-                                    Strategic rollout that maximizes cultural impact. We don't just launch campaigns—we orchestrate cultural moments 
-                                    that people want to participate in, share, and remember.
+                                    Deep dive into your audience's world. We study their language, their hangouts, their heroes, their pain points. 
+                                    Real insight comes from real understanding, not just data points.
                                 </p>
                             </div>
                         </div>
@@ -684,5 +685,3 @@ const CreativeCampaignsPage = () => {
 };
 
 export default CreativeCampaignsPage;
-
-```

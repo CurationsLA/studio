@@ -1,6 +1,7 @@
 
 'use client';
 import { useState } from 'react';
+import DraftNav from '@/components/ui/draft-nav';
 
 const RestaurantBizPage = () => {
     const [activeTab, setActiveTab] = useState('overview');
@@ -42,6 +43,7 @@ const RestaurantBizPage = () => {
 
     return (
         <div style={{ fontFamily: "'JetBrains Mono', monospace", background: '#FDFDFC', minHeight: '100vh' }}>
+            <DraftNav />
             <script 
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -530,10 +532,3 @@ const RestaurantBizPage = () => {
                         CALL US NOW
                     </a>
                 </div>
-            </div>
-        </div>
-    );
-};
-
-export default RestaurantBizPage;
-
