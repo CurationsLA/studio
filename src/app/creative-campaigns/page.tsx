@@ -86,7 +86,7 @@ const CreativeCampaignsPage = () => {
     return (
         <>
             <DraftNav />
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", background: '#FDFDFC', minHeight: '100vh' }}>
+            <div style={{ background: 'hsl(var(--background))', minHeight: '100vh' }}>
                 <script 
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(campaignSchema) }}
@@ -346,7 +346,7 @@ const CreativeCampaignsPage = () => {
                 </div>
 
                 {/* Creative Process */}
-                <div style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
+                <div style={{ padding: '4rem 2rem', background: 'hsl(var(--background))' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
                             OUR CREATIVE PROCESS

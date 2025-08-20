@@ -87,7 +87,7 @@ const AIDiscoveryPage = () => {
     return (
         <>
             <DraftNav />
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", background: '#FDFDFC', minHeight: '100vh' }}>
+            <div style={{ background: 'hsl(var(--background))', minHeight: '100vh' }}>
                 <script 
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(aiDiscoverySchema) }}
@@ -101,18 +101,18 @@ const AIDiscoveryPage = () => {
                     
                     .ai-terminal {
                         background: #000;
-                        color: #00ff00;
+                        color: hsl(var(--accent-foreground));
                         font-family: 'JetBrains Mono', monospace;
                         padding: 1.5rem;
-                        border: 4px solid #00ff00;
-                        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+                        border: 4px solid hsl(var(--accent));
+                        box-shadow: 0 0 20px hsla(var(--accent), 0.3);
                         min-height: 200px;
                         overflow: hidden;
                     }
                     
                     .ai-cursor {
                         display: inline-block;
-                        background: #00ff00;
+                        background: hsl(var(--accent));
                         animation: blink 1s infinite;
                         width: 10px;
                         height: 20px;
@@ -270,7 +270,7 @@ const AIDiscoveryPage = () => {
                                 <h3 style={{ color: '#EBF998', marginBottom: '1rem', textTransform: 'uppercase', fontWeight: 800 }}>
                                     INPUT PROMPT:
                                 </h3>
-                                <div className="ai-terminal" style={{ minHeight: '150px', borderColor: '#EBF998' }}>
+                                <div className="ai-terminal" style={{ minHeight: '150px' }}>
                                     <div style={{ color: '#EBF998' }}>$ curations-ai --execute</div>
                                     <div style={{ color: 'white', marginTop: '1rem' }}>
                                         {demoPrompts[activeDemo]?.input}
@@ -282,11 +282,11 @@ const AIDiscoveryPage = () => {
                                 <h3 style={{ color: '#EBF998', marginBottom: '1rem', textTransform: 'uppercase', fontWeight: 800 }}>
                                     AI OUTPUT:
                                 </h3>
-                                <div className="ai-terminal" style={{ minHeight: '150px', borderColor: '#EBF998' }}>
+                                <div className="ai-terminal" style={{ minHeight: '150px' }}>
                                     <div style={{ color: '#EBF998' }}>$ Processing...</div>
                                     <div style={{ color: 'white', marginTop: '1rem', whiteSpace: 'pre-line' }}>
                                         {aiResponse}
-                                        {isTyping && <span className="ai-cursor" style={{background: '#EBF998'}}></span>}
+                                        {isTyping && <span className="ai-cursor"></span>}
                                     </div>
                                 </div>
                             </div>
@@ -295,7 +295,7 @@ const AIDiscoveryPage = () => {
                 </div>
 
                 {/* AI Statistics */}
-                <div style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
+                <div style={{ padding: '4rem 2rem', background: 'hsl(var(--background))' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
                             AI-POWERED RESULTS
@@ -465,7 +465,7 @@ const AIDiscoveryPage = () => {
                 </div>
 
                 {/* ROI Calculator */}
-                <div style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
+                <div style={{ padding: '4rem 2rem', background: 'hsl(var(--background))' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
                             AI ROI PROJECTIONS
