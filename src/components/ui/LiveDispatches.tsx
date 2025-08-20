@@ -38,7 +38,7 @@ const LiveDispatches = () => {
     };
 
     return (
-        <div className="brutal-box mb-4 bg-black text-white p-6 border-highlight" style={{borderColor: '#EBF998', borderWidth: '4px'}}>
+        <div className="brutal-box mb-4 bg-black text-white p-6 border-highlight" style={{borderColor: '#EBF998', borderWidth: '8px'}}>
             <h3 className="font-headline font-bold text-xl mb-3 uppercase flex items-center gap-2">
                 <Rss className="w-5 h-5 text-highlight" />
                 LOCAL HEADLINES
@@ -57,9 +57,9 @@ const LiveDispatches = () => {
                                 {item.title}
                             </a>
                             <p className="text-xs mt-1">
-                                <span className="font-bold text-accent">{formatDate(item.pubDate)}</span>
+                                <span className="font-bold" style={{color: 'hsl(var(--accent))'}}>{formatDate(item.pubDate)}</span>
                                 <span className="text-gray-400"> &bull; </span>
-                                <span className="text-primary font-bold">CURATIONSLA</span>
+                                <span className="text-primary font-bold" style={{color: 'hsl(var(--primary))'}}>CURATIONSLA</span>
                             </p>
                         </li>
                     ))}
