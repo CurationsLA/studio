@@ -1,22 +1,24 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export', // Changed from 'standalone' to 'export' for static deployment
-  trailingSlash: true, // Required for static export
-  experimental: {
-    granularChunks: true, // Split JS chunks to avoid huge files
-  },
-  images: {
-    unoptimized: true, // Required for static export
+import type {NextConfig} from 'next';
+
+const nextConfig: NextConfig = {
+  /* config options here */
+  output: 'standalone',
+  typescript: {
+    ignoreBuildErrors: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Skip linting to speed up builds
+    ignoreDuringBuilds: true,
   },
-  typescript: {
-    ignoreBuildErrors: true, // Skip type errors if any
-  },
-  webpack: (config) => {
-    config.cache = false; // Disable webpack cache to avoid the 25MB issue
-    return config;
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };
-module.exports = nextConfig;
+
+export default nextConfig;
