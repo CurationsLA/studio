@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import DraftNav from '@/components/ui/draft-nav';
 import Link from 'next/link';
+import LiveDispatches from '@/components/ui/LiveDispatches';
 
 const HomePage = () => {
     const [activePage, setActivePage] = useState('home');
@@ -36,7 +37,6 @@ const HomePage = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Schema.org structured data for SEO
     const organizationSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -141,7 +141,6 @@ const HomePage = () => {
                         transform: translateY(${scrollY * 0.5}px);
                     }
                     
-                    /* Hero section enhancements */
                     .hero-gradient {
                         background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, #EBF998 100%);
                         -webkit-background-clip: text;
@@ -158,7 +157,6 @@ const HomePage = () => {
                         50% { transform: translateY(-10px); }
                     }
                     
-                    /* Trust indicators */
                     .trust-badge {
                         display: inline-flex;
                         align-items: center;
@@ -170,7 +168,6 @@ const HomePage = () => {
                         font-size: 0.875rem;
                     }
                     
-                    /* Corner Badge */
                     .corner-badge {
                         position: fixed;
                         top: 100px;
@@ -207,7 +204,6 @@ const HomePage = () => {
                         color: hsl(var(--primary));
                     }
 
-                    /* Enhanced service cards */
                     .service-card {
                         transition: all 0.3s ease;
                         cursor: pointer;
@@ -220,7 +216,6 @@ const HomePage = () => {
                         box-shadow: 12px 12px 0px black;
                     }
                     
-                    /* Utility classes */
                     .text-center { text-align: center; }
                     .mb-2 { margin-bottom: 1rem; }
                     .mb-4 { margin-bottom: 2rem; }
@@ -269,7 +264,6 @@ const HomePage = () => {
                     <span>EMAIL US!</span>
                 </a>
 
-                {/* Enhanced Hero Section */}
                 <div id="home" style={{paddingTop: '80px', minHeight: 'auto'}}>
                     <section style={{ padding: '2rem 2rem 4rem 2rem', display: 'flex', alignItems: 'center' }}>
                         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
@@ -289,40 +283,31 @@ const HomePage = () => {
                                         </div>
                                         
                                         <div className="grid grid-2 mt-4">
-                                            <div className="brutal-box pulse-brutal service-card" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem', animationDelay: '0.3s' }}>
+                                            <Link href="/creative-campaigns" className="brutal-box pulse-brutal service-card" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem', animationDelay: '0.3s' }}>
                                                 <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                                     [HEART]
                                                 </h3>
                                                 <div style={{ marginTop: '0.5rem', textAlign: 'center', fontSize: '0.875rem', fontWeight: 700 }}>
                                                     BRAND CONNECTION
                                                 </div>
-                                            </div>
+                                            </Link>
                                             
-                                            <div className="brutal-box pulse-brutal service-card" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem', animationDelay: '0.6s' }}>
+                                            <a href="https://la.curations.org" target="_blank" rel="noopener noreferrer" className="brutal-box pulse-brutal service-card" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem', animationDelay: '0.6s' }}>
                                                 <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, textAlign: 'center', textTransform: 'uppercase' }} className="font-headline">
                                                     [HEADLINES]
                                                 </h3>
                                                 <div style={{ marginTop: '0.5rem', textAlign: 'center', fontSize: '0.875rem', fontWeight: 700 }}>
                                                     CULTURAL IMPACT
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div style={{ marginTop: '2rem' }}>
-                                    <div className="brutal-box mb-4 fade-in-up" style={{ background: '#EBF998', padding: '1.5rem' }}>
-                                        <h3 style={{ fontWeight: 800, fontSize: '1.25rem', marginBottom: '0.75rem', textTransform: 'uppercase' }} className="font-headline">OUR FOCUS</h3>
-                                        <ul style={{ listStyle: 'none', fontSize: '0.875rem' }}>
-                                            <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[1] Eats + Biz</li>
-                                            <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[2] AI Discovery</li>
-                                            <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[3] Media Buying</li>
-                                            <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[4] Creative Collabs</li>
-                                            <li style={{ fontWeight: 700 }}>[5] Communications</li>
-                                        </ul>
-                                    </div>
+                                    <LiveDispatches />
                                     
-                                    <div className="brutal-box fade-in-up" style={{ background: 'white', padding: '1.5rem', animationDelay: '0.2s' }}>
+                                    <div className="brutal-box fade-in-up mt-4" style={{ background: 'white', padding: '1.5rem', animationDelay: '0.2s' }}>
                                         <p style={{ fontWeight: 800, fontSize: '1.125rem', textTransform: 'uppercase' }} className="font-headline">SYSTEMS:</p>
                                         <p className="pulse-brutal" style={{ fontSize: '1.875rem', marginTop: '0.5rem', fontWeight: 800, color: 'hsl(var(--primary))' }}>[ONLINE]</p>
                                         <div style={{ marginTop: '0.75rem' }}>
@@ -337,7 +322,6 @@ const HomePage = () => {
                                 </div>
                             </div>
                             
-                            {/* Trust Indicators */}
                             <div className="mt-8 text-center">
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
                                     <div className="trust-badge">
@@ -358,7 +342,6 @@ const HomePage = () => {
                     </section>
                 </div>
                 
-                {/* Quick Stats Section */}
                 <div style={{ background: 'black', padding: '2rem 0' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
                         <div className="grid grid-4">
@@ -382,7 +365,6 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                {/* Services Preview */}
                 <div id="services" style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div className="text-center mb-8">
@@ -452,7 +434,6 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                 {/* Contact Section */}
                 <div id="contact" style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
