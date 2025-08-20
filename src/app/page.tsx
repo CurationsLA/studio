@@ -176,7 +176,7 @@ const HomePage = () => {
                 
                 /* Service page styles */
                 .service-hero {
-                    padding: 4rem 2rem;
+                    padding: 2.5rem 2rem;
                     background: linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%);
                     color: white;
                     text-align: center;
@@ -247,18 +247,34 @@ const HomePage = () => {
                 /* Corner Badge */
                 .corner-badge {
                     position: fixed;
-                    top: 105px;
-                    right: 30px;
+                    top: 100px;
+                    right: 15px;
                     z-index: 50;
                     background: #FF5BF1;
                     color: white;
-                    padding: 0.5rem 1rem;
+                    padding: 0.25rem 0.5rem;
                     transform: rotate(12deg);
                     cursor: pointer;
                     text-decoration: none;
                     transition: all 0.2s ease-in-out;
                 }
+
+                .corner-badge span {
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                }
                 
+                @media (min-width: 768px) {
+                    .corner-badge {
+                        top: 105px;
+                        right: 30px;
+                        padding: 0.5rem 1rem;
+                    }
+                    .corner-badge span {
+                        font-size: 1rem;
+                    }
+                }
+
                 .corner-badge:hover {
                     transform: rotate(12deg) scale(1.1);
                     background: white;
@@ -343,7 +359,7 @@ const HomePage = () => {
             </nav>
 
             <a href="mailto:curate@curations.org" className="corner-badge brutal-box">
-                <span style={{ fontSize: '1rem', fontWeight: 700 }}>EMAIL US! ✉️</span>
+                <span>EMAIL US! ✉️</span>
             </a>
 
             <div id="home" className="page-section" style={{paddingTop: '80px', minHeight: 'auto'}}>
@@ -631,7 +647,7 @@ const HomePage = () => {
                     </div>
                 </section>
 
-                <div className="service-hero" style={{paddingTop: '4rem', paddingBottom: '4rem'}}>
+                <div className="service-hero" style={{paddingTop: '2.5rem', paddingBottom: '2.5rem'}}>
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         Have a project, a question, or just want to vibe? Drop us a line.
