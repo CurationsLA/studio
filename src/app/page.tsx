@@ -109,7 +109,7 @@ const HomePage = () => {
                     }
 
                     .text-outline-green {
-                        -webkit-text-stroke: 1.5px #EBF998;
+                        -webkit-text-stroke: 2px #EBF998;
                         -webkit-text-fill-color: transparent;
                     }
                     
