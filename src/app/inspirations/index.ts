@@ -14,6 +14,7 @@ import { inspiration as inspiration7 } from "./inspiration7";
 import { inspiration as inspiration8 } from "./inspiration8";
 import { inspiration as inspiration9 } from "./inspiration9";
 import { inspiration as inspiration10 } from "./inspiration10";
+import { inspiration as inspiration11 } from "./inspiration11";
 import { inspiration as homepage } from "./homepage";
 
 const silverVibes: Inspiration = {
@@ -25,7 +26,7 @@ const silverVibes: Inspiration = {
     description: "Primary workspace for final draft elements and pages. Contains live drafts and an archive for comparison and versioning.",
     tags: ["workflow", "draft", "silver"],
     ctas: [
-      { label: "View Live Drafts", url: "/vibes/silver-vibes" },
+      { label: "View Silver Vibes", url: "/vibes/silver-vibes" },
       { label: "View Archive", url: "/vibes/silver-vibes/archive" },
     ],
   };
@@ -70,4 +71,5 @@ export const inspirations: Inspiration[] = [
   inspiration8,
   inspiration9,
   inspiration10,
+  inspiration11,
 ];
