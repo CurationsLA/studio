@@ -1,33 +1,61 @@
 
 'use client';
+import { useState, useEffect } from 'react';
 
-import Link from "next/link";
+const HomePage = () => {
+    const [activePage, setActivePage] = useState('home');
+    const [isMenuOpen, setMenuOpen] = useState(false);
 
-const Minimal74BrutalistPage = () => {
+    const showPage = (pageId: string) => {
+        const section = document.getElementById(pageId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setActivePage(pageId);
+        }
+        setMenuOpen(false); // Close menu on navigation
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    };
+
+    useEffect(() => {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            setActivePage(hash);
+        } else {
+            // If no hash, scroll to top
+            window.scrollTo(0, 0);
+        }
+    }, []);
+
+
     return (
-        <>
+        <div style={{ scrollBehavior: 'smooth' }}>
             <style jsx global>{`
+                html {
+                    scroll-behavior: smooth;
+                }
                 body {
                     font-family: 'JetBrains Mono', monospace;
+                    background: white;
+                    color: black;
+                    overflow-x: hidden;
                 }
                 
                 .brutal-box {
                     border: 4px solid black;
                     box-shadow: 8px 8px 0px black;
                 }
-
+                
                 .text-outline-subtle {
                     -webkit-text-stroke: 1.5px #FF5BF1;
                     -webkit-text-fill-color: transparent;
                 }
                 
                 @keyframes pulse-brutal {
-                    0%, 100% { 
-                        transform: scale(1);
-                    }
-                    50% { 
-                        transform: scale(1.02);
-                    }
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.02); }
                 }
                 
                 .pulse-brutal {
@@ -47,260 +75,609 @@ const Minimal74BrutalistPage = () => {
                     box-shadow: 0 0 40px rgba(255, 91, 241, 0.6),
                                 inset 0 0 40px rgba(255, 91, 241, 0.1);
                 }
-            `}</style>
-            <div className="bg-white text-black pt-8">
-                {/* Floating Corner Badge */}
-                <div className="fixed top-20 right-4 z-50 bg-[#FF5BF1] text-white px-4 py-2 rotate-12 shadow-xl brutal-box">
-                    <span className="text-xs font-bold">SUMMER 2025 🔥</span>
-                </div>
+                
+                /* Navigation */
+                .nav {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    background: white;
+                    z-index: 100;
+                    border-bottom: 4px solid black;
+                }
+                
+                .nav-container {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 1rem 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
 
-                {/* Hero Grid Layout */}
-                <section id="home" className="min-h-[70vh] pt-16 px-4 md:px-8 bg-white">
-                    <div className="grid md:grid-cols-12 gap-6 items-center h-full">
-                        {/* Main Title */}
-                        <div className="md:col-span-8 z-10">
+                .logo-link {
+                    text-decoration: none;
+                    color: black;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                }
+
+                .logo-link:hover {
+                    color: #FF5BF1;
+                }
+                
+                .nav-links {
+                    display: flex;
+                    gap: 2rem;
+                    list-style: none;
+                }
+                
+                .nav-links a {
+                    color: black;
+                    text-decoration: none;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    transition: all 0.3s;
+                    cursor: pointer;
+                }
+                
+                .nav-links a:hover {
+                    color: #FF5BF1;
+                    transform: scale(1.1);
+                }
+                
+                .page-section {
+                    padding-top: 80px; 
+                    min-height: 100vh;
+                }
+                
+                /* Mobile menu toggle */
+                .menu-toggle {
+                    display: none;
+                    background: #EBF998;
+                    color: black;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                
+                @media (max-width: 768px) {
+                    .menu-toggle {
+                        display: block;
+                    }
+
+                    .menu-toggle:hover {
+                        background: #FF5BF1;
+                        color: white;
+                    }
+                    
+                    .nav-links {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        background: white;
+                        flex-direction: column;
+                        padding: 2rem;
+                        border-top: 4px solid black;
+                        display: none;
+                    }
+                    
+                    .nav-links.open {
+                        display: flex;
+                    }
+
+                    .arsenal-grid-container {
+                        justify-content: center;
+                    }
+                }
+                
+                /* Service page styles */
+                .service-hero {
+                    padding: 4rem 2rem;
+                    background: linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%);
+                    color: white;
+                    text-align: center;
+                }
+                
+                .service-content {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 4rem 2rem;
+                }
+                
+                .grid {
+                    display: grid;
+                    gap: 2rem;
+                }
+                
+                @media (min-width: 768px) {
+                    .grid-2 {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    .grid-3 {
+                         grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+
+                .learn-more-link span {
+                    background: #EBF998; 
+                    color: black; 
+                    padding: 0.25rem 0.5rem;
+                    transition: all 0.3s ease;
+                    border: 4px solid transparent;
+                }
+
+                .learn-more-link:hover span {
+                   background: white;
+                   color: #FF5BF1;
+                   border-color: black;
+                }
+
+
+                /* Utility classes */
+                .text-center { text-align: center; }
+                .mb-2 { margin-bottom: 1rem; }
+                .mb-4 { margin-bottom: 2rem; }
+                .mb-8 { margin-bottom: 4rem; }
+                .mt-4 { margin-top: 2rem; }
+                .mt-8 { margin-top: 4rem; }
+                .p-4 { padding: 2rem; }
+                .p-8 { padding: 4rem; }
+                
+                .btn-primary {
+                    background: #FF5BF1;
+                    color: white;
+                    padding: 1rem 2rem;
+                    border: none;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: background 0.3s;
+                    text-decoration: none;
+                    display: inline-block;
+                }
+                
+                .btn-primary:hover {
+                    background: #6370E7;
+                }
+                
+                /* Corner Badge */
+                .corner-badge {
+                    position: fixed;
+                    top: 105px;
+                    right: 30px;
+                    z-index: 50;
+                    background: #FF5BF1;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    transform: rotate(12deg);
+                    cursor: pointer;
+                    text-decoration: none;
+                    transition: all 0.2s ease-in-out;
+                }
+                
+                .corner-badge:hover {
+                    transform: rotate(12deg) scale(1.1);
+                    background: white;
+                    color: #FF5BF1;
+                }
+
+                .our-story-box, .philosophy-box, .dual-powerhouse-box {
+                    transition: all 0.3s ease-in-out;
+                }
+                
+                .philosophy-box p, .dual-powerhouse-box p {
+                     color: white;
+                }
+
+                .our-story-box h2, .philosophy-box h3, .dual-powerhouse-box h3 {
+                    transition: all 0.3s ease-in-out;
+                    display: inline-block; /* To contain highlight */
+                    padding: 0.25rem 0.5rem;
+                }
+
+                .our-story-box:hover {
+                    background: white !important;
+                }
+                .our-story-box:hover h2 {
+                    background: #EBF998;
+                    color: black;
+                }
+
+                .philosophy-box:hover {
+                    background: white !important;
+                }
+                .philosophy-box:hover h3 {
+                    background: #FF5BF1;
+                    color: white;
+                }
+                .philosophy-box:hover p {
+                    color: black !important;
+                }
+
+                 .dual-powerhouse-box:hover {
+                    background: white !important;
+                }
+                .dual-powerhouse-box:hover h3 {
+                    background: #6370E7;
+                    color: white;
+                }
+                .dual-powerhouse-box:hover p {
+                    color: black !important;
+                }
+                .curationsla-brutal-box {
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    background-color: white;
+                    color: #FF5BF1;
+                    padding: 2px 4px;
+                    transition: color 0.3s ease;
+                    border: 2px solid black;
+                }
+                .curationsla-brutal-box:hover {
+                    color: #6370E7;
+                }
+            `}</style>
+            
+            <nav className="nav">
+                <div className="nav-container">
+                    <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>
+                        <a onClick={(e) => { e.preventDefault(); showPage('home');}} className="logo-link">[CURATIONS]</a>
+                    </div>
+                    <button className="menu-toggle brutal-box" onClick={toggleMenu}>MENU</button>
+                    <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`} id="navLinks">
+                        <li><a onClick={(e) => { e.preventDefault(); showPage('home');}}>Home</a></li>
+                        <li><a onClick={(e) => { e.preventDefault(); showPage('about');}}>About</a></li>
+                        <li><a onClick={(e) => { e.preventDefault(); showPage('services');}}>Services</a></li>
+                        <li><a onClick={(e) => { e.preventDefault(); showPage('contact');}}>Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <a href="mailto:curate@curations.org" className="corner-badge brutal-box">
+                <span style={{ fontSize: '1rem', fontWeight: 700 }}>EMAIL US! ✉️</span>
+            </a>
+
+            <div id="home" className="page-section" style={{paddingTop: '60px', minHeight: 'auto'}}>
+                <section style={{ padding: '2rem 2rem 4rem 2rem', display: 'flex', alignItems: 'center' }}>
+                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+                        <div className="grid grid-2" style={{ alignItems: 'center' }}>
                             <div>
-                                <h1 className="text-4xl md:text-6xl font-black leading-tight uppercase">
-                                    <span className="block slide-in">CURATIONS</span>
-                                    <span className="block text-outline-subtle slide-in" style={{animationDelay: '0.2s'}}>CURATIONS</span>
-                                    <span className="block text-[#6370E7] slide-in" style={{animationDelay: '0.4s'}}>CURATIONS</span>
+                                <h1 style={{ fontSize: 'clamp(3rem, 6vw, 6rem)', fontWeight: 800, lineHeight: 1, textTransform: 'uppercase' }}>
+                                    <span className="slide-in" style={{ display: 'block' }}>CURATIONS</span>
+                                    <span className="text-outline-subtle slide-in" style={{ display: 'block', animationDelay: '0.2s' }}>CURATIONS</span>
+                                    <span className="slide-in" style={{ display: 'block', color: '#6370E7', animationDelay: '0.4s' }}>CURATIONS</span>
                                 </h1>
-                            </div>
-                            
-                            {/* Brutalist Motto Expression */}
-                            <div className="mt-8 space-y-6">
-                                <div className="brutal-box bg-black text-white p-6 pulse-brutal">
-                                    <h2 className="text-2xl md:text-3xl font-black uppercase text-center">
-                                        WE CURATE THE
-                                    </h2>
-                                </div>
                                 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="brutal-box bg-[#FF5BF1] text-white p-8 pulse-brutal" style={{animationDelay: '0.3s'}}>
-                                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-center uppercase">
-                                            [HEART]
-                                        </h3>
-                                        <div className="mt-2 text-center text-sm font-bold">
-                                            BRAND CONNECTION
-                                        </div>
+                                <div className="mt-8">
+                                    <div className="brutal-box pulse-brutal" style={{ background: 'white', color: 'black', padding: '1.5rem' }}>
+                                        <h2 style={{ fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase', textAlign: 'center' }}>
+                                            WE CURATE THE
+                                        </h2>
                                     </div>
                                     
-                                    <div className="brutal-box bg-[#6370E7] text-white p-8 pulse-brutal" style={{animationDelay: '0.6s'}}>
-                                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-center uppercase">
-                                            [HEADLINES]
-                                        </h3>
-                                        <div className="mt-2 text-center text-sm font-bold">
-                                            CULTURAL IMPACT
+                                    <div className="grid grid-2 mt-4">
+                                        <div className="brutal-box pulse-brutal" style={{ background: '#FF5BF1', color: 'white', padding: '2rem', animationDelay: '0.3s' }}>
+                                            <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, textAlign: 'center', textTransform: 'uppercase' }}>
+                                                [HEART]
+                                            </h3>
+                                            <div style={{ marginTop: '0.5rem', textAlign: 'center', fontSize: '0.875rem', fontWeight: 700 }}>
+                                                BRAND CONNECTION
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="brutal-box pulse-brutal" style={{ background: '#6370E7', color: 'white', padding: '2rem', animationDelay: '0.6s' }}>
+                                            <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 800, textAlign: 'center', textTransform: 'uppercase' }}>
+                                                [HEADLINES]
+                                            </h3>
+                                            <div style={{ marginTop: '0.5rem', textAlign: 'center', fontSize: '0.875rem', fontWeight: 700 }}>
+                                                CULTURAL IMPACT
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        {/* Side Panel */}
-                        <div className="md:col-span-4 space-y-4 z-20">
-                            <div className="brutal-box bg-[#EBF998] text-black p-6 hover:scale-105 transition">
-                                <h3 className="font-black text-xl mb-3 uppercase">OUR FOCUS</h3>
-                                <ul className="space-y-2 text-sm">
-                                    <li className="font-bold">[1] Restaurant Launches</li>
-                                    <li className="font-bold">[2] AI Discovery</li>
-                                    <li className="font-bold">[3] Media Buying</li>
-                                    <li className="font-bold">[4] Creative Collabs</li>
-                                    <li className="font-bold">[5] Communications</li>
-                                </ul>
-                            </div>
                             
-                            <div className="brutal-box bg-white p-6">
-                                <p className="font-black text-lg uppercase">SYSTEMS:</p>
-                                <p className="text-3xl mt-2 pulse-brutal font-black text-[#FF5BF1]">[ONLINE]</p>
-                                <div className="mt-3 space-y-1">
-                                    <div className="w-full bg-gray-300 h-4 brutal-box">
-                                        <div className="bg-[#6370E7] h-full w-full pulse-brutal"></div>
+                            <div style={{ marginTop: '2rem' }}>
+                                <div className="brutal-box mb-4" style={{ background: '#EBF998', padding: '1.5rem' }}>
+                                    <h3 style={{ fontWeight: 800, fontSize: '1.25rem', marginBottom: '0.75rem', textTransform: 'uppercase' }}>OUR FOCUS</h3>
+                                    <ul style={{ listStyle: 'none', fontSize: '0.875rem' }}>
+                                        <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[1] Eats + Biz</li>
+                                        <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[2] AI Discovery</li>
+                                        <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[3] Media Buying</li>
+                                        <li style={{ fontWeight: 700, marginBottom: '0.5rem' }}>[4] Creative Collabs</li>
+                                        <li style={{ fontWeight: 700 }}>[5] Communications</li>
+                                    </ul>
+                                </div>
+                                
+                                <div className="brutal-box" style={{ background: 'white', padding: '1.5rem' }}>
+                                    <p style={{ fontWeight: 800, fontSize: '1.125rem', textTransform: 'uppercase' }}>SYSTEMS:</p>
+                                    <p className="pulse-brutal" style={{ fontSize: '1.875rem', marginTop: '0.5rem', fontWeight: 800, color: '#FF5BF1' }}>[ONLINE]</p>
+                                    <div style={{ marginTop: '0.75rem' }}>
+                                        <div className="brutal-box" style={{ width: '100%', background: '#e5e5e5', height: '1rem', border: '2px solid black', boxShadow: 'none' }}>
+                                            <div className="pulse-brutal" style={{ background: '#6370E7', height: '100%', width: '100%' }}></div>
+                                        </div>
+                                        <p style={{ fontSize: '0.75rem', textAlign: 'right', fontWeight: 800, marginTop: '1rem' }}>
+                                            <span style={{ background: '#EBF998', padding: '0.1rem 0.25rem', fontWeight: 800 }}>100% READY</span>
+                                        </p>
                                     </div>
-                                    <p className="text-xs text-right font-black mt-4"><span className="bg-[#EBF998] px-1 font-extrabold">100% READY</span></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
-                {/* Services Section */}
-                <section className="pt-16 pb-12 px-4 md:px-8 bg-white">
-                    <div className="max-w-7xl mx-auto">
-                        <h2 className="text-5xl md:text-7xl font-black mb-16 text-center uppercase text-[#FF5BF1]">
-                            [SERVICES]
-                        </h2>
-                        
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div className="brutal-box bg-white p-6 flex flex-col">
-                                <span className="text-5xl">🍽️</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">Restaurant &amp; Biz</h3>
-                                <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
-                                    <li>• Grand Openings &amp; Events</li>
-                                    <li>• Menu Marketing Magic</li>
-                                    <li>• Third-Party App Strategy</li>
-                                    <li>• Delivery Optimization</li>
-                                </ul>
-                                <div className="mt-4">
-                                    <Link href="/services/restaurant-biz" className="font-bold text-sm uppercase inline-block">
-                                        <span className="bg-[#EBF998] text-black px-2 py-1">Learn More</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            
-                            <div className="brutal-box bg-white p-6 flex flex-col">
-                                <span className="text-5xl">🤖</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">AI Discovery</h3>
-                                <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
-                                    <li>• AI Prompt Engineering</li>
-                                    <li>• SEO &amp; AI Citations</li>
-                                    <li>• Tech Stack Discovery</li>
-                                    <li>• Team Workshops</li>
-                                </ul>
-                                <div className="mt-4">
-                                    <Link href="/services/ai-discovery" className="font-bold text-sm uppercase inline-block">
-                                        <span className="bg-[#EBF998] text-black px-2 py-1">Learn More</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            
-                            <div className="brutal-box bg-white p-6 flex flex-col">
-                                <span className="text-5xl">📺</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">Media Buying</h3>
-                                <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
-                                  <li>• Netflix Placement</li>
-                                  <li>• Podcast Ads</li>
-                                  <li>• Linear TV</li>
-                                  <li>• Social Media</li>
-                                </ul>
-                                <div className="mt-4">
-                                    <Link href="/services/media-buying" className="font-bold text-sm uppercase inline-block">
-                                        <span className="bg-[#EBF998] text-black px-2 py-1">Learn More</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            
-                            <div className="brutal-box bg-white p-6 flex flex-col">
-                                <span className="text-5xl">👋</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">Creative Collabs</h3>
-                                 <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
-                                  <li>• Social Strategy</li>
-                                  <li>• UGC that Converts</li>
-                                  <li>• Content Gaps</li>
-                                </ul>
-                                <div className="mt-4">
-                                    <Link href="/services/creative-collabs" className="font-bold text-sm uppercase inline-block">
-                                        <span className="bg-[#EBF998] text-black px-2 py-1">Learn More</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            
-                            <div className="brutal-box bg-white p-6 flex flex-col">
-                                <span className="text-5xl">📰</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">Communications</h3>
-                                <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
-                                  <li>• Corporate Comms</li>
-                                  <li>• Executive Branding</li>
-                                  <li>• Newsletter Design</li>
-                                </ul>
-                                <div className="mt-4">
-                                    <Link href="/services/communications" className="font-bold text-sm uppercase inline-block">
-                                        <span className="bg-[#EBF998] text-black px-2 py-1">Learn More</span>
-                                    </Link>
-                                </div>
-                            </div>
-                            
-                            <div className="brutal-box bg-white p-6 flex flex-col">
-                                <span className="text-5xl">🚀</span>
-                                <h3 className="font-black text-2xl mt-4 uppercase flex-grow">SEO &amp; Discovery</h3>
-                                <ul className="mt-4 space-y-2 text-sm font-bold flex-grow">
-                                  <li>• Big Search</li>
-                                  <li>• AI Citations</li>
-                                  <li>• Rich Snippets</li>
-                                </ul>
-                                <div className="mt-4">
-                                    <Link href="/services/seo-discovery" className="font-bold text-sm uppercase inline-block">
-                                        <span className="bg-[#EBF998] text-black px-2 py-1">Learn More</span>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="mt-16 mb-16 brutal-box" style={{background: 'linear-gradient(to right, #FF5BF1, #6370E7, #EBF998)', padding: '2rem', color: 'white'}}>
-                            <div className="flex flex-wrap justify-between items-center">
-                                <h3 className="text-xl md:text-2xl lg:text-3xl font-black shrink-0 mr-6">FULL STACK DIGITAL</h3>
-                                <div className="flex flex-wrap justify-center gap-3 mt-4 md:mt-0 flex-grow">
-                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>PAID SEARCH</span>
-                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>PAID SOCIAL</span>
-                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>DISPLAY ADS</span>
-                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>EMAIL/CRM</span>
-                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>SEO</span>
-                                    <span style={{background: 'rgba(255,255,255,0.2)', padding: '0.5rem 1rem', fontWeight: 700, border: '2px solid black'}}>UI/UX</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            </div>
+            
+            <div id="about" className="page-section" style={{paddingTop: 0, minHeight: 'auto'}}>
+                <div className="service-hero">
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>ABOUT [CURATIONS]</h1>
+                    <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', fontWeight: 900 }}>
+                        We curate the HEART and HEADLINES of BRANDS
+                    </p>
+                </div>
                 
-                {/* Google Partner */}
-                <div className="py-12 px-4 md:px-8 bg-black">
-                    <div className="text-center">
-                         <div className="inline-block brutal-box p-8 border-2 border-[#EBF998] neon-glow-pink">
-                            <p className="text-2xl font-black text-[#EBF998] uppercase">🏆 GROW WITH GOOGLE PARTNER</p>
-                            <p className="mt-2 text-sm text-white">One deserving brand gets a full-service partnership for free, yearly.</p>
+                <div className="service-content" style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
+                    <div className="brutal-box mb-8 our-story-box" style={{ background: '#EBF998', padding: '2rem' }}>
+                        <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>OUR STORY</h2>
+                        <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
+                            Born from the creative chaos of Los Angeles, CURATIONS emerged when we realized brands weren&apos;t just competing for market share—they were competing for cultural relevance. In a city where trends are born at food trucks and go global through TikTok, we saw an opportunity to bridge the gap between authentic local culture and ambitious brand storytelling.
+                        </p>
+                        <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
+                            We started with a simple observation: the brands that win hearts don&apos;t just advertise, they participate. They show up at the right moments, in the right places, with the right message. They understand that in LA, your next customer might be at a warehouse party in DTLA, a farmers market in Santa Monica, or scrolling through their phone at a coffee shop in Silver Lake.
+                        </p>
+                        <p style={{ lineHeight: 1.8, color: 'black' }}>
+                            Today, CURATIONS operates at the intersection of digital innovation and street-level culture. We&apos;re not just another agency—we&apos;re cultural architects, building bridges between what brands want to say and what people actually want to hear.
+                        </p>
+                    </div>
+        
+                    <div className="grid grid-2">
+                        <div className="brutal-box philosophy-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
+                            <p style={{ lineHeight: 1.8 }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
+                        </div>
+                         <div className="brutal-box dual-powerhouse-box" style={{ background: '#6370E7', padding: '2rem' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
+                            <p style={{ lineHeight: 1.8 }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div id="services" className="page-section" style={{paddingTop: '4rem', minHeight: 'auto'}}>
+                <div className="service-hero">
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CURATIONS</h1>
+                    <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+                        A full-stack arsenal for modern brands.
+                    </p>
+                </div>
+                <div className="service-content" style={{paddingTop: '2rem', paddingBottom: '0'}}>
+                     <div className="grid grid-3">
+                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
+                            <span style={{fontSize: '3rem'}}>🍽️</span>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Restaurant & Biz</h3>
+                            <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
+                                <li style={{marginBottom: '0.5rem'}}>• Grand Openings & Events</li>
+                                <li style={{marginBottom: '0.5rem'}}>• Menu Marketing Magic</li>
+                                <li style={{marginBottom: '0.5rem'}}>• Third-Party App Strategy</li>
+                                <li>• Delivery Optimization</li>
+                            </ul>
+                            <div style={{marginTop: '1rem'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('restaurant-biz');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                    <span>Learn More</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
+                            <span style={{fontSize: '3rem'}}>🤖</span>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>AI Discovery</h3>
+                            <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
+                                <li style={{marginBottom: '0.5rem'}}>• AI Prompt Engineering</li>
+                                <li style={{marginBottom: '0.5rem'}}>• SEO & AI Citations</li>
+                                <li style={{marginBottom: '0.5rem'}}>• Tech Stack Discovery</li>
+                                <li>• Team Workshops</li>
+                            </ul>
+                            <div style={{marginTop: '1rem'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('ai-discovery');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
+                            <span style={{fontSize: '3rem'}}>📺</span>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Media Buying</h3>
+                            <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
+                                <li style={{marginBottom: '0.5rem'}}>• Netflix Placement</li>
+                                <li style={{marginBottom: '0.5rem'}}>• Podcast Ads</li>
+                                <li style={{marginBottom: '0.5rem'}}>• Linear TV</li>
+                                <li>• Social Media</li>
+                            </ul>
+                            <div style={{marginTop: '1rem'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('media-buying');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
+                            <span style={{fontSize: '3rem'}}>👋</span>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Creative Collabs</h3>
+                            <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
+                                <li style={{marginBottom: '0.5rem'}}>• Social Strategy</li>
+                                <li style={{marginBottom: '0.5rem'}}>• UGC that Converts</li>
+                                <li>• Content Gaps</li>
+                            </ul>
+                            <div style={{marginTop: '1rem'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('creative-collabs');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
+                            <span style={{fontSize: '3rem'}}>📰</span>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>Communications</h3>
+                            <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
+                                <li style={{marginBottom: '0.5rem'}}>• Corporate Comms</li>
+                                <li style={{marginBottom: '0.5rem'}}>• Executive Branding</li>
+                                <li>• Newsletter Design</li>
+                            </ul>
+                            <div style={{marginTop: '1rem'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('communications');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
+                                </a>
+                            </div>
+                        </div>
+                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
+                            <span style={{fontSize: '3rem'}}>🚀</span>
+                            <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase', flexGrow: 1}}>SEO & Discovery</h3>
+                            <ul style={{marginTop: '1rem', listStyle: 'none', fontSize: '0.875rem', fontWeight: 700, flexGrow: 1}}>
+                                <li style={{marginBottom: '0.5rem'}}>• Big Search</li>
+                                <li style={{marginBottom: '0.5rem'}}>• AI Citations</li>
+                                <li>• Rich Snippets</li>
+                            </ul>
+                            <div style={{marginTop: '1rem'}}>
+                                <a onClick={(e) => { e.preventDefault(); showPage('seo-discovery');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                     <span>Learn More</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                     <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, rgb(255, 91, 241), rgb(169, 194, 72), rgb(99, 112, 231))', padding: '2rem', color: 'white'}}>
+                        <div className="text-center">
+                            <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
+                            <div className="arsenal-grid-container" style={{display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center'}}>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>PAID SEARCH</span>
+                                </div>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>PAID SOCIAL</span>
+                                </div>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>EMAIL/CRM</span>
+                                </div>
+                                 <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>SEO</span>
+                                </div>
+                                <div style={{background: 'rgba(255,255,255,0.2)', padding: '1rem', border: '2px solid black'}}>
+                                    <span style={{fontWeight: 700}}>UI/UX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                {/* CurationsLA Deep Dive */}
-                <section className="py-12 px-4 md:px-8 relative bg-white">
-                    <div className="max-w-7xl mx-auto">
+            <div id="google-partner-section" style={{padding: '2rem 0', background: 'black'}}>
+                <div className="text-center">
+                    <div className="brutal-box neon-glow-pink" style={{display: 'inline-block', padding: '2rem', border: '2px solid #EBF998'}}>
+                        <p style={{fontSize: '1.5rem', fontWeight: 800, color: '#EBF998', textTransform: 'uppercase'}}>🏆 GROW WITH GOOGLE PARTNER</p>
+                        <p style={{marginTop: '0.5rem', fontSize: '0.875rem', color: 'white'}}>One deserving brand gets a full-service partnership for free, yearly.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="contact" className="page-section" style={{paddingTop: '2rem', minHeight: 'auto'}}>
+                <section style={{background: 'white'}}>
+                    <div style={{maxWidth: '1400px', margin: '0 auto', padding: '3rem 2rem'}}>
                         <div className="text-center mb-8">
-                            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black bg-gradient-to-r from-[#FF5BF1] to-[#6370E7] text-transparent bg-clip-text">
+                            <h2 style={{fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, background: 'linear-gradient(to right, #FF5BF1, #6370E7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
                                 GOOD VIBES FROM CURATIONSLA
                             </h2>
-                            <p className="text-lg max-w-3xl mx-auto mt-4 text-gray-700">
-                                This isn't just a newsletter. It's the pulse of LA. While <span className="font-bold">[CURATIONS]</span> builds your brand, <span className="font-bold text-[#6370E7]">CurationsLA</span> puts you in the inbox of the city's most influential voices, creating a dual-powerhouse for cultural impact.
+                            <p style={{fontSize: '1.125rem', maxWidth: '800px', margin: '1rem auto', color: '#333'}}>
+                                This isn&apos;t just a newsletter. It&apos;s the pulse of LA. While <span style={{fontWeight: 700}}>[CURATIONS]</span> builds your brand, 
+                                <span className="curationsla-brutal-box">CurationsLA</span> puts you in the inbox of the city&apos;s most influential voices, 
+                                creating a dual-powerhouse for cultural impact.
                             </p>
                         </div>
                         
-                        <div className="grid justify-center md:justify-start md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div className="brutal-box bg-[#FF5BF1] text-white p-6">
-                                <span className="text-sm font-black">AUG 15, 2025</span>
-                                <h3 className="text-2xl font-black mt-3 mb-3">🌮 FRIDAY AFTERNOON VIBES</h3>
-                                <p className="text-sm">Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
+                        <div className="grid grid-3">
+                            <div className="brutal-box" style={{background: '#FF5BF1', color: 'white', padding: '1.5rem'}}>
+                                <span style={{fontSize: '0.875rem', fontWeight: 800}}>AUG 15, 2025</span>
+                                <h3 style={{fontSize: '1.5rem', fontWeight: 800, margin: '0.75rem 0'}}>🌮 FRIDAY AFTERNOON VIBES</h3>
+                                <p style={{fontSize: '0.875rem'}}>Weekend essentials: rooftop parties, beach clubs, taco trucks, and everything in between.</p>
                             </div>
-                             <div className="brutal-box bg-gradient-to-br from-[#FF5BF1] to-[#6370E7] p-6 text-white">
-                                <span className="text-sm font-bold bg-white text-black px-2 py-1 inline-block">AUG 17, 2025</span>
-                                <h3 className="text-2xl font-black text-white mt-3 mb-3">📅 EVENTS: WEEK OF MONDAY</h3>
-                                <p className="mb-3 text-white text-sm">Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
+                            
+                            <div className="brutal-box" style={{background: 'linear-gradient(135deg, #FF5BF1, #6370E7)', padding: '1.5rem', color: 'white'}}>
+                                <span style={{fontSize: '0.875rem', fontWeight: 700, background: 'white', color: 'black', padding: '0.25rem 0.5rem', display: 'inline-block'}}>AUG 17, 2025</span>
+                                <h3 style={{fontSize: '1.5rem', fontWeight: 800, color: 'white', margin: '0.75rem 0'}}>📅 EVENTS: WEEK OF MONDAY</h3>
+                                <p style={{marginBottom: '0.75rem', color: 'white', fontSize: '0.875rem'}}>Dave Matthews Band, Adam Sandler, Mt. Joy, The Frey, Nelly, and more.</p>
                             </div>
-                             <div className="brutal-box bg-white text-black p-6 border-4 border-black lg:col-start-2 xl:col-start-auto">
-                                <span className="text-black text-sm font-bold">AUG 9, 2025</span>
-                                <h3 className="text-xl font-black mt-2 mb-2">📅 SUMMER HEAT EVENTS</h3>
-                                <p className="text-sm">Your guide to surviving LA summer in style</p>
+                            
+                            <div className="brutal-box" style={{background: 'white', color: 'black', padding: '1.5rem', border: '4px solid black'}}>
+                                <span style={{color: 'black', fontSize: '0.875rem', fontWeight: 700}}>AUG 9, 2025</span>
+                                <h3 style={{fontSize: '1.25rem', fontWeight: 800, margin: '0.5rem 0'}}>📅 SUMMER HEAT EVENTS</h3>
+                                <p style={{fontSize: '0.875rem'}}>Your guide to surviving LA summer in style</p>
                             </div>
                         </div>
                     </div>
                 </section>
                 
-                {/* Subscribe CTA */}
-                <section className="py-20 px-4 md:px-8 bg-black">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="brutal-box bg-white text-black p-12 text-center">
+                <section style={{padding: '2rem', background: 'black'}}>
+                    <div style={{maxWidth: '1400px', margin: '0 auto'}}>
+                        <div className="brutal-box" style={{background: 'white', color: 'black', padding: '3rem', textAlign: 'center'}}>
                             <h3 className="text-4xl font-black mb-4 uppercase">RECEIVE GOOD VIBES IN YOUR INBOX</h3>
-                            <p className="text-xl mb-6 font-bold">Curate Los Angeles with us&nbsp;now</p>
-                            <button className="brutal-box px-8 py-4 bg-[#FF5BF1] text-white font-black text-lg uppercase hover:bg-[#6370E7] transition">
+                            
+                            <button className="brutal-box btn-primary" style={{padding: '1rem 2rem', fontSize: '1.125rem'}}>
                                 SUBSCRIBE TO CURATIONSLA
                             </button>
                         </div>
                     </div>
                 </section>
+
+                <div className="service-hero">
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
+                    <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+                        Have a project, a question, or just want to vibe? Drop us a line.
+                    </p>
+                </div>
+                <div className="service-content" style={{paddingTop: '2rem'}}>
+                    <div className="brutal-box" style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
+                        <form action="mailto:curate@curations.org" method="post" encType="text/plain">
+                            <div style={{ marginBottom: '1rem' }}>
+                                <label htmlFor="name" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>NAME</label>
+                                <input type="text" id="name" name="name" className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required />
+                            </div>
+                            <div style={{ marginBottom: '1rem' }}>
+                                <label htmlFor="email" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>EMAIL</label>
+                                <input type="email" id="email" name="email" className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required />
+                            </div>
+                            <div style={{ marginBottom: '1.5rem' }}>
+                                <label htmlFor="message" style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem' }}>MESSAGE</label>
+                                <textarea id="message" name="message" rows={6} className="brutal-box" style={{ width: '100%', padding: '0.75rem', border: '4px solid black', boxShadow: 'none' }} required></textarea>
+                            </div>
+                            <button type="submit" className="brutal-box btn-primary" style={{ width: '100%', padding: '1rem' }}>SEND IT</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </>
+            
+            <div id="restaurant-biz" className="page-section" style={{display: activePage === 'restaurant-biz' ? 'block' : 'none'}}>
+                <div className="service-hero"><h1>🍽️ Restaurant & Biz</h1></div>
+                <div className="service-content"><p>Details about Restaurant & Biz services...</p></div>
+            </div>
+            <div id="ai-discovery" className="page-section" style={{display: activePage === 'ai-discovery' ? 'block' : 'none'}}>
+                <div className="service-hero"><h1>🤖 AI Discovery</h1></div>
+                <div className="service-content"><p>Details about AI Discovery services...</p></div>
+            </div>
+            <div id="media-buying" className="page-section" style={{display: activePage === 'media-buying' ? 'block' : 'none'}}>
+                <div className="service-hero"><h1>📺 Media Buying</h1></div>
+                <div className="service-content"><p>Details about Media Buying services...</p></div>
+            </div>
+            <div id="creative-collabs" className="page-section" style={{display: activePage === 'creative-collabs' ? 'block' : 'none'}}>
+                <div className="service-hero"><h1>👋 Creative Collabs</h1></div>
+                <div className="service-content"><p>Details about Creative Collabs services...</p></div>
+            </div>
+            <div id="communications" className="page-section" style={{display: activePage === 'communications' ? 'block' : 'none'}}>
+                <div className="service-hero"><h1>📰 Communications</h1></div>
+                <div className="service-content"><p>Details about Communications services...</p></div>
+            </div>
+            <div id="seo-discovery" className="page-section" style={{display: activePage === 'seo-discovery' ? 'block' : 'none'}}>
+                <div className="service-hero"><h1>🚀 SEO & Discovery</h1></div>
+                <div className="service-content"><p>Details about SEO & Discovery services...</p></div>
+            </div>
+        </div>
     );
 };
 
-export default Minimal74BrutalistPage;
-
-    
+export default HomePage;
