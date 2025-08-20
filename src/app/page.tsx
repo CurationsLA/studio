@@ -436,17 +436,17 @@ const HomePage = () => {
                     <div className="grid grid-2">
                         <div className="brutal-box philosophy-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
-                            <p style={{ lineHeight: 1.8 }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
                         </div>
                          <div className="brutal-box dual-powerhouse-box" style={{ background: '#6370E7', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
-                            <p style={{ lineHeight: 1.8 }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, CurationsLA, amplifies it. With a newsletter reaching over 50,000 of LA&apos;s most engaged citizens, we don&apos;t just hope for media pickup—we create it.</p>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, <a href="https://curations.org" target="_blank" rel="noopener noreferrer" className="curationsla-brutal-box">CurationsLA</a>, amplifies it. With a newsletter reaching LA&apos;s most engaged locals and tourists, we don&apos;t just hope for media pickup—we create it.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="services" className="page-section" style={{paddingTop: '4rem', minHeight: 'auto'}}>
+            <div id="services" className="page-section" style={{paddingTop: '2rem', minHeight: 'auto'}}>
                 <div className="service-hero">
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>OUR CURATIONS</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -543,7 +543,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-                     <div className="brutal-box mt-8 mb-8" style={{background: 'linear-gradient(to right, rgb(255, 91, 241), rgb(169, 194, 72), rgb(99, 112, 231))', padding: '2rem', color: 'white'}}>
+                     <div className="brutal-box mt-4 mb-4" style={{background: 'linear-gradient(to right, rgb(255, 91, 241), rgb(169, 194, 72), rgb(99, 112, 231))', padding: '2rem', color: 'white'}}>
                         <div className="text-center">
                             <h3 style={{fontSize: 'clamp(1.25rem, 2vw, 2rem)', fontWeight: 800, marginBottom: '1.5rem'}}>FULL STACK ARSENAL</h3>
                             <div className="arsenal-grid-container" style={{display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center'}}>
@@ -568,7 +568,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div id="google-partner-section" style={{padding: '2rem 0', background: 'black'}}>
+            <div id="google-partner-section" style={{padding: '1rem 0', background: 'black'}}>
                 <div className="text-center">
                     <div className="brutal-box neon-glow-pink" style={{display: 'inline-block', padding: '2rem', border: '2px solid #EBF998'}}>
                         <p style={{fontSize: '1.5rem', fontWeight: 800, color: '#EBF998', textTransform: 'uppercase'}}>🏆 GROW WITH GOOGLE PARTNER</p>
@@ -577,7 +577,7 @@ const HomePage = () => {
                 </div>
             </div>
             
-            <div id="contact" className="page-section" style={{paddingTop: '2rem', minHeight: 'auto'}}>
+            <div id="contact" className="page-section" style={{paddingTop: '1rem', minHeight: 'auto'}}>
                 <section style={{background: 'white'}}>
                     <div style={{maxWidth: '1400px', margin: '0 auto', padding: '3rem 2rem'}}>
                         <div className="text-center mb-8">
@@ -625,7 +625,7 @@ const HomePage = () => {
                     </div>
                 </section>
 
-                <div className="service-hero">
+                <div className="service-hero" style={{paddingTop: '2rem', paddingBottom: '2rem'}}>
                     <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         Have a project, a question, or just want to vibe? Drop us a line.
