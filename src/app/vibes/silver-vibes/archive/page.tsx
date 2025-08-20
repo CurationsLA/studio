@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -71,6 +70,14 @@ const silverInspirations: Inspiration[] = [
     power: 93,
     href: '/vibes/silver-vibes/archive/stepped-brutalist',
   },
+  {
+    id: 'digital-renaissance',
+    title: 'Digital Renaissance',
+    description: 'A theme that merges classic, almost serif-like typography with modern digital aesthetics like gradients, glows, and holographic text.',
+    styleFeatures: ['Holographic Text', 'Digital Glow', 'Serif/Classic Typography'],
+    power: 91,
+    href: '/vibes/silver-vibes/archive/digital-renaissance',
+  }
 ];
 
 const PowerIcon = ({ power }: { power: number }) => {
@@ -138,5 +145,3 @@ export default function SilverVibesArchivePage() {
     </div>
   );
 }
-
-    
