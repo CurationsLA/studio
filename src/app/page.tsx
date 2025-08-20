@@ -1,14 +1,12 @@
 
 'use client';
 import { useState, useEffect } from 'react';
-import DraftNav from '@/components/ui/draft-nav';
 import Link from 'next/link';
 import LiveDispatches from '@/components/ui/LiveDispatches';
 
 const HomePage = () => {
     const [activePage, setActivePage] = useState('home');
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const [scrollY, setScrollY] = useState(0);
 
     const showPage = (pageId: string) => {
         const section = document.getElementById(pageId);
@@ -16,7 +14,7 @@ const HomePage = () => {
             section.scrollIntoView({ behavior: 'smooth' });
             setActivePage(pageId);
         }
-        setMenuOpen(false);
+        setMenuOpen(false); // Close menu on navigation
     };
 
     const toggleMenu = () => {
@@ -24,7 +22,19 @@ const HomePage = () => {
     };
 
     useEffect(() => {
-        const handleScroll = () => setScrollY(window.scrollY);
+        const handleScroll = () => {
+            const sections = ['home', 'about', 'services', 'contact'];
+            const scrollPosition = window.scrollY + 100;
+
+            for (const id of sections) {
+                const section = document.getElementById(id);
+                if (section && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    setActivePage(id);
+                    break;
+                }
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
         
         const hash = window.location.hash.substring(1);
@@ -73,7 +83,6 @@ const HomePage = () => {
     return (
         <>
             <div style={{ scrollBehavior: 'smooth' }}>
-                 <DraftNav />
                 <script 
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -135,10 +144,6 @@ const HomePage = () => {
                     .neon-glow-pink {
                         box-shadow: 0 0 40px hsla(var(--primary), 0.6),
                                     inset 0 0 40px hsla(var(--primary), 0.1);
-                    }
-                    
-                    .parallax-element {
-                        transform: translateY(${scrollY * 0.5}px);
                     }
                     
                     .hero-gradient {
@@ -258,13 +263,147 @@ const HomePage = () => {
                              grid-template-columns: repeat(4, 1fr);
                         }
                     }
+
+                     /* Navigation */
+                    .nav {
+                        position: fixed;
+                        top: 0;
+                        width: 100%;
+                        background: white;
+                        z-index: 100;
+                        border-bottom: 4px solid black;
+                    }
+                    
+                    .nav-container {
+                        max-width: 1400px;
+                        margin: 0 auto;
+                        padding: 1rem 2rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .logo-link {
+                        text-decoration: none;
+                        color: black;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                    }
+
+                    .logo-link:hover {
+                        color: hsl(var(--primary));
+                    }
+                    
+                    .nav-links {
+                        display: flex;
+                        gap: 2rem;
+                        list-style: none;
+                    }
+                    
+                    .nav-links a {
+                        color: black;
+                        text-decoration: none;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        transition: all 0.3s;
+                        cursor: pointer;
+                    }
+                    
+                    .nav-links a:hover, .nav-links a.active {
+                        color: hsl(var(--primary));
+                    }
+                    
+                    .page-section {
+                        padding-top: 80px; 
+                        min-height: 100vh;
+                    }
+                    
+                    .menu-toggle {
+                        display: none;
+                        background: #EBF998;
+                        color: black;
+                        border: none;
+                        padding: 0.5rem 1rem;
+                        font-weight: 700;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .menu-toggle {
+                            display: block;
+                        }
+
+                        .menu-toggle:hover {
+                            background: hsl(var(--primary));
+                            color: white;
+                        }
+                        
+                        .nav-links {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 100%;
+                            background: white;
+                            flex-direction: column;
+                            padding: 2rem;
+                            border-top: 4px solid black;
+                            display: none;
+                        }
+                        
+                        .nav-links.open {
+                            display: flex;
+                        }
+                    }
+
+                    .service-hero {
+                        padding: 2.5rem 2rem;
+                        background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+                        color: white;
+                        text-align: center;
+                    }
+                
+                    .service-content {
+                        max-width: 1400px;
+                        margin: 0 auto;
+                        padding: 4rem 2rem;
+                    }
+                    .motto-box {
+                        display: inline-block;
+                        border: 2px solid black;
+                        padding: 2px 6px;
+                    }
+                    .curationsla-brutal-box {
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        background-color: white;
+                        color: #FF5BF1;
+                        padding: 2px 4px;
+                        transition: color 0.3s ease;
+                        border: 2px solid black;
+                    }
                 `}</style>
                 
+                <nav className="nav">
+                    <div className="nav-container">
+                        <div style={{ fontSize: '1.5rem', fontWeight: 800 }}>
+                            <a onClick={() => showPage('home')} className="logo-link">[CURATIONS]</a>
+                        </div>
+                        <button className="menu-toggle brutal-box" onClick={toggleMenu}>MENU</button>
+                        <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`} id="navLinks">
+                            <li><a onClick={() => showPage('home')} className={activePage === 'home' ? 'active' : ''}>Home</a></li>
+                            <li><a onClick={() => showPage('about')} className={activePage === 'about' ? 'active' : ''}>About</a></li>
+                            <li><a onClick={() => showPage('services')} className={activePage === 'services' ? 'active' : ''}>Services</a></li>
+                            <li><a onClick={() => showPage('contact')} className={activePage === 'contact' ? 'active' : ''}>Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
                 <a href="mailto:curate@curations.org" className="corner-badge brutal-box">
                     <span>EMAIL US!</span>
                 </a>
 
-                <div id="home" style={{paddingTop: '80px', minHeight: 'auto'}}>
+                <div id="home" className="page-section" style={{minHeight: 'auto'}}>
                     <section style={{ padding: '2rem 2rem 4rem 2rem', display: 'flex', alignItems: 'center' }}>
                         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                             <div className="grid grid-2" style={{ alignItems: 'center' }}>
@@ -342,99 +481,112 @@ const HomePage = () => {
                     </section>
                 </div>
                 
-                <div style={{ background: 'black', padding: '2rem 0' }}>
-                    <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
-                        <div className="grid grid-4">
-                            <div className="text-center">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'hsl(var(--primary))' }} className="font-headline">100+</div>
-                                <div style={{ color: 'white', fontWeight: 700, fontSize: '0.875rem' }}>BRANDS CURATED</div>
-                            </div>
-                            <div className="text-center">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'hsl(var(--accent))' }} className="font-headline">500%</div>
-                                <div style={{ color: 'white', fontWeight: 700, fontSize: '0.875rem' }}>AVG GROWTH</div>
-                            </div>
-                            <div className="text-center">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: '#EBF998' }} className="font-headline">24/7</div>
-                                <div style={{ color: 'white', fontWeight: 700, fontSize: '0.875rem' }}>AI MONITORING</div>
-                            </div>
-                            <div className="text-center">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, color: 'hsl(var(--primary))' }} className="font-headline">∞</div>
-                                <div style={{ color: 'white', fontWeight: 700, fontSize: '0.875rem' }}>POSSIBILITIES</div>
-                            </div>
-                        </div>
+                <div id="about" className="page-section" style={{paddingTop: 0, minHeight: 'auto'}}>
+                    <div className="service-hero">
+                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>ABOUT [CURATIONS]</h1>
+                        <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', fontWeight: 900 }}>
+                            We curate the <span className='motto-box' style={{backgroundColor: '#FF5BF1', color: 'white'}}>HEART</span> and <span className='motto-box' style={{backgroundColor: 'white', color: '#6370E7'}}>HEADLINES</span> of <span className='motto-box' style={{backgroundColor: '#EBF998', color: 'black'}}>BRANDS</span>
+                        </p>
                     </div>
-                </div>
-
-                <div id="services" style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
-                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <div className="text-center mb-8">
-                            <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
-                                OUR <span className="hero-gradient">CURATIONS</span>
-                            </h2>
-                            <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto' }}>
-                                Full-stack solutions for brands ready to make cultural impact
+                
+                    <div className="service-content" style={{paddingTop: '4rem', paddingBottom: '4rem', background: '#FDFDFC'}}>
+                        <div className="brutal-box mb-8" style={{ background: '#EBF998', padding: '2rem' }}>
+                            <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>OUR STORY</h2>
+                            <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
+                                Born from the creative chaos of Los Angeles, CURATIONS emerged when we realized brands weren't just competing for market share—they were competing for cultural relevance. In a city where trends are born at food trucks and go global through TikTok, we saw an opportunity to bridge the gap between authentic local culture and ambitious brand storytelling.
+                            </p>
+                            <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
+                                We started with a simple observation: the brands that win hearts don't just advertise, they participate. They show up at the right moments, in the right places, with the right message. They understand that in LA, your next customer might be at a warehouse party in DTLA, a farmers market in Santa Monica, or scrolling through their phone at a coffee shop in Silver Lake.
+                            </p>
+                            <p style={{ lineHeight: 1.8, color: 'black' }}>
+                                Today, CURATIONS operates at the intersection of digital innovation and street-level culture. We're not just another agency—we're cultural architects, building bridges between what brands want to say and what people actually want to hear.
                             </p>
                         </div>
-                        
-                        <div className="grid grid-3">
-                            <Link href="/restaurant-biz" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
-                                <span style={{fontSize: '3rem'}}>🍽️</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Restaurant & Biz</h3>
-                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Grand openings, menu marketing, delivery optimization, and cultural integration.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
-                                    EXPLORE
-                                </div>
-                            </Link>
-                            
-                            <Link href="/ai-discovery" className="brutal-box service-card" style={{background: 'hsl(var(--accent))', color: 'white', padding: '2rem'}}>
-                                <span style={{fontSize: '3rem'}}>🤖</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">AI Discovery</h3>
-                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Prompt engineering, SEO optimization, and tech stack discovery for the AI age.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--accent))', display: 'inline-block'}}>
-                                    EXPLORE
-                                </div>
-                            </Link>
-                            
-                            <Link href="/public-relations" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
-                                <span style={{fontSize: '3rem'}}>📺</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Media Buying & PR</h3>
-                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Netflix placements, podcast ads, linear TV, and strategic public relations.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
-                                    EXPLORE
-                                </div>
-                            </Link>
-
-                             <Link href="/creative-campaigns" className="brutal-box service-card" style={{background: 'hsl(var(--accent))', color: 'white', padding: '2rem'}}>
-                                <span style={{fontSize: '3rem'}}>🎨</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Creative Campaigns</h3>
-                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Campaigns that drive engagement and build authentic community connections.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--accent))', display: 'inline-block'}}>
-                                    EXPLORE
-                                </div>
-                            </Link>
-
-                             <Link href="/influencer-ugc" className="brutal-box service-card" style={{background: '#EBF998', color: 'black', padding: '2rem'}}>
-                                <span style={{fontSize: '3rem'}}>🤝</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Influencer & UGC</h3>
-                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Strategic partnerships and user-generated content programs that build trust.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
-                                    EXPLORE
-                                </div>
-                            </Link>
-
-                             <Link href="/newsletter-services" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
-                                <span style={{fontSize: '3rem'}}>📧</span>
-                                <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Newsletter Services</h3>
-                                <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Newsletters that don't just reach inboxes, they create communities.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
-                                    EXPLORE
-                                </div>
-                            </Link>
+            
+                        <div className="grid grid-2">
+                            <div className="brutal-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
+                                <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in 'Vibe Coding'—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
+                            </div>
+                             <div className="brutal-box" style={{ background: '#6370E7', padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
+                                <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand's voice and strategy, our sister media company, <a href="https://la.curations.org" target="_blank" rel="noopener noreferrer" className="curationsla-brutal-box">CurationsLA</a>, amplifies it. With a newsletter reaching LA's most engaged locals and tourists, we don't just hope for media pickup—we create it.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="contact" style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem' }}>
+                <div id="services" className="page-section" style={{paddingTop: 0, minHeight: 'auto'}}>
+                    <div className="service-hero">
+                        <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
+                            OUR <span className="hero-gradient">CURATIONS</span>
+                        </h2>
+                        <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto' }}>
+                            Full-stack solutions for brands ready to make cultural impact
+                        </p>
+                    </div>
+                    <div style={{ padding: '4rem 2rem', background: '#FDFDFC' }}>
+                        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+                            <div className="grid grid-3">
+                                <Link href="/restaurant-biz" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
+                                    <span style={{fontSize: '3rem'}}>🍽️</span>
+                                    <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Restaurant & Biz</h3>
+                                    <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Grand openings, menu marketing, delivery optimization, and cultural integration.</p>
+                                    <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
+                                        EXPLORE
+                                    </div>
+                                </Link>
+                                
+                                <Link href="/ai-discovery" className="brutal-box service-card" style={{background: 'hsl(var(--accent))', color: 'white', padding: '2rem'}}>
+                                    <span style={{fontSize: '3rem'}}>🤖</span>
+                                    <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">AI Discovery</h3>
+                                    <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Prompt engineering, SEO optimization, and tech stack discovery for the AI age.</p>
+                                    <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--accent))', display: 'inline-block'}}>
+                                        EXPLORE
+                                    </div>
+                                </Link>
+                                
+                                <Link href="/public-relations" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
+                                    <span style={{fontSize: '3rem'}}>📺</span>
+                                    <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Media Buying & PR</h3>
+                                    <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Netflix placements, podcast ads, linear TV, and strategic public relations.</p>
+                                    <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
+                                        EXPLORE
+                                    </div>
+                                </Link>
+
+                                 <Link href="/creative-campaigns" className="brutal-box service-card" style={{background: 'hsl(var(--accent))', color: 'white', padding: '2rem'}}>
+                                    <span style={{fontSize: '3rem'}}>🎨</span>
+                                    <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Creative Campaigns</h3>
+                                    <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Campaigns that drive engagement and build authentic community connections.</p>
+                                    <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--accent))', display: 'inline-block'}}>
+                                        EXPLORE
+                                    </div>
+                                </Link>
+
+                                 <Link href="/influencer-ugc" className="brutal-box service-card" style={{background: '#EBF998', color: 'black', padding: '2rem'}}>
+                                    <span style={{fontSize: '3rem'}}>🤝</span>
+                                    <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Influencer & UGC</h3>
+                                    <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Strategic partnerships and user-generated content programs that build trust.</p>
+                                    <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block', color: 'black', background: 'white'}}>
+                                        EXPLORE
+                                    </div>
+                                </Link>
+
+                                 <Link href="/newsletter-services" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
+                                    <span style={{fontSize: '3rem'}}>📧</span>
+                                    <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Newsletter Services</h3>
+                                    <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Newsletters that don't just reach inboxes, they create communities.</p>
+                                    <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
+                                        EXPLORE
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contact" className="page-section" style={{ paddingTop: 0, minHeight: 'auto', background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                             READY TO CURATE YOUR SUCCESS?
