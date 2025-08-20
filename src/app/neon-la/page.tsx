@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useEffect } from 'react';
 
@@ -591,4 +592,6 @@ const NeonLAPage = () => {
     );
 };
 
-export default HomePage;
+export default NeonLAPage;
+
+    
