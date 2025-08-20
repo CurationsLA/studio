@@ -104,13 +104,18 @@ const HomePage = () => {
                     }
                     
                     .text-outline-subtle {
-                        -webkit-text-stroke: 1.5px hsl(var(--primary));
-                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 4px black;
+                        -webkit-text-fill-color: hsl(var(--primary));
                     }
 
                     .text-outline-green {
-                        -webkit-text-stroke: 2px #EBF998;
-                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 4px black;
+                        -webkit-text-fill-color: #EBF998;
+                    }
+
+                    .text-outline-blue {
+                        -webkit-text-stroke: 4px black;
+                        -webkit-text-fill-color: hsl(var(--accent));
                     }
                     
                     @keyframes pulse-brutal {
@@ -414,9 +419,9 @@ const HomePage = () => {
                             <div className="grid grid-2" style={{ alignItems: 'center' }}>
                                 <div>
                                     <h1 style={{ fontSize: 'clamp(3rem, 6vw, 6rem)', fontWeight: 800, lineHeight: 1, textTransform: 'uppercase' }} className="font-headline">
-                                        <span className="slide-in" style={{ display: 'block', color: 'hsl(var(--primary))', WebkitTextStroke: '2px black' }}>CURATIONS</span>
-                                        <span className="slide-in" style={{ display: 'block', color: '#EBF998', WebkitTextStroke: '2px black', animationDelay: '0.2s' }}>CURATIONS</span>
-                                        <span className="slide-in" style={{ display: 'block', color: 'hsl(var(--accent))', WebkitTextStroke: '2px black', animationDelay: '0.4s' }}>CURATIONS</span>
+                                        <span className="slide-in text-outline-subtle" style={{ display: 'block' }}>CURATIONS</span>
+                                        <span className="slide-in text-outline-green" style={{ display: 'block', animationDelay: '0.2s' }}>CURATIONS</span>
+                                        <span className="slide-in text-outline-blue" style={{ display: 'block', animationDelay: '0.4s' }}>CURATIONS</span>
                                     </h1>
                                     
                                     <div className="mt-8">
