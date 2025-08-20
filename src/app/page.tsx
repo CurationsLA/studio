@@ -107,6 +107,11 @@ const HomePage = () => {
                         -webkit-text-stroke: 1.5px hsl(var(--primary));
                         -webkit-text-fill-color: transparent;
                     }
+
+                    .text-outline-green {
+                        -webkit-text-stroke: 1.5px #EBF998;
+                        -webkit-text-fill-color: transparent;
+                    }
                     
                     @keyframes pulse-brutal {
                         0%, 100% { transform: scale(1); }
@@ -410,7 +415,7 @@ const HomePage = () => {
                                 <div>
                                     <h1 style={{ fontSize: 'clamp(3rem, 6vw, 6rem)', fontWeight: 800, lineHeight: 1, textTransform: 'uppercase' }} className="font-headline">
                                         <span className="slide-in" style={{ display: 'block', color: 'hsl(var(--primary))' }}>CURATIONS</span>
-                                        <span className="slide-in" style={{ display: 'block', color: '#EBF998', textShadow: '-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000', animationDelay: '0.2s' }}>CURATIONS</span>
+                                        <span className="slide-in text-outline-green" style={{ display: 'block', animationDelay: '0.2s' }}>CURATIONS</span>
                                         <span className="slide-in" style={{ display: 'block', color: 'hsl(var(--accent))', animationDelay: '0.4s' }}>CURATIONS</span>
                                     </h1>
                                     
@@ -483,7 +488,7 @@ const HomePage = () => {
                 
                 <div id="about" className="page-section" style={{paddingTop: 0, minHeight: 'auto'}}>
                     <div className="service-hero">
-                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>ABOUT [CURATIONS]</h1>
+                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }} className="font-headline">ABOUT [CURATIONS]</h1>
                         <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', fontWeight: 900 }}>
                             We curate the <span className='motto-box' style={{backgroundColor: '#FF5BF1', color: 'white'}}>HEART</span> and <span className='motto-box' style={{backgroundColor: 'white', color: '#6370E7'}}>HEADLINES</span> of <span className='motto-box' style={{backgroundColor: '#EBF998', color: 'black'}}>BRANDS</span>
                         </p>
@@ -491,7 +496,7 @@ const HomePage = () => {
                 
                     <div className="service-content" style={{paddingTop: '4rem', paddingBottom: '4rem', background: '#FDFDFC'}}>
                         <div className="brutal-box mb-8" style={{ background: '#EBF998', padding: '2rem' }}>
-                            <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>OUR STORY</h2>
+                            <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">OUR STORY</h2>
                             <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
                                 Born from the creative chaos of Los Angeles, CURATIONS emerged when we realized brands weren't just competing for market share—they were competing for cultural relevance. In a city where trends are born at food trucks and go global through TikTok, we saw an opportunity to bridge the gap between authentic local culture and ambitious brand storytelling.
                             </p>
@@ -505,11 +510,11 @@ const HomePage = () => {
             
                         <div className="grid grid-2">
                             <div className="brutal-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">[PHILOSOPHY]</h3>
                                 <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in 'Vibe Coding'—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
                             </div>
                              <div className="brutal-box" style={{ background: '#6370E7', padding: '2rem' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">[DUAL POWERHOUSE]</h3>
                                 <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand's voice and strategy, our sister media company, <a href="https://la.curations.org" target="_blank" rel="noopener noreferrer" className="curationsla-brutal-box">CurationsLA</a>, amplifies it. With a newsletter reaching LA's most engaged locals and tourists, we don't just hope for media pickup—we create it.</p>
                             </div>
                         </div>
