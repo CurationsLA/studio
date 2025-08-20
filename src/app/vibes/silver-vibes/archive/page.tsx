@@ -93,6 +93,14 @@ const silverInspirations: Inspiration[] = [
     styleFeatures: ['Stencil/Graffiti Typography', 'Textured Background', 'Underground Aesthetic'],
     power: 89,
     href: '/vibes/silver-vibes/archive/underground-movement',
+  },
+  {
+    id: 'viral-mechanics',
+    title: 'Viral Mechanics',
+    description: 'A data-driven theme focused on the mechanics of virality, with counters, trending text, and dynamic animations.',
+    styleFeatures: ['Data-driven', 'Animated Counters', 'Viral Aesthetics'],
+    power: 94,
+    href: '/vibes/silver-vibes/archive/viral-mechanics'
   }
 ];
 
