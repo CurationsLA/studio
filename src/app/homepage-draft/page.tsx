@@ -702,4 +702,6 @@ const HomePageDraft = () => {
     );
 };
 
-export default InfluencerUGCPage;
+export default HomePageDraft;
+
+    
