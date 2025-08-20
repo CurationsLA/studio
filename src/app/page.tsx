@@ -409,9 +409,9 @@ const HomePage = () => {
                             <div className="grid grid-2" style={{ alignItems: 'center' }}>
                                 <div>
                                     <h1 style={{ fontSize: 'clamp(3rem, 6vw, 6rem)', fontWeight: 800, lineHeight: 1, textTransform: 'uppercase' }} className="font-headline">
-                                        <span className="slide-in" style={{ display: 'block' }}>CURATIONS</span>
-                                        <span className="text-outline-subtle slide-in" style={{ display: 'block', animationDelay: '0.2s' }}>CURATIONS</span>
-                                        <span className="slide-in hero-gradient" style={{ display: 'block', animationDelay: '0.4s' }}>CURATIONS</span>
+                                        <span className="slide-in" style={{ display: 'block', color: 'hsl(var(--primary))' }}>CURATIONS</span>
+                                        <span className="slide-in" style={{ display: 'block', color: '#EBF998', textShadow: '-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000', animationDelay: '0.2s' }}>CURATIONS</span>
+                                        <span className="slide-in" style={{ display: 'block', color: 'hsl(var(--accent))', animationDelay: '0.4s' }}>CURATIONS</span>
                                     </h1>
                                     
                                     <div className="mt-8">
