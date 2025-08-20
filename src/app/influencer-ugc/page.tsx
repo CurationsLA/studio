@@ -88,8 +88,8 @@ const InfluencerUGCPage = () => {
                     }
                     
                     .tab-button.active {
-                        background: #EBF998;
-                        color: black;
+                        background: hsl(var(--primary));
+                        color: hsl(var(--primary-foreground));
                         border-color: black;
                     }
                     
@@ -149,7 +149,7 @@ const InfluencerUGCPage = () => {
                         top: 0;
                         bottom: 0;
                         width: 4px;
-                        background: #EBF998;
+                        background: hsl(var(--primary));
                         transform: translateX(-50%);
                     }
                     
@@ -173,8 +173,8 @@ const InfluencerUGCPage = () => {
                     }
                     
                     .timeline-marker {
-                        background: #EBF998;
-                        color: black;
+                        background: hsl(var(--primary));
+                        color: hsl(var(--primary-foreground));
                         width: 60px;
                         height: 60px;
                         border: 4px solid black;
@@ -191,15 +191,15 @@ const InfluencerUGCPage = () => {
                     
                     .performance-metric {
                         background: black;
-                        color: #EBF998;
+                        color: hsl(var(--primary));
                         padding: 1.5rem;
                         text-align: center;
-                        border: 2px solid #EBF998;
+                        border: 2px solid hsl(var(--primary));
                         transition: all 0.3s ease;
                     }
                     
                     .performance-metric:hover {
-                        background: #EBF998;
+                        background: hsl(var(--primary));
                         color: black;
                         transform: scale(1.05);
                     }
@@ -247,7 +247,7 @@ const InfluencerUGCPage = () => {
                 `}</style>
 
                 {/* Hero Section */}
-                <div style={{ background: '#EBF998', padding: '4rem 2rem', color: 'black' }}>
+                <div style={{ background: 'hsl(var(--primary))', padding: '4rem 2rem', color: 'white' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🤝</div>
                         <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline font-bold">
@@ -353,7 +353,7 @@ const InfluencerUGCPage = () => {
                                             We prioritize authentic fit over follower count every time.
                                         </p>
                                     </div>
-                                    <div className="timeline-marker" style={{ background: 'hsl(var(--accent))', color: 'white' }}>2</div>
+                                    <div className="timeline-marker" style={{ background: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>2</div>
                                 </div>
 
                                 <div className="timeline-step">
@@ -366,7 +366,7 @@ const InfluencerUGCPage = () => {
                                             Clear guidelines that inspire rather than restrict authentic content creation.
                                         </p>
                                     </div>
-                                    <div className="timeline-marker" style={{ background: 'hsl(var(--primary))', color: 'white' }}>3</div>
+                                    <div className="timeline-marker" style={{ background: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}>3</div>
                                 </div>
 
                                 <div className="timeline-step">
@@ -695,7 +695,7 @@ const InfluencerUGCPage = () => {
                 </div>
 
                 {/* Investment Packages */}
-                <div style={{ padding: '4rem 2rem', background: '#EBF998' }}>
+                <div style={{ padding: '4rem 2rem', background: 'hsl(var(--background))' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'black' }} className="font-headline font-bold">
                             INFLUENCER INVESTMENT PACKAGES

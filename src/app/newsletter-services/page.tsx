@@ -43,7 +43,7 @@ const NewsletterServicesPage = () => {
     };
 
     return (
-        <div style={{ fontFamily: "'Inter', sans-serif", background: '#FDFDFC', minHeight: '100vh' }}>
+        <div style={{ background: '#FDFDFC', minHeight: '100vh' }}>
             <DraftNav />
             <script 
                 type="application/ld+json"
@@ -319,7 +319,7 @@ const NewsletterServicesPage = () => {
                         </div>
 
                         <div className="feature-grid">
-                            <div className="brutal-box" style={{ background: '#FF5BF1', color: 'white', padding: '2rem' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     BRAND VOICE ARCHITECTURE
                                 </h3>
@@ -332,7 +332,7 @@ const NewsletterServicesPage = () => {
                                 </ul>
                             </div>
 
-                            <div className="brutal-box" style={{ background: '#6370E7', color: 'white', padding: '2rem' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     EDITORIAL POSITIONING
                                 </h3>
@@ -425,12 +425,12 @@ const NewsletterServicesPage = () => {
                             <div className="newsletter-preview">
                                 <div style={{ borderBottom: '4px solid black', paddingBottom: '1rem', marginBottom: '1rem' }}>
                                     <h3 style={{ fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase' }} className="font-headline">
-                                        {templateStyles[selectedTemplate].name} PREVIEW
+                                        {templateStyles[selectedTemplate as keyof typeof templateStyles].name} PREVIEW
                                     </h3>
                                 </div>
                                 
                                 <div style={{ 
-                                    background: templateStyles[selectedTemplate].colors[0], 
+                                    background: templateStyles[selectedTemplate as keyof typeof templateStyles].colors[0], 
                                     color: selectedTemplate === 'minimal' ? '#333' : 'white',
                                     padding: '1rem', 
                                     marginBottom: '1rem',
@@ -446,10 +446,10 @@ const NewsletterServicesPage = () => {
                                 </div>
                                 
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                                    <div style={{ padding: '0.75rem', background: templateStyles[selectedTemplate].colors[2], color: 'black' }}>
+                                    <div style={{ padding: '0.75rem', background: templateStyles[selectedTemplate as keyof typeof templateStyles].colors[2], color: 'black' }}>
                                         <h5 style={{ fontWeight: 800, fontSize: '0.875rem' }}>SECONDARY</h5>
                                     </div>
-                                    <div style={{ padding: '0.75rem', background: templateStyles[selectedTemplate].colors[2], color: 'black' }}>
+                                    <div style={{ padding: '0.75rem', background: templateStyles[selectedTemplate as keyof typeof templateStyles].colors[2], color: 'black' }}>
                                         <h5 style={{ fontWeight: 800, fontSize: '0.875rem' }}>CONTENT</h5>
                                     </div>
                                 </div>
@@ -457,9 +457,9 @@ const NewsletterServicesPage = () => {
                                 <div style={{ marginTop: '1rem', textAlign: 'center' }}>
                                     <strong>Key Features:</strong>
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem', justifyContent: 'center' }}>
-                                        {templateStyles[selectedTemplate].features.map((feature, index) => (
+                                        {templateStyles[selectedTemplate as keyof typeof templateStyles].features.map((feature, index) => (
                                             <span key={index} style={{ 
-                                                background: templateStyles[selectedTemplate].colors[1], 
+                                                background: templateStyles[selectedTemplate as keyof typeof templateStyles].colors[1], 
                                                 color: 'white', 
                                                 padding: '0.25rem 0.5rem', 
                                                 fontSize: '0.75rem',
@@ -779,7 +779,7 @@ const NewsletterServicesPage = () => {
             </div>
 
             {/* CTA Section */}
-            <div style={{ background: 'linear-gradient(135deg, #FF5BF1 0%, #6370E7 100%)', padding: '4rem 2rem', textAlign: 'center' }}>
+            <div style={{ background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)', padding: '4rem 2rem', textAlign: 'center' }}>
                 <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                     READY TO DOMINATE INBOXES?
                 </h2>
@@ -790,7 +790,7 @@ const NewsletterServicesPage = () => {
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <a href="mailto:newsletters@curations.org" className="brutal-box" style={{
                         background: 'white', 
-                        color: '#FF5BF1', 
+                        color: 'hsl(var(--primary))', 
                         padding: '1rem 2rem', 
                         fontWeight: 800, 
                         textTransform: 'uppercase', 

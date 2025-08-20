@@ -395,25 +395,25 @@ const HomePage = () => {
                                 </div>
                             </Link>
                             
-                            <Link href="/public-relations" className="brutal-box service-card" style={{background: '#EBF998', color: 'black', padding: '2rem'}}>
+                            <Link href="/public-relations" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>📺</span>
                                 <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Media Buying & PR</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Netflix placements, podcast ads, linear TV, and strategic public relations.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
+                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
                                     EXPLORE
                                 </div>
                             </Link>
 
-                             <Link href="/creative-campaigns" className="brutal-box service-card" style={{background: 'white', color: 'black', padding: '2rem'}}>
+                             <Link href="/creative-campaigns" className="brutal-box service-card" style={{background: 'hsl(var(--accent))', color: 'white', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>🎨</span>
                                 <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Creative Campaigns</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Campaigns that drive engagement and build authentic community connections.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
+                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--accent))', display: 'inline-block'}}>
                                     EXPLORE
                                 </div>
                             </Link>
 
-                             <Link href="/influencer-ugc" className="brutal-box service-card" style={{background: 'white', color: 'black', padding: '2rem'}}>
+                             <Link href="/influencer-ugc" className="brutal-box service-card" style={{background: '#EBF998', color: 'black', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>🤝</span>
                                 <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Influencer & UGC</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Strategic partnerships and user-generated content programs that build trust.</p>
@@ -422,11 +422,11 @@ const HomePage = () => {
                                 </div>
                             </Link>
 
-                             <Link href="/newsletter-services" className="brutal-box service-card" style={{background: 'white', color: 'black', padding: '2rem'}}>
+                             <Link href="/newsletter-services" className="brutal-box service-card" style={{background: 'hsl(var(--primary))', color: 'white', padding: '2rem'}}>
                                 <span style={{fontSize: '3rem'}}>📧</span>
                                 <h3 style={{fontWeight: 800, fontSize: '1.5rem', marginTop: '1rem', textTransform: 'uppercase'}} className="font-headline">Newsletter Services</h3>
                                 <p style={{marginTop: '1rem', fontSize: '0.875rem'}}>Newsletters that don't just reach inboxes, they create communities.</p>
-                                <div className="btn-primary" style={{marginTop: '1rem', display: 'inline-block'}}>
+                                <div className="btn-primary" style={{marginTop: '1rem', background: 'white', color: 'hsl(var(--primary))', display: 'inline-block'}}>
                                     EXPLORE
                                 </div>
                             </Link>
