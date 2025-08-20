@@ -1,6 +1,7 @@
 
 'use client';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const HomePageDraft = () => {
     const [activePage, setActivePage] = useState('home');
@@ -485,9 +486,9 @@ const HomePageDraft = () => {
                                 <li>• Delivery Optimization</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={(e) => { e.preventDefault(); showPage('restaurant-biz');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <Link href="/restaurant-biz" className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                     <span>Learn More</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
@@ -500,9 +501,9 @@ const HomePageDraft = () => {
                                 <li>• Team Workshops</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={(e) => { e.preventDefault(); showPage('ai-discovery');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <Link href="/ai-discovery" className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
@@ -515,9 +516,9 @@ const HomePageDraft = () => {
                                 <li>• Social Media</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={(e) => { e.preventDefault(); showPage('media-buying');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <Link href="/public-relations" className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
@@ -529,9 +530,9 @@ const HomePageDraft = () => {
                                 <li>• Content Gaps</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={(e) => { e.preventDefault(); showPage('creative-collabs');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <Link href="/creative-campaigns" className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
@@ -543,9 +544,9 @@ const HomePageDraft = () => {
                                 <li>• Newsletter Design</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={(e) => { e.preventDefault(); showPage('communications');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <Link href="/public-relations" className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                          <div className="brutal-box" style={{background: 'white', padding: '2rem', display: 'flex', flexDirection: 'column'}}>
@@ -557,9 +558,9 @@ const HomePageDraft = () => {
                                 <li>• Rich Snippets</li>
                             </ul>
                             <div style={{marginTop: '1rem'}}>
-                                <a onClick={(e) => { e.preventDefault(); showPage('seo-discovery');}} className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
+                                <Link href="/ai-discovery" className="learn-more-link" style={{fontWeight: 700, fontSize: '0.875rem', textTransform: 'uppercase', textDecoration: 'none', cursor: 'pointer'}}>
                                      <span>Learn More</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -671,31 +672,6 @@ const HomePageDraft = () => {
                         </form>
                     </div>
                 </div>
-            </div>
-            
-            <div id="restaurant-biz" className="page-section" style={{display: activePage === 'restaurant-biz' ? 'block' : 'none'}}>
-                <div className="service-hero"><h1>🍽️ Restaurant & Biz</h1></div>
-                <div className="service-content"><p>Details about Restaurant & Biz services...</p></div>
-            </div>
-            <div id="ai-discovery" className="page-section" style={{display: activePage === 'ai-discovery' ? 'block' : 'none'}}>
-                <div className="service-hero"><h1>🤖 AI Discovery</h1></div>
-                <div className="service-content"><p>Details about AI Discovery services...</p></div>
-            </div>
-            <div id="media-buying" className="page-section" style={{display: activePage === 'media-buying' ? 'block' : 'none'}}>
-                <div className="service-hero"><h1>📺 Media Buying</h1></div>
-                <div className="service-content"><p>Details about Media Buying services...</p></div>
-            </div>
-            <div id="creative-collabs" className="page-section" style={{display: activePage === 'creative-collabs' ? 'block' : 'none'}}>
-                <div className="service-hero"><h1>👋 Creative Collabs</h1></div>
-                <div className="service-content"><p>Details about Creative Collabs services...</p></div>
-            </div>
-            <div id="communications" className="page-section" style={{display: activePage === 'communications' ? 'block' : 'none'}}>
-                <div className="service-hero"><h1>📰 Communications</h1></div>
-                <div className="service-content"><p>Details about Communications services...</p></div>
-            </div>
-            <div id="seo-discovery" className="page-section" style={{display: activePage === 'seo-discovery' ? 'block' : 'none'}}>
-                <div className="service-hero"><h1>🚀 SEO & Discovery</h1></div>
-                <div className="service-content"><p>Details about SEO & Discovery services...</p></div>
             </div>
         </div>
     );

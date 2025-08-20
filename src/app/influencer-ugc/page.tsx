@@ -518,7 +518,7 @@ const InfluencerUGCPage = () => {
                             </div>
 
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-                                <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
+                                <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))', padding: '2rem' }}>
                                     <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline font-bold">
                                         UGC CAMPAIGN STRATEGY
                                     </h3>
@@ -531,7 +531,7 @@ const InfluencerUGCPage = () => {
                                     </ul>
                                 </div>
 
-                                <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
+                                <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))', padding: '2rem' }}>
                                     <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline font-bold">
                                         CREATOR RECRUITMENT
                                     </h3>
@@ -757,7 +757,7 @@ const InfluencerUGCPage = () => {
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                         <a href="mailto:influencers@curations.org" className="brutal-box" style={{
                             background: 'hsl(var(--primary))', 
-                            color: 'white', 
+                            color: 'hsl(var(--primary-foreground))', 
                             padding: '1rem 2rem', 
                             fontWeight: 800, 
                             textTransform: 'uppercase', 
