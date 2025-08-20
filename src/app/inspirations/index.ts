@@ -14,8 +14,10 @@ import { inspiration as inspiration7 } from "./inspiration7";
 import { inspiration as inspiration8 } from "./inspiration8";
 import { inspiration as inspiration9 } from "./inspiration9";
 import { inspiration as inspiration10 } from "./inspiration10";
+import { inspiration as homepage } from "./homepage";
 
 export const inspirations: Inspiration[] = [
+  homepage,
   inspiration1,
   inspiration2,
   inspiration3,

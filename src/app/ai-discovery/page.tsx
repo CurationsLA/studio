@@ -151,13 +151,16 @@ const AIDiscoveryPage = () => {
                         border: 4px solid black;
                         padding: 2rem;
                         transition: all 0.3s ease;
-                        cursor: pointer;
                     }
                     
                     .ai-feature-card:hover {
                         background: #EBF998;
                         transform: translateY(-5px);
                         box-shadow: 12px 12px 0px black;
+                    }
+
+                     .ai-feature-card.highlight {
+                        background: #EBF998;
                     }
                     
                     .stats-grid {
@@ -227,7 +230,7 @@ const AIDiscoveryPage = () => {
                 <div style={{ background: 'linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%)', padding: '4rem 2rem', color: 'white' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🤖</div>
-                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}>
+                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
                             AI DISCOVERY
                         </h1>
                         <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto' }}>
@@ -240,7 +243,7 @@ const AIDiscoveryPage = () => {
                 {/* Interactive AI Demo */}
                 <div style={{ padding: '4rem 2rem', background: 'black' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase', color: '#EBF998' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem', textTransform: 'uppercase', color: '#EBF998' }} className="font-headline">
                             LIVE AI DEMONSTRATION
                         </h2>
                         
@@ -297,7 +300,7 @@ const AIDiscoveryPage = () => {
                 {/* AI Statistics */}
                 <div style={{ padding: '4rem 2rem', background: 'hsl(var(--background))' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             AI-POWERED RESULTS
                         </h2>
                         
@@ -327,15 +330,15 @@ const AIDiscoveryPage = () => {
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
                             
-                            <div className="ai-feature-card">
+                            <div className="ai-feature-card highlight">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>⚡</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     AI PROMPT ENGINEERING
                                 </h3>
                                 <p style={{ marginBottom: '1.5rem', lineHeight: 1.8 }}>
                                     Custom-engineered prompts that deliver consistent, brand-aligned results across all AI platforms.
                                 </p>
-                                <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+                                <ul style={{ listStyle: 'none', paddingLeft: 0, fontWeight: 700 }}>
                                     <li style={{ marginBottom: '0.5rem' }}>• Brand voice training datasets</li>
                                     <li style={{ marginBottom: '0.5rem' }}>• Multi-modal prompt optimization</li>
                                     <li style={{ marginBottom: '0.5rem' }}>• Output quality assurance</li>
@@ -345,13 +348,13 @@ const AIDiscoveryPage = () => {
 
                             <div className="ai-feature-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔍</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     AI SEO & CITATIONS
                                 </h3>
                                 <p style={{ marginBottom: '1.5rem', lineHeight: 1.8 }}>
                                     Optimize for AI-powered search engines and ensure your brand appears in AI-generated responses.
                                 </p>
-                                <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+                                <ul style={{ listStyle: 'none', paddingLeft: 0, fontWeight: 700 }}>
                                     <li style={{ marginBottom: '0.5rem' }}>• ChatGPT citation optimization</li>
                                     <li style={{ marginBottom: '0.5rem' }}>• Perplexity AI visibility</li>
                                     <li style={{ marginBottom: '0.5rem' }}>• Google AI Overview ranking</li>
@@ -361,13 +364,13 @@ const AIDiscoveryPage = () => {
 
                             <div className="ai-feature-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🛠️</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     TECH STACK DISCOVERY
                                 </h3>
                                 <p style={{ marginBottom: '1.5rem', lineHeight: 1.8 }}>
                                     Identify and integrate the perfect AI tools for your specific business needs and budget.
                                 </p>
-                                <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+                                <ul style={{ listStyle: 'none', paddingLeft: 0, fontWeight: 700 }}>
                                     <li style={{ marginBottom: '0.5rem' }}>• Custom AI tool audits</li>
                                     <li style={{ marginBottom: '0.5rem' }}>• Integration roadmaps</li>
                                     <li style={{ marginBottom: '0.5rem' }}>• ROI projections</li>
@@ -377,13 +380,13 @@ const AIDiscoveryPage = () => {
 
                             <div className="ai-feature-card">
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>👥</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     TEAM WORKSHOPS
                                 </h3>
                                 <p style={{ marginBottom: '1.5rem', lineHeight: 1.8 }}>
                                     Hands-on training sessions that transform your team into AI power users.
                                 </p>
-                                <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+                                <ul style={{ listStyle: 'none', paddingLeft: 0, fontWeight: 700 }}>
                                     <li style={{ marginBottom: '0.5rem' }}>• Custom workshop design</li>
                                     <li style={{ marginBottom: '0.5rem' }}>• Hands-on AI training</li>
                                     <li style={{ marginBottom: '0.5rem' }}>• Best practices frameworks</li>
@@ -397,12 +400,12 @@ const AIDiscoveryPage = () => {
                 {/* AI Workflow Visualization */}
                 <div style={{ padding: '4rem 2rem', background: 'black' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                             OUR AI INTEGRATION PROCESS
                         </h2>
                         
                         <div className="ai-workflow brutal-box">
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 PHASE 1: AI AUDIT & DISCOVERY
                             </h3>
                             <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -423,7 +426,7 @@ const AIDiscoveryPage = () => {
                         </div>
 
                         <div className="ai-workflow brutal-box" style={{ animationDelay: '0.5s' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 PHASE 2: CUSTOM AI DEVELOPMENT
                             </h3>
                             <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -443,7 +446,7 @@ const AIDiscoveryPage = () => {
                         </div>
 
                         <div className="ai-workflow brutal-box" style={{ animationDelay: '1s' }}>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                 PHASE 3: DEPLOYMENT & OPTIMIZATION
                             </h3>
                             <p style={{ lineHeight: 1.8, marginBottom: '1rem' }}>
@@ -467,12 +470,12 @@ const AIDiscoveryPage = () => {
                 {/* ROI Calculator */}
                 <div style={{ padding: '4rem 2rem', background: 'hsl(var(--background))' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
                             AI ROI PROJECTIONS
                         </h2>
                         
                         <div className="roi-visualization brutal-box">
-                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }}>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                                 TYPICAL 12-MONTH RESULTS
                             </h3>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
@@ -500,16 +503,16 @@ const AIDiscoveryPage = () => {
                 {/* Investment Packages */}
                 <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%)' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
                             AI DISCOVERY PACKAGES
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                             <div className="brutal-box" style={{ background: 'white', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     AI STARTER
                                 </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$8K</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$8K</div>
                                 <div style={{ marginBottom: '2rem' }}>Perfect for AI beginners</div>
                                 <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                     <li>AI audit & strategy</li>
@@ -521,10 +524,10 @@ const AIDiscoveryPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: '#EBF998', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     AI ACCELERATOR
                                 </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$25K</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$25K</div>
                                 <div style={{ marginBottom: '2rem' }}>Most popular package</div>
                                 <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                     <li>Complete AI integration</li>
@@ -536,10 +539,10 @@ const AIDiscoveryPage = () => {
                             </div>
 
                             <div className="brutal-box" style={{ background: 'black', color: '#EBF998', padding: '2rem', textAlign: 'center', borderColor: '#EBF998' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
                                     AI ENTERPRISE
                                 </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }}>$75K+</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$75K+</div>
                                 <div style={{ marginBottom: '2rem' }}>Full AI transformation</div>
                                 <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
                                     <li>Custom AI development</li>
@@ -555,7 +558,7 @@ const AIDiscoveryPage = () => {
 
                 {/* CTA Section */}
                 <div style={{ background: 'black', padding: '4rem 2rem', textAlign: 'center' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#EBF998', marginBottom: '2rem', textTransform: 'uppercase' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#EBF998', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
                         READY TO HARNESS AI POWER?
                     </h2>
                     <p style={{ fontSize: '1.25rem', color: 'white', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
