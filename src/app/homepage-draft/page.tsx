@@ -444,24 +444,24 @@ const HomePageDraft = () => {
                     <div className="brutal-box mb-8 our-story-box" style={{ background: '#EBF998', padding: '2rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>OUR STORY</h2>
                         <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
-                            Born from the creative chaos of Los Angeles, CURATIONS emerged when we realized brands weren&apos;t just competing for market share—they were competing for cultural relevance. In a city where trends are born at food trucks and go global through TikTok, we saw an opportunity to bridge the gap between authentic local culture and ambitious brand storytelling.
+                            Born from the creative chaos of Los Angeles, CURATIONS emerged when we realized brands weren't just competing for market share—they were competing for cultural relevance. In a city where trends are born at food trucks and go global through TikTok, we saw an opportunity to bridge the gap between authentic local culture and ambitious brand storytelling.
                         </p>
                         <p style={{ lineHeight: 1.8, marginBottom: '1rem', color: 'black' }}>
-                            We started with a simple observation: the brands that win hearts don&apos;t just advertise, they participate. They show up at the right moments, in the right places, with the right message. They understand that in LA, your next customer might be at a warehouse party in DTLA, a farmers market in Santa Monica, or scrolling through their phone at a coffee shop in Silver Lake.
+                            We started with a simple observation: the brands that win hearts don't just advertise, they participate. They show up at the right moments, in the right places, with the right message. They understand that in LA, your next customer might be at a warehouse party in DTLA, a farmers market in Santa Monica, or scrolling through their phone at a coffee shop in Silver Lake.
                         </p>
                         <p style={{ lineHeight: 1.8, color: 'black' }}>
-                            Today, CURATIONS operates at the intersection of digital innovation and street-level culture. We&apos;re not just another agency—we&apos;re cultural architects, building bridges between what brands want to say and what people actually want to hear.
+                            Today, CURATIONS operates at the intersection of digital innovation and street-level culture. We're not just another agency—we're cultural architects, building bridges between what brands want to say and what people actually want to hear.
                         </p>
                     </div>
         
                     <div className="grid grid-2">
                         <div className="brutal-box philosophy-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[PHILOSOPHY]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in &apos;Vibe Coding&apos;—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in 'Vibe Coding'—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
                         </div>
                          <div className="brutal-box dual-powerhouse-box" style={{ background: '#6370E7', padding: '2rem' }}>
                             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }}>[DUAL POWERHOUSE]</h3>
-                            <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand&apos;s voice and strategy, our sister media company, <a href="https://la.curations.org" target="_blank" rel="noopener noreferrer" className="curationsla-brutal-box">CurationsLA</a>, amplifies it. With a newsletter reaching LA's most engaged locals and tourists, we don't just hope for media pickup—we create it.</p>
+                            <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand's voice and strategy, our sister media company, <a href="https://la.curations.org" target="_blank" rel="noopener noreferrer" className="curationsla-brutal-box">CurationsLA</a>, amplifies it. With a newsletter reaching LA's most engaged locals and tourists, we don't just hope for media pickup—we create it.</p>
                         </div>
                     </div>
                 </div>
@@ -606,8 +606,8 @@ const HomePageDraft = () => {
                                 GOOD VIBES FROM CURATIONSLA
                             </h2>
                             <p style={{fontSize: '1.125rem', maxWidth: '800px', margin: '1rem auto', color: '#333'}}>
-                                This isn&apos;t just a newsletter. It&apos;s the pulse of LA. While <span style={{fontWeight: 700}}>[CURATIONS]</span> builds your brand, 
-                                <span className="curationsla-brutal-box">CurationsLA</span> puts you in the inbox of the city&apos;s most influential voices, 
+                                This isn't just a newsletter. It's the pulse of LA. While <span style={{fontWeight: 700}}>[CURATIONS]</span> builds your brand, 
+                                <span className="curationsla-brutal-box">CurationsLA</span> puts you in the inbox of the city's most influential voices, 
                                 creating a dual-powerhouse for cultural impact.
                             </p>
                         </div>
@@ -648,7 +648,7 @@ const HomePageDraft = () => {
                 </section>
 
                 <div className="service-hero" style={{paddingTop: '2.5rem', paddingBottom: '2.5rem'}}>
-                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET&apos;S CURATE</h1>
+                    <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }}>LET'S CURATE</h1>
                     <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
                         Have a project, a question, or just want to vibe? Drop us a line.
                     </p>
@@ -702,4 +702,4 @@ const HomePageDraft = () => {
     );
 };
 
-export default HomePage
+export default InfluencerUGCPage;
