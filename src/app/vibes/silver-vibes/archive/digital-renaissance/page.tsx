@@ -6,6 +6,8 @@ import LiveDispatches from '@/components/ui/LiveDispatches';
 
 
 const DigitalRenaissancePage = () => {
+    const [activePage, setActivePage] = useState('home');
+    const [isMenuOpen, setMenuOpen] = useState(false);
     const [creativityMeter, setCreativityMeter] = useState(0);
 
     useEffect(() => {
@@ -14,6 +16,38 @@ const DigitalRenaissancePage = () => {
         }, 50);
         return () => clearInterval(timer);
     }, []);
+
+    const showPage = (pageId: string) => {
+        const section = document.getElementById(pageId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setActivePage(pageId);
+        }
+        setMenuOpen(false);
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['home', 'about', 'services', 'contact'];
+            const scrollPosition = window.scrollY + 100;
+
+            for (const id of sections) {
+                const section = document.getElementById(id);
+                if (section && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    setActivePage(id);
+                    break;
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
 
     return (
         <div className="min-h-screen bg-[#FDFDFC]">
@@ -312,6 +346,25 @@ const DigitalRenaissancePage = () => {
                     50% { background-position: 100% 50%; }
                 }
             `}</style>
+
+            <nav className="nav">
+                <div className="nav-container">
+                    <div className="text-xl font-black digital-serif">
+                        <a onClick={() => showPage('home')} className="logo-link">[CURATIONS]</a>
+                    </div>
+                    <button className="menu-toggle brutal-box" onClick={toggleMenu}>MENU</button>
+                    <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+                        <li><a onClick={() => showPage('home')} className={activePage === 'home' ? 'active' : ''}>Home</a></li>
+                        <li><a onClick={() => showPage('about')} className={activePage === 'about' ? 'active' : ''}>About</a></li>
+                        <li><a onClick={() => showPage('services')} className={activePage === 'services' ? 'active' : ''}>Services</a></li>
+                        <li><a onClick={() => showPage('contact')} className={activePage === 'contact' ? 'active' : ''}>Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <a href="mailto:curate@curations.org" className="corner-badge brutal-box">
+                <span>EMAIL US!</span>
+            </a>
 
             <div id="home" className="pt-20 min-h-screen">
                 <section className="px-4 md:px-8 py-16 flex items-center">
