@@ -50,7 +50,7 @@ const ViralMechanicsPage = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#FDFDFC]">
+        <div className="min-h-screen bg-[#fafbfc]">
             <style jsx global>{`
                 .brutal-box {
                     border: 4px solid black;
@@ -390,12 +390,12 @@ const ViralMechanicsPage = () => {
             </a>
 
             {/* Hero Section */}
-            <div id="home" className="pt-20 min-h-screen">
+            <div id="home" className="pt-20 min-h-screen" style={{background: 'linear-gradient(to right, #8A2BE2, #FF1493)'}}>
                 <section className="px-4 md:px-8 py-16 flex items-center">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             <div>
-                                <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-none uppercase text-black mb-8 trending-text">
+                                <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-none uppercase text-white mb-8 trending-text">
                                     CURATIONS
                                 </h1>
                                 
@@ -478,7 +478,7 @@ const ViralMechanicsPage = () => {
                     </div>
                 </div>
                 
-                <div className="bg-[#FDFDFC] py-16 px-4 md:px-8">
+                <div className="bg-[#fafbfc] py-16 px-4 md:px-8">
                     <div className="max-w-7xl mx-auto">
                         <div className="mechanics-grid">
                             <div className="brutal-box creative-card bg-[#FF5BF1] p-6 md:p-8 viral-glow">
@@ -532,7 +532,7 @@ const ViralMechanicsPage = () => {
                     </div>
                 </div>
                 
-                <div className="bg-[#FDFDFC] py-16 px-4 md:px-8">
+                <div className="bg-[#fafbfc] py-16 px-4 md:px-8">
                     <div className="max-w-7xl mx-auto">
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <a href="/restaurant-biz" className="brutal-box creative-card bg-[#FF5BF1] text-white p-6 md:p-8 viral-glow">
@@ -617,5 +617,3 @@ const ViralMechanicsPage = () => {
 };
 
 export default ViralMechanicsPage;
-
-  
