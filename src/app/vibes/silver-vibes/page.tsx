@@ -6,6 +6,14 @@ export default function SilverVibesPage() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-8">
       <h1 className="text-5xl font-black text-gray-300 mb-4">🥈 Silver Vibes</h1>
       <p className="text-lg text-gray-400 mb-8">Primary workspace for final draft elements and pages.</p>
+      <div className="flex space-x-4 mb-8">
+        <Link href="/vibes/silver-vibes/pages" className="px-6 py-3 bg-gray-300 text-black font-bold rounded-lg hover:bg-gray-400 transition">
+          Silver Pages
+        </Link>
+        <Link href="/vibes/silver-vibes/goodies" className="px-6 py-3 bg-gray-300 text-black font-bold rounded-lg hover:bg-gray-400 transition">
+          Silver Goodies
+        </Link>
+      </div>
       <Link href="/v2-inspirations" className="px-6 py-3 bg-gray-300 text-black font-bold rounded-lg hover:bg-gray-400 transition">
         Back to Inspirations
       </Link>
