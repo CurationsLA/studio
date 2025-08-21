@@ -474,7 +474,7 @@ const HomePage = () => {
                             <div className="mt-8 text-center">
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
                                     <div className="trust-badge">
-                                        <span>🏆</span> GOOGLE PARTNER
+                                        <span>🏆</span> GROW WITH GOOGLE
                                     </div>
                                     <div className="trust-badge">
                                         <span>📈</span> 500% AVG GROWTH

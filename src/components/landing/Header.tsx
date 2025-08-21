@@ -8,6 +8,7 @@ import CurationCraftLogo from '@/components/icons/CurationCraftLogo';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
+  { href: '/vibes/silver-vibes/viral-mechanics', label: 'Viral Mechanics' },
   { href: '#services', label: 'Services' },
   { href: '#work', label: 'Work' },
   { href: '#contact', label: 'Contact' },
