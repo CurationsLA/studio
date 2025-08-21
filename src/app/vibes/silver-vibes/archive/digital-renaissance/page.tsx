@@ -48,7 +48,6 @@ const DigitalRenaissancePage = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-
     return (
         <div className="min-h-screen bg-[#FDFDFC]">
             <style jsx global>{`
@@ -599,4 +598,6 @@ const DigitalRenaissancePage = () => {
     );
 };
 
-export default HomePage;
+export default DigitalRenaissancePage;
+
+    

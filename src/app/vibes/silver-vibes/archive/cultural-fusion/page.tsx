@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import LiveDispatches from '@/components/ui/LiveDispatches';
 
+
 const CulturalFusionPage = () => {
     const [activePage, setActivePage] = useState('home');
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -236,7 +237,7 @@ const CulturalFusionPage = () => {
                     background: white;
                     color: #FF5BF1;
                 }
-
+                
                 .cultural-showcase {
                     background: linear-gradient(45deg, #FF5BF1, #6370E7, #4AE54A, #FF5BF1);
                     background-size: 400% 400%;
@@ -352,7 +353,7 @@ const CulturalFusionPage = () => {
                             </div>
                             
                             <div className="mt-8 md:mt-0 space-y-4">
-                               <LiveDispatches />
+                                <LiveDispatches />
                                 
                                 {/* Creative Vibes Meter */}
                                 <div className="brutal-box bg-white p-4 md:p-6">
@@ -458,7 +459,7 @@ const CulturalFusionPage = () => {
                             <a href="/restaurant-biz" className="brutal-box creative-card bg-[#FF5BF1] text-white p-6 md:p-8 neon-glow">
                                 <span className="text-4xl md:text-5xl">🍽️</span>
                                 <h3 className="font-black text-xl md:text-2xl mt-4 uppercase">Restaurant & Biz</h3>
-                                <p className="mt-4 text-sm md:text-base">Culinary experiences that become neighborhood legends.</p>
+                                <p className="mt-4 text-sm md:text-base">Cultural dining experiences that become neighborhood legends.</p>
                                 <div className="mt-4 bg-white text-[#FF5BF1] px-4 py-2 font-black uppercase inline-block text-sm">
                                     EXPLORE
                                 </div>
@@ -536,4 +537,6 @@ const CulturalFusionPage = () => {
     );
 };
 
-export default HomePage;
+export default NeonCulturePage;
+
+    

@@ -434,6 +434,7 @@ const ViralMechanicsPage = () => {
                             <div className="mt-8 md:mt-0 space-y-4">
                                 <LiveDispatches />
                                 
+                                {/* Creative Vibes Meter */}
                                 <div className="brutal-box bg-white p-4 md:p-6 viral-pattern">
                                     <h3 className="font-black text-sm md:text-lg uppercase mb-4 text-[#FF5BF1]">CREATIVE VIBES</h3>
                                     <div className="creative-vibes-meter brutal-box" style={{boxShadow: 'none'}}>
@@ -615,4 +616,6 @@ const ViralMechanicsPage = () => {
     );
 };
 
-export default HomePage;
+export default ViralMechanicsPage;
+
+  
