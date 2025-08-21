@@ -28,7 +28,7 @@ const SteppedBrutalistPage = () => {
 
             for (const id of sections) {
                 const section = document.getElementById(id);
-                if (section && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                if (section && scrollPosition >= section.offsetTop && scrollPosition < section.offsetHeight) {
                     setActivePage(id);
                     break;
                 }
@@ -231,17 +231,15 @@ const SteppedBrutalistPage = () => {
                     content: '';
                     position: absolute;
                     top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
-                    background-size: 200% 200%;
-                    animation: shimmer 4s ease-in-out infinite;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+                    transition: all 0.5s ease;
                 }
                 
-                @keyframes shimmer {
-                    0%, 100% { background-position: 0% 0%; }
-                    50% { background-position: 100% 100%; }
+                .campaign-showcase:hover::before {
+                    left: 100%;
                 }
             `}</style>
 
@@ -306,7 +304,6 @@ const SteppedBrutalistPage = () => {
                             <div className="mt-8 md:mt-0">
                                 <LiveDispatches />
                                 
-                                {/* Campaign Highlights */}
                                 <div className="stepped-brutal campaign-showcase mt-4">
                                     <h3 className="font-black text-lg uppercase mb-4">CAMPAIGN HIGHLIGHTS</h3>
                                     <div className="space-y-3">
@@ -477,4 +474,4 @@ const SteppedBrutalistPage = () => {
     );
 };
 
-    
+export default SteppedBrutalistPage;
