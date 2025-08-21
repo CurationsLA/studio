@@ -1,4 +1,3 @@
-
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -18,9 +17,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['JetBrains Mono', 'monospace'],
+        body: ['var(--font-inter)'],
+        headline: ['var(--font-poppins)'],
+        code: ['var(--font-jetbrains-mono)'],
       },
       colors: {
         'highlight': '#EBF998',

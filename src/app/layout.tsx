@@ -1,10 +1,27 @@
-import type {Metadata} from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter, JetBrains_Mono, Poppins } from "next/font/google";
+import "./globals.css";
 import { Toaster } from "@/components/ui/toaster"
 
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: '--font-inter'
+});
+
+const jetbrains_mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono'
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700', '800', '900']
+})
+
 export const metadata: Metadata = {
-  title: 'CURATIONS | Los Angeles Public Relations and Dual-Media Creative Powerhouse',
-  description: 'Los Angeles Public Relations Firm, AI Prompt Engineering, Brand and Restaurant Branding, beehiiv Newsletter Design + Toolkits',
+  title: "Curations",
+  description: "Good Vibes for Los Angeles",
 };
 
 export default function RootLayout({
@@ -13,14 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
-      <head>
-        {/* Curator Font Family */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased">
+    <html lang="en">
+      <body className={`${inter.variable} ${jetbrains_mono.variable} ${poppins.variable}`}>
         {children}
         <Toaster />
       </body>

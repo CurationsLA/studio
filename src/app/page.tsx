@@ -387,7 +387,7 @@ const HomePage = () => {
                         font-weight: 900;
                         text-transform: uppercase;
                         background-color: white;
-                        color: #FF5BF1;
+                        color: hsl(var(--primary));
                         padding: 2px 4px;
                         transition: color 0.3s ease;
                         border: 2px solid black;
@@ -477,13 +477,10 @@ const HomePage = () => {
                                         <span>🏆</span> GROW WITH GOOGLE
                                     </div>
                                     <div className="trust-badge">
-                                        <span>📈</span> 500% AVG GROWTH
+                                        <span>💜</span> HUMANS X AI
                                     </div>
                                     <div className="trust-badge">
-                                        <span>🌟</span> LA BASED
-                                    </div>
-                                    <div className="trust-badge">
-                                        <span>🤖</span> AI POWERED
+                                        <span>📰</span> DUAL-POWERHOUSE
                                     </div>
                                 </div>
                             </div>
@@ -495,7 +492,7 @@ const HomePage = () => {
                     <div className="service-hero">
                         <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase' }} className="font-headline">ABOUT [CURATIONS]</h1>
                         <p style={{ fontSize: '1.25rem', marginTop: '1rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto', fontWeight: 900 }}>
-                            We curate the <span className='motto-box' style={{backgroundColor: '#FF5BF1', color: 'white'}}>HEART</span> and <span className='motto-box' style={{backgroundColor: 'white', color: '#6370E7'}}>HEADLINES</span> of <span className='motto-box' style={{backgroundColor: '#EBF998', color: 'black'}}>BRANDS</span>
+                            We curate the <span className='motto-box' style={{backgroundColor: 'hsl(var(--primary))', color: 'white'}}>HEART</span> and <span className='motto-box' style={{backgroundColor: 'white', color: 'hsl(var(--accent))'}}>HEADLINES</span> of <span className='motto-box' style={{backgroundColor: '#EBF998', color: 'black'}}>BRANDS</span>
                         </p>
                     </div>
                 
@@ -514,11 +511,11 @@ const HomePage = () => {
                         </div>
             
                         <div className="grid grid-2">
-                            <div className="brutal-box" style={{ background: '#FF5BF1', padding: '2rem' }}>
+                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', padding: '2rem' }}>
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">[PHILOSOPHY]</h3>
-                                <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in 'Vibe Coding'—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart.</p>
+                                <p style={{ lineHeight: 1.8, color: 'white' }}>We believe in 'Vibe Coding'—the art and science of decoding cultural signals and translating them into brand actions that feel authentic, not advertised. It’s about being part of the conversation, not just buying your way into it. Our work is data-informed but human-driven, ensuring every campaign has a real, beating heart. For instance, we once launched a coffee brand not with a splashy ad, but by sponsoring a month of free Wi-Fi at local coffee shops where their target audience already spent their mornings. ☕️</p>
                             </div>
-                             <div className="brutal-box" style={{ background: '#6370E7', padding: '2rem' }}>
+                             <div className="brutal-box" style={{ background: 'hsl(var(--accent))', padding: '2rem' }}>
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">[DUAL POWERHOUSE]</h3>
                                 <p style={{ lineHeight: 1.8, color: 'white' }}>What makes us unique is our dual structure. While CURATIONS crafts your brand's voice and strategy, our sister media company, <a href="https://la.curations.org" target="_blank" rel="noopener noreferrer" className="curationsla-brutal-box">CurationsLA</a>, amplifies it. With a newsletter reaching LA's most engaged locals and tourists, we don't just hope for media pickup—we create it.</p>
                             </div>

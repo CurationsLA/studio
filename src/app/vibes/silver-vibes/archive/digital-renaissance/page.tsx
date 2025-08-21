@@ -330,20 +330,6 @@ const DigitalRenaissancePage = () => {
                         grid-template-columns: 1fr;
                     }
                 }
-
-                .holographic-text {
-                    background: linear-gradient(45deg, #FF5BF1, #6370E7, #4AE54A, #FF5BF1);
-                    background-size: 400% 400%;
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    animation: holographic 8s ease-in-out infinite;
-                }
-
-                @keyframes holographic {
-                    0%, 100% { background-position: 0% 50%; }
-                    50% { background-position: 100% 50%; }
-                }
             `}</style>
 
             <nav className="nav">
@@ -370,9 +356,6 @@ const DigitalRenaissancePage = () => {
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             <div>
-                                <h1 className="text-4xl md:text-6xl lg:text-8xl font-black leading-none uppercase text-black mb-8 holographic-text">
-                                    CURATIONS
-                                </h1>
                                 
                                 <div className="mt-8">
                                     <div className="brutal-box digital-glow renaissance-pattern bg-white text-black p-4 md:p-6">
@@ -599,5 +582,3 @@ const DigitalRenaissancePage = () => {
 };
 
 export default DigitalRenaissancePage;
-
-    

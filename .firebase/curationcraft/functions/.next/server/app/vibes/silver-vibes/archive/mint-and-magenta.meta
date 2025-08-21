@@ -1,0 +1,7 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/vibes/layout,_N_T_/vibes/silver-vibes/layout,_N_T_/vibes/silver-vibes/archive/layout,_N_T_/vibes/silver-vibes/archive/mint-and-magenta/layout,_N_T_/vibes/silver-vibes/archive/mint-and-magenta/page,_N_T_/vibes/silver-vibes/archive/mint-and-magenta"
+  }
+}

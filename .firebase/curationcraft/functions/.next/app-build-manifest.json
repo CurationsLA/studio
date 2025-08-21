@@ -1,0 +1,528 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/_not-found/page-d32dab383778e9dc.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/css/2c19baf443c10e76.css",
+      "static/chunks/668-394064328289dafa.js",
+      "static/chunks/8707-d2e1a4ef1bc0ccc4.js",
+      "static/chunks/app/layout-5528a53fe2fd1502.js"
+    ],
+    "/ai-discovery/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/4487-e92f53aa60777626.js",
+      "static/chunks/app/ai-discovery/page-f0105a07e4e7466d.js"
+    ],
+    "/arctic-terminal/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/arctic-terminal/page-2aa8c9aed4d9f5fa.js"
+    ],
+    "/asymmetric-grid/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/asymmetric-grid/page-3d43797c4283a056.js"
+    ],
+    "/bold-grid-system/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/bold-grid-system/page-e55400a7f5742bb4.js"
+    ],
+    "/bold-newspaper/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/bold-newspaper/page-b58a35eecb3ce511.js"
+    ],
+    "/brutalist-man/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/brutalist-man/page-c6f359b7f8d52f5f.js"
+    ],
+    "/clean-zine-layers/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/clean-zine-layers/page-0ce352ac1182eefe.js"
+    ],
+    "/college-chaos/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/college-chaos/page-e20f3f8f6b5a0e0e.js"
+    ],
+    "/creative-campaigns/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/4487-e92f53aa60777626.js",
+      "static/chunks/app/creative-campaigns/page-4ea01b9dc416c090.js"
+    ],
+    "/crimson-command/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/crimson-command/page-bfcb30a23ee4e908.js"
+    ],
+    "/curated-mix/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/curated-mix/page-6e7df6d0364372cb.js"
+    ],
+    "/editorial-columns/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/editorial-columns/page-113671f4f7cd2027.js"
+    ],
+    "/editorial-stack/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/editorial-stack/page-89742a5f73343477.js"
+    ],
+    "/elevated-editorial/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/elevated-editorial/page-28d7aec29ca2bb4b.js"
+    ],
+    "/glitch-matrix/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/glitch-matrix/page-8321e32a4909e1a4.js"
+    ],
+    "/gradient-flow-zine/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/gradient-flow-zine/page-20af2e0258a66f2f.js"
+    ],
+    "/heartbeat-pulse/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/heartbeat-pulse/page-4395acbe72e0d5bc.js"
+    ],
+    "/layered-depth/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/layered-depth/page-26d24b0462b24062.js"
+    ],
+    "/magazine-stack/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/magazine-stack/page-6b6610aba12efb6d.js"
+    ],
+    "/minimal-brutalist/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/minimal-brutalist/page-2bb5a0bbe8435bcc.js"
+    ],
+    "/minimal-luxe-editorial/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/minimal-luxe-editorial/page-d418a028efcce760.js"
+    ],
+    "/minimal-swiss/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/minimal-swiss/page-e3d90749b5dc25e5.js"
+    ],
+    "/neon-editorial/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/neon-editorial/page-a02139666af675e0.js"
+    ],
+    "/neon-la/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/neon-la/page-1e0943958595010e.js"
+    ],
+    "/neon-typography/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/neon-typography/page-e24d56c41270f443.js"
+    ],
+    "/newsletter-services/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/4487-e92f53aa60777626.js",
+      "static/chunks/app/newsletter-services/page-4b4a277a8ccd1a86.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/page-2fe2794e206e3299.js"
+    ],
+    "/perplexity-elements-3/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/perplexity-elements-3/page-f3cfbb08e8b9b0a7.js"
+    ],
+    "/public-relations/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/4487-e92f53aa60777626.js",
+      "static/chunks/app/public-relations/page-daa5ce800bd8eb61.js"
+    ],
+    "/restaurant-biz/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/4487-e92f53aa60777626.js",
+      "static/chunks/app/restaurant-biz/page-fdccb9741638a9e3.js"
+    ],
+    "/silver-vibes/archive/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/silver-vibes/archive/page-ea2957ba58fb887c.js"
+    ],
+    "/silver-vibes/classic-homepage/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/silver-vibes/classic-homepage/page-a5d55a301e63ad04.js"
+    ],
+    "/silver-vibes/creative-time/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/silver-vibes/creative-time/page-500b5c9a718d0024.js"
+    ],
+    "/silver-vibes/cyberpunk-neon/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/silver-vibes/cyberpunk-neon/page-4afd636be7d845e8.js"
+    ],
+    "/silver-vibes/mint-and-magenta/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/silver-vibes/mint-and-magenta/page-82867def39ef5ccb.js"
+    ],
+    "/split-screen-magazine/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/split-screen-magazine/page-5792bb602fb1a48b.js"
+    ],
+    "/stark-brutalist/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/stark-brutalist/page-4ecfb7506d2367e6.js"
+    ],
+    "/system-grid-modular/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/system-grid-modular/page-ea6d6ca6b048987a.js"
+    ],
+    "/techno-neon-pulse/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/techno-neon-pulse/page-28b81b2864b66aa4.js"
+    ],
+    "/traditional-mock-1/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/668-394064328289dafa.js",
+      "static/chunks/8707-d2e1a4ef1bc0ccc4.js",
+      "static/chunks/app/traditional-mock-1/page-42f6795cc081e3f3.js"
+    ],
+    "/ultra-brutalist-newspaper-grid/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/ultra-brutalist-newspaper-grid/page-fa51a4f1a6767635.js"
+    ],
+    "/v2-inspirations/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/668-394064328289dafa.js",
+      "static/chunks/app/v2-inspirations/page-48c652ca55b80791.js"
+    ],
+    "/vibes/glitter-vibes/golden-vibes-deck/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/vibes/glitter-vibes/golden-vibes-deck/page-5af75c9fdd05b198.js"
+    ],
+    "/vibes/glitter-vibes/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/vibes/glitter-vibes/page-741e604c873640b2.js"
+    ],
+    "/vibes/golden-vibes/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/vibes/golden-vibes/page-dc35f1f33401ee56.js"
+    ],
+    "/vibes/silver-vibes/archive/creative-time/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/creative-time/page-25fd973eb8b3595e.js"
+    ],
+    "/vibes/silver-vibes/archive/classic-homepage/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/classic-homepage/page-d62cb7a069f5796d.js"
+    ],
+    "/vibes/silver-vibes/archive/cultural-fusion/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/cultural-fusion/page-bf3ec6c95387af2a.js"
+    ],
+    "/vibes/silver-vibes/archive/cyberpunk-neon/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/cyberpunk-neon/page-ac6e16c72f45c177.js"
+    ],
+    "/vibes/silver-vibes/archive/digital-renaissance/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/digital-renaissance/page-10e41b17f28266ec.js"
+    ],
+    "/vibes/silver-vibes/archive/mint-and-magenta/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/mint-and-magenta/page-fb3359864c40855b.js"
+    ],
+    "/vibes/silver-vibes/archive/monochrome-power/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/monochrome-power/page-a1d5dba595281fe3.js"
+    ],
+    "/vibes/silver-vibes/archive/stepped-brutalist/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/stepped-brutalist/page-7cca87c4f7c87232.js"
+    ],
+    "/vibes/silver-vibes/archive/underground-movement/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/archive/underground-movement/page-54f9f4bc2bc17c28.js"
+    ],
+    "/vibes/silver-vibes/archive/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/vibes/silver-vibes/archive/page-d875200a08a0fdbf.js"
+    ],
+    "/vibes/silver-vibes/goodies/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/vibes/silver-vibes/goodies/page-b2e3d6eb60d7a8d8.js"
+    ],
+    "/vibes/silver-vibes/goodies/silver-palette-1-1/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/vibes/silver-vibes/goodies/silver-palette-1-1/page-73814d82ac443b1f.js"
+    ],
+    "/vibes/silver-vibes/pages/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/vibes/silver-vibes/pages/page-4281ebad5fce1dbb.js"
+    ],
+    "/vibes/silver-vibes/viral-mechanics/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/5097-79a57297c0d7704d.js",
+      "static/chunks/app/vibes/silver-vibes/viral-mechanics/page-34b645388463296f.js"
+    ],
+    "/zine-collage-energy/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/zine-collage-energy/page-b849fe3f03bf2341.js"
+    ],
+    "/zine-mock/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/zine-mock/page-981d5f7b5f024369.js"
+    ],
+    "/zine-remix/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/zine-remix/page-dd9b8316bf91de42.js"
+    ],
+    "/silver-vibes/stepped-brutalist/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/silver-vibes/stepped-brutalist/page-acfc4ee6cf13dfa3.js"
+    ],
+    "/silver-vibes/monochrome-power/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/silver-vibes/monochrome-power/page-c4c04a3d42af62be.js"
+    ],
+    "/silver-vibes/electric-sunset/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/app/silver-vibes/electric-sunset/page-18e4346b0e35932e.js"
+    ],
+    "/influencer-ugc/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/4487-e92f53aa60777626.js",
+      "static/chunks/app/influencer-ugc/page-3c5b76ac1e1ca966.js"
+    ],
+    "/vibes/silver-vibes/page": [
+      "static/chunks/webpack-a51c6e9c279026ee.js",
+      "static/chunks/4bd1b696-9a0b9381a2f4a392.js",
+      "static/chunks/1684-caaa8d62f043b4d4.js",
+      "static/chunks/main-app-0ec640679fb0f8cb.js",
+      "static/chunks/6874-ddc71f91bd106456.js",
+      "static/chunks/app/vibes/silver-vibes/page-9dfe5f2870711c0e.js"
+    ]
+  }
+}
