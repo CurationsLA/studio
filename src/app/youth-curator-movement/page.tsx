@@ -81,18 +81,42 @@ const YouthCuratorMovementPage = () => {
             {/* Main Content */}
             <div style={{ padding: '4rem 2rem' }}>
                 <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                    {/* Interactive Features */}
+                    {/* Program Features */}
                     <div className="brutal-box bg-white p-6 mb-8">
-                         <h2 className="text-2xl font-bold uppercase mb-4">Discover Your Creative Superpower</h2>
-                        {/* Placeholder for quiz */}
-                        <p>What kind of creator are you? Take our quiz to find out!</p>
+                         <h2 className="text-2xl font-bold uppercase mb-4">💡 Discover Your Creative Superpower</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                            <div className="p-4 border-2 border-black">
+                                <h4 className="font-bold">🎨 Creative Visionary</h4>
+                                <p className="text-sm mt-2">Design campaigns that captivate and inspire audiences</p>
+                            </div>
+                            <div className="p-4 border-2 border-black">
+                                <h4 className="font-bold">📱 Digital Native</h4>
+                                <p className="text-sm mt-2">Master social platforms and emerging technologies</p>
+                            </div>
+                            <div className="p-4 border-2 border-black">
+                                <h4 className="font-bold">🎯 Strategic Thinker</h4>
+                                <p className="text-sm mt-2">Develop authentic brand connections and community engagement</p>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Content Elements */}
+                    {/* Success Stories */}
                      <div className="brutal-box bg-white p-6 mb-8">
-                         <h2 className="text-2xl font-bold uppercase mb-4">Success Stories</h2>
-                        {/* Placeholder for carousel */}
-                        <p>Meet some of the amazing young creators in our movement.</p>
+                         <h2 className="text-2xl font-bold uppercase mb-4">🌟 Youth Curator Success Stories</h2>
+                        <div className="space-y-4">
+                            <div className="p-4 bg-gray-50 border-l-4 border-black">
+                                <h4 className="font-bold">Maria, 17 - Los Angeles</h4>
+                                <p className="text-sm mt-1">"Through the Youth Curator program, I created a viral campaign for sustainable fashion that reached 100K+ people and landed me my first brand partnership."</p>
+                            </div>
+                            <div className="p-4 bg-gray-50 border-l-4 border-black">
+                                <h4 className="font-bold">Alex, 16 - Chicago</h4>
+                                <p className="text-sm mt-1">"The AI ethics training prepared me for the future of marketing. I now help other teens understand responsible technology use."</p>
+                            </div>
+                            <div className="p-4 bg-gray-50 border-l-4 border-black">
+                                <h4 className="font-bold">Jordan, 18 - New York</h4>
+                                <p className="text-sm mt-1">"From zero followers to launching my own creative agency - the mentorship and real-world experience changed everything."</p>
+                            </div>
+                        </div>
                     </div>
                     
                     {/* Application Process */}
