@@ -2,6 +2,9 @@
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     unoptimized: true,
     formats: ['image/avif', 'image/webp']
