@@ -16,6 +16,7 @@ const navLinks = [
   { href: '/ai-discovery', label: 'AI Discovery' },
   { href: '/newsletter-services', label: 'Newsletter Services' },
   { href: '/branding-toolkit', label: 'Branding Toolkit' },
+  { href: '/youth-curator', label: 'Youth Curator Program' },
 ];
 
 export default function Header() {

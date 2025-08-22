@@ -23,6 +23,18 @@
  --shadow1: #333;
  --shadow2: #666;
  --shadow3: #999;
+ 
+ /* Branded gradient definitions for Summer 2025 */
+ --gradient-influencer: linear-gradient(135deg, #ff69b4 0%, #38b6ff 50%, #ebf998 100%);
+ --gradient-creative: linear-gradient(135deg, #ff69b4 0%, #ebf998 100%);
+ --gradient-creative-alt: linear-gradient(135deg, #ebf998 0%, #ff69b4 50%, #38b6ff 100%);
+ --gradient-ai: linear-gradient(135deg, #38b6ff 0%, #ff69b4 100%);
+ --gradient-pr: linear-gradient(135deg, #222222 0%, #ff69b4 100%);
+ --gradient-restaurant: linear-gradient(135deg, #ebf998 0%, #38b6ff 100%);
+ --gradient-newsletter: linear-gradient(135deg, #ebf998 0%, #ff69b4 100%);
+ --gradient-branding: linear-gradient(135deg, #38b6ff 0%, #ebf998 50%, #ff69b4 100%);
+ --gradient-outbox: linear-gradient(135deg, #FDFDFC 0%, #ebf998 100%);
+ --gradient-youth: linear-gradient(135deg, #ff69b4 0%, #38b6ff 50%, #ebf998 100%);
 }
 
 html, body {
