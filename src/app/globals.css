@@ -1,15 +1,18 @@
+/* --- FONT IMPORTS (must be at very top before all CSS rules) --- */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=JetBrains+Mono:400,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* --- CURSOR --- */
 .gradient-cursor {
  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='m12 2l2.5 5.5L20 9l-4.5 4.5L16.5 20l-4.5-2.5L7.5 20l1-6.5L4 9l5.5-1.5z'/%3E%3C/svg%3E") 16 16, auto;
 }
 
 /* --- FONT & ROOT --- */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Archivo:400,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=JetBrains+Mono:400,700&display=swap');
 
 :root {
  --primary: #FF5BF1; /* Fuschia Electric */
