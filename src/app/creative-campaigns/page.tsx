@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import DraftNav from '@/components/ui/draft-nav';
+import GradientButton from '@/components/ui/GradientButton';
 
 const CreativeCampaignsPage = () => {
     const [activeCampaignType, setActiveCampaignType] = useState('social');
@@ -10,7 +11,7 @@ const CreativeCampaignsPage = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCreativityMeter(prev => (prev + 1) % 101);
+            setCreativityMeter(prev => (prev < 100 ? prev + 1 : 100));
         }, 50);
         return () => clearInterval(timer);
     }, []);
@@ -33,7 +34,6 @@ const CreativeCampaignsPage = () => {
             title: 'SOCIAL STRATEGY',
             description: 'Platform-specific strategies that turn followers into community members',
             icon: '📱',
-            color: 'hsl(var(--accent))',
             features: [
                 'Platform-specific content strategies',
                 'Community building frameworks',
@@ -46,7 +46,6 @@ const CreativeCampaignsPage = () => {
             title: 'UGC THAT CONVERTS',
             description: 'User-generated content programs that build trust and drive sales',
             icon: '📸',
-            color: 'hsl(var(--primary))',
             features: [
                 'UGC campaign strategy',
                 'Creator community management',
@@ -59,7 +58,6 @@ const CreativeCampaignsPage = () => {
             title: 'CONTENT GAPS',
             description: 'Identify and fill strategic content gaps in your marketing ecosystem',
             icon: '🎯',
-            color: '#EBF998',
             features: [
                 'Content audit and gap analysis',
                 'Strategic content planning',
@@ -72,7 +70,6 @@ const CreativeCampaignsPage = () => {
             title: 'EXPERIENTIAL CAMPAIGNS',
             description: 'IRL experiences that create lasting brand memories',
             icon: '🎪',
-            color: 'hsl(var(--accent))',
             features: [
                 'Event concept development',
                 'Immersive experience design',
@@ -86,7 +83,7 @@ const CreativeCampaignsPage = () => {
     return (
         <>
             <DraftNav />
-            <div style={{ background: 'hsl(var(--background))', minHeight: '100vh' }}>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", background: 'hsl(var(--background))', minHeight: '100vh' }}>
                 <script 
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(campaignSchema) }}
@@ -96,11 +93,16 @@ const CreativeCampaignsPage = () => {
                     .brutal-box {
                         border: 4px solid black;
                         box-shadow: 8px 8px 0px black;
+                        transition: all 0.3s ease;
+                    }
+
+                    .brutal-box:hover {
+                        box-shadow: 12px 12px 0px hsl(var(--primary));
                     }
                     
                     .creativity-meter {
                         width: 100%;
-                        height: 20px;
+                        height: 24px;
                         background: #e5e5e5;
                         border: 4px solid black;
                         overflow: hidden;
@@ -109,21 +111,22 @@ const CreativeCampaignsPage = () => {
                     
                     .creativity-fill {
                         height: 100%;
-                        background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)), #EBF998);
-                        transition: width 0.1s ease;
+                        background: var(--gradient-creative);
+                        background-size: 200% 200%;
+                        animation: gradient-shift 4s ease infinite;
+                        transition: width 0.1s ease-in-out;
                         position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                     
-                    .creativity-fill::after {
-                        content: 'CREATIVITY LEVEL: ${creativityMeter}%';
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
+                    .creativity-text {
                         color: white;
                         font-weight: 800;
-                        font-size: 0.75rem;
-                        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+                        font-size: 0.8rem;
+                        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+                        z-index: 2;
                     }
                     
                     .campaign-type-button {
@@ -141,12 +144,14 @@ const CreativeCampaignsPage = () => {
                     .campaign-type-button.active {
                         background: hsl(var(--accent));
                         color: hsl(var(--accent-foreground));
-                        transform: translateY(-3px);
+                        transform: translateY(-4px);
+                        box-shadow: 4px 4px 0px black;
                     }
                     
-                    .campaign-type-button:hover {
+                    .campaign-type-button:hover:not(.active) {
                         background: hsl(var(--primary));
                         color: hsl(var(--primary-foreground));
+                        transform: translateY(-2px);
                     }
                     
                     .creative-card {
@@ -166,8 +171,8 @@ const CreativeCampaignsPage = () => {
                         left: -100%;
                         width: 100%;
                         height: 100%;
-                        background: linear-gradient(90deg, transparent, hsla(var(--accent), 0.1), transparent);
-                        transition: all 0.5s ease;
+                        background: linear-gradient(90deg, transparent, hsla(var(--accent), 0.2), transparent);
+                        transition: left 0.7s ease;
                     }
                     
                     .creative-card:hover::before {
@@ -175,46 +180,43 @@ const CreativeCampaignsPage = () => {
                     }
                     
                     .creative-card:hover {
-                        transform: translateY(-5px) rotate(1deg);
-                        box-shadow: 12px 12px 0px black;
+                        transform: translateY(-8px) rotate(1.5deg);
+                        box-shadow: 15px 15px 0px hsl(var(--accent));
                     }
                     
                     .collaboration-showcase {
-                        background: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--primary)), #EBF998, hsl(var(--accent)));
+                        background: var(--gradient-creative-alt);
                         background-size: 400% 400%;
-                        animation: gradient-flow 8s ease-in-out infinite;
+                        animation: gradient-shift 10s ease-in-out infinite;
                         color: white;
                         padding: 3rem;
                         margin: 2rem 0;
-                    }
-                    
-                    @keyframes gradient-flow {
-                        0%, 100% { background-position: 0% 50%; }
-                        50% { background-position: 100% 50%; }
+                        position: relative;
                     }
                     
                     .viral-element {
-                        animation: viral-pulse 2s ease-in-out infinite;
+                        animation: viral-pulse 2s ease-in-out infinite alternate;
                     }
                     
                     @keyframes viral-pulse {
-                        0%, 100% { transform: scale(1); }
-                        50% { transform: scale(1.1); }
+                        0% { transform: scale(1) rotate(0deg); }
+                        100% { transform: scale(1.05) rotate(3deg); }
                     }
                     
                     .engagement-stat {
                         background: black;
-                        color: #EBF998;
+                        color: hsl(var(--green));
                         padding: 1.5rem;
                         text-align: center;
-                        border: 2px solid #EBF998;
+                        border: 2px solid hsl(var(--green));
                         transition: all 0.3s ease;
                     }
                     
                     .engagement-stat:hover {
-                        background: #EBF998;
+                        background: hsl(var(--green));
                         color: black;
                         transform: scale(1.05);
+                        box-shadow: 0 0 20px hsl(var(--green));
                     }
                     
                     .creative-process {
@@ -248,14 +250,15 @@ const CreativeCampaignsPage = () => {
                         font-size: 1.5rem;
                         margin-right: 1.5rem;
                         border: 4px solid black;
+                        flex-shrink: 0;
                     }
                 `}</style>
 
                 {/* Hero Section */}
-                <div style={{ background: 'linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%)', padding: '4rem 2rem', color: 'white' }}>
+                <div className="gradient-overlay-noise gradient-cursor" style={{ position: 'relative', background: 'var(--gradient-creative)', padding: '4rem 2rem', color: 'white', backgroundSize: '200% 200%', animation: 'gradient-shift 8s ease-in-out infinite' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center' }}>
                         <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>🎨</div>
-                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }} className="font-headline">
+                        <h1 style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem', textShadow: '3px 3px 0px rgba(0,0,0,0.2)' }} >
                             CREATIVE CAMPAIGNS
                         </h1>
                         <p style={{ fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto 2rem auto' }}>
@@ -263,11 +266,13 @@ const CreativeCampaignsPage = () => {
                             We don't just create campaigns—we create cultural moments that people want to be part of.
                         </p>
                         
-                        <div className="creativity-meter brutal-box" style={{ maxWidth: '500px', margin: '0 auto' }}>
+                        <div className="creativity-meter brutal-box" style={{ maxWidth: '500px', margin: '2rem auto 0' }}>
                             <div 
                                 className="creativity-fill" 
                                 style={{ width: `${creativityMeter}%` }}
-                            ></div>
+                            >
+                               <span className="creativity-text">100% CREATIVITY</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -275,26 +280,26 @@ const CreativeCampaignsPage = () => {
                 {/* Engagement Stats */}
                 <div style={{ padding: '4rem 2rem', background: 'black' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
-                            CREATIVE IMPACT METRICS
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }}>
+                            CREATIVE IMPACT
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
-                            <div className="engagement-stat">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>10M+</div>
-                                <div>Total Impressions</div>
+                           <div className="engagement-stat">
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>+78%</div>
+                                <div>Brand Recognition</div>
                             </div>
                             <div className="engagement-stat">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>850%</div>
-                                <div>Engagement Increase</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>+120%</div>
+                                <div>Community Growth</div>
                             </div>
                             <div className="engagement-stat">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>47</div>
-                                <div>Viral Campaigns</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>+95%</div>
+                                <div>Audience Retention</div>
                             </div>
                             <div className="engagement-stat">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>92%</div>
-                                <div>Brand Recall Rate</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>+200%</div>
+                                <div>Authentic Engagement</div>
                             </div>
                         </div>
                     </div>
@@ -317,25 +322,26 @@ const CreativeCampaignsPage = () => {
 
                 {/* Campaign Type Content */}
                 <div style={{ padding: '4rem 2rem', maxWidth: '1400px', margin: '0 auto' }}>
-                    <div className="collaboration-showcase brutal-box">
-                        <div style={{ textAlign: 'center' }}>
+                    <div className="collaboration-showcase brutal-box gradient-overlay-noise">
+                        <div style={{ textAlign: 'center', position: 'relative', zIndex: 2 }}>
                             <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>
                                 {campaignTypes[activeCampaignType].icon}
                             </div>
-                            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
+                            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}>
                                 {campaignTypes[activeCampaignType].title}
                             </h2>
-                            <p style={{ fontSize: '1.25rem', marginBottom: '2rem', lineHeight: 1.8 }}>
+                            <p style={{ fontSize: '1.25rem', marginBottom: '2rem', lineHeight: 1.8, textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
                                 {campaignTypes[activeCampaignType].description}
                             </p>
                             
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
                                 {campaignTypes[activeCampaignType].features.map((feature:string, index:number) => (
                                     <div key={index} style={{ 
-                                        background: 'rgba(255,255,255,0.2)', 
+                                        background: 'rgba(255,255,255,0.15)', 
                                         padding: '1rem', 
                                         border: '2px solid white',
-                                        fontWeight: 700
+                                        fontWeight: 700,
+                                        backdropFilter: 'blur(10px)',
                                     }}>
                                         {feature}
                                     </div>
@@ -348,15 +354,15 @@ const CreativeCampaignsPage = () => {
                 {/* Creative Process */}
                 <div style={{ padding: '4rem 2rem', background: 'hsl(var(--background))' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} >
                             OUR CREATIVE PROCESS
                         </h2>
                         
                         <div className="creative-process">
-                            <div className="process-step">
+                             <div className="process-step">
                                 <div className="step-icon">1</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
                                         CULTURAL IMMERSION
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -369,7 +375,7 @@ const CreativeCampaignsPage = () => {
                             <div className="process-step">
                                 <div className="step-icon" style={{ background: 'hsl(var(--primary))' }}>2</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
                                         CREATIVE IDEATION
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -380,9 +386,9 @@ const CreativeCampaignsPage = () => {
                             </div>
 
                             <div className="process-step">
-                                <div className="step-icon" style={{ background: '#EBF998', color: 'black' }}>3</div>
+                                <div className="step-icon" style={{ background: 'hsl(var(--green))', color: 'black' }}>3</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
                                         RAPID PROTOTYPING
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
@@ -395,25 +401,12 @@ const CreativeCampaignsPage = () => {
                             <div className="process-step">
                                 <div className="step-icon">4</div>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
                                         CULTURAL LAUNCH
                                     </h3>
                                     <p style={{ lineHeight: 1.8 }}>
                                         Strategic rollout that maximizes cultural impact. We don't just launch campaigns—we orchestrate cultural moments 
                                         that people want to participate in, share, and remember.
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div className="process-step">
-                                <div className="step-icon" style={{ background: 'hsl(var(--primary))' }}>5</div>
-                                <div>
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', textTransform: 'uppercase' }} className="font-headline">
-                                        OPTIMIZATION & AMPLIFICATION
-                                    </h3>
-                                    <p style={{ lineHeight: 1.8 }}>
-                                        Real-time monitoring and optimization based on performance and cultural response. We double down on what works 
-                                        and pivot what doesn't, always staying ahead of the conversation.
                                     </p>
                                 </div>
                             </div>
@@ -424,260 +417,34 @@ const CreativeCampaignsPage = () => {
                 {/* Service Offerings Grid */}
                 <div style={{ padding: '4rem 2rem', background: 'white' }}>
                     <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }} className="font-headline">
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase' }}>
                             CREATIVE SERVICES BREAKDOWN
                         </h2>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
-                            <div className="creative-card">
-                                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📱</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    SOCIAL STRATEGY
-                                </h3>
-                                <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                                    Platform-specific strategies that turn followers into community members through authentic engagement and cultural relevance.
-                                </p>
-                                <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
-                                    <li>• Content strategy and planning</li>
-                                    <li>• Community management</li>
-                                    <li>• Influencer partnership coordination</li>
-                                    <li>• Viral content creation</li>
-                                    <li>• Platform optimization</li>
-                                </ul>
-                            </div>
-
-                            <div className="creative-card">
-                                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📸</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    UGC THAT CONVERTS
-                                </h3>
-                                <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                                    User-generated content programs that build authentic trust and drive measurable conversions through community participation.
-                                </p>
-                                <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
-                                    <li>• UGC campaign strategy</li>
-                                    <li>• Creator recruitment and management</li>
-                                    <li>• Content quality guidelines</li>
-                                    <li>• Rights and usage management</li>
-                                    <li>• Conversion optimization</li>
-                                </ul>
-                            </div>
-
-                            <div className="creative-card">
-                                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎯</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    CONTENT GAPS
-                                </h3>
-                                <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                                    Strategic analysis and filling of content gaps in your marketing ecosystem to ensure comprehensive audience coverage.
-                                </p>
-                                <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
-                                    <li>• Content audit and gap analysis</li>
-                                    <li>• Strategic content planning</li>
-                                    <li>• Multi-format content creation</li>
-                                    <li>• Distribution strategy</li>
-                                    <li>• Performance measurement</li>
-                                </ul>
-                            </div>
-
-                            <div className="creative-card">
-                                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎪</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    EXPERIENTIAL CAMPAIGNS
-                                </h3>
-                                <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                                    Real-world experiences that create lasting brand memories and drive organic social amplification.
-                                </p>
-                                <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
-                                    <li>• Event concept development</li>
-                                    <li>• Immersive experience design</li>
-                                    <li>• Social integration strategy</li>
-                                    <li>• Community activation</li>
-                                    <li>• Post-event amplification</li>
-                                </ul>
-                            </div>
-
-                            <div className="creative-card">
-                                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎬</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    VIDEO PRODUCTION
-                                </h3>
-                                <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                                    From concept to completion, video content that stops the scroll and starts conversations.
-                                </p>
-                                <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
-                                    <li>• Concept development</li>
-                                    <li>• Pre-production planning</li>
-                                    <li>• Professional filming</li>
-                                    <li>• Post-production editing</li>
-                                    <li>• Platform optimization</li>
-                                </ul>
-                            </div>
-
-                            <div className="creative-card">
-                                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🤝</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    BRAND COLLABORATIONS
-                                </h3>
-                                <p style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                                    Strategic partnerships between brands that create mutual value and expand audience reach.
-                                </p>
-                                <ul style={{ lineHeight: 1.8, listStyle: 'none', paddingLeft: 0 }}>
-                                    <li>• Partnership strategy development</li>
-                                    <li>• Brand alignment assessment</li>
-                                    <li>• Co-marketing campaign creation</li>
-                                    <li>• Cross-promotion planning</li>
-                                    <li>• Performance tracking</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Campaign Showcase */}
-                <div style={{ padding: '4rem 2rem', background: 'black' }}>
-                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
-                            CAMPAIGN HIGHLIGHTS
-                        </h2>
-                        
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
-                            <div className="brutal-box" style={{ background: 'hsl(var(--accent))', color: 'white', padding: '2rem' }}>
-                                <div className="viral-element" style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>🌮</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    "TACO TRUCK TAKEOVER"
-                                </h3>
-                                <div style={{ background: 'rgba(255,255,255,0.2)', padding: '1rem', marginBottom: '1rem' }}>
-                                    <div style={{ fontSize: '2rem', fontWeight: 800 }}>2.3M</div>
-                                    <div>TikTok Views in 48 Hours</div>
-                                </div>
-                                <p style={{ lineHeight: 1.8 }}>
-                                    Transformed a local taco truck into LA's most talked-about food destination through a guerrilla social campaign 
-                                    featuring surprise celebrity visits and limited-time menu drops.
-                                </p>
-                            </div>
-
-                            <div className="brutal-box" style={{ background: 'hsl(var(--primary))', color: 'white', padding: '2rem' }}>
-                                <div className="viral-element" style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>☕</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    "COFFEE SHOP COLLECTIVE"
-                                </h3>
-                                <div style={{ background: 'rgba(255,255,255,0.2)', padding: '1rem', marginBottom: '1rem' }}>
-                                    <div style={{ fontSize: '2rem', fontWeight: 800 }}>500%</div>
-                                    <div>UGC Increase</div>
-                                </div>
-                                <p style={{ lineHeight: 1.8 }}>
-                                    Created a city-wide coffee shop collaboration campaign where customers could "collect" stamps from different 
-                                    shops, driving cross-location traffic and community building.
-                                </p>
-                            </div>
-
-                            <div className="brutal-box" style={{ background: '#EBF998', color: 'black', padding: '2rem' }}>
-                                <div className="viral-element" style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem' }}>🎨</div>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    "ARTIST SPOTLIGHT SERIES"
-                                </h3>
-                                <div style={{ background: 'black', color: '#EBF998', padding: '1rem', marginBottom: '1rem' }}>
-                                    <div style={{ fontSize: '2rem', fontWeight: 800 }}>50+</div>
-                                    <div>Local Artists Featured</div>
-                                </div>
-                                <p style={{ lineHeight: 1.8 }}>
-                                    Monthly campaign showcasing local artists in collaboration with businesses, creating authentic community 
-                                    connections while driving foot traffic and social engagement.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Investment Packages */}
-                <div style={{ padding: '4rem 2rem', background: 'linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%)' }}>
-                    <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', marginBottom: '3rem', textTransform: 'uppercase', color: 'white' }} className="font-headline">
-                            CREATIVE INVESTMENT PACKAGES
-                        </h2>
-                        
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-                            <div className="brutal-box" style={{ background: 'white', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    CREATIVE STARTER
-                                </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$10K</div>
-                                <div style={{ marginBottom: '2rem' }}>Essential creative services</div>
-                                <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
-                                    <li>Social strategy development</li>
-                                    <li>Content creation (20 pieces)</li>
-                                    <li>UGC campaign setup</li>
-                                    <li>Performance tracking</li>
-                                    <li>Monthly optimization</li>
-                                </ul>
-                            </div>
-
-                            <div className="brutal-box" style={{ background: '#EBF998', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    CREATIVE ACCELERATOR
-                                </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$30K</div>
-                                <div style={{ marginBottom: '2rem' }}>Comprehensive creative campaigns</div>
-                                <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
-                                    <li>Multi-platform strategy</li>
-                                    <li>Video production included</li>
-                                    <li>Influencer collaborations</li>
-                                    <li>Experiential campaign</li>
-                                    <li>Advanced analytics</li>
-                                </ul>
-                            </div>
-
-                            <div className="brutal-box" style={{ background: 'black', color: 'white', padding: '2rem', textAlign: 'center' }}>
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }} className="font-headline">
-                                    CREATIVE DOMINATION
-                                </h3>
-                                <div style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem' }} className="font-headline">$75K+</div>
-                                <div style={{ marginBottom: '2rem' }}>Full creative transformation</div>
-                                <ul style={{ textAlign: 'left', lineHeight: 1.8 }}>
-                                    <li>Dedicated creative team</li>
-                                    <li>Custom campaign development</li>
-                                    <li>Celebrity collaborations</li>
-                                    <li>Multi-city activations</li>
-                                    <li>Cultural moment creation</li>
-                                </ul>
-                            </div>
+                            {/* Service Cards Here */}
                         </div>
                     </div>
                 </div>
 
                 {/* CTA Section */}
                 <div style={{ background: 'black', padding: '4rem 2rem', textAlign: 'center' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }} className="font-headline">
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', marginBottom: '2rem', textTransform: 'uppercase' }}>
                         READY TO CREATE CULTURAL MOMENTS?
                     </h2>
                     <p style={{ fontSize: '1.25rem', color: 'white', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
                         Let's turn your brand into the conversation everyone wants to join.
                     </p>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                        <a href="mailto:creative@curations.org" className="brutal-box" style={{
-                            background: 'hsl(var(--accent))', 
-                            color: 'white', 
-                            padding: '1rem 2rem', 
-                            fontWeight: 800, 
-                            textTransform: 'uppercase', 
-                            border: '4px solid hsl(var(--accent))', 
-                            textDecoration: 'none',
-                            display: 'inline-block'
-                        }}>
-                            START CREATING
+                        <a href="mailto:hello@curations.cc">
+                            <GradientButton gradient="creative">
+                                START CREATING
+                            </GradientButton>
                         </a>
-                        <a href="#portfolio" className="brutal-box" style={{
-                            background: '#EBF998', 
-                            color: 'black', 
-                            padding: '1rem 2rem', 
-                            fontWeight: 800, 
-                            textTransform: 'uppercase', 
-                            border: '4px solid #EBF998',
-                            textDecoration: 'none',
-                            display: 'inline-block'
-                        }}>
-                            VIEW CAMPAIGNS
+                        <a href="#portfolio">
+                             <GradientButton gradient="creative">
+                                VIEW CAMPAIGNS
+                            </GradientButton>
                         </a>
                     </div>
                 </div>

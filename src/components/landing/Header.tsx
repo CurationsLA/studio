@@ -8,10 +8,14 @@ import CurationCraftLogo from '@/components/icons/CurationCraftLogo';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/vibes/silver-vibes/viral-mechanics', label: 'Viral Mechanics' },
-  { href: '#services', label: 'Services' },
-  { href: '#work', label: 'Work' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/', label: 'Home' },
+  { href: '/creative-campaigns', label: 'Creative Campaigns' },
+  { href: '/restaurant-biz', label: 'Restaurant & Biz' },
+  { href: '/public-relations', label: 'Public Relations' },
+  { href: '/influencer-ugc', label: 'Influencer Collaborations' },
+  { href: '/ai-discovery', label: 'AI Discovery' },
+  { href: '/newsletter-services', label: 'Newsletter Services' },
+  { href: '/branding-toolkit', label: 'Branding Toolkit' },
 ];
 
 export default function Header() {
@@ -23,18 +27,21 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2">
           <CurationCraftLogo />
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="text-xs font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
           ))}
+           <Link href="/outbox" className="text-xs font-bold text-primary transition-colors hover:text-accent border-2 border-primary px-3 py-1 rounded-md">
+              [OUTBOX]
+            </Link>
         </nav>
-        <div className="hidden">
+        <div className="md:hidden">
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -53,6 +60,9 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+             <Link href="/outbox" className="text-lg font-bold text-primary transition-colors hover:text-accent" onClick={() => setIsOpen(false)}>
+              [OUTBOX]
+            </Link>
           </nav>
         </div>
       )}

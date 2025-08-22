@@ -1,69 +1,227 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  font-family: 'Inter', sans-serif;
+/* --- CURSOR --- */
+.gradient-cursor {
+ cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='m12 2l2.5 5.5L20 9l-4.5 4.5L16.5 20l-4.5-2.5L7.5 20l1-6.5L4 9l5.5-1.5z'/%3E%3C/svg%3E") 16 16, auto;
 }
 
-@layer base {
-  :root {
-    --background: 300 100% 98.5%;
-    --foreground: 240 10% 3.9%;
-    --card: 300 100% 98.5%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 300 100% 98.5%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 329 98% 65%;
-    --primary-foreground: 330 46% 9.6%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 235 73% 65%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.5rem;
-    --pink: 329 98% 65%;
-    --green: 74 90% 82%;
-    --neon-blue: 235 73% 65%;
-  }
- 
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 329 98% 65%;
-    --primary-foreground: 330 46% 9.6%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 235 73% 65%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --pink: 329 98% 65%;
-    --green: 74 90% 82%;
-    --neon-blue: 235 73% 65%;
-  }
+/* --- FONT & ROOT --- */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=JetBrains+Mono:400,700&display=swap');
+
+:root {
+ --primary: #FF5BF1; /* Fuschia Electric */
+ --accent: #6370E7; /* Blue Electric */
+ --success: #4AE54A; /* Vibrant Green */
+ --neutral: #FDFDFC; /* Brand White */
+ --dark: #222222; /* Rich Black */
+ --border: #000; /* Brutalist Black Border */
+ --warn: #FFD200; /* Gold Accent */
+ --secondary: #AEE6FF; /* Soft Blue */
+ --shadow1: #333;
+ --shadow2: #666;
+ --shadow3: #999;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+html, body {
+ font-family: 'Poppins', 'Archivo', 'JetBrains Mono', Arial, sans-serif;
+ color: var(--dark);
+ background: var(--neutral);
+ margin: 0;
+ padding: 0;
+ overflow-x: hidden;
 }
+
+/* --- HOMEPAGE --- */
+.homepage-root {
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ background: var(--neutral);
+ font-family: 'Poppins', Arial, sans-serif;
+}
+
+.hero {
+ padding: 3.5rem 1rem 2.5rem 1rem;
+ margin-bottom: 2rem;
+ text-align: center;
+ border-radius: 1.25rem;
+ background: linear-gradient(
+ 120deg,
+    var(--primary) 0%,
+ var(--accent) 100%
+ );
+ color: #fff;
+ box-shadow:
+ 10px 10px 0 var(--border),
+ 16px 16px 0 var(--shadow1),
+ 22px 22px 0 var(--shadow2);
+}
+
+.hero-title {
+ font-size: 2.9rem;
+ font-family: 'Poppins', 'Archivo', Arial, sans-serif;
+ letter-spacing: -0.03em;
+ font-weight: 800;
+ margin: 0 0 0.5rem 0;
+ color: #fff;
+ text-shadow: 0 3px 10px var(--accent);
+}
+
+.hero-desc {
+ margin-top: 0.5rem;
+ font-size: 1.5rem;
+ color: var(--secondary);
+ font-weight: 600;
+}
+
+/* --- SERVICE GRID & CARDS --- */
+.services-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: 2.2rem;
+ width: 100%;
+ max-width: 1240px;
+ margin: 0 auto;
+ padding: 0 2rem 2.8rem 2rem;
+}
+
+.service-card {
+ padding: 2.2rem 1rem 1.5rem 1rem;
+ border-radius: 1rem;
+ box-shadow:
+ 12px 12px 0 var(--border),
+ 16px 16px 0 var(--shadow1),
+ 20px 20px 0 var(--shadow2);
+ border: 4px solid var(--border);
+ color: var(--dark);
+ background: var(--neutral);
+ background-clip: padding-box;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: flex-start;
+ transition: transform 0.22s, box-shadow 0.22s;
+ min-height: 230px;
+ position: relative;
+ font-family: 'Poppins', Arial, sans-serif;
+}
+.service-card.placeholder {
+ opacity: 0.63;
+ border-style: dashed;
+}
+.service-card:hover {
+ transform: scale(1.05) translateY(-9px) rotate(1.6deg);
+ box-shadow:
+ 20px 20px 0 var(--border),
+ 26px 26px 0 var(--shadow1),
+ 34px 34px 0 var(--shadow2),
+ 38px 38px 0 var(--shadow3);
+}
+.service-card h2 {
+ margin-bottom: 0.7rem;
+ font-size: 1.4rem;
+ font-family: 'Archivo', 'Poppins', Arial, sans-serif;
+ font-weight: 800;
+ color: var(--accent);
+}
+.service-card p {
+ margin: 0;
+ font-size: 1.07rem;
+ color: var(--dark);
+ font-family: 'Poppins', Arial, sans-serif;
+ font-weight: 500;
+}
+.explore-cta {
+ margin-top: 1.1rem;
+ font-weight: 800;
+ color: var(--primary);
+ font-family: 'Archivo', Arial, sans-serif;
+ background: none;
+ border: none;
+ cursor: pointer;
+ font-size: 1.14rem;
+ letter-spacing: 0.5px;
+ padding: 0;
+}
+
+/* --- SHIMMER EFFECT --- */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- Noise Texture Overlay --- */
+/* This needs to be applied to elements *receiving* the texture, not globally like this */
+.gradient-overlay-noise::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+ background-size: 100px 100px;
+ pointer-events: none;
+ z-index: 1; /* Ensure it's above the gradient but below content */
+}
+
+/* --- SHIMMER EFFECT --- */
+@keyframes shimmer {
+ 0% { background-position: -400px 0; }
+ 100% { background-position: 400px 0; }
+}
+
+.shimmer {
+ background: linear-gradient(
+ 90deg,
+ rgba(255,255,255,0) 0%,
+ rgba(255,255,255,0.18) 30%,
+ rgba(255,255,255,0.4) 60%,
+ rgba(255,255,255,0.07) 100%
+ );
+ background-size: 800px 100%;
+ animation: shimmer 1.8s infinite linear;
+ display: inline-block;
+ padding: 4px 8px;
+ border-radius: 0.6em;
+ margin-top: 0.9em;
+}
+@keyframes shimmer {
+ 0% { background-position: -400px 0; }
+ 100% { background-position: 400px 0; }
+}
+
+/* --- FOOTER --- */
+.homepage-footer {
+ padding: 2rem 1.5rem 1rem 1.5rem;
+ font-size: 1.06rem;
+ margin-top: auto;
+ background: var(--neutral);
+ border-radius: 1.1rem 1.1rem 0 0;
+ text-align: center;
+ border: 4px solid var(--border);
+ box-shadow: 8px 8px 0 var(--border);
+ color: var(--dark);
+ font-family: 'Archivo', 'Poppins', Arial, sans-serif;
+}
+
+.text-fuschia { color: var(--primary); }
+.text-accent { color: var(--accent); }
+.bg-fuschia { background-color: var(--primary) !important; color: #fff !important; }
+.bg-accent { background-color: var(--accent) !important; color: #fff !important; }
+.bg-success { background-color: var(--success) !important; color: #111 !important; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.1rem; }
+ .services-grid { grid-template-columns: 1fr; gap: 1.15rem; }
+ .service-card { padding: 1.1rem 0.8rem; }
+ .homepage-footer { padding: 1.1rem 0.75rem 0.6rem 0.75rem; }
+}
+
+/* --- CREATIVE EXPRESSION (Feel free to expand) --- */
+/* Add wild but branded SVGs, animated borders, playful shadows, etc. */

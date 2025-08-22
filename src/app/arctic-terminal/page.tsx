@@ -10,6 +10,24 @@ const ArcticTerminalPage = () => {
                 body {
                     font-family: 'Space Mono', monospace;
                 }
+
+                .marquee-wrapper {
+                  overflow: hidden;
+                  white-space: nowrap;
+                  width: 100%;
+                  position: relative;
+                }
+
+                .marquee-text {
+                  display: inline-block;
+                  padding-left: 100%;
+                  animation: marquee 15s linear infinite;
+                }
+
+                @keyframes marquee {
+                  from { transform: translateX(0%); }
+                  to { transform: translateX(-100%); }
+                }
                 
                 .arctic-blue {
                     background: #00D4FF;
@@ -144,9 +162,11 @@ const ArcticTerminalPage = () => {
                         <span className="text-steel-gray">GOOGLE.PARTNER.ACTIVE</span>
                     </div>
                     <div className="ice-white text-black px-6 py-1 text-center scanline">
-                        <marquee className="text-sm font-bold orbitron">
-                            SYSTEM_ALERT: NEW_CLIENTS_20%_DISCOUNT • AI_DISCOVERY_WORKSHOPS_ONLINE • SUBSCRIBER_COUNT_50K_REACHED • RECRUITMENT_CREATIVE_DIRECTORS_ACTIVE 
-                        </marquee>
+                        <div className="marquee-wrapper">
+                            <span className="marquee-text text-sm font-bold orbitron">
+                                SYSTEM_ALERT: NEW_CLIENTS_20%_DISCOUNT • AI_DISCOVERY_WORKSHOPS_ONLINE • SUBSCRIBER_COUNT_50K_REACHED • RECRUITMENT_CREATIVE_DIRECTORS_ACTIVE 
+                            </span>
+                        </div>
                     </div>
                 </div>
 
