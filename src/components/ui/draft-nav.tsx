@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const DraftNav = () => {
     const navLinks = [
+        { href: '/', label: 'Home' },
         { href: '/v2-inspirations', label: 'Inspirations' },
         { href: '/homepage-draft', label: 'Draft Home' },
         { href: '/restaurant-biz', label: 'Restaurant/Biz' },
@@ -11,6 +12,9 @@ const DraftNav = () => {
         { href: '/influencer-ugc', label: 'Influencer/UGC' },
         { href: '/ai-discovery', label: 'AI Discovery' },
         { href: '/newsletter-services', label: 'Newsletter' },
+        { href: '/branding-toolkit', label: 'Branding Toolkit' },
+        { href: '/outbox', label: 'Outbox' },
+        { href: '/youth-curator', label: 'Youth Curator' },
     ];
 
     return (
